@@ -13,34 +13,63 @@ const fail = (m) => errors.push(m)
 const read = (rel) => readFileSync(join(root, rel), 'utf8')
 
 // —— 1. 旅程資料 ——
-const { CATEGORIES, JOURNEYS } = await import('../src/data.js').catch((e) => {
-  fail('src/data.js 無法載入(語法錯誤?):' + e.message)
-  return { CATEGORIES: [], JOURNEYS: [] }
-})
+const { CATEGORIES, JOURNEYS, COLLECTIONS } = await import('../src/data.js').catch(
+  (e) => {
+    fail('src/data.js 無法載入(語法錯誤?):' + e.message)
+    return { CATEGORIES: [], JOURNEYS: [], COLLECTIONS: {} }
+  }
+)
 
 const catIds = new Set(CATEGORIES.map((c) => c.id))
 if (CATEGORIES.length === 0) fail('CATEGORIES 是空的')
+const collections = COLLECTIONS || {}
+
+// 共用:檢一張卡片(直達 / 合輯 / 敬請期待)。soon 可省略 url;合輯卡片要指到存在的合輯。
+function checkCard(j, where, seen) {
+  if (!j || typeof j !== 'object') {
+    fail(`${where} 不是物件`)
+    return
+  }
+  if (!j.id) fail(`${where} 缺 id`)
+  else if (seen.has(j.id)) fail(`${where} id 重複:${j.id}`)
+  else seen.add(j.id)
+  if (!j.name) fail(`${where} 缺 name`)
+  if (!j.color) fail(`${where} 缺 color`)
+  if (j.collection) {
+    if (!collections[j.collection])
+      fail(`${where} 指向不存在的合輯 collection "${j.collection}"`)
+  } else if (!j.soon) {
+    if (!j.url) fail(`${where} 不是 soon、也不是合輯,卻沒有 url`)
+    else if (!/^https?:\/\//.test(j.url))
+      fail(`${where} 的 url 不是 http(s) 開頭:${j.url}`)
+  }
+}
 
 const seen = new Set()
 for (const [i, j] of JOURNEYS.entries()) {
   const where = `JOURNEYS[${i}] (${j && j.id ? j.id : '無 id'})`
-  if (!j || typeof j !== 'object') {
+  checkCard(j, where, seen)
+  if (j && j.category && !catIds.has(j.category))
+    fail(`${where} 的 category "${j.category}" 不在 CATEGORIES`)
+  else if (j && !j.category) fail(`${where} 缺 category`)
+}
+
+// 每個合輯卡片都要有對應 COLLECTIONS;每個合輯的關卡各自檢查(id 在合輯內唯一)。
+const referenced = new Set(JOURNEYS.filter((j) => j.collection).map((j) => j.collection))
+for (const [key, col] of Object.entries(collections)) {
+  const where = `COLLECTIONS["${key}"]`
+  if (!col || typeof col !== 'object') {
     fail(`${where} 不是物件`)
     continue
   }
-  if (!j.id) fail(`${where} 缺 id`)
-  else if (seen.has(j.id)) fail(`${where} id 重複`)
-  else seen.add(j.id)
-  if (!j.name) fail(`${where} 缺 name`)
-  if (!j.category) fail(`${where} 缺 category`)
-  else if (!catIds.has(j.category))
-    fail(`${where} 的 category "${j.category}" 不在 CATEGORIES`)
-  if (!j.color) fail(`${where} 缺 color`)
-  if (!j.soon) {
-    if (!j.url) fail(`${where} 不是 soon,卻沒有 url`)
-    else if (!/^https?:\/\//.test(j.url))
-      fail(`${where} 的 url 不是 http(s) 開頭:${j.url}`)
-  }
+  if (!col.title) fail(`${where} 缺 title`)
+  if (!Array.isArray(col.items) || col.items.length === 0)
+    fail(`${where} 沒有 items`)
+  const seenItem = new Set()
+  for (const [i, it] of (col.items || []).entries())
+    checkCard(it, `${where}.items[${i}] (${it && it.id ? it.id : '無 id'})`, seenItem)
+  if (!referenced.has(key))
+    fail(`${where} 沒有任何 JOURNEYS 卡片連到它(孤兒合輯)`)
 }
 
 // —— 2. 檔案接線(referenced assets 真的存在) ——
@@ -100,6 +129,11 @@ if (errors.length) {
   for (const e of errors) console.error('  - ' + e)
   process.exit(1)
 }
+const colItems = Object.values(collections).reduce(
+  (n, c) => n + ((c && c.items && c.items.length) || 0),
+  0
+)
 console.log(
-  `✓ 煙霧測試通過:${JOURNEYS.length} 個旅程、${CATEGORIES.length} 個分類,接線與離線清單齊備。`
+  `✓ 煙霧測試通過:${JOURNEYS.length} 張首頁卡片、${CATEGORIES.length} 個分類、` +
+    `${Object.keys(collections).length} 個合輯(共 ${colItems} 關),接線與離線清單齊備。`
 )

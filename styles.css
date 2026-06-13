@@ -165,6 +165,32 @@ body {
   font-size: clamp(12px, 1.8vw, 16px);
 }
 
+/* —— 合輯內頁:返回鈕 —— */
+.backlink {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: clamp(14px, 2.2vw, 18px);
+  font-weight: 700;
+  color: var(--gold);
+  text-decoration: none;
+  padding: 8px 16px;
+  margin-bottom: 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  transition: transform 0.12s ease, background 0.12s ease;
+}
+.backlink:hover,
+.backlink:focus-visible {
+  transform: translateX(-2px);
+  background: rgba(255, 255, 255, 0.12);
+  outline: none;
+}
+.subhub__head .cat__name {
+  color: color-mix(in srgb, var(--accent) 45%, var(--ink));
+}
+
 /* —— 卡片牆:格子滿了自動往下排,能裝無限多旅程 —— */
 .grid {
   display: grid;

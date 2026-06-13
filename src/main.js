@@ -1,54 +1,94 @@
 // 進入點:把 data.js 的旅程清單畫成「分類 + 卡片牆」。
-// 純讀資料、不含遊戲邏輯;點卡片就連到各遊戲自己的網址。
-import { CATEGORIES, JOURNEYS } from './data.js'
+// 純讀資料、不含遊戲邏輯;點直達卡片就連到各遊戲網址,點合輯卡片就就地展開那組關卡。
+import { CATEGORIES, JOURNEYS, COLLECTIONS } from './data.js'
 
 const app = document.getElementById('app')
 
-// 只渲染「有卡片」的分類,空分類不顯示(避免出現空蕩蕩的標題)。
-for (const cat of CATEGORIES) {
-  const items = JOURNEYS.filter((j) => j.category === cat.id)
-  if (items.length === 0) continue
+// —— 一張卡片(直達 / 合輯 / 敬請期待 共用) ——
+//   有 collection → 合輯卡片(href=#/<id>,點了走 hash 路由、不離開大廳)。
+//   有 url 且非 soon → 直達卡片(連到該遊戲網址)。
+//   soon → 不可點的「敬請期待」。
+function makeCard(j) {
+  const isCollection = !!j.collection
+  const clickable = isCollection || (!j.soon && j.url)
+  const card = clickable ? document.createElement('a') : document.createElement('div')
+  card.className = 'card' + (j.soon ? ' card--soon' : '')
+  card.style.setProperty('--accent', j.color || '#3b6ea5')
 
+  let cta = '敬請期待'
+  if (isCollection) {
+    card.href = `#/${j.collection}`
+    card.setAttribute('aria-label', `展開 ${j.name}`)
+    cta = '展開 →'
+  } else if (clickable) {
+    card.href = j.url
+    // 同分頁開啟:大廳是「門口」,點了就走進該遊戲。
+    card.setAttribute('aria-label', `進入 ${j.name}`)
+    cta = '進入 →'
+  }
+
+  card.innerHTML = `
+    <div class="card__emoji" aria-hidden="true">${j.emoji || '✦'}</div>
+    <div class="card__text">
+      <div class="card__name">${j.name}</div>
+      <div class="card__sub">${j.subtitle || ''}</div>
+    </div>
+    <div class="card__cta">${cta}</div>
+  `
+  return card
+}
+
+// —— 首頁(大廳):分類 + 卡片牆。只渲染「有卡片」的分類。 ——
+function renderHome() {
+  app.innerHTML = ''
+  for (const cat of CATEGORIES) {
+    const items = JOURNEYS.filter((j) => j.category === cat.id)
+    if (items.length === 0) continue
+
+    const section = document.createElement('section')
+    section.className = 'cat'
+    section.innerHTML = `<div class="cat__head"><h2 class="cat__name">${cat.name}</h2>${
+      cat.desc ? `<p class="cat__desc">${cat.desc}</p>` : ''
+    }</div>`
+
+    const grid = document.createElement('div')
+    grid.className = 'grid'
+    for (const j of items) grid.appendChild(makeCard(j))
+    section.appendChild(grid)
+    app.appendChild(section)
+  }
+}
+
+// —— 合輯內頁:標題 + 返回鈕 + 該組關卡卡片牆 ——
+function renderCollection(col) {
+  app.innerHTML = ''
   const section = document.createElement('section')
   section.className = 'cat'
-
-  const head = document.createElement('div')
-  head.className = 'cat__head'
-  head.innerHTML = `<h2 class="cat__name">${cat.name}</h2>${
-    cat.desc ? `<p class="cat__desc">${cat.desc}</p>` : ''
-  }`
-  section.appendChild(head)
+  section.style.setProperty('--accent', col.color || '#3b6ea5')
+  section.innerHTML = `
+    <a class="backlink" href="#/" aria-label="返回大廳">← 返回大廳</a>
+    <div class="cat__head subhub__head">
+      <h2 class="cat__name">${col.emoji || ''} ${col.title}</h2>
+      ${col.desc ? `<p class="cat__desc">${col.desc}</p>` : ''}
+    </div>`
 
   const grid = document.createElement('div')
   grid.className = 'grid'
-
-  for (const j of items) {
-    const card = j.soon
-      ? document.createElement('div')
-      : document.createElement('a')
-    card.className = 'card' + (j.soon ? ' card--soon' : '')
-    card.style.setProperty('--accent', j.color || '#3b6ea5')
-
-    if (!j.soon) {
-      card.href = j.url
-      // 同分頁開啟:大廳是「門口」,點了就走進該遊戲。
-      card.setAttribute('aria-label', `進入 ${j.name}`)
-    }
-
-    card.innerHTML = `
-      <div class="card__emoji" aria-hidden="true">${j.emoji || '✦'}</div>
-      <div class="card__text">
-        <div class="card__name">${j.name}</div>
-        <div class="card__sub">${j.subtitle || ''}</div>
-      </div>
-      <div class="card__cta">${j.soon ? '敬請期待' : '進入 →'}</div>
-    `
-    grid.appendChild(card)
-  }
-
+  for (const item of col.items || []) grid.appendChild(makeCard(item))
   section.appendChild(grid)
   app.appendChild(section)
 }
+
+// —— hash 路由:#/<合輯id> → 合輯內頁;其餘 → 大廳。 ——
+function route() {
+  const m = (location.hash || '').match(/^#\/([\w-]+)$/)
+  const col = m && COLLECTIONS[m[1]]
+  if (col) renderCollection(col)
+  else renderHome()
+  window.scrollTo(0, 0)
+}
+window.addEventListener('hashchange', route)
+route()
 
 // —— 「安裝到手機/主畫面」按鈕(vanilla 版,邏輯同 pwa-install-button skill) ——
 // listener 必須在模組最上層、越早越好:beforeinstallprompt 只觸發一次且很早,
