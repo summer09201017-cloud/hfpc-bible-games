@@ -1,6 +1,7 @@
 // 進入點:把 data.js 的旅程清單畫成「分類 + 卡片牆」。
 // 純讀資料、不含遊戲邏輯;點直達卡片就連到各遊戲網址,點合輯卡片就就地展開那組關卡。
 import { CATEGORIES, JOURNEYS, COLLECTIONS } from './data.js'
+import { renderScoreboard } from './scoreboard.js'
 
 const app = document.getElementById('app')
 
@@ -79,11 +80,12 @@ function renderCollection(col) {
   app.appendChild(section)
 }
 
-// —— hash 路由:#/<合輯id> → 合輯內頁;其餘 → 大廳。 ——
+// —— hash 路由:#/scoreboard → 計分板;#/<合輯id> → 合輯內頁;其餘 → 大廳。 ——
 function route() {
   const m = (location.hash || '').match(/^#\/([\w-]+)$/)
-  const col = m && COLLECTIONS[m[1]]
-  if (col) renderCollection(col)
+  const key = m && m[1]
+  if (key === 'scoreboard') renderScoreboard(app)
+  else if (key && COLLECTIONS[key]) renderCollection(COLLECTIONS[key])
   else renderHome()
   window.scrollTo(0, 0)
 }

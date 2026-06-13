@@ -78,6 +78,7 @@ const mustExist = [
   'styles.css',
   'src/main.js',
   'src/data.js',
+  'src/scoreboard.js',
   'public/sw.js',
   'public/manifest.webmanifest',
   'public/icon.svg',
@@ -92,7 +93,7 @@ if (!/src\/main\.js/.test(html)) fail('index.html 沒有載入 src/main.js')
 // —— 3. Service Worker app shell 清單 ——
 const sw = existsSync(join(root, 'public/sw.js')) ? read('public/sw.js') : ''
 if (!/const\s+CACHE\s*=/.test(sw)) fail('sw.js 沒有 CACHE 版本號')
-for (const need of ['/index.html', '/styles.css', '/src/main.js', '/src/data.js'])
+for (const need of ['/index.html', '/styles.css', '/src/main.js', '/src/data.js', '/src/scoreboard.js'])
   if (!sw.includes(`'${need}'`))
     fail(`sw.js 的預快取清單 CORE 漏了 ${need}(離線會缺檔)`)
 

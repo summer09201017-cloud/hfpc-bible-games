@@ -165,6 +165,163 @@ body {
   font-size: clamp(12px, 1.8vw, 16px);
 }
 
+/* —— 標題列導覽鈕(計分板入口) —— */
+.hero__nav {
+  margin-top: 12px;
+}
+.topbtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: clamp(15px, 2.4vw, 19px);
+  font-weight: 800;
+  color: #0a1b2e;
+  background: var(--gold);
+  text-decoration: none;
+  padding: 9px 20px;
+  border-radius: 999px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.topbtn:hover,
+.topbtn:focus-visible {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.4);
+  outline: none;
+}
+
+/* —— 分組計分板(投影大字、老師操作) —— */
+.sb__list {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(10px, 1.6vw, 16px);
+}
+.sb__empty {
+  color: var(--ink-dim);
+  font-size: clamp(15px, 2.4vw, 19px);
+  text-align: center;
+  padding: 20px;
+}
+.sb__team {
+  --team: #3b6ea5;
+  display: flex;
+  align-items: center;
+  gap: clamp(10px, 1.6vw, 18px);
+  padding: clamp(12px, 1.8vw, 18px) clamp(14px, 2vw, 22px);
+  border-radius: 16px;
+  background: linear-gradient(
+    150deg,
+    var(--card-bg) 0%,
+    color-mix(in srgb, var(--team) 26%, var(--card-bg)) 100%
+  );
+  border: 2px solid color-mix(in srgb, var(--team) 60%, transparent);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.sb__team--lead {
+  border-color: var(--gold);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.4),
+    0 0 0 3px color-mix(in srgb, var(--gold) 55%, transparent);
+}
+.sb__rank {
+  flex: 0 0 auto;
+  width: clamp(34px, 6vw, 52px);
+  text-align: center;
+  font-size: clamp(26px, 5vw, 42px);
+  line-height: 1;
+}
+.sb__name {
+  flex: 1 1 auto;
+  min-width: 0;
+  font: inherit;
+  font-size: clamp(20px, 3.4vw, 30px);
+  font-weight: 800;
+  color: var(--ink);
+  background: transparent;
+  border: none;
+  border-bottom: 2px dashed transparent;
+  padding: 4px 2px;
+}
+.sb__name:hover {
+  border-bottom-color: rgba(255, 255, 255, 0.25);
+}
+.sb__name:focus {
+  outline: none;
+  border-bottom-color: var(--gold);
+}
+.sb__score {
+  flex: 0 0 auto;
+  min-width: clamp(56px, 12vw, 110px);
+  text-align: right;
+  font-size: clamp(34px, 8vw, 64px);
+  font-weight: 800;
+  line-height: 1;
+  color: var(--gold);
+  font-variant-numeric: tabular-nums;
+}
+.sb__btns {
+  flex: 0 0 auto;
+  display: flex;
+  gap: clamp(6px, 1vw, 10px);
+}
+.sb__btn {
+  font: inherit;
+  font-size: clamp(16px, 2.6vw, 22px);
+  font-weight: 800;
+  min-width: clamp(44px, 7vw, 60px);
+  min-height: clamp(44px, 7vw, 56px);
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+  color: #0a1b2e;
+  transition: transform 0.1s ease, filter 0.1s ease;
+}
+.sb__btn:active {
+  transform: scale(0.93);
+}
+.sb__btn--up {
+  background: #6fcf8e;
+}
+.sb__btn--up5 {
+  background: var(--gold);
+}
+.sb__btn--down {
+  background: #cfd8e3;
+}
+.sb__btn--rm {
+  background: transparent;
+  color: var(--ink-dim);
+  min-width: clamp(34px, 5vw, 44px);
+  font-weight: 700;
+}
+.sb__btn--rm:hover {
+  color: #ff8d8d;
+}
+.sb__controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: center;
+  margin-top: clamp(18px, 3vh, 30px);
+}
+.sb__ctrl {
+  font: inherit;
+  font-size: clamp(15px, 2.2vw, 18px);
+  font-weight: 700;
+  color: var(--ink);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  padding: 10px 22px;
+  cursor: pointer;
+}
+.sb__ctrl:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+.sb__ctrl--reset:hover {
+  color: #ffb38a;
+}
+
 /* —— 合輯內頁:返回鈕 —— */
 .backlink {
   display: inline-flex;
