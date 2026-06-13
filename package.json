@@ -1,0 +1,14 @@
+{
+  "name": "hfpc-bible-games",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "description": "聖經闖關大富翁遊戲 — 總入口大廳(連到各旅程:約拿、保羅…)",
+  "scripts": {
+    "dev": "node scripts/serve.mjs .",
+    "build": "node scripts/bundle-static.mjs",
+    "preview": "node scripts/serve.mjs site",
+    "test": "node scripts/smoke-test.mjs",
+    "test:offline": "node scripts/smoke-test.mjs --offline"
+  }
+}
