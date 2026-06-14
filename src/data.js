@@ -147,6 +147,17 @@ export const COLLECTIONS = {
         url: 'https://hfpc-war-games.netlify.app/?level=jehoshaphat',
       },
       {
+        // 反轉奇兵(巴蘭的驢 民22):住在「約拿引擎」repo,?level=balaam 閃避動作關。
+        // 與「逆轉奇兵」合輯共用同一關(深連結,不複製;改一處兩邊都更新)。
+        // ✅ 2026-06-14:同摩西/聖歌,部署在 hfpc-war-games,卡片正式亮。
+        id: 'balaam',
+        name: '反轉奇兵',
+        subtitle: '民 22・巴蘭的驢,神攔阻得勝',
+        color: '#8a6d3b',
+        emoji: '🫏',
+        url: 'https://hfpc-war-games.netlify.app/?level=balaam',
+      },
+      {
         // 紅海奔逃:設計稿 + config/scripture 就緒,關卡程式(redsea.js)待寫。
         id: 'redsea',
         name: '紅海奔逃',
@@ -174,12 +185,13 @@ export const COLLECTIONS = {
         soon: true,
       },
       {
+        // ✅ 2026-06-14:已部署 hfpc-war-games(?level=balaam);與「戰爭闖關合輯」共用同一關。
         id: 'donkey',
         name: '反轉奇兵',
         subtitle: '民 22・巴蘭的驢開口',
         color: '#8a6d3b',
         emoji: '🫏',
-        soon: true,
+        url: 'https://hfpc-war-games.netlify.app/?level=balaam',
       },
       {
         id: 'cornelius',
@@ -190,12 +202,13 @@ export const COLLECTIONS = {
         soon: true,
       },
       {
+        // ✅ 2026-06-14:已部署 hfpc-war-games(?level=jehoshaphat);與「戰爭闖關合輯」共用同一關。
         id: 'jehoshaphat',
         name: '聖歌奇兵',
-        subtitle: '代下 20・約沙法唱詩歌得勝(設計稿已備)',
+        subtitle: '代下 20・約沙法唱詩歌得勝',
         color: '#9a4ca8',
         emoji: '🎵',
-        soon: true,
+        url: 'https://hfpc-war-games.netlify.app/?level=jehoshaphat',
       },
       {
         id: 'elijah',
