@@ -114,17 +114,15 @@ export const COLLECTIONS = {
     emoji: '⚔️',
     items: [
       {
-        // 摩西舉手之戰:住在「約拿引擎」repo(vanilla JS),?level=moses 可單機直玩。
-        // ⚠ 現況:原型已完成、手感已驗證,但尚未 commit/部署 →「敬請期待」。
-        //   上線路徑(二擇一,見 HANDOFF):①搬進保羅 repo 當出埃及闖關站(永久家);
-        //   或 ②若決定讓約拿站獨立上線,push 約拿 main 後此 url 即生效。屆時拿掉 soon。
+        // 摩西舉手之戰:住在「約拿引擎」repo(vanilla JS),?level=moses。
+        // ✅ 2026-06-14:部署到「戰爭原型」獨立站 hfpc-war-games(不碰線上約拿六關站),卡片正式亮。
+        //   永久家仍是保羅 repo(見 HANDOFF);營會後有空再搬,屆時把 url 改指向保羅站即可。
         id: 'moses',
         name: '摩西舉手之戰',
         subtitle: '出 17・撐住舉手,亞倫戶珥扶手',
         color: '#c98a2b',
         emoji: '🙌',
-        url: 'https://hfpc-jonah-game.netlify.app/?level=moses',
-        soon: true,
+        url: 'https://hfpc-war-games.netlify.app/?level=moses',
       },
       {
         // 大衛甩石:住在「保羅大富翁」repo,src/minigames/sling/,?demo=sling 可單獨玩。
@@ -135,6 +133,18 @@ export const COLLECTIONS = {
         color: '#3a8d6b',
         emoji: '🎯',
         url: 'https://hfpc-paul-game.netlify.app/?demo=sling',
+      },
+      {
+        // 聖歌奇兵(約沙法):住在「約拿引擎」repo(vanilla JS),?level=jehoshaphat 動作關。
+        // 代下 20——詩班走在軍隊前面讚美,神設伏兵,猶大不戰而勝(最典型「不靠刀槍、靠倚靠神」)。
+        // 與「逆轉奇兵」合輯共用同一關(深連結,不複製;改一處兩邊都更新)。
+        // ✅ 2026-06-14:同摩西,部署到「戰爭原型」獨立站 hfpc-war-games,卡片正式亮。
+        id: 'jehoshaphat',
+        name: '聖歌奇兵',
+        subtitle: '代下 20・詩班讚美,神設伏兵得勝',
+        color: '#9a4ca8',
+        emoji: '🎵',
+        url: 'https://hfpc-war-games.netlify.app/?level=jehoshaphat',
       },
       {
         // 紅海奔逃:設計稿 + config/scripture 就緒,關卡程式(redsea.js)待寫。
