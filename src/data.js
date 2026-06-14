@@ -194,12 +194,13 @@ export const COLLECTIONS = {
         url: 'https://hfpc-war-games.netlify.app/?level=balaam',
       },
       {
+        // ✅ 2026-06-15：福音奇兵上線（保羅大富翁卡片關，?demo=cornelius，牧者已審文案）。
         id: 'cornelius',
         name: '福音奇兵',
         subtitle: '徒 10・彼得向哥尼流傳福音',
         color: '#3a8d8d',
         emoji: '🕊️',
-        soon: true,
+        url: 'https://hfpc-paul-game.netlify.app/?demo=cornelius',
       },
       {
         // ✅ 2026-06-14:已部署 hfpc-war-games(?level=jehoshaphat);與「戰爭闖關合輯」共用同一關。
