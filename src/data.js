@@ -158,13 +158,14 @@ export const COLLECTIONS = {
         url: 'https://hfpc-war-games.netlify.app/?level=balaam',
       },
       {
-        // 紅海奔逃:設計稿 + config/scripture 就緒,關卡程式(redsea.js)待寫。
+        // ✅ 2026-06-15:紅海奔逃動作關復活(保羅 ?demo=redsea,約拿引擎 level 8,出 14)。
+        //   決策①(A):動作版獨立入口、不併入保羅旅程。⚠ 需先合併並部署 paul「feat/redsea-demo」才會生效。
         id: 'redsea',
         name: '紅海奔逃',
-        subtitle: '出 14・敬請期待',
+        subtitle: '出 14・站住等候,神開海路',
         color: '#2b6fa8',
         emoji: '🌊',
-        soon: true,
+        url: 'https://hfpc-paul-game.netlify.app/?demo=redsea',
       },
     ],
   },
