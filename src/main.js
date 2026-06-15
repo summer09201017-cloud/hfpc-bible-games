@@ -15,8 +15,8 @@ const THEMES = [
 ]
 const THEME_KEY = 'hub-theme'
 function applyTheme(id) {
-  // 預設皮(mint)沒有對應的 [data-theme] 規則 → 清掉 data-theme,直接用 :root 預設。
-  if (id && id !== 'mint') document.documentElement.dataset.theme = id
+  // 預設皮(cream 暖米白)沒有對應的 [data-theme] 規則 → 清掉 data-theme,直接用 :root 預設。
+  if (id && id !== 'cream') document.documentElement.dataset.theme = id
   else delete document.documentElement.dataset.theme
   try { localStorage.setItem(THEME_KEY, id) } catch {}
   document.querySelectorAll('.theme-pick__dot').forEach((d) =>
@@ -40,7 +40,7 @@ function renderThemePick() {
   }
 }
 const savedTheme =
-  (() => { try { return localStorage.getItem(THEME_KEY) } catch { return null } })() || 'mint'
+  (() => { try { return localStorage.getItem(THEME_KEY) } catch { return null } })() || 'cream'
 renderThemePick()
 applyTheme(savedTheme)
 

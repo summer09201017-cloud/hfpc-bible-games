@@ -2,29 +2,29 @@
    設計重點(主日學/投影/平板):大字、大卡片、好點、橫直向都好看。 */
 
 /* —— 換色外皮(2026-06-15):整個大廳的顏色都走 CSS 變數,換皮只改下面這組變數。
-   預設 = 淺薄荷綠;其他皮見 [data-theme=...](由 src/main.js 依 localStorage 切換)。 */
+   預設 = 暖米白(2026-06-15 改);其他皮見 [data-theme=...](由 src/main.js 依 localStorage 切換)。 */
 :root {
-  --bg-glow: #f7fcf8; /* 背景頂部光暈 */
-  --bg-top: #f1f8f2;
-  --bg-bot: #e0f0e6;
-  --ink: #243b32; /* 主文字 */
-  --ink-dim: #5b6f62; /* 次文字 */
-  --card-bg: #ffffff; /* 卡片/面板底(再依各卡 accent 染色) */
+  --bg-glow: #fffdf7; /* 背景頂部光暈 */
+  --bg-top: #fdfaf3;
+  --bg-bot: #f4ead6;
+  --ink: #2c3a30; /* 主文字 */
+  --ink-dim: #6b7a6e; /* 次文字 */
+  --card-bg: #fffdf8; /* 卡片/面板底(再依各卡 accent 染色) */
   --gold: #c1772e; /* 強調色:按鈕底 + 重點字 */
-  --title-from: #3a8d6b; /* 大標漸層起 */
-  --title-to: #c1772e; /* 大標漸層迄 */
+  --title-from: #c1772e; /* 大標漸層起 */
+  --title-to: #9a4ca8; /* 大標漸層迄 */
   --line: rgba(0, 0, 0, 0.12); /* 細邊線/分隔線 */
-  --line-strong: rgba(0, 0, 0, 0.28);
+  --line-strong: rgba(0, 0, 0, 0.26);
   --overlay: rgba(0, 0, 0, 0.05); /* 次要按鈕/返回鈕底 */
   --overlay-hover: rgba(0, 0, 0, 0.09);
 }
 
-/* 暖米白 */
-[data-theme="cream"] {
-  --bg-glow: #fffdf7; --bg-top: #fdfaf3; --bg-bot: #f4ead6;
-  --ink: #2c3a30; --ink-dim: #6b7a6e; --card-bg: #fffdf8;
-  --gold: #c1772e; --title-from: #c1772e; --title-to: #9a4ca8;
-  --line: rgba(0, 0, 0, 0.12); --line-strong: rgba(0, 0, 0, 0.26);
+/* 淺薄荷綠 */
+[data-theme="mint"] {
+  --bg-glow: #f7fcf8; --bg-top: #f1f8f2; --bg-bot: #e0f0e6;
+  --ink: #243b32; --ink-dim: #5b6f62; --card-bg: #ffffff;
+  --gold: #c1772e; --title-from: #3a8d6b; --title-to: #c1772e;
+  --line: rgba(0, 0, 0, 0.12); --line-strong: rgba(0, 0, 0, 0.28);
   --overlay: rgba(0, 0, 0, 0.05); --overlay-hover: rgba(0, 0, 0, 0.09);
 }
 /* 淺天藍 */
