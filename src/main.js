@@ -5,6 +5,45 @@ import { renderScoreboard } from './scoreboard.js'
 
 const app = document.getElementById('app')
 
+// —— 換色外皮:5 種背景皮,localStorage 記住;預設淺薄荷綠(= :root,不設 data-theme) ——
+const THEMES = [
+  { id: 'cream', name: '暖米白', sw: 'linear-gradient(135deg,#fdfaf3,#f4ead6)' },
+  { id: 'sky', name: '淺天藍', sw: 'linear-gradient(135deg,#f0f7fd,#dbeafe)' },
+  { id: 'mint', name: '淺薄荷綠', sw: 'linear-gradient(135deg,#f1f8f2,#e0f0e6)' },
+  { id: 'apricot', name: '暖杏橘', sw: 'linear-gradient(135deg,#fdf3ea,#fbe6d2)' },
+  { id: 'night', name: '深藍夜間', sw: 'linear-gradient(135deg,#1d4a73,#0a1b2e)' },
+]
+const THEME_KEY = 'hub-theme'
+function applyTheme(id) {
+  // 預設皮(mint)沒有對應的 [data-theme] 規則 → 清掉 data-theme,直接用 :root 預設。
+  if (id && id !== 'mint') document.documentElement.dataset.theme = id
+  else delete document.documentElement.dataset.theme
+  try { localStorage.setItem(THEME_KEY, id) } catch {}
+  document.querySelectorAll('.theme-pick__dot').forEach((d) =>
+    d.setAttribute('aria-pressed', String(d.dataset.theme === id)),
+  )
+}
+function renderThemePick() {
+  const slot = document.getElementById('theme-slot')
+  if (!slot) return
+  slot.innerHTML = ''
+  for (const t of THEMES) {
+    const b = document.createElement('button')
+    b.type = 'button'
+    b.className = 'theme-pick__dot'
+    b.dataset.theme = t.id
+    b.style.background = t.sw
+    b.title = `背景:${t.name}`
+    b.setAttribute('aria-label', `背景顏色:${t.name}`)
+    b.addEventListener('click', () => applyTheme(t.id))
+    slot.appendChild(b)
+  }
+}
+const savedTheme =
+  (() => { try { return localStorage.getItem(THEME_KEY) } catch { return null } })() || 'mint'
+renderThemePick()
+applyTheme(savedTheme)
+
 // —— 一張卡片(直達 / 合輯 / 敬請期待 共用) ——
 //   有 collection → 合輯卡片(href=#/<id>,點了走 hash 路由、不離開大廳)。
 //   有 url 且非 soon → 直達卡片(連到該遊戲網址)。

@@ -1,13 +1,55 @@
 /* 聖經闖關大富翁遊戲 — 總入口大廳樣式
    設計重點(主日學/投影/平板):大字、大卡片、好點、橫直向都好看。 */
 
+/* —— 換色外皮(2026-06-15):整個大廳的顏色都走 CSS 變數,換皮只改下面這組變數。
+   預設 = 淺薄荷綠;其他皮見 [data-theme=...](由 src/main.js 依 localStorage 切換)。 */
 :root {
-  --bg-top: #102a43;
-  --bg-bot: #0a1b2e;
-  --ink: #eaf2fb;
-  --ink-dim: #9fb6cf;
-  --card-bg: #15314f;
-  --gold: #ffd479;
+  --bg-glow: #f7fcf8; /* 背景頂部光暈 */
+  --bg-top: #f1f8f2;
+  --bg-bot: #e0f0e6;
+  --ink: #243b32; /* 主文字 */
+  --ink-dim: #5b6f62; /* 次文字 */
+  --card-bg: #ffffff; /* 卡片/面板底(再依各卡 accent 染色) */
+  --gold: #c1772e; /* 強調色:按鈕底 + 重點字 */
+  --title-from: #3a8d6b; /* 大標漸層起 */
+  --title-to: #c1772e; /* 大標漸層迄 */
+  --line: rgba(0, 0, 0, 0.12); /* 細邊線/分隔線 */
+  --line-strong: rgba(0, 0, 0, 0.28);
+  --overlay: rgba(0, 0, 0, 0.05); /* 次要按鈕/返回鈕底 */
+  --overlay-hover: rgba(0, 0, 0, 0.09);
+}
+
+/* 暖米白 */
+[data-theme="cream"] {
+  --bg-glow: #fffdf7; --bg-top: #fdfaf3; --bg-bot: #f4ead6;
+  --ink: #2c3a30; --ink-dim: #6b7a6e; --card-bg: #fffdf8;
+  --gold: #c1772e; --title-from: #c1772e; --title-to: #9a4ca8;
+  --line: rgba(0, 0, 0, 0.12); --line-strong: rgba(0, 0, 0, 0.26);
+  --overlay: rgba(0, 0, 0, 0.05); --overlay-hover: rgba(0, 0, 0, 0.09);
+}
+/* 淺天藍 */
+[data-theme="sky"] {
+  --bg-glow: #f7fbff; --bg-top: #f0f7fd; --bg-bot: #dbeafe;
+  --ink: #243b52; --ink-dim: #5b7088; --card-bg: #ffffff;
+  --gold: #2b6fa8; --title-from: #2b6fa8; --title-to: #c1772e;
+  --line: rgba(20, 40, 70, 0.14); --line-strong: rgba(20, 40, 70, 0.3);
+  --overlay: rgba(20, 40, 70, 0.05); --overlay-hover: rgba(20, 40, 70, 0.1);
+}
+/* 暖杏橘 */
+[data-theme="apricot"] {
+  --bg-glow: #fff8f1; --bg-top: #fdf3ea; --bg-bot: #fbe6d2;
+  --ink: #4a3b2e; --ink-dim: #7a6753; --card-bg: #fffdfa;
+  --gold: #b85c2e; --title-from: #c1772e; --title-to: #a8324a;
+  --line: rgba(60, 40, 20, 0.13); --line-strong: rgba(60, 40, 20, 0.28);
+  --overlay: rgba(60, 40, 20, 0.05); --overlay-hover: rgba(60, 40, 20, 0.1);
+}
+/* 深藍夜間(原本的深色,暗房投影好用) */
+[data-theme="night"] {
+  --bg-glow: #1d4a73; --bg-top: #102a43; --bg-bot: #0a1b2e;
+  --ink: #eaf2fb; --ink-dim: #9fb6cf; --card-bg: #15314f;
+  --gold: #ffd479; --title-from: #ffffff; --title-to: #ffd479;
+  --line: rgba(255, 255, 255, 0.12); --line-strong: rgba(255, 255, 255, 0.25);
+  --overlay: rgba(255, 255, 255, 0.07); --overlay-hover: rgba(255, 255, 255, 0.13);
 }
 
 * {
@@ -28,7 +70,7 @@ body {
   color: var(--ink);
   background: radial-gradient(
       120% 90% at 50% -10%,
-      #1d4a73 0%,
+      var(--bg-glow) 0%,
       var(--bg-top) 45%,
       var(--bg-bot) 100%
     )
@@ -50,16 +92,44 @@ body {
   font-size: clamp(28px, 6vw, 56px);
   font-weight: 800;
   letter-spacing: 0.04em;
-  background: linear-gradient(180deg, #fff 0%, var(--gold) 130%);
+  background: linear-gradient(180deg, var(--title-from) 0%, var(--title-to) 130%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
-  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
 }
 .hero__subtitle {
   margin: 10px 0 0;
   font-size: clamp(14px, 2.4vw, 20px);
   color: var(--ink-dim);
+}
+
+/* —— 換色外皮:一排小色點(由 src/main.js 注入;localStorage 記住選擇) —— */
+.theme-pick {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+.theme-pick__dot {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  padding: 0;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+.theme-pick__dot:hover,
+.theme-pick__dot:focus-visible {
+  transform: scale(1.12);
+  outline: none;
+}
+.theme-pick__dot[aria-pressed="true"] {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--gold) 45%, transparent);
 }
 
 /* —— 安裝按鈕(不能裝時 JS 不會塞,所以平常是空的) —— */
@@ -102,9 +172,9 @@ body {
   padding: 20px;
 }
 .install-ios__card {
-  background: #15314f;
+  background: var(--card-bg);
   color: var(--ink);
-  border: 1px solid rgba(255, 255, 255, 0.16);
+  border: 1px solid var(--line);
   border-radius: 18px;
   padding: 22px 24px;
   max-width: 380px;
@@ -150,7 +220,7 @@ body {
   align-items: baseline;
   gap: 12px;
   flex-wrap: wrap;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid var(--line);
   padding-bottom: 8px;
   margin-bottom: 16px;
 }
@@ -243,7 +313,7 @@ body {
   padding: 4px 2px;
 }
 .sb__name:hover {
-  border-bottom-color: rgba(255, 255, 255, 0.25);
+  border-bottom-color: var(--line-strong);
 }
 .sb__name:focus {
   outline: none;
@@ -309,14 +379,14 @@ body {
   font-size: clamp(15px, 2.2vw, 18px);
   font-weight: 700;
   color: var(--ink);
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: var(--overlay);
+  border: 1px solid var(--line);
   border-radius: 999px;
   padding: 10px 22px;
   cursor: pointer;
 }
 .sb__ctrl:hover {
-  background: rgba(255, 255, 255, 0.14);
+  background: var(--overlay-hover);
 }
 .sb__ctrl--reset:hover {
   color: #ffb38a;
@@ -334,14 +404,14 @@ body {
   padding: 8px 16px;
   margin-bottom: 8px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
-  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: var(--overlay);
+  border: 1px solid var(--line);
   transition: transform 0.12s ease, background 0.12s ease;
 }
 .backlink:hover,
 .backlink:focus-visible {
   transform: translateX(-2px);
-  background: rgba(255, 255, 255, 0.12);
+  background: var(--overlay-hover);
   outline: none;
 }
 .subhub__head .cat__name {
@@ -392,7 +462,7 @@ body {
     color-mix(in srgb, var(--accent) 22%, var(--card-bg)) 100%
   );
   border: 2px solid color-mix(in srgb, var(--accent) 55%, transparent);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12);
   transition: transform 0.12s ease, box-shadow 0.12s ease,
     border-color 0.12s ease;
 }
@@ -400,7 +470,7 @@ body {
 .card:focus-visible {
   transform: translateY(-3px);
   border-color: var(--accent);
-  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4),
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.18),
     0 0 0 3px color-mix(in srgb, var(--accent) 40%, transparent);
   outline: none;
 }
@@ -412,7 +482,7 @@ body {
   font-size: clamp(34px, 7vw, 52px);
   line-height: 1;
   flex: 0 0 auto;
-  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.4));
+  filter: drop-shadow(0 3px 6px rgba(0, 0, 0, 0.18));
 }
 .card__text {
   flex: 1 1 auto;
