@@ -230,13 +230,13 @@ export const COLLECTIONS = {
       },
       // ───────────── 動作版(5):即時 Canvas 闖關 ─────────────
       {
-        // 🚧 福音動作版待做(徒 10 異象→出發傳福音)——目前福音只有卡片版。
+        // ✅ 2026-06-15:福音動作版上線(跑酷,約帕→該撒利亞,?demo=cornelius-action)。需 paul feat/cornelius-action 部署。
         id: 'cornelius-action',
         name: '福音奇兵·動作版',
-        subtitle: '徒 10・敬請期待',
+        subtitle: '徒 10・順服聖靈,出發傳福音',
         color: '#3a8d8d',
         emoji: '🕊️',
-        soon: true,
+        url: 'https://hfpc-paul-game.netlify.app/?demo=cornelius-action',
       },
       {
         // ✅ 2026-06-15:盼望動作版上線(以利亞曠野撿餅水恢復體力,?demo=elijah-action)。
