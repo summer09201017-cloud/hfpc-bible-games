@@ -355,6 +355,26 @@ body {
   gap: clamp(12px, 2vw, 20px);
 }
 
+/* —— 逆轉奇兵:固定 2 欄、先填滿左欄(卡片版)再填右欄(動作版),每橫列是同一個奇兵 —— */
+.grid--paired {
+  grid-template-columns: 1fr 1fr;
+  grid-auto-flow: column;
+  align-items: stretch;
+}
+/* 兩欄標題,對齊上面 2 欄 */
+.pairhead {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(12px, 2vw, 20px);
+  margin: 4px 0 10px;
+}
+.pairhead span {
+  text-align: center;
+  font-weight: 700;
+  opacity: 0.72;
+  font-size: clamp(14px, 1.7vw, 19px);
+}
+
 /* —— 卡片 —— */
 .card {
   --accent: #3b6ea5;

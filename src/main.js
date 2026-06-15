@@ -73,10 +73,26 @@ function renderCollection(col) {
       ${col.desc ? `<p class="cat__desc">${col.desc}</p>` : ''}
     </div>`
 
-  const grid = document.createElement('div')
-  grid.className = 'grid'
-  for (const item of col.items || []) grid.appendChild(makeCard(item))
-  section.appendChild(grid)
+  const items = col.items || []
+  // 逆轉奇兵:5 列 2 欄(col.paired)——左欄=前半「卡片版」、右欄=後半「動作版」,
+  //   靠 grid-auto-flow:column 先填滿左欄再填右欄;data.js 內前 5 筆=卡片版、後 5 筆=動作版,
+  //   且兩半奇兵順序一致(福音/盼望/大光/聖歌/反轉),所以每一橫列剛好是同一個奇兵。
+  if (col.paired && items.length >= 2) {
+    const head = document.createElement('div')
+    head.className = 'pairhead'
+    head.innerHTML = `<span>📖 卡片版</span><span>🎮 動作版</span>`
+    section.appendChild(head)
+    const grid = document.createElement('div')
+    grid.className = 'grid grid--paired'
+    grid.style.gridTemplateRows = `repeat(${Math.ceil(items.length / 2)}, auto)`
+    for (const item of items) grid.appendChild(makeCard(item))
+    section.appendChild(grid)
+  } else {
+    const grid = document.createElement('div')
+    grid.className = 'grid'
+    for (const item of items) grid.appendChild(makeCard(item))
+    section.appendChild(grid)
+  }
   app.appendChild(section)
 }
 

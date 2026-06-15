@@ -158,8 +158,8 @@ export const COLLECTIONS = {
         url: 'https://hfpc-war-games.netlify.app/?level=balaam',
       },
       {
-        // ✅ 2026-06-15:紅海奔逃動作關復活(保羅 ?demo=redsea,約拿引擎 level 8,出 14)。
-        //   決策①(A):動作版獨立入口、不併入保羅旅程。⚠ 需先合併並部署 paul「feat/redsea-demo」才會生效。
+        // ✅ 2026-06-15:紅海奔逃動作關復活——獨立入口 保羅 ?demo=redsea(出 14;不綁約拿站,點進去直接玩)。
+        //   ⚠ 需先合併並部署 paul「feat/redsea-demo」才會生效。
         id: 'redsea',
         name: '紅海奔逃',
         subtitle: '出 14・站住等候,神開海路',
@@ -177,6 +177,7 @@ export const COLLECTIONS = {
       '(做好一關就把它的「敬請期待」拿掉、補上網址;牧者審完的卡片版也一併點亮。)',
     color: '#7a3aa8',
     emoji: '🛡️',
+    paired: true, // 大廳以「5 列 2 欄」呈現:左欄卡片版、右欄動作版(見 main.js renderCollection)。
     // ★ 10 張卡 = 5 奇兵 × 2 形態。卡片版住保羅(?demo=)、動作版分住保羅(?demo=)或戰爭原型站(?level=)。
     //   ⚠ jehoshaphat-card / balaam-card 指向 ?demo=jehoshaphat / ?demo=balaam,需先合併並部署
     //      paul 的「feat/reversal-card-levels」(這兩個新卡片關)才會生效,否則會 404。
