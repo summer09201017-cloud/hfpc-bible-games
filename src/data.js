@@ -99,6 +99,17 @@ export const JOURNEYS = [
     emoji: '🛡️',
     collection: 'reversal',
   },
+  {
+    // 挪亞方舟:兩個方舟小遊戲(住保羅 repo src/minigames/arkpairs|arkbuild/)。
+    // ⚠ 連到保羅站 ?demo=,需先合併並部署 paul「feat/noah-minigames」(PR #15)才會生效;未部署前點了會 404。
+    id: 'noah',
+    name: '挪亞方舟',
+    subtitle: '創 6–7・兩個方舟小遊戲',
+    category: 'series',
+    color: '#3f7fbf',
+    emoji: '🛕',
+    collection: 'noah',
+  },
 ]
 
 // ★ 合輯內容(每個 = 一張「播放清單」)。
@@ -273,6 +284,35 @@ export const COLLECTIONS = {
         color: '#8a6d3b',
         emoji: '🫏',
         url: 'https://hfpc-war-games.netlify.app/?level=balaam',
+      },
+    ],
+  },
+  noah: {
+    title: '挪亞方舟',
+    desc:
+      '創世記 6–7:挪亞因著信、頂著旁人譏笑造方舟;動物一對一對進來。' +
+      '兩個小遊戲都能單獨玩。' +
+      '(⚠ 連到保羅站的 ?demo=,需先合併並部署 paul「feat/noah-minigames」(PR #15)才會生效。)',
+    color: '#3f7fbf',
+    emoji: '🛕',
+    items: [
+      {
+        // 一公一母進方舟 + 安排房間解謎:住保羅 repo src/minigames/arkpairs/,?demo=arkpairs。
+        id: 'arkpairs',
+        name: '一公一母進方舟',
+        subtitle: '創 6–7・翻牌配對 + 安排房間(母的戴🎀)',
+        color: '#3f7fd0',
+        emoji: '🐘',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=arkpairs',
+      },
+      {
+        // 一步一步蓋方舟(操作挪亞鎚擊瞄準):住保羅 repo src/minigames/arkbuild/,?demo=arkbuild。
+        id: 'arkbuild',
+        name: '一步一步蓋方舟',
+        subtitle: '創 6:14-22・操作挪亞釘木板,旁人嘲笑',
+        color: '#8a4b2f',
+        emoji: '🔨',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=arkbuild',
       },
     ],
   },
