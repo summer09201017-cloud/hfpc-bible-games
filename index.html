@@ -11,7 +11,7 @@
       name="description"
       content="HFPC 聖經遊戲總入口 — 選一段旅程開始(約拿、保羅…)"
     />
-    <meta name="theme-color" content="#0a1b2e" />
+    <meta name="theme-color" content="#e0f0e6" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/icon.svg" />
@@ -26,6 +26,8 @@
       </nav>
       <!-- 安裝按鈕由 src/main.js 視平台動態塞入(不能裝就不顯示) -->
       <div id="install-slot" class="install-slot"></div>
+      <!-- 換色外皮:色點由 src/main.js 注入(localStorage 記住選擇) -->
+      <div id="theme-slot" class="theme-pick" aria-label="背景顏色"></div>
     </header>
 
     <main id="app" class="app"><!-- 卡片由 src/main.js 依 data.js 產生 --></main>

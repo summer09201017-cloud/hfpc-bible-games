@@ -5,6 +5,45 @@ import { renderScoreboard } from './scoreboard.js'
 
 const app = document.getElementById('app')
 
+// —— 換色外皮:5 種背景皮,localStorage 記住;預設淺薄荷綠(= :root,不設 data-theme) ——
+const THEMES = [
+  { id: 'cream', name: '暖米白', sw: 'linear-gradient(135deg,#fdfaf3,#f4ead6)' },
+  { id: 'sky', name: '淺天藍', sw: 'linear-gradient(135deg,#f0f7fd,#dbeafe)' },
+  { id: 'mint', name: '淺薄荷綠', sw: 'linear-gradient(135deg,#f1f8f2,#e0f0e6)' },
+  { id: 'apricot', name: '暖杏橘', sw: 'linear-gradient(135deg,#fdf3ea,#fbe6d2)' },
+  { id: 'night', name: '深藍夜間', sw: 'linear-gradient(135deg,#1d4a73,#0a1b2e)' },
+]
+const THEME_KEY = 'hub-theme'
+function applyTheme(id) {
+  // 預設皮(mint)沒有對應的 [data-theme] 規則 → 清掉 data-theme,直接用 :root 預設。
+  if (id && id !== 'mint') document.documentElement.dataset.theme = id
+  else delete document.documentElement.dataset.theme
+  try { localStorage.setItem(THEME_KEY, id) } catch {}
+  document.querySelectorAll('.theme-pick__dot').forEach((d) =>
+    d.setAttribute('aria-pressed', String(d.dataset.theme === id)),
+  )
+}
+function renderThemePick() {
+  const slot = document.getElementById('theme-slot')
+  if (!slot) return
+  slot.innerHTML = ''
+  for (const t of THEMES) {
+    const b = document.createElement('button')
+    b.type = 'button'
+    b.className = 'theme-pick__dot'
+    b.dataset.theme = t.id
+    b.style.background = t.sw
+    b.title = `背景:${t.name}`
+    b.setAttribute('aria-label', `背景顏色:${t.name}`)
+    b.addEventListener('click', () => applyTheme(t.id))
+    slot.appendChild(b)
+  }
+}
+const savedTheme =
+  (() => { try { return localStorage.getItem(THEME_KEY) } catch { return null } })() || 'mint'
+renderThemePick()
+applyTheme(savedTheme)
+
 // —— 一張卡片(直達 / 合輯 / 敬請期待 共用) ——
 //   有 collection → 合輯卡片(href=#/<id>,點了走 hash 路由、不離開大廳)。
 //   有 url 且非 soon → 直達卡片(連到該遊戲網址)。
@@ -73,10 +112,26 @@ function renderCollection(col) {
       ${col.desc ? `<p class="cat__desc">${col.desc}</p>` : ''}
     </div>`
 
-  const grid = document.createElement('div')
-  grid.className = 'grid'
-  for (const item of col.items || []) grid.appendChild(makeCard(item))
-  section.appendChild(grid)
+  const items = col.items || []
+  // 逆轉奇兵:5 列 2 欄(col.paired)——左欄=前半「卡片版」、右欄=後半「動作版」,
+  //   靠 grid-auto-flow:column 先填滿左欄再填右欄;data.js 內前 5 筆=卡片版、後 5 筆=動作版,
+  //   且兩半奇兵順序一致(福音/盼望/大光/聖歌/反轉),所以每一橫列剛好是同一個奇兵。
+  if (col.paired && items.length >= 2) {
+    const head = document.createElement('div')
+    head.className = 'pairhead'
+    head.innerHTML = `<span>📖 卡片版</span><span>🎮 動作版</span>`
+    section.appendChild(head)
+    const grid = document.createElement('div')
+    grid.className = 'grid grid--paired'
+    grid.style.gridTemplateRows = `repeat(${Math.ceil(items.length / 2)}, auto)`
+    for (const item of items) grid.appendChild(makeCard(item))
+    section.appendChild(grid)
+  } else {
+    const grid = document.createElement('div')
+    grid.className = 'grid'
+    for (const item of items) grid.appendChild(makeCard(item))
+    section.appendChild(grid)
+  }
   app.appendChild(section)
 }
 
