@@ -212,12 +212,15 @@ export const COLLECTIONS = {
         url: 'https://hfpc-war-games.netlify.app/?level=jehoshaphat',
       },
       {
+        // ✅ 2026-06-15:盼望「動作版」(以利亞重得力,曠野撿餅🍞水💧恢復體力,王上 19)已上線
+        //   保羅 main,?demo=elijah-action(自成一體引擎 src/minigames/elijah/)。
+        //   卡片版(?demo=elijah,逆轉奇兵反思卡)文案待審;審完可改指卡片版或兩版並列。
         id: 'elijah',
         name: '盼望奇兵',
         subtitle: '王上 19・以利亞灰心後重得力',
         color: '#c1772e',
         emoji: '🌅',
-        soon: true,
+        url: 'https://hfpc-paul-game.netlify.app/?demo=elijah-action',
       },
     ],
   },
