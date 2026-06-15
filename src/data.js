@@ -171,56 +171,106 @@ export const COLLECTIONS = {
   reversal: {
     title: '逆轉奇兵',
     desc:
-      '暑假快樂兒童營主題:神專門用世人看為軟弱的,逆轉得勝(林前 1:27)。五個「神的出其不意」。' +
-      '(五關陸續開發中——做好一個就把它的「敬請期待」拿掉。)',
+      '暑假快樂兒童營主題:神專門用世人看為軟弱的,逆轉得勝(林前 1:27)。五個「神的出其不意」,' +
+      '每個奇兵都有兩種玩法——「卡片版」(讀經、抉擇、默想)與「動作版」(即時闖關)。' +
+      '(做好一關就把它的「敬請期待」拿掉、補上網址;牧者審完的卡片版也一併點亮。)',
     color: '#7a3aa8',
     emoji: '🛡️',
+    // ★ 10 張卡 = 5 奇兵 × 2 形態。卡片版住保羅(?demo=)、動作版分住保羅(?demo=)或戰爭原型站(?level=)。
+    //   ⚠ jehoshaphat-card / balaam-card 指向 ?demo=jehoshaphat / ?demo=balaam,需先合併並部署
+    //      paul 的「feat/reversal-card-levels」(這兩個新卡片關)才會生效,否則會 404。
     items: [
+      // ───────────── 卡片版(5):純 React 讀經/排序/抉擇/默想關 ─────────────
       {
-        id: 'paul-light',
-        name: '大光奇兵',
-        subtitle: '徒 9・保羅遇大光信主',
-        color: '#d9b310',
-        emoji: '🌟',
-        soon: true,
-      },
-      {
-        // ✅ 2026-06-14:已部署 hfpc-war-games(?level=balaam);與「戰爭闖關合輯」共用同一關。
-        id: 'donkey',
-        name: '反轉奇兵',
-        subtitle: '民 22・巴蘭的驢開口',
-        color: '#8a6d3b',
-        emoji: '🫏',
-        url: 'https://hfpc-war-games.netlify.app/?level=balaam',
-      },
-      {
-        // ✅ 2026-06-15：福音奇兵上線（保羅大富翁卡片關，?demo=cornelius，牧者已審文案）。
-        id: 'cornelius',
-        name: '福音奇兵',
+        // ✅ 2026-06-15:福音卡片關上線(?demo=cornelius,牧者已審)。
+        id: 'cornelius-card',
+        name: '福音奇兵·卡片版',
         subtitle: '徒 10・彼得向哥尼流傳福音',
         color: '#3a8d8d',
         emoji: '🕊️',
         url: 'https://hfpc-paul-game.netlify.app/?demo=cornelius',
       },
       {
-        // ✅ 2026-06-14:已部署 hfpc-war-games(?level=jehoshaphat);與「戰爭闖關合輯」共用同一關。
-        id: 'jehoshaphat',
-        name: '聖歌奇兵',
+        // ⚠ 文案待牧者審(使用者指示先亮、之後自審);關卡已在保羅 main(?demo=elijah)。
+        id: 'elijah-card',
+        name: '盼望奇兵·卡片版',
+        subtitle: '王上 19・以利亞灰心後重得力',
+        color: '#c1772e',
+        emoji: '🌅',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=elijah',
+      },
+      {
+        // ⚠ 文案待牧者審(使用者指示先亮、之後自審);關卡已在保羅 main(?demo=saul)。
+        id: 'saul-card',
+        name: '大光奇兵·卡片版',
+        subtitle: '徒 9・掃羅遇大光信主',
+        color: '#d9b310',
+        emoji: '💡',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=saul',
+      },
+      {
+        // ✅ 2026-06-15 新做:聖歌卡片關(代下 20 約沙法唱詩得勝);需 paul 卡片關 PR 部署。文案待牧者審。
+        id: 'jehoshaphat-card',
+        name: '聖歌奇兵·卡片版',
         subtitle: '代下 20・約沙法唱詩歌得勝',
+        color: '#9a4ca8',
+        emoji: '🎵',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=jehoshaphat',
+      },
+      {
+        // ✅ 2026-06-15 新做:反轉卡片關(民 22 巴蘭的驢);需 paul 卡片關 PR 部署。文案待牧者審。
+        id: 'balaam-card',
+        name: '反轉奇兵·卡片版',
+        subtitle: '民 22・巴蘭的驢開口',
+        color: '#8a6d3b',
+        emoji: '🫏',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=balaam',
+      },
+      // ───────────── 動作版(5):即時 Canvas 闖關 ─────────────
+      {
+        // 🚧 福音動作版待做(徒 10 異象→出發傳福音)——目前福音只有卡片版。
+        id: 'cornelius-action',
+        name: '福音奇兵·動作版',
+        subtitle: '徒 10・敬請期待',
+        color: '#3a8d8d',
+        emoji: '🕊️',
+        soon: true,
+      },
+      {
+        // ✅ 2026-06-15:盼望動作版上線(以利亞曠野撿餅水恢復體力,?demo=elijah-action)。
+        id: 'elijah-action',
+        name: '盼望奇兵·動作版',
+        subtitle: '王上 19・撿餅喝水重得力',
+        color: '#c1772e',
+        emoji: '🌅',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=elijah-action',
+      },
+      {
+        // 🚧 大光動作版待做(徒 9 大光中仆倒→順服奔跑)——目前大光只有卡片版。
+        id: 'saul-action',
+        name: '大光奇兵·動作版',
+        subtitle: '徒 9・敬請期待',
+        color: '#d9b310',
+        emoji: '💡',
+        soon: true,
+      },
+      {
+        // ✅ 2026-06-14:聖歌動作版部署於 hfpc-war-games(?level=jehoshaphat);與戰爭合輯共用同一關。
+        id: 'jehoshaphat-action',
+        name: '聖歌奇兵·動作版',
+        subtitle: '代下 20・詩班讚美,神設伏兵',
         color: '#9a4ca8',
         emoji: '🎵',
         url: 'https://hfpc-war-games.netlify.app/?level=jehoshaphat',
       },
       {
-        // ✅ 2026-06-15:盼望「動作版」(以利亞重得力,曠野撿餅🍞水💧恢復體力,王上 19)已上線
-        //   保羅 main,?demo=elijah-action(自成一體引擎 src/minigames/elijah/)。
-        //   卡片版(?demo=elijah,逆轉奇兵反思卡)文案待審;審完可改指卡片版或兩版並列。
-        id: 'elijah',
-        name: '盼望奇兵',
-        subtitle: '王上 19・以利亞灰心後重得力',
-        color: '#c1772e',
-        emoji: '🌅',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=elijah-action',
+        // ✅ 2026-06-14:反轉動作版部署於 hfpc-war-games(?level=balaam);與戰爭合輯共用同一關。
+        id: 'balaam-action',
+        name: '反轉奇兵·動作版',
+        subtitle: '民 22・閃避攔路,神攔阻得勝',
+        color: '#8a6d3b',
+        emoji: '🫏',
+        url: 'https://hfpc-war-games.netlify.app/?level=balaam',
       },
     ],
   },
