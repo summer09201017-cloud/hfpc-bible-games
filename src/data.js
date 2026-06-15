@@ -248,13 +248,13 @@ export const COLLECTIONS = {
         url: 'https://hfpc-paul-game.netlify.app/?demo=elijah-action',
       },
       {
-        // 🚧 大光動作版待做(徒 9 大光中仆倒→順服奔跑)——目前大光只有卡片版。
+        // ✅ 2026-06-15:大光動作版上線(曠野跑酷,大馬士革路→直街,?demo=saul-action)。需 paul feat/saul-action 部署。
         id: 'saul-action',
         name: '大光奇兵·動作版',
-        subtitle: '徒 9・敬請期待',
+        subtitle: '徒 9・大光仆倒,順服奔跑',
         color: '#d9b310',
         emoji: '💡',
-        soon: true,
+        url: 'https://hfpc-paul-game.netlify.app/?demo=saul-action',
       },
       {
         // ✅ 2026-06-14:聖歌動作版部署於 hfpc-war-games(?level=jehoshaphat);與戰爭合輯共用同一關。
