@@ -178,6 +178,17 @@ export const COLLECTIONS = {
         emoji: '🌊',
         url: 'https://hfpc-paul-game.netlify.app/?demo=redsea',
       },
+      {
+        // 參孫打獅子:住在獨立 repo「孫孫打獅子」(vanilla JS + Canvas,可獨立 build 的 PWA)。
+        // 永久家=自己的 Netlify 站。✅ 2026-06-17:hfpc-samson-game.netlify.app 已部署上線,卡片正式亮。
+        // 主題正中合輯精神:聖經不說參孫多強壯,而說「耶和華的靈大大感動他」——力量出於神。
+        id: 'samson',
+        name: '參孫打獅子',
+        subtitle: '士 14・耶和華的靈感動,徒手撕獅',
+        color: '#9c5a2a',
+        emoji: '🦁',
+        url: 'https://hfpc-samson-game.netlify.app/',
+      },
     ],
   },
   reversal: {
