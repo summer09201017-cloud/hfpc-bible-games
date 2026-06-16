@@ -146,16 +146,16 @@ export const COLLECTIONS = {
         url: 'https://hfpc-paul-game.netlify.app/?demo=sling',
       },
       {
-        // 聖歌奇兵(約沙法):住在「約拿引擎」repo(vanilla JS),?level=jehoshaphat 動作關。
-        // 代下 20——詩班走在軍隊前面讚美,神設伏兵,猶大不戰而勝(最典型「不靠刀槍、靠倚靠神」)。
-        // 與「逆轉奇兵」合輯共用同一關(深連結,不複製;改一處兩邊都更新)。
-        // ✅ 2026-06-14:同摩西,部署到「戰爭原型」獨立站 hfpc-war-games,卡片正式亮。
+        // 聖歌奇兵(約沙法)動作關:代下 20——詩班走在軍隊前面讚美,神設伏兵,猶大不戰而勝
+        // (最典型「不靠刀槍、靠倚靠神」)。與「逆轉奇兵」合輯共用同一關(深連結,不複製)。
+        // ✅ 2026-06-16:戰爭關搬進保羅 repo(永久家,消除跨 repo sync)→ paul ?demo=jehoshaphat-action
+        //    (自動部署;敵人放大+表情等改動即可上線。原 war-games 為手動部署的原型站。)
         id: 'jehoshaphat',
         name: '聖歌奇兵',
         subtitle: '代下 20・詩班讚美,神設伏兵得勝',
         color: '#9a4ca8',
         emoji: '🎵',
-        url: 'https://hfpc-war-games.netlify.app/?level=jehoshaphat',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=jehoshaphat-action',
       },
       {
         // 反轉奇兵(巴蘭的驢 民22):住在「約拿引擎」repo,?level=balaam 閃避動作關。
@@ -268,13 +268,13 @@ export const COLLECTIONS = {
         url: 'https://hfpc-paul-game.netlify.app/?demo=saul-action',
       },
       {
-        // ✅ 2026-06-14:聖歌動作版部署於 hfpc-war-games(?level=jehoshaphat);與戰爭合輯共用同一關。
+        // ✅ 2026-06-16:聖歌動作版搬進保羅 repo(永久家)→ paul ?demo=jehoshaphat-action(自動部署);與戰爭合輯共用同一關。
         id: 'jehoshaphat-action',
         name: '聖歌奇兵·動作版',
         subtitle: '代下 20・詩班讚美,神設伏兵',
         color: '#9a4ca8',
         emoji: '🎵',
-        url: 'https://hfpc-war-games.netlify.app/?level=jehoshaphat',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=jehoshaphat-action',
       },
       {
         // ✅ 2026-06-14:反轉動作版部署於 hfpc-war-games(?level=balaam);與戰爭合輯共用同一關。
