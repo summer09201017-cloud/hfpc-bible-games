@@ -22,7 +22,8 @@ GitHub 帳號：summer09201017-cloud。GitHub 是唯一真相；桌面 zip 只�
   • ★ 連 paul `?demo=` 的卡片鐵律：**先合併並部署 paul，再合併大廳**，否則點了 404（挪亞卡、聖歌都踩過）。
 
   鐵律：走 PR 不直推 main；卡片關一律 L6 手繪、動作關遊玩時隱藏標題。
-  新跨專案 skill：embed-fullscreen-fit（手機全螢幕嵌入固定比例 Canvas 關）。
+  新跨專案 skill ×2：embed-fullscreen-fit（手機全螢幕嵌入固定比例 Canvas 關）、
+  difficulty-knob（難度旋鈕 輕鬆/普通/挑戰 + ⭐星等，資料驅動、不會把「不會失敗」的關變成會輸）。
   → 完整「已完成 vs 待做」+ CP 排序：hfpc-paul-game 的 roadmap.md(最上方 2026-06-17 段) 與
     docs/未來功能與skill點子-CP排序.md。
 
