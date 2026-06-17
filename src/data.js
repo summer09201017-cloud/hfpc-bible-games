@@ -301,12 +301,20 @@ export const COLLECTIONS = {
   noah: {
     title: '挪亞方舟',
     desc:
-      '創世記 6–7:挪亞因著信、頂著旁人譏笑造方舟;動物一對一對進來。' +
-      '兩個小遊戲都能單獨玩。' +
-      '(⚠ 連到保羅站的 ?demo=,需先合併並部署 paul「feat/noah-minigames」(PR #15)才會生效。)',
+      '創世記 6–9:挪亞因著信、頂著旁人譏笑造方舟;動物一對一對進來;審判中有恩典,彩虹為立約的記號。' +
+      '可玩「完整大富翁旅程」(14 站,把兩關當闖關站),也可單獨玩各關。',
     color: '#3f7fbf',
     emoji: '🛕',
     items: [
+      {
+        // ✅ 2026-06-18:完整挪亞大富翁旅程(14 站手繪洪水板 + arkbuild/arkpairs 闖關站 + 彩虹之約終局卡片關)。住保羅 repo,?journey=noah。
+        id: 'noah-journey',
+        name: '挪亞方舟・完整旅程',
+        subtitle: '創 6–9・擲骰大富翁:造舟→洪水→彩虹之約',
+        color: '#3f7fbf',
+        emoji: '🌈',
+        url: 'https://hfpc-paul-game.netlify.app/?journey=noah',
+      },
       {
         // 一公一母進方舟 + 安排房間解謎:住保羅 repo src/minigames/arkpairs/,?demo=arkpairs。
         id: 'arkpairs',
