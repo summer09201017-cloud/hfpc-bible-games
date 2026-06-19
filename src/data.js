@@ -79,6 +79,17 @@ export const JOURNEYS = [
     emoji: '🔥',
     url: 'https://hfpc-paul-game.netlify.app/?journey=exodus',
   },
+  {
+    // 路得記·從空到滿:獨立 repo hfpc-ruth-game(可玩棋盤 + 拾麥穗收集闖關)。
+    // ✅ 2026-06-19:已部署 hfpc-ruth-game.netlify.app(curl 驗證標題+資產+真內容),卡片正式亮。
+    id: 'ruth',
+    name: '路得記·從空到滿',
+    subtitle: '得 1–4・大富翁桌遊:救贖與恩慈(hesed)',
+    category: 'bible',
+    color: '#caa54a',
+    emoji: '🌾',
+    url: 'https://hfpc-ruth-game.netlify.app/',
+  },
 
   // —— 兩張「合輯卡片」:點了在大廳內就地展開,不離開頁面 ——
   {
