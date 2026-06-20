@@ -16,6 +16,7 @@
 //   url       【link card】點下去要去的網址(各遊戲各自的 Netlify 站)
 //   collection【collection card】要展開哪一組合輯(對應 COLLECTIONS 的 key)
 //   soon:true 還沒做好 → 卡片變「敬請期待」、不可點(url 可省略;留著當「將來要連去哪」的備忘也行)
+//   credit   小作者署名(選填),如 '製作:憫安'。有值就在卡片上顯示一枚「製作」徽章,給孩子記上一筆。
 //
 // ─────────────────────────────────────────────────────────────────────────────
 // ★ 重要原則:大廳「不放遊戲、不複製關卡」,只「帶路」。
@@ -199,6 +200,8 @@ export const COLLECTIONS = {
         color: '#9c5a2a',
         emoji: '🦁',
         url: 'https://hfpc-samson-game.netlify.app/',
+        // 小作者署名:任何卡片加 credit 欄就會顯示一枚「製作」徽章(見 main.js makeCard / styles.css .card__credit)。
+        credit: '製作:憫安',
       },
     ],
   },

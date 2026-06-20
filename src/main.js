@@ -72,6 +72,7 @@ function makeCard(j) {
     <div class="card__text">
       <div class="card__name">${j.name}</div>
       <div class="card__sub">${j.subtitle || ''}</div>
+      ${j.credit ? `<div class="card__credit">${j.credit}</div>` : ''}
     </div>
     <div class="card__cta">${cta}</div>
   `

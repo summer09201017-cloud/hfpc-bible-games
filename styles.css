@@ -505,6 +505,18 @@ body {
   color: var(--gold);
   white-space: nowrap;
 }
+/* —— 小作者署名徽章(卡片有 credit 欄才出現,如「製作:憫安」) —— */
+.card__credit {
+  display: inline-block;
+  margin-top: 7px;
+  font-size: clamp(11px, 1.7vw, 13px);
+  font-weight: 600;
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 14%, transparent);
+  border: 1px solid color-mix(in srgb, var(--accent) 38%, transparent);
+  border-radius: 999px;
+  padding: 1px 10px;
+}
 
 /* —— 敬請期待(尚未做好):整張變暗、不可點 —— */
 .card--soon {
