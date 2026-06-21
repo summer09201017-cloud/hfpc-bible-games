@@ -91,6 +91,17 @@ export const JOURNEYS = [
     emoji: '🌾',
     url: 'https://hfpc-ruth-game.netlify.app/',
   },
+  {
+    // 彼得走海(節奏闖關):獨立 repo hfpc-peter-sea-game(vanilla Canvas + Web Audio PWA,FNF 風格節拍打擊)。
+    // ✅ 2026-06-21:已部署 hfpc-peter-sea-game.netlify.app(curl 驗證標題 + 核心資產 200),卡片正式亮。
+    id: 'peter-sea',
+    name: '彼得走海(節奏闖關)',
+    subtitle: '太 14・定睛看耶穌,踩準節拍走過海面',
+    category: 'bible',
+    color: '#1e4f8a',
+    emoji: '🌊',
+    url: 'https://hfpc-peter-sea-game.netlify.app/',
+  },
 
   // —— 兩張「合輯卡片」:點了在大廳內就地展開,不離開頁面 ——
   {
