@@ -102,6 +102,28 @@ export const JOURNEYS = [
     emoji: '🌊',
     url: 'https://hfpc-peter-sea-game.netlify.app/',
   },
+  {
+    // 保羅西拉(節奏闖關):獨立 repo hfpc-paul-silas-game(vanilla Canvas + Web Audio PWA,FNF 風格)。
+    // ✅ 2026-06-22:已部署 hfpc-paul-silas-game.netlify.app(curl 驗證標題 + 核心資產 200),卡片正式亮。
+    id: 'paul-silas',
+    name: '保羅西拉(節奏闖關)',
+    subtitle: '徒 16・半夜監牢唱詩讚美,神開監門',
+    category: 'bible',
+    color: '#5a3a8a',
+    emoji: '🎶',
+    url: 'https://hfpc-paul-silas-game.netlify.app/',
+  },
+  {
+    // 詩篇150(節奏闖關):獨立 repo hfpc-psalm150-game(vanilla Canvas + Web Audio PWA,FNF 風格)。
+    // ✅ 2026-06-22:已部署 hfpc-psalm150-game.netlify.app(curl 驗證標題 + 核心資產 200),卡片正式亮。
+    id: 'psalm150',
+    name: '詩篇150(節奏闖關)',
+    subtitle: '詩 150・各樣樂器齊鳴,凡有氣息都讚美',
+    category: 'bible',
+    color: '#b5872e',
+    emoji: '🎺',
+    url: 'https://hfpc-psalm150-game.netlify.app/',
+  },
 
   // —— 兩張「合輯卡片」:點了在大廳內就地展開,不離開頁面 ——
   {
