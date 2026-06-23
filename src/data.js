@@ -101,6 +101,7 @@ export const JOURNEYS = [
     color: '#1e4f8a',
     emoji: '🌊',
     url: 'https://hfpc-peter-sea-game.netlify.app/',
+    credit: '製作:憫安',
   },
   {
     // 保羅西拉(節奏闖關):獨立 repo hfpc-paul-silas-game(vanilla Canvas + Web Audio PWA,FNF 風格)。
