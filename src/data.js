@@ -125,6 +125,19 @@ export const JOURNEYS = [
     emoji: '🎺',
     url: 'https://hfpc-psalm150-game.netlify.app/',
   },
+  {
+    // 王宮之夜(潛行恐怖 + 輕反向RPG):獨立 repo hfpc-daniel-game(vanilla Canvas PWA)。
+    // ✅ 2026-06-25:已部署 hfpc-daniel-game.netlify.app(curl 驗證標題 + 核心資產 200),卡片正式亮。
+    //    內建「恐怖強度」旋鈕(💀滿／🕯️緩和／🧸兒童),切「兒童」即不嚇人、無血、較亮 → 主日學也能用。
+    id: 'daniel-palace',
+    name: '王宮之夜(潛行闖關)',
+    subtitle: '但 2・漆黑王宮避開獵手,趕在天亮前到王前求寬限',
+    category: 'bible',
+    color: '#3a2c52',
+    emoji: '🕯️',
+    url: 'https://hfpc-daniel-game.netlify.app/',
+    credit: '製作:憫安',
+  },
 
   // —— 兩張「合輯卡片」:點了在大廳內就地展開,不離開頁面 ——
   {
