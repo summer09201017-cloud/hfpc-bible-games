@@ -334,6 +334,17 @@ export const COLLECTIONS = {
         // 小作者署名:任何卡片加 credit 欄就會顯示一枚「製作」徽章(見 main.js makeCard / styles.css .card__credit)。
         credit: '製作:憫安',
       },
+      {
+        // 約阿施射得勝箭(王下 13):住保羅 repo src/minigames/joash/,?demo=joash(拋射動作關,複製甩石引擎換皮)。
+        // ✅ 2026-06-25:經文 cuv 查驗、自動部署上線(paul A 站)。年齡旋鈕(幼/童/青)+ 會動的靶 + 語音玩法。
+        // 主題正中合輯精神:得勝是「耶和華的得勝箭」,不是王的臂力;憑信多射幾次=得勝越完全(13:19)。
+        id: 'joash',
+        name: '約阿施射得勝箭',
+        subtitle: '王下 13・憑信射到底,耶和華使你得勝',
+        color: '#7a4fb0',
+        emoji: '🏹',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=joash',
+      },
     ],
   },
   reversal: {
