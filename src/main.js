@@ -5,7 +5,7 @@ import { renderScoreboard } from './scoreboard.js'
 
 const app = document.getElementById('app')
 
-// —— 換色外皮:5 種背景皮,localStorage 記住;預設淺薄荷綠(= :root,不設 data-theme) ——
+// —— 換色外皮:5 種背景皮,localStorage 記住;預設淺天藍(sky)。cream 暖米白 = :root(不設 data-theme) ——
 const THEMES = [
   { id: 'cream', name: '暖米白', sw: 'linear-gradient(135deg,#fdfaf3,#f4ead6)' },
   { id: 'sky', name: '淺天藍', sw: 'linear-gradient(135deg,#f0f7fd,#dbeafe)' },
@@ -40,7 +40,7 @@ function renderThemePick() {
   }
 }
 const savedTheme =
-  (() => { try { return localStorage.getItem(THEME_KEY) } catch { return null } })() || 'cream'
+  (() => { try { return localStorage.getItem(THEME_KEY) } catch { return null } })() || 'sky'
 renderThemePick()
 applyTheme(savedTheme)
 
