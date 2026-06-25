@@ -150,6 +150,19 @@ export const JOURNEYS = [
     emoji: '🎲',
     url: 'https://hfpc-paul-game.netlify.app/?journey=peter',
   },
+  {
+    // 參孫打獅子(直達卡):獨立 repo hfpc-samson-game(vanilla Canvas PWA),即時動作關。
+    // 已部署 hfpc-samson-game.netlify.app(2026-06-25 curl 驗證標題 + 200)。憫安製作,合輯(戰爭/憫安)也各收一張。
+    // 主題正中合輯精神:聖經不說參孫多強壯,而說「耶和華的靈大大感動他」——力量出於神。
+    id: 'samson',
+    name: '參孫打獅子',
+    subtitle: '士 14・耶和華的靈感動,徒手撕獅',
+    category: 'bible',
+    color: '#9c5a2a',
+    emoji: '🦁',
+    url: 'https://hfpc-samson-game.netlify.app/',
+    credit: '製作:憫安',
+  },
 
   // —— 兩張「合輯卡片」:點了在大廳內就地展開,不離開頁面 ——
   {
