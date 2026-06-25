@@ -169,12 +169,61 @@ export const JOURNEYS = [
     emoji: '🛕',
     collection: 'noah',
   },
+  {
+    // 憫安製作闖關合輯:作者「作品集 / 榮譽牆」——把憫安一手做的關集中展示。
+    // 這些關各自在大廳別處也有卡(播放清單模式:同一關可在多個清單),這裡按「作者」聚成一面牆。
+    id: 'minan',
+    name: '憫安製作闖關合輯',
+    subtitle: '憫安一手打造的關卡・每關單獨玩',
+    category: 'series',
+    color: '#2a9d8f',
+    emoji: '✨',
+    collection: 'minan',
+  },
 ]
 
 // ★ 合輯內容(每個 = 一張「播放清單」)。
 //   items 裡每一關都『指向它原本已存在的地方』(深連結),不在這裡複製關卡。
 //   一關還沒上線就 soon:true(顯示「敬請期待」、不可點);上線後把 soon 拿掉、補上 url 即可。
 export const COLLECTIONS = {
+  // 作者作品集(榮譽牆):按「製作者=憫安」聚成一張清單,鼓勵小作者。每關都連到它原本的網址,不複製。
+  minan: {
+    title: '憫安製作闖關合輯',
+    desc:
+      '這些關卡都是憫安一手打造的——節奏、動作、潛行各一款,每關都能單獨玩。' +
+      '(同一關在大廳別處也找得到;這裡按「作者」聚成一面作品牆,給憫安記上一筆。)',
+    color: '#2a9d8f',
+    emoji: '✨',
+    items: [
+      {
+        id: 'peter-sea',
+        name: '彼得走海(節奏闖關)',
+        subtitle: '太 14・定睛看耶穌,踩準節拍走過海面',
+        color: '#1e4f8a',
+        emoji: '🌊',
+        url: 'https://hfpc-peter-sea-game.netlify.app/',
+        credit: '製作:憫安',
+      },
+      {
+        id: 'samson',
+        name: '參孫打獅子',
+        subtitle: '士 14・耶和華的靈感動,徒手撕獅',
+        color: '#9c5a2a',
+        emoji: '🦁',
+        url: 'https://hfpc-samson-game.netlify.app/',
+        credit: '製作:憫安',
+      },
+      {
+        id: 'daniel-palace',
+        name: '王宮之夜(潛行闖關)',
+        subtitle: '但 2・漆黑王宮避開獵手,趕在天亮前到王前',
+        color: '#3a2c52',
+        emoji: '🕯️',
+        url: 'https://hfpc-daniel-game.netlify.app/',
+        credit: '製作:憫安',
+      },
+    ],
+  },
   war: {
     title: '戰爭闖關合輯',
     desc:
