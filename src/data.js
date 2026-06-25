@@ -138,6 +138,18 @@ export const JOURNEYS = [
     url: 'https://hfpc-daniel-game.netlify.app/',
     credit: '製作:憫安',
   },
+  {
+    // 彼得大富翁(直達卡):住保羅 repo,?journey=peter(20 站真實地理聖地棋盤)。
+    // ✅ 2026-06-25:地圖「整頁變藍」已修(paul 494eb9d)、經文已上線;文案經牧者自審(免送審題包)→ 直接亮。
+    //    另在「彼得的一生」合輯(series)也收一張(id:'board');這裡是首頁聖經旅程的直達卡。
+    id: 'peter-board',
+    name: '彼得大富翁',
+    subtitle: '徒 1–12・20 站真實地理,擲骰走遍彼得腳蹤',
+    category: 'bible',
+    color: '#5a7d3a',
+    emoji: '🎲',
+    url: 'https://hfpc-paul-game.netlify.app/?journey=peter',
+  },
 
   // —— 兩張「合輯卡片」:點了在大廳內就地展開,不離開頁面 ——
   {
@@ -465,14 +477,13 @@ export const COLLECTIONS = {
     items: [
       {
         // 彼得大富翁(?journey=peter,已嵌 paul、A 站自動部署)。地圖「整頁變藍」2026-06-25 已修(commit 494eb9d,已 push 上線)。
-        // ⚠ 文案 AI 草擬、待牧者審(/cuv-check + pastor-review);先掛 soon,審過再拿掉。
+        // ✅ 2026-06-25:經文已上線、文案經牧者自審(免送審題包)→ 直接亮(首頁聖經旅程另有直達卡 peter-board)。
         id: 'board',
         name: '彼得大富翁',
         subtitle: '徒 1–12・20 站真實地理,擲骰走遍彼得腳蹤',
         color: '#5a7d3a',
         emoji: '🎲',
         url: 'https://hfpc-paul-game.netlify.app/?journey=peter',
-        soon: true,
       },
       {
         // 彼得走海(節奏關,已部署上線;大廳首頁也有直達卡 peter-sea、憫安合輯也收一張)。
