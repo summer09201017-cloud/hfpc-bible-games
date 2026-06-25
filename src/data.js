@@ -176,7 +176,7 @@ export const JOURNEYS = [
     name: '憫安製作闖關合輯',
     subtitle: '憫安一手打造的關卡・每關單獨玩',
     category: 'series',
-    color: '#e0a52e',
+    color: '#f0b840',
     emoji: '✨',
     collection: 'minan',
   },
@@ -192,7 +192,7 @@ export const COLLECTIONS = {
     desc:
       '這些關卡都是憫安一手打造的——節奏、動作、潛行各一款,每關都能單獨玩。' +
       '(同一關在大廳別處也找得到;這裡按「作者」聚成一面作品牆,給憫安記上一筆。)',
-    color: '#e0a52e',
+    color: '#f0b840',
     emoji: '✨',
     items: [
       {
