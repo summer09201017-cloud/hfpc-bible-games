@@ -495,14 +495,14 @@ export const COLLECTIONS = {
         url: 'https://hfpc-peter-sea-game.netlify.app/',
       },
       {
-        // 彼得越獄(潛行關,2026-06-24 新做,尚未部署)→ ship-game-online 部署拿到真網址後,刪 soon、確認 url。
+        // 彼得越獄(潛行關)。✅ 2026-06-25:經文 cuv 查驗 10/10、已部署 hfpc-peter-prison-game.netlify.app
+        //   (curl 驗證標題 + 核心資產 200);牧者審題包依指示略過(牧者自審)→ 正式亮。
         id: 'prison',
         name: '彼得越獄',
         subtitle: '徒 12・神開鐵門,人只管跟著走',
         color: '#5b6470',
         emoji: '🕯️',
         url: 'https://hfpc-peter-prison-game.netlify.app/',
-        soon: true,
       },
       {
         // 下網得魚(未製作,佔位「敬請期待」;做好再補 url + 刪 soon)。
