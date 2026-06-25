@@ -180,6 +180,16 @@ export const JOURNEYS = [
     emoji: '✨',
     collection: 'minan',
   },
+  {
+    // 彼得的一生:合輯卡(就地展開)。彼得不只一關——水面行走/越獄/下網得魚/海邊復興。
+    id: 'peterLife',
+    name: '彼得的一生',
+    subtitle: '從漁夫到磐石・蒙召・跌倒・被主重建',
+    category: 'series',
+    color: '#7a5230',
+    emoji: '🪨',
+    collection: 'peterLife',
+  },
 ]
 
 // ★ 合輯內容(每個 = 一張「播放清單」)。
@@ -442,6 +452,64 @@ export const COLLECTIONS = {
         color: '#8a4b2f',
         emoji: '🔨',
         url: 'https://hfpc-paul-game.netlify.app/?demo=arkbuild',
+      },
+    ],
+  },
+  peterLife: {
+    title: '彼得的一生',
+    desc:
+      '跟著彼得走一生:在風浪中定睛、在監牢裡蒙拯救、在跌倒後被主重建。' +
+      '(每張卡片直接連到那一關的所在地,不複製關卡;沒做好/沒部署的先「敬請期待」。)',
+    color: '#7a5230',
+    emoji: '🪨',
+    items: [
+      {
+        // 彼得大富翁(?journey=peter,已嵌 paul、A 站自動部署)。地圖「整頁變藍」2026-06-25 已修(commit 494eb9d,已 push 上線)。
+        // ⚠ 文案 AI 草擬、待牧者審(/cuv-check + pastor-review);先掛 soon,審過再拿掉。
+        id: 'board',
+        name: '彼得大富翁',
+        subtitle: '徒 1–12・20 站真實地理,擲骰走遍彼得腳蹤',
+        color: '#5a7d3a',
+        emoji: '🎲',
+        url: 'https://hfpc-paul-game.netlify.app/?journey=peter',
+        soon: true,
+      },
+      {
+        // 彼得走海(節奏關,已部署上線;大廳首頁也有直達卡 peter-sea、憫安合輯也收一張)。
+        id: 'sea',
+        name: '彼得走海',
+        subtitle: '太 14・定睛看耶穌,在風浪中不下沉',
+        color: '#2f6fb0',
+        emoji: '🌊',
+        url: 'https://hfpc-peter-sea-game.netlify.app/',
+      },
+      {
+        // 彼得越獄(潛行關,2026-06-24 新做,尚未部署)→ ship-game-online 部署拿到真網址後,刪 soon、確認 url。
+        id: 'prison',
+        name: '彼得越獄',
+        subtitle: '徒 12・神開鐵門,人只管跟著走',
+        color: '#5b6470',
+        emoji: '🕯️',
+        url: 'https://hfpc-peter-prison-game.netlify.app/',
+        soon: true,
+      },
+      {
+        // 下網得魚(未製作,佔位「敬請期待」;做好再補 url + 刪 soon)。
+        id: 'catch',
+        name: '下網得魚',
+        subtitle: '路 5/約 21・聽主的話,空船變滿網',
+        color: '#2e8b8b',
+        emoji: '🎣',
+        soon: true,
+      },
+      {
+        // 海邊的復興/三次託付(未製作,佔位)。
+        id: 'restore',
+        name: '海邊的復興',
+        subtitle: '約 21・「你愛我嗎?」三次跌倒、三次託付',
+        color: '#c0612a',
+        emoji: '🔥',
+        soon: true,
       },
     ],
   },
