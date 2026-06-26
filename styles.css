@@ -693,3 +693,71 @@ body {
   font-weight: 600;
   cursor: pointer;
 }
+
+/* ============================================================
+   分組計分板 — 快速分組 / 輪流 / 成員(scoreboard.js 2026-06-26)
+   ============================================================ */
+.sb__setup {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  margin: 4px 0 14px;
+}
+.sb__setuplab { color: var(--ink-dim); font-size: clamp(14px, 2vw, 17px); font-weight: 700; }
+.sb__quick {
+  font: inherit;
+  font-size: clamp(14px, 2vw, 17px);
+  font-weight: 700;
+  color: var(--ink);
+  background: var(--overlay);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.sb__quick:hover { background: var(--overlay-hover); }
+.sb__quick--on { background: var(--gold); color: #0a1b2e; border-color: var(--gold); }
+.sb__quick--rng { border-style: dashed; }
+
+.sb__turn {
+  --team: #3b6ea5;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0 auto 16px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: color-mix(in srgb, var(--team) 18%, var(--card-bg));
+  border: 2px solid color-mix(in srgb, var(--team) 55%, transparent);
+}
+.sb__turnlab { color: var(--ink-dim); font-size: clamp(15px, 2.4vw, 20px); }
+.sb__turnname { color: var(--ink); font-size: clamp(20px, 3.6vw, 30px); font-weight: 800; }
+.sb__turnnext {
+  font: inherit;
+  font-size: clamp(14px, 2vw, 18px);
+  font-weight: 800;
+  color: #0a1b2e;
+  background: var(--gold);
+  border: none;
+  border-radius: 999px;
+  padding: 8px 18px;
+  cursor: pointer;
+}
+.sb__turnnext:active { transform: scale(0.95); }
+
+.sb__namewrap { flex: 1 1 auto; min-width: 0; }
+.sb__members {
+  color: var(--ink-dim);
+  font-size: clamp(12px, 1.8vw, 15px);
+  margin-top: 2px;
+  line-height: 1.4;
+}
+/* 輪到的隊:加一圈隊色高亮(和領先金框可同時出現) */
+.sb__team--turn {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28),
+    0 0 0 3px color-mix(in srgb, var(--team) 70%, transparent);
+}
