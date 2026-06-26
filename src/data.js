@@ -42,6 +42,16 @@ export const JOURNEYS = [
     emoji: '📖',
     route: 'verses', // → #/verses(src/verses.js);不是外部遊戲網址
   },
+  // —— 靠神得勝・閃避(合輯卡片:點了就地展開掃羅+尼希米兩關) ——
+  {
+    id: 'dodge-heroes',
+    name: '靠神得勝・閃避',
+    subtitle: '掃羅擲槍 / 尼希米修牆 — 只管躲、不還手,神保守',
+    category: 'series',
+    color: '#7a4030',
+    emoji: '🛡️',
+    collection: 'dodge-heroes',
+  },
   {
     id: 'jonah',
     name: '約拿闖關(動作版)',
@@ -232,6 +242,33 @@ export const JOURNEYS = [
 //   items 裡每一關都『指向它原本已存在的地方』(深連結),不在這裡複製關卡。
 //   一關還沒上線就 soon:true(顯示「敬請期待」、不可點);上線後把 soon 拿掉、補上 url 即可。
 export const COLLECTIONS = {
+  // 靠神得勝・閃避:仇敵攻擊,只管躲、不還手——得勝在乎倚靠神(反向 RPG)。兩關都住在保羅 app 的 ?demo=。
+  'dodge-heroes': {
+    title: '靠神得勝・閃避',
+    emoji: '🛡️',
+    desc:
+      '仇敵不斷攻擊,你只管躲、不還手——得勝不是靠武力,是靠神的保守。' +
+      '用 ← → (或左右半邊畫面) 閃開飛來的槍和箭。兩關都能單獨玩,也有幼/童/青三種難度。',
+    color: '#7a4030',
+    items: [
+      {
+        id: 'saul-spear',
+        name: '掃羅擲槍·大衛閃避',
+        subtitle: '撒上 18-19・大衛不伸手害受膏者,只躲、只信靠神',
+        color: '#6b3fa0',
+        emoji: '🗡️',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=saul-spear',
+      },
+      {
+        id: 'nehemiah-wall',
+        name: '尼希米修牆·躲攻擊',
+        subtitle: '尼 4&6・邊閃避邊把城牆建起來,神為我們爭戰',
+        color: '#7a4030',
+        emoji: '🧱',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=nehemiah',
+      },
+    ],
+  },
   // 作者作品集(榮譽牆):按「製作者=憫安」聚成一張清單,鼓勵小作者。每關都連到它原本的網址,不複製。
   minan: {
     title: '憫安製作闖關合輯',
