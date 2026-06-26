@@ -547,3 +547,149 @@ body {
     font-size: clamp(22px, 5vw, 34px);
   }
 }
+
+/* ============================================================
+   📖 金句複習・朗讀 + 今日金句(src/verses.js)
+   ============================================================ */
+
+/* 今日金句橫條(首頁頂端 + 金句頁頂端) */
+.daily {
+  max-width: 1040px;
+  margin: 0 auto 18px;
+  padding: 16px 18px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, var(--card-bg), color-mix(in srgb, #7a5cc4 14%, var(--card-bg)));
+  border: 1px solid color-mix(in srgb, #7a5cc4 30%, transparent);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+.daily__tag { font-weight: 700; color: #7a5cc4; font-size: 14px; }
+.daily__ref { color: var(--ink-dim); font-size: 13px; margin-top: 2px; }
+.daily__text {
+  color: var(--ink);
+  font-size: clamp(18px, 3vw, 26px);
+  font-weight: 700;
+  line-height: 1.5;
+  margin: 6px 0 10px;
+}
+.daily__row { display: flex; gap: 10px; flex-wrap: wrap; }
+.daily__btn {
+  display: inline-block;
+  padding: 9px 16px;
+  border-radius: 999px;
+  border: none;
+  background: #7a5cc4;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+}
+.daily__btn--ghost {
+  background: transparent;
+  color: #7a5cc4;
+  border: 1.5px solid color-mix(in srgb, #7a5cc4 50%, transparent);
+}
+.daily__btn:hover { filter: brightness(1.05); }
+
+/* 分頁 複習 / 小測 */
+.vd__tabs { display: flex; gap: 8px; margin: 4px 0 16px; }
+.vd__tab {
+  padding: 9px 18px;
+  border-radius: 999px;
+  border: 1.5px solid color-mix(in srgb, var(--ink-dim) 35%, transparent);
+  background: transparent;
+  color: var(--ink-dim);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+.vd__tab--on { background: #7a5cc4; color: #fff; border-color: #7a5cc4; }
+
+/* 複習:依書卷分組 */
+.vd__group { margin-bottom: 22px; }
+.vd__book {
+  color: var(--ink);
+  font-size: clamp(17px, 2.6vw, 22px);
+  margin: 0 0 10px;
+  padding-bottom: 6px;
+  border-bottom: 2px solid color-mix(in srgb, #7a5cc4 25%, transparent);
+}
+.vd__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 12px;
+}
+.vd__card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 14px 15px;
+  border: 1px solid color-mix(in srgb, var(--ink-dim) 18%, transparent);
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+}
+.vd__card--soon { opacity: 0.72; }
+.vd__ref { font-size: 13px; color: #7a5cc4; font-weight: 700; }
+.vd__soon {
+  font-size: 11px;
+  color: var(--ink-dim);
+  background: color-mix(in srgb, var(--ink-dim) 14%, transparent);
+  padding: 1px 7px;
+  border-radius: 999px;
+  margin-left: 4px;
+}
+.vd__verse { color: var(--ink); font-size: 17px; font-weight: 700; line-height: 1.5; margin: 6px 0; }
+.vd__pending { color: var(--ink-dim); font-weight: 500; font-style: italic; font-size: 14px; }
+.vd__theme { color: var(--ink-dim); font-size: 14px; line-height: 1.5; }
+.vd__from { color: var(--ink-dim); font-size: 12px; margin-top: 6px; opacity: 0.85; }
+.vd__row { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
+.vd__speak, .vd__go {
+  padding: 7px 14px;
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+.vd__speak { background: #7a5cc4; color: #fff; }
+.vd__speak:disabled { background: color-mix(in srgb, var(--ink-dim) 25%, transparent); color: var(--ink-dim); cursor: not-allowed; }
+.vd__go { background: transparent; color: #7a5cc4; border: 1.5px solid color-mix(in srgb, #7a5cc4 45%, transparent); }
+
+/* 金句小測 */
+.vd__quiz { max-width: 720px; }
+.vd__qstatus { color: var(--ink-dim); font-size: 14px; margin-bottom: 10px; }
+.vd__qstage {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 20px;
+  border: 1px solid color-mix(in srgb, var(--ink-dim) 18%, transparent);
+}
+.vd__qprompt { color: var(--ink-dim); font-size: 14px; }
+.vd__qtheme { color: var(--ink); font-size: clamp(18px, 3vw, 24px); font-weight: 700; line-height: 1.5; margin: 6px 0 16px; }
+.vd__qopts { display: grid; gap: 10px; }
+.vd__qopt {
+  text-align: left;
+  padding: 13px 16px;
+  border-radius: 12px;
+  border: 1.5px solid color-mix(in srgb, var(--ink-dim) 30%, transparent);
+  background: transparent;
+  color: var(--ink);
+  font-size: 16px;
+  cursor: pointer;
+}
+.vd__qopt:hover:not(:disabled) { border-color: #7a5cc4; }
+.vd__qopt--ok { background: #3a9d6b; color: #fff; border-color: #3a9d6b; }
+.vd__qopt--no { background: #d64545; color: #fff; border-color: #d64545; }
+.vd__qfb { margin-top: 14px; font-size: 16px; line-height: 1.6; }
+.vd__qfb--ok { color: #2f7d54; }
+.vd__qfb--no { color: var(--ink); }
+.vd__qnext {
+  margin-top: 14px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  border: none;
+  background: #7a5cc4;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}

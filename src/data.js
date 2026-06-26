@@ -28,9 +28,20 @@
 export const CATEGORIES = [
   { id: 'bible', name: '聖經旅程', desc: '跟著聖經人物走一趟(大富翁桌遊)' },
   { id: 'series', name: '闖關合輯', desc: '一張卡片,進入一整組可單獨玩的關卡' },
+  { id: 'review', name: '複習・工具', desc: '金句複習朗讀、課堂計分等工具' },
 ]
 
 export const JOURNEYS = [
+  // —— 複習・工具(route 卡片:點了走大廳內頁 hash 路由,不離開大廳) ——
+  {
+    id: 'verse-review',
+    name: '金句複習・朗讀',
+    subtitle: '全系列金句 ‧ 複習 + 小測 + 朗讀(可離線)',
+    category: 'review',
+    color: '#7a5cc4',
+    emoji: '📖',
+    route: 'verses', // → #/verses(src/verses.js);不是外部遊戲網址
+  },
   {
     id: 'jonah',
     name: '約拿闖關(動作版)',

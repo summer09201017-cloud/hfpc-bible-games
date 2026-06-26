@@ -2,6 +2,7 @@
 // 純讀資料、不含遊戲邏輯;點直達卡片就連到各遊戲網址,點合輯卡片就就地展開那組關卡。
 import { CATEGORIES, JOURNEYS, COLLECTIONS } from './data.js'
 import { renderScoreboard } from './scoreboard.js'
+import { renderVerses, dailyStrip } from './verses.js'
 
 const app = document.getElementById('app')
 
@@ -50,7 +51,8 @@ applyTheme(savedTheme)
 //   soon → 不可點的「敬請期待」。
 function makeCard(j) {
   const isCollection = !!j.collection
-  const clickable = isCollection || (!j.soon && j.url)
+  const isRoute = !!j.route // 大廳內頁(hash 路由,如金句複習 #/verses);不是外部遊戲網址
+  const clickable = isCollection || isRoute || (!j.soon && j.url)
   const card = clickable ? document.createElement('a') : document.createElement('div')
   card.className = 'card' + (j.soon ? ' card--soon' : '')
   card.style.setProperty('--accent', j.color || '#3b6ea5')
@@ -60,6 +62,10 @@ function makeCard(j) {
     card.href = `#/${j.collection}`
     card.setAttribute('aria-label', `展開 ${j.name}`)
     cta = '展開 →'
+  } else if (isRoute) {
+    card.href = `#/${j.route}`
+    card.setAttribute('aria-label', `開啟 ${j.name}`)
+    cta = '開啟 →'
   } else if (clickable) {
     card.href = j.url
     // 同分頁開啟:大廳是「門口」,點了就走進該遊戲。
@@ -82,6 +88,7 @@ function makeCard(j) {
 // —— 首頁(大廳):分類 + 卡片牆。只渲染「有卡片」的分類。 ——
 function renderHome() {
   app.innerHTML = ''
+  app.appendChild(dailyStrip()) // 📖 今日金句(daily-verse)橫條
   for (const cat of CATEGORIES) {
     const items = JOURNEYS.filter((j) => j.category === cat.id)
     if (items.length === 0) continue
@@ -141,6 +148,7 @@ function route() {
   const m = (location.hash || '').match(/^#\/([\w-]+)$/)
   const key = m && m[1]
   if (key === 'scoreboard') renderScoreboard(app)
+  else if (key === 'verses') renderVerses(app)
   else if (key && COLLECTIONS[key]) renderCollection(COLLECTIONS[key])
   else renderHome()
   window.scrollTo(0, 0)

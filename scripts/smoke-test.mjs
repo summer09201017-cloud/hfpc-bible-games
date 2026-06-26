@@ -38,8 +38,12 @@ function checkCard(j, where, seen) {
   if (j.collection) {
     if (!collections[j.collection])
       fail(`${where} 指向不存在的合輯 collection "${j.collection}"`)
+  } else if (j.route) {
+    // 大廳內頁卡片(hash 路由,如金句複習 #/verses)——不連外部遊戲,不需要 http url。
+    if (!/^[\w-]+$/.test(j.route))
+      fail(`${where} 的 route "${j.route}" 不是合法的 hash 路由代號`)
   } else if (!j.soon) {
-    if (!j.url) fail(`${where} 不是 soon、也不是合輯,卻沒有 url`)
+    if (!j.url) fail(`${where} 不是 soon、也不是合輯/內頁,卻沒有 url`)
     else if (!/^https?:\/\//.test(j.url))
       fail(`${where} 的 url 不是 http(s) 開頭:${j.url}`)
   }
@@ -93,7 +97,7 @@ if (!/src\/main\.js/.test(html)) fail('index.html 沒有載入 src/main.js')
 // —— 3. Service Worker app shell 清單 ——
 const sw = existsSync(join(root, 'public/sw.js')) ? read('public/sw.js') : ''
 if (!/const\s+CACHE\s*=/.test(sw)) fail('sw.js 沒有 CACHE 版本號')
-for (const need of ['/index.html', '/styles.css', '/src/main.js', '/src/data.js', '/src/scoreboard.js'])
+for (const need of ['/index.html', '/styles.css', '/src/main.js', '/src/data.js', '/src/scoreboard.js', '/src/verses.js', '/src/verseData.js'])
   if (!sw.includes(`'${need}'`))
     fail(`sw.js 的預快取清單 CORE 漏了 ${need}(離線會缺檔)`)
 
