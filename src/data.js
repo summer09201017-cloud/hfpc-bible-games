@@ -184,6 +184,17 @@ export const JOURNEYS = [
     url: 'https://hfpc-samson-game.netlify.app/',
     credit: '製作:憫安',
   },
+  {
+    // 耶利哥城牆(直達卡):住保羅 repo src/minigames/jericho/,?demo=jericho(忿怒鳥式:蓄力吹角吶喊震塌城牆)。
+    // ✅ 2026-06-27:經文 cuv 查驗(書6:2/6:16/6:20)、A 站自動部署。神學:城牆是「耶和華使它塌陷」(書6:20),不是靠人的武力。
+    id: 'jericho',
+    name: '耶利哥城牆',
+    subtitle: '書 6・繞城吹角大聲呼喊,耶和華使城牆塌陷',
+    category: 'bible',
+    color: '#c98a2b',
+    emoji: '🎺',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=jericho',
+  },
 
   // —— 兩張「合輯卡片」:點了在大廳內就地展開,不離開頁面 ——
   {
