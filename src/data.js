@@ -598,13 +598,14 @@ export const COLLECTIONS = {
         url: 'https://hfpc-paul-game.netlify.app/?demo=fishing',
       },
       {
-        // 海邊的復興/三次託付(未製作,佔位)。
+        // 海邊的復興/三次託付。✅ 2026-06-28:住保羅 repo src/minigames/shore/,?demo=shore;經文 cuv 查驗(約21:15/16/17/19/9)、A 站自動部署。
+        //   三次「你愛我嗎?」→ 餵養我的羊;炭火旁的接納(彼得曾三次不認主)、「你跟從我吧」(21:19)。⛔ 不渲染殉道。
         id: 'restore',
         name: '海邊的復興',
         subtitle: '約 21・「你愛我嗎?」三次跌倒、三次託付',
         color: '#c0612a',
         emoji: '🔥',
-        soon: true,
+        url: 'https://hfpc-paul-game.netlify.app/?demo=shore',
       },
     ],
   },
