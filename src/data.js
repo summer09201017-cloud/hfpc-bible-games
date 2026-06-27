@@ -588,13 +588,14 @@ export const COLLECTIONS = {
         url: 'https://hfpc-peter-prison-game.netlify.app/',
       },
       {
-        // 下網得魚(未製作,佔位「敬請期待」;做好再補 url + 刪 soon)。
+        // 下網得魚(收集類)。✅ 2026-06-27:住保羅 repo src/minigames/fishing/,?demo=fishing;經文 cuv 查驗(路5:4/5/6/10/11)、A 站自動部署。
+        //   兩階段順服:整夜勞力→「依你的話」開到水深之處→網滿;神學「得人如得魚、撇下所有跟從」(路5:10-11)。
         id: 'catch',
         name: '下網得魚',
-        subtitle: '路 5/約 21・聽主的話,空船變滿網',
+        subtitle: '路 5・聽主的話,空船變滿網',
         color: '#2e8b8b',
         emoji: '🎣',
-        soon: true,
+        url: 'https://hfpc-paul-game.netlify.app/?demo=fishing',
       },
       {
         // 海邊的復興/三次託付(未製作,佔位)。
