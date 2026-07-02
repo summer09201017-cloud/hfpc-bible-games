@@ -519,6 +519,43 @@ body {
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
 
+/* —— 🎁 隱藏彩蛋卡片(連點大標題 7 下才出現):金色寶箱感 + 浮出動畫 —— */
+.card--egg {
+  border-style: double;
+  border-width: 4px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.12),
+    0 0 18px color-mix(in srgb, var(--accent) 45%, transparent);
+  animation: egg-pop 0.5s ease-out;
+}
+@keyframes egg-pop {
+  0% { transform: scale(0.6); opacity: 0; }
+  70% { transform: scale(1.05); }
+  100% { transform: scale(1); opacity: 1; }
+}
+/* 彩帶:全螢幕覆蓋、不吃點擊,3 秒後由 JS 移除 */
+.egg-confetti {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+.egg-confetti span {
+  position: absolute;
+  top: -12px;
+  width: 10px;
+  height: 14px;
+  border-radius: 2px;
+  animation: egg-fall linear forwards;
+}
+@keyframes egg-fall {
+  to { transform: translateY(105vh) rotate(540deg); opacity: 0.7; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .card--egg { animation: none; }
+  .egg-confetti { display: none; }
+}
+
 /* —— 敬請期待(尚未做好):整張變暗、不可點 —— */
 .card--soon {
   cursor: default;

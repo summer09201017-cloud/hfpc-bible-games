@@ -1,6 +1,6 @@
 // 進入點:把 data.js 的旅程清單畫成「分類 + 卡片牆」。
 // 純讀資料、不含遊戲邏輯;點直達卡片就連到各遊戲網址,點合輯卡片就就地展開那組關卡。
-import { CATEGORIES, JOURNEYS, COLLECTIONS } from './data.js'
+import { CATEGORIES, JOURNEYS, COLLECTIONS, EGG } from './data.js'
 import { renderScoreboard } from './scoreboard.js'
 import { renderVerses, dailyStrip } from './verses.js'
 
@@ -105,7 +105,64 @@ function renderHome() {
     section.appendChild(grid)
     app.appendChild(section)
   }
+  if (eggFound()) app.appendChild(makeEggSection())
 }
+
+// —— 🎁 隱藏彩蛋:連點大廳大標題 7 下,浮出「爸爸作品集」卡片(localStorage 記住) ——
+const EGG_KEY = 'hub-egg-found'
+function eggFound() {
+  try { return localStorage.getItem(EGG_KEY) === '1' } catch { return false }
+}
+function makeEggSection() {
+  const section = document.createElement('section')
+  section.className = 'cat egg'
+  section.innerHTML = `<div class="cat__head"><h2 class="cat__name">🎁 隱藏彩蛋</h2></div>`
+  const grid = document.createElement('div')
+  grid.className = 'grid'
+  const card = makeCard(EGG)
+  card.classList.add('card--egg')
+  grid.appendChild(card)
+  section.appendChild(grid)
+  return section
+}
+function eggConfetti() {
+  const box = document.createElement('div')
+  box.className = 'egg-confetti'
+  box.setAttribute('aria-hidden', 'true')
+  const colors = ['#f5c518', '#e8a33d', '#b8860b', '#fff3c4', '#d94f4f', '#3b6ea5']
+  for (let i = 0; i < 60; i++) {
+    const p = document.createElement('span')
+    p.style.left = Math.random() * 100 + 'vw'
+    p.style.background = colors[i % colors.length]
+    p.style.animationDelay = Math.random() * 0.5 + 's'
+    p.style.animationDuration = 1.4 + Math.random() * 1.2 + 's'
+    box.appendChild(p)
+  }
+  document.body.appendChild(box)
+  setTimeout(() => box.remove(), 3000)
+}
+;(() => {
+  const title = document.querySelector('.hero__title')
+  if (!title) return
+  let taps = 0
+  let timer = null
+  title.addEventListener('pointerdown', () => {
+    if (eggFound()) return
+    taps++
+    clearTimeout(timer)
+    timer = setTimeout(() => { taps = 0 }, 1200) // 停 1.2 秒就重數
+    if (taps < 7) return
+    taps = 0
+    try { localStorage.setItem(EGG_KEY, '1') } catch {}
+    // 在大廳首頁才就地重畫並捲到彩蛋;在內頁就等下次回大廳自然出現。
+    const onHome = !location.hash || location.hash === '#/' || location.hash === '#'
+    if (onHome) {
+      renderHome()
+      document.querySelector('.card--egg')?.scrollIntoView({ behavior: 'smooth', block: 'center' })
+    }
+    eggConfetti()
+  })
+})()
 
 // —— 合輯內頁:標題 + 返回鈕 + 該組關卡卡片牆 ——
 function renderCollection(col) {

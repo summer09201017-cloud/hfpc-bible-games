@@ -249,6 +249,18 @@ export const JOURNEYS = [
   },
 ]
 
+// ★ 隱藏彩蛋卡片(2026-07-03 牧師決定):連點大廳大標題 7 下才會出現、之後 localStorage 記住。
+//   不放進 JOURNEYS(平常卡片牆一張不多);和「憫安製作闖關合輯」成對——父子的作品都在這個家。
+export const EGG = {
+  id: 'daddy-portfolio',
+  name: '爸爸作品集',
+  emoji: '🎁',
+  subtitle: '爸爸做的 51 個網站・聖經遊戲只是其中一部分',
+  credit: '被你發現了!🎉',
+  url: 'https://hfpc-portfolio.netlify.app',
+  color: '#b8860b',
+}
+
 // ★ 合輯內容(每個 = 一張「播放清單」)。
 //   items 裡每一關都『指向它原本已存在的地方』(深連結),不在這裡複製關卡。
 //   一關還沒上線就 soon:true(顯示「敬請期待」、不可點);上線後把 soon 拿掉、補上 url 即可。
