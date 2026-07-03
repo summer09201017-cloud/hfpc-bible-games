@@ -159,6 +159,17 @@ export const JOURNEYS = [
     url: 'https://hfpc-paul-game.netlify.app/?demo=psalm100',
   },
   {
+    // 大衛彈琴(Guitar Hero 型節奏):住 hfpc-paul-game(?demo=davidharp)。
+    // ✅ 2026-07-03:琴弦由遠而近,判定線=琴橋;彈得穩,掃羅的愁煩就散開(撒上 16:23)。
+    id: 'davidharp',
+    name: '大衛彈琴(琴弦節奏)',
+    subtitle: '撒上 16・用手彈琴,掃羅便舒暢爽快,惡魔離了他',
+    category: 'bible',
+    color: '#7a5a9c',
+    emoji: '🎻',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=davidharp',
+  },
+  {
     // 王宮之夜(潛行恐怖 + 輕反向RPG):獨立 repo hfpc-daniel-game(vanilla Canvas PWA)。
     // ✅ 2026-06-25:已部署 hfpc-daniel-game.netlify.app(curl 驗證標題 + 核心資產 200),卡片正式亮。
     //    內建「恐怖強度」旋鈕(💀滿／🕯️緩和／🧸兒童),切「兒童」即不嚇人、無血、較亮 → 主日學也能用。
