@@ -147,6 +147,18 @@ export const JOURNEYS = [
     url: 'https://hfpc-psalm150-game.netlify.app/',
   },
   {
+    // 讚美琴鍵(4K 下落式節奏/VSRG):住 hfpc-paul-game(?demo=psalm100,自成一體引擎)。
+    // ✅ 2026-07-03:系列首個下落式——琴鍵落進「稱謝之門」按對=稱謝進門(詩 100:4);
+    //    漏按歌照唱(歌是神的)、不會輸,星等看命中率;年齡三檔;鍵盤+多點觸控。
+    id: 'psalm100',
+    name: '讚美琴鍵(下落節奏)',
+    subtitle: '詩 100・琴鍵落進聖殿的門,按對=稱謝進門',
+    category: 'bible',
+    color: '#b8860b',
+    emoji: '🎹',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=psalm100',
+  },
+  {
     // 王宮之夜(潛行恐怖 + 輕反向RPG):獨立 repo hfpc-daniel-game(vanilla Canvas PWA)。
     // ✅ 2026-06-25:已部署 hfpc-daniel-game.netlify.app(curl 驗證標題 + 核心資產 200),卡片正式亮。
     //    內建「恐怖強度」旋鈕(💀滿／🕯️緩和／🧸兒童),切「兒童」即不嚇人、無血、較亮 → 主日學也能用。
