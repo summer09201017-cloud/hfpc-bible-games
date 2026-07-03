@@ -146,40 +146,8 @@ export const JOURNEYS = [
     emoji: '🎺',
     url: 'https://hfpc-psalm150-game.netlify.app/',
   },
-  {
-    // 讚美琴鍵(4K 下落式節奏/VSRG):住 hfpc-paul-game(?demo=psalm100,自成一體引擎)。
-    // ✅ 2026-07-03:系列首個下落式——琴鍵落進「稱謝之門」按對=稱謝進門(詩 100:4);
-    //    漏按歌照唱(歌是神的)、不會輸,星等看命中率;年齡三檔;鍵盤+多點觸控。
-    id: 'psalm100',
-    name: '讚美琴鍵(下落節奏)',
-    subtitle: '詩 100・琴鍵落進聖殿的門,按對=稱謝進門',
-    category: 'bible',
-    color: '#b8860b',
-    emoji: '🎹',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=psalm100',
-  },
-  {
-    // 大衛彈琴(Guitar Hero 型節奏):住 hfpc-paul-game(?demo=davidharp)。
-    // ✅ 2026-07-03:琴弦由遠而近,判定線=琴橋;彈得穩,掃羅的愁煩就散開(撒上 16:23)。
-    id: 'davidharp',
-    name: '大衛彈琴(琴弦節奏)',
-    subtitle: '撒上 16・用手彈琴,掃羅便舒暢爽快,惡魔離了他',
-    category: 'bible',
-    color: '#7a5a9c',
-    emoji: '🎻',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=davidharp',
-  },
-  {
-    // 米利暗擊鼓(太鼓達人型節奏):住 hfpc-paul-game(?demo=miriam)。
-    // ✅ 2026-07-04:單軌雙打點(紅拍鼓/藍搖鈴);過紅海的得勝慶祝關,不會輸。
-    id: 'miriam',
-    name: '米利暗擊鼓(太鼓節奏)',
-    subtitle: '出 15・拿鼓跳舞!你們要歌頌耶和華,因他大大戰勝',
-    category: 'bible',
-    color: '#d9483d',
-    emoji: '🥁',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=miriam',
-  },
+  // (psalm100 讚美琴鍵 / davidharp 大衛彈琴 / miriam 米利暗擊鼓 三張直達卡
+  //  2026-07-04 撤下首頁、收進「音樂闖關合輯」COLLECTIONS.music——網址不變,只是入口整併。)
   {
     // 王宮之夜(潛行恐怖 + 輕反向RPG):獨立 repo hfpc-daniel-game(vanilla Canvas PWA)。
     // ✅ 2026-06-25:已部署 hfpc-daniel-game.netlify.app(curl 驗證標題 + 核心資產 200),卡片正式亮。
@@ -281,6 +249,18 @@ export const JOURNEYS = [
     emoji: '🪨',
     collection: 'peterLife',
   },
+  {
+    // 音樂闖關合輯(2026-07-04):六關四種玩法(FNF/下落式/GuitarHero/太鼓)聚成一張播放清單。
+    // psalm100/davidharp/miriam 的首頁直達卡同日撤下收進來(上架僅兩天無習慣);
+    // 彼得走海/保羅西拉/詩篇150 首頁卡先留(上線較久,同一關可在多個清單)。
+    id: 'music',
+    name: '音樂闖關合輯',
+    subtitle: '六關四種玩法・唱詩擊鼓讚美耶和華',
+    category: 'series',
+    color: '#b8860b',
+    emoji: '🎵',
+    collection: 'music',
+  },
 ]
 
 // ★ 隱藏彩蛋卡片(2026-07-03 牧師決定):連點大廳大標題 7 下才會出現、之後 localStorage 記住。
@@ -299,6 +279,66 @@ export const EGG = {
 //   items 裡每一關都『指向它原本已存在的地方』(深連結),不在這裡複製關卡。
 //   一關還沒上線就 soon:true(顯示「敬請期待」、不可點);上線後把 soon 拿掉、補上 url 即可。
 export const COLLECTIONS = {
+  // 音樂闖關合輯(2026-07-04):節奏家族四子型六關——同一個信息(讚美/持守/定睛),四種玩法給老師和孩子選。
+  music: {
+    title: '音樂闖關合輯',
+    emoji: '🎵',
+    desc:
+      '六關音樂節奏遊戲、四種玩法——節拍、下落琴鍵、透視琴弦、太鼓連打。' +
+      '每關都能單獨玩、都有年齡難度;打得準不是為了贏,是一起把讚美歸給耶和華。',
+    color: '#b8860b',
+    items: [
+      {
+        id: 'peter-sea',
+        name: '彼得走海(節拍)',
+        subtitle: '太 14・定睛看耶穌,踩準節拍走過海面',
+        color: '#1e4f8a',
+        emoji: '🌊',
+        url: 'https://hfpc-peter-sea-game.netlify.app/',
+        credit: '製作:憫安',
+      },
+      {
+        id: 'paul-silas',
+        name: '保羅西拉獄中讚美(節拍)',
+        subtitle: '徒 16・半夜監牢唱詩讚美,神開監門',
+        color: '#3a2c52',
+        emoji: '⛓️',
+        url: 'https://hfpc-paul-silas-game.netlify.app/',
+      },
+      {
+        id: 'psalm150',
+        name: '詩篇150(節拍)',
+        subtitle: '詩 150・各樣樂器齊鳴,凡有氣息都讚美',
+        color: '#b5872e',
+        emoji: '🎺',
+        url: 'https://hfpc-psalm150-game.netlify.app/',
+      },
+      {
+        id: 'psalm100',
+        name: '讚美琴鍵(下落琴鍵)',
+        subtitle: '詩 100・琴鍵落進聖殿的門,按對=稱謝進門',
+        color: '#b8860b',
+        emoji: '🎹',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=psalm100',
+      },
+      {
+        id: 'davidharp',
+        name: '大衛彈琴(透視琴弦)',
+        subtitle: '撒上 16・用手彈琴,掃羅便舒暢爽快,惡魔離了他',
+        color: '#7a5a9c',
+        emoji: '🎻',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=davidharp',
+      },
+      {
+        id: 'miriam',
+        name: '米利暗擊鼓(太鼓連打)',
+        subtitle: '出 15・拿鼓跳舞!你們要歌頌耶和華,因他大大戰勝',
+        color: '#d9483d',
+        emoji: '🥁',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=miriam',
+      },
+    ],
+  },
   // 靠神得勝・閃避:仇敵攻擊,只管躲、不還手——得勝在乎倚靠神(反向 RPG)。兩關都住在保羅 app 的 ?demo=。
   'dodge-heroes': {
     title: '靠神得勝・閃避',
