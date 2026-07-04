@@ -174,6 +174,19 @@ export const JOURNEYS = [
     url: 'https://hfpc-paul-game.netlify.app/?journey=peter',
   },
   {
+    // 耶穌生平之旅(直達卡):住保羅 repo,?journey=jesus(21 站聖地棋盤,伯利恆→加利利→耶路撒冷)。
+    // ✅ 2026-07-05:七關全接上(①曠野試探②平靜風浪③五餅二魚④水面行走=嵌彼得走海⑤好撒馬利亞人
+    //    ⑥客西馬尼撐住不睡⑦各各他五幕終局)、題庫+卡片文案牧師已過審 → 點亮。
+    //    玩家=無名門徒「你」,耶穌永不受操控;受難守定調(剪影不見血)。
+    id: 'jesus-journey',
+    name: '耶穌生平之旅',
+    subtitle: '四福音・21 站聖地,跟隨主直到空墳墓',
+    category: 'bible',
+    color: '#7a5ab0',
+    emoji: '✝️',
+    url: 'https://hfpc-paul-game.netlify.app/?journey=jesus',
+  },
+  {
     // 參孫打獅子(直達卡):獨立 repo hfpc-samson-game(vanilla Canvas PWA),即時動作關。
     // 已部署 hfpc-samson-game.netlify.app(2026-06-25 curl 驗證標題 + 200)。憫安製作,合輯(戰爭/憫安)也各收一張。
     // 主題正中合輯精神:聖經不說參孫多強壯,而說「耶和華的靈大大感動他」——力量出於神。
