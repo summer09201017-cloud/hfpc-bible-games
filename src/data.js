@@ -330,6 +330,16 @@ export const COLLECTIONS = {
         url: 'https://hfpc-paul-game.netlify.app/?demo=davidharp',
       },
       {
+        // two-forms 配對(2026-07-04):同故事的「自由演奏」幼稚園版——沒有音符、沒有錯的音,
+        // 五聲音階怎麼亂彈都好聽;跟上面的節奏判定版並排,老師按年齡選。
+        id: 'harptoy',
+        name: '大衛彈琴(自由演奏・幼兒)',
+        subtitle: '撒上 16・想彈哪根弦就彈,沒有錯的音!彈著彈著,王的愁煩就散開',
+        color: '#9c7ab8',
+        emoji: '🪕',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=harptoy',
+      },
+      {
         id: 'miriam',
         name: '米利暗擊鼓(太鼓連打)',
         subtitle: '出 15・拿鼓跳舞!你們要歌頌耶和華,因他大大戰勝',
