@@ -115,6 +115,12 @@ export const VERSES = [
   },
 
   {
+    id: 'luke-15-4', book: '路加福音', ref: '路加福音 15:4', status: 'live',
+    theme: '牧人必去找那失去的羊,直到找著——主來尋找失喪的人。',
+    text: '你們中間誰有一百隻羊失去一隻，不把這九十九隻撇在曠野、去找那失去的羊，直到找著呢？', cuv: 'verified',
+    game: '好牧人尋羊', enter: 'https://hfpc-paul-game.netlify.app/?demo=shepherd',
+  },
+  {
     id: 'ruth-1-16', book: '路得記', ref: '路得記 1:16', status: 'live',
     theme: '你的國就是我的國,你的神就是我的神——忠誠與歸屬。',
     text: '你往哪裡去，我也往那裡去；你在哪裡住宿，我也在那裡住宿；你的國就是我的國，你的神就是我的神。', cuv: 'verified',

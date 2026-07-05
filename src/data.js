@@ -210,6 +210,18 @@ export const JOURNEYS = [
     emoji: '🎺',
     url: 'https://hfpc-paul-game.netlify.app/?demo=jericho',
   },
+  {
+    // 好牧人尋羊(直達卡):住保羅 repo src/minigames/shepherd/,?demo=shepherd(系列第一個「迷宮尋路」)。
+    // ✅ 2026-07-05:牧者過審文案後點亮;引文 路15:4/5-6/7 cuv 逐字查驗;paul PR #63 A 站部署、線上已驗。
+    //   年齡三檔(青=夜裡提燈尋羊);永不會輸——「直到找著呢?」牧人必找到底。
+    id: 'shepherd',
+    name: '好牧人尋羊',
+    subtitle: '路 15・循「咩~」尋迷羊,扛在肩上帶回家',
+    category: 'bible',
+    color: '#5c8f49',
+    emoji: '🐑',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=shepherd',
+  },
 
   // —— 兩張「合輯卡片」:點了在大廳內就地展開,不離開頁面 ——
   {
