@@ -115,6 +115,12 @@ export const VERSES = [
   },
 
   {
+    id: '1sam-3-10', book: '撒母耳記上', ref: '撒母耳記上 3:10', status: 'live',
+    theme: '聽神的話,不只是聽見——是記住、回應、照著行。',
+    text: '耶和華又來站著，像前三次呼喚說：「撒母耳啊！撒母耳啊！」撒母耳回答說：「請說，僕人敬聽！」', cuv: 'verified',
+    game: '撒母耳聽呼喚', enter: 'https://hfpc-paul-game.netlify.app/?demo=samuel',
+  },
+  {
     id: 'luke-15-4', book: '路加福音', ref: '路加福音 15:4', status: 'live',
     theme: '牧人必去找那失去的羊,直到找著——主來尋找失喪的人。',
     text: '你們中間誰有一百隻羊失去一隻，不把這九十九隻撇在曠野、去找那失去的羊，直到找著呢？', cuv: 'verified',

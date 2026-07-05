@@ -222,6 +222,18 @@ export const JOURNEYS = [
     emoji: '🐑',
     url: 'https://hfpc-paul-game.netlify.app/?demo=shepherd',
   },
+  {
+    // 撒母耳聽呼喚(直達卡):住保羅 repo src/minigames/samuel/,?demo=samuel(系列第一個「記憶序列 Simon 型」)。
+    // ✅ 2026-07-06:牧者過審文案後點亮;引文 撒上3:4-5/3:9/3:10/3:19 cuv 逐字查驗;paul PR #64 A 站部署、線上已驗(mp3 f93b7f6c 200)。
+    //   油燈依序亮、照順序點回(聽與順服);聽錯溫柔重聽、永不會輸;年齡三檔(幼3/童4/青5輪更快)。
+    id: 'samuel',
+    name: '撒母耳聽呼喚',
+    subtitle: '撒上 3・注意聽,照順序點燈——請說,僕人敬聽',
+    category: 'bible',
+    color: '#7a5c9e',
+    emoji: '🕯️',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=samuel',
+  },
 
   // —— 兩張「合輯卡片」:點了在大廳內就地展開,不離開頁面 ——
   {
