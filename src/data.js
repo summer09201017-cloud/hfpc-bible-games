@@ -436,15 +436,15 @@ export const COLLECTIONS = {
     emoji: '⚔️',
     items: [
       {
-        // 摩西舉手之戰:住在「約拿引擎」repo(vanilla JS),?level=moses。
-        // ✅ 2026-06-14:部署到「戰爭原型」獨立站 hfpc-war-games(不碰線上約拿六關站),卡片正式亮。
-        //   永久家仍是保羅 repo(見 HANDOFF);營會後有空再搬,屆時把 url 改指向保羅站即可。
+        // 摩西舉手之戰(約拿引擎 L7)。
+        // ✅ 2026-07-05:搬進永久家保羅 repo(paul PR #62,自動部署)→ ?demo=moses-action;
+        //   原 hfpc-war-games(手動 B 站)可退役。
         id: 'moses',
         name: '摩西舉手之戰',
         subtitle: '出 17・撐住舉手,亞倫戶珥扶手',
         color: '#c98a2b',
         emoji: '🙌',
-        url: 'https://hfpc-war-games.netlify.app/?level=moses',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=moses-action',
       },
       {
         // 大衛甩石:住在「保羅大富翁」repo,src/minigames/sling/,?demo=sling 可單獨玩。
@@ -469,15 +469,14 @@ export const COLLECTIONS = {
         url: 'https://hfpc-paul-game.netlify.app/?demo=jehoshaphat-action',
       },
       {
-        // 反轉奇兵(巴蘭的驢 民22):住在「約拿引擎」repo,?level=balaam 閃避動作關。
-        // 與「逆轉奇兵」合輯共用同一關(深連結,不複製;改一處兩邊都更新)。
-        // ✅ 2026-06-14:同摩西/聖歌,部署在 hfpc-war-games,卡片正式亮。
+        // 反轉奇兵(巴蘭的驢 民22,約拿引擎 L10)。與「逆轉奇兵」合輯共用同一關(深連結,不複製)。
+        // ✅ 2026-07-05:搬進永久家保羅 repo(paul PR #62,自動部署)→ ?demo=balaam-action。
         id: 'balaam',
         name: '反轉奇兵',
         subtitle: '民 22・巴蘭的驢,神攔阻得勝',
         color: '#8a6d3b',
         emoji: '🫏',
-        url: 'https://hfpc-war-games.netlify.app/?level=balaam',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=balaam-action',
       },
       {
         // ✅ 2026-06-15:紅海奔逃動作關復活——獨立入口 保羅 ?demo=redsea(出 14;不綁約拿站,點進去直接玩)。
@@ -612,13 +611,13 @@ export const COLLECTIONS = {
         url: 'https://hfpc-paul-game.netlify.app/?demo=jehoshaphat-action',
       },
       {
-        // ✅ 2026-06-14:反轉動作版部署於 hfpc-war-games(?level=balaam);與戰爭合輯共用同一關。
+        // ✅ 2026-07-05:搬進保羅 repo(paul PR #62)→ ?demo=balaam-action;與戰爭合輯共用同一關。
         id: 'balaam-action',
         name: '反轉奇兵·動作版',
         subtitle: '民 22・閃避攔路,神攔阻得勝',
         color: '#8a6d3b',
         emoji: '🫏',
-        url: 'https://hfpc-war-games.netlify.app/?level=balaam',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=balaam-action',
       },
     ],
   },
