@@ -114,13 +114,14 @@ export const VERSES = [
     game: '參孫打獅子', enter: 'https://hfpc-samson-game.netlify.app/',
   },
 
-  // ───── 設計中 / 尚未做關(soon;經文已核對、可複習朗讀,關卡待做)──────────
   {
-    id: 'ruth-1-16', book: '路得記', ref: '路得記 1:16', status: 'soon',
+    id: 'ruth-1-16', book: '路得記', ref: '路得記 1:16', status: 'live',
     theme: '你的國就是我的國,你的神就是我的神——忠誠與歸屬。',
     text: '你往哪裡去，我也往那裡去；你在哪裡住宿，我也在那裡住宿；你的國就是我的國，你的神就是我的神。', cuv: 'verified',
-    game: '(設計中)',
+    game: '路得記·從空到滿', enter: 'https://hfpc-ruth-game.netlify.app/',
   },
+
+  // ───── 設計中 / 尚未做關(soon;經文已核對、可複習朗讀,關卡待做)──────────
   {
     id: 'est-4-14', book: '以斯帖記', ref: '以斯帖記 4:14', status: 'soon',
     theme: '焉知你得了王后的位分,不是為現今的機會嗎?——神的安排與勇氣。',

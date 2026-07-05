@@ -798,3 +798,29 @@ body {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.28),
     0 0 0 3px color-mix(in srgb, var(--team) 70%, transparent);
 }
+
+/* —— 🧩 拼金句(verses.js buildPuzzle):片段 chips + 已拼區 —— */
+.vd__built {
+  min-height: 48px;
+  background: #fffdf6;
+  border: 2px dashed #d8c9a8;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: clamp(16px, 2.6vw, 22px);
+  line-height: 1.6;
+  margin: 12px 0;
+}
+.vd__chips { display: flex; flex-wrap: wrap; gap: 10px; }
+.vd__chip {
+  font-size: clamp(15px, 2.4vw, 20px);
+  padding: 10px 14px;
+  min-height: 44px;
+  border-radius: 10px;
+  border: 1px solid #d8c9a8;
+  background: #fff;
+  cursor: pointer;
+}
+.vd__chip--used { opacity: 0.35; text-decoration: line-through; cursor: default; }
+.vd__chip--no { background: #fde3e3; border-color: #e88; animation: vdshake 0.4s; }
+.vd__chip--hint { background: #fff3c4; border-color: #e2b93b; box-shadow: 0 0 0 3px rgba(243, 217, 122, 0.4); }
+@keyframes vdshake { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
