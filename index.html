@@ -38,5 +38,9 @@
     </footer>
 
     <script type="module" src="/src/main.js"></script>
+    <script>
+      // 匿名使用統計(play-stats-lite):只記「lobby+日期→次數」,零個資;離線/被擋靜默跳過,不影響大廳。
+      try { if (location.hostname.endsWith('netlify.app') && navigator.sendBeacon) navigator.sendBeacon('https://hfpc-play-stats.summer09201017.workers.dev/api/ping?g=lobby') } catch (e) {}
+    </script>
   </body>
 </html>
