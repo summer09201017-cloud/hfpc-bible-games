@@ -298,6 +298,16 @@ export const JOURNEYS = [
     url: 'https://hfpc-paul-game.netlify.app/?demo=foxes',
   },
   {
+    // 穿戴全副軍裝(直達卡):系列第一個「拖曳裝備/換裝」關(弗 6;PR #71 牧者過審)。青檔穿完加意義配對。
+    id: 'armor',
+    name: '穿戴全副軍裝',
+    subtitle: '弗 6・六件軍裝拖到正確部位——站立得住',
+    category: 'bible',
+    color: '#8a6a2e',
+    emoji: '⚔️',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=armor',
+  },
+  {
     // 撲滅小火苗(直達卡):守護反應第三式・蔓延型撲滅(雅 3:5;PR #70 牧者過審)。
     id: 'sparks',
     name: '撲滅小火苗',
