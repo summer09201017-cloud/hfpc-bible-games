@@ -257,6 +257,17 @@ export const JOURNEYS = [
     url: 'https://hfpc-paul-game.netlify.app/?demo=samuel',
   },
 
+  {
+    // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
+    // ✅ 2026-07-06:牧者過審內建題組後點亮;投影分組搶答(先按先得/roll-over/末題雙倍),老師判分。
+    id: 'quiz-show',
+    name: '聖經搶答 PK 秀',
+    subtitle: '投影分組搶答・🦁A 🦅L 🐑Z 🐟M 先按先得',
+    category: 'review',
+    color: '#8a5cc4',
+    emoji: '🎤',
+    url: 'https://hfpc-quiz-show.netlify.app/',
+  },
   // —— 兩張「合輯卡片」:點了在大廳內就地展開,不離開頁面 ——
   {
     id: 'war',
