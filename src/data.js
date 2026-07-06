@@ -228,6 +228,17 @@ export const JOURNEYS = [
     //   油燈依序亮、照順序點回(聽與順服);聽錯溫柔重聽、永不會輸;年齡三檔(幼3/童4/青5輪更快)。
     // 約瑟的彩衣(直達卡):住保羅 repo src/minigames/joseph/,?demo=joseph(系列第一個「滑塊拼圖」)。
     // ✅ 2026-07-06:牧者過審(paul PR #65 併,A 站已驗;mp3 596bac62 200);點空格旁碎塊拼回彩衣,永不會輸。
+    // 約瑟管糧倉(直達卡):獨立 repo hfpc-joseph-granary(零建置手寫 PWA,系列第一個「經營管理」)。
+    // ✅ 2026-07-06:牧者過審文案後點亮;七豐年收存/七荒年配糧,恩典卡永不會輸;線上全程 Playwright 驗畢(3星)。
+    id: 'joseph-granary',
+    name: '約瑟管糧倉',
+    subtitle: '創 41・七豐年七荒年——豐年不揮霍,荒年有預備',
+    category: 'bible',
+    color: '#b8860b',
+    emoji: '🌾',
+    url: 'https://hfpc-joseph-granary.netlify.app/',
+  },
+  {
     id: 'joseph',
     name: '約瑟的彩衣',
     subtitle: '創 37→50・拼回彩衣——神把破碎拼回',
