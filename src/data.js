@@ -256,6 +256,27 @@ export const JOURNEYS = [
     emoji: '🕯️',
     url: 'https://hfpc-paul-game.netlify.app/?demo=samuel',
   },
+  {
+    // 尼希米守望(直達卡):住保羅 repo src/minigames/wallguard/(系列第一個「塔防・佈置守望」,PR #69 牧者過審)。
+    // 與閃避合輯裡的「尼希米修牆」是 two-forms:同故事,靜的佈置版 vs 動的閃避版。
+    id: 'wallguard',
+    name: '尼希米守望',
+    subtitle: '尼 3-6・佈崗吹角,仇敵退去——神必為我們爭戰',
+    category: 'bible',
+    color: '#8a6a33',
+    emoji: '🛡️',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=wallguard',
+  },
+  {
+    // 以斯拉護送(直達卡):住保羅 repo src/minigames/ezra/(系列第一個「護送」,PR #69 牧者過審)。
+    id: 'ezra',
+    name: '以斯拉護送',
+    subtitle: '拉 8・沒有刀兵,只有禱告——護送全隊回耶路撒冷',
+    category: 'bible',
+    color: '#4a7a8a',
+    emoji: '🕊️',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=ezra',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
