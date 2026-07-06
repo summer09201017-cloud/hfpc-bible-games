@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>聖經賓果卡產生器</title>
+<!--
+  聖經賓果(bible-bingo)——零相依、可離線、雙擊即開的單檔產生器。
+  照 content-editor-lite 範式:單檔 HTML、老師不碰程式。
+  ★ 內建題組文案為 AI 依和合本常識草擬,正式課堂使用前請牧者過目;
+    金句出處類的經文引用請先以 cuv MCP 核對(本檔只放「出處/人物」不引長句)。
+  種子亂數 = mulberry32(與系列 selfplay 同款):同「場次代碼+卡號」永遠產同一張卡,
+  卡片遺失可重印;每張卡彼此互異。
+-->
+<style>
+  :root { color-scheme: light; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: #f4efe3; color: #2e2418; font-family: "Noto Sans TC","Microsoft JhengHei","PingFang TC",sans-serif; line-height: 1.5; }
+  header { max-width: 960px; margin: 0 auto; padding: 20px 16px 4px; }
+  h1 { margin: 0 0 2px; font-size: 26px; color: #8a5a1e; }
+  .sub { color: #6b5a32; margin: 0 0 10px; }
+  main { max-width: 960px; margin: 0 auto; padding: 0 16px 60px; }
+  fieldset { border: 2px solid #d8c9a3; border-radius: 10px; background: #fffdf6; margin: 0 0 14px; padding: 10px 14px; }
+  legend { font-weight: 700; color: #8a5a1e; padding: 0 6px; }
+  label { display: inline-block; margin: 4px 14px 4px 0; }
+  input[type=number], input[type=text], select { font-size: 16px; padding: 4px 8px; border: 1px solid #c9b98d; border-radius: 6px; background: #fff; }
+  textarea { width: 100%; min-height: 110px; font-size: 14px; font-family: Consolas,monospace; border: 1px solid #c9b98d; border-radius: 6px; padding: 8px; }
+  button { font-size: 17px; padding: 8px 18px; border: 0; border-radius: 8px; background: #8a5a1e; color: #fff; cursor: pointer; margin: 4px 8px 4px 0; }
+  button.secondary { background: #5c8f49; }
+  button:disabled { background: #b9ab8c; cursor: not-allowed; }
+  .hint { font-size: 13px; color: #7a6a45; }
+  .err { color: #a33; font-weight: 700; }
+  /* ── 卡片 ── */
+  .card { width: 460px; max-width: 100%; border: 3px solid #8a5a1e; border-radius: 12px; background: #fff; margin: 14px auto; padding: 10px 12px 14px; page-break-inside: avoid; }
+  .card h3 { margin: 2px 0 0; text-align: center; font-size: 20px; color: #8a5a1e; }
+  .card .meta { text-align: center; font-size: 13px; color: #7a6a45; margin-bottom: 8px; }
+  table.grid { border-collapse: collapse; width: 100%; table-layout: fixed; }
+  table.grid td { border: 2px solid #8a5a1e; text-align: center; vertical-align: middle; height: 74px; padding: 2px; font-size: 17px; font-weight: 700; overflow: hidden; }
+  table.grid td.small { font-size: 13px; }
+  table.grid td.free { background: #fdf3d7; color: #8a5a1e; font-size: 14px; }
+  /* ── 老師主持稿 ── */
+  .host { border: 3px dashed #5c8f49; border-radius: 12px; background: #f2f8ee; margin: 14px auto; padding: 12px 16px; page-break-before: always; }
+  .host h3 { margin: 0 0 6px; color: #3c6b2c; }
+  .host ol { padding-left: 22px; }
+  .host li { margin: 5px 0; font-size: 16px; }
+  .host .ans { color: #3c6b2c; font-weight: 700; }
+  .host table { border-collapse: collapse; font-size: 12px; margin-top: 8px; }
+  .host table td, .host table th { border: 1px solid #9bbf8a; padding: 2px 6px; }
+  @media print {
+    header, fieldset, .noprint { display: none !important; }
+    body { background: #fff; }
+    .card { margin: 0 auto 8mm; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>🎯 聖經賓果卡產生器</h1>
+  <p class="sub">選題組(或貼題庫 JSON)→ 產出全班互異的賓果卡 + 老師主持稿 → 直接列印。零網路、零安裝。</p>
+</header>
+<main>
+  <fieldset>
+    <legend>① 題組來源</legend>
+    <label>內建題組
+      <select id="preset">
+        <option value="people">聖經人物(是誰?)</option>
+        <option value="jonah">約拿書複習</option>
+        <option value="books">金句出處(哪卷書?)</option>
+        <option value="paste">— 貼上題庫 JSON —</option>
+      </select>
+    </label>
+    <div id="pasteBox" style="display:none">
+      <p class="hint">支援兩種格式:①系列 quiz 陣列 <code>[{question, options, answerIndex}]</code>(答案=正解選項文字)②簡易 <code>[{q:"提示", a:"格子字"}]</code>;也可貼整份 journey JSON(自動抽 stations[].quizzes)。</p>
+      <textarea id="pasteArea" placeholder='[{"q":"在魚肚裡三天三夜的先知?","a":"約拿"}]'></textarea>
+    </div>
+    <p class="hint" id="poolInfo"></p>
+  </fieldset>
+  <fieldset>
+    <legend>② 設定</legend>
+    <label>卡數(全班人數) <input type="number" id="nCards" value="10" min="1" max="60" style="width:70px"></label>
+    <label>尺寸
+      <select id="size"><option value="5">5×5(國小以上)</option><option value="3">3×3(幼兒)</option></select>
+    </label>
+    <label>場次代碼(同代碼可重印同一批) <input type="text" id="seedStr" value="HFPC" style="width:110px"></label>
+    <label>中央 FREE 格字(主題金句出處) <input type="text" id="freeText" value="路 15:4 ❤" style="width:150px"></label>
+  </fieldset>
+  <div class="noprint">
+    <button id="genBtn">產生賓果卡</button>
+    <button id="printBtn" class="secondary" disabled>🖨 列印</button>
+    <span class="err" id="errMsg"></span>
+  </div>
+  <div id="out"></div>
+</main>
+<script>
+'use strict'
+// ── mulberry32:與系列 selfplay 同款種子亂數;字串種子先 FNV-1a 成 32bit ──
+function fnv1a (str) { let h = 0x811c9dc5; for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 0x01000193) } return h >>> 0 }
+function mulberry32 (a) { return function () { a |= 0; a = (a + 0x6D2B79F5) | 0; let t = Math.imul(a ^ (a >>> 15), 1 | a); t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t; return ((t ^ (t >>> 14)) >>> 0) / 4294967296 } }
+function seededShuffle (arr, rng) { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rng() * (i + 1)); [a[i], a[j]] = [a[j], a[i]] } return a }
+
+// ── 內建題組(★文案 AI 草擬,課堂使用前請牧者過目)──
+const PRESETS = {
+  people: { name: '聖經人物(是誰?)', items: [
+    { q: '在魚肚裡三天三夜的先知?', a: '約拿' },
+    { q: '用甩石機弦打倒歌利亞的少年?', a: '大衛' },
+    { q: '照神吩咐造方舟的義人?', a: '挪亞' },
+    { q: '被賣到埃及、後來作宰相的?', a: '約瑟' },
+    { q: '帶以色列人過紅海的?', a: '摩西' },
+    { q: '力氣極大、打死獅子的士師?', a: '參孫' },
+    { q: '夜裡聽見耶和華呼喚的童子?', a: '撒母耳' },
+    { q: '說「你的國就是我的國」的摩押女子?', a: '路得' },
+    { q: '在獅子坑裡蒙保守的?', a: '但以理' },
+    { q: '三次不認主、後來大大悔改的門徒?', a: '彼得' },
+    { q: '從逼迫教會變成宣教士的?', a: '保羅' },
+    { q: '為主唱詩、半夜監牢門開的(保羅的同伴)?', a: '西拉' },
+    { q: '接待路得拾穗的大財主?', a: '波阿斯' },
+    { q: '路得的婆婆?', a: '拿俄米' },
+    { q: '繞耶利哥城、城牆倒塌時的領袖?', a: '約書亞' },
+    { q: '被哥哥們嫉妒、得了彩衣的?', a: '約瑟(彩衣)' },
+    { q: '求智慧不求長壽的王?', a: '所羅門' },
+    { q: '「為現今的機會」作王后的?', a: '以斯帖' },
+    { q: '在曠野吃蝗蟲野蜜、為主預備道路的?', a: '施洗約翰' },
+    { q: '把五餅二魚帶來給耶穌的是個…?', a: '小孩子' },
+    { q: '好牧人比喻裡,牧人去找幾隻迷失的羊?', a: '一隻' },
+    { q: '重建耶路撒冷城牆的酒政?', a: '尼希米' },
+    { q: '擊鼓跳舞讚美神的摩西姊姊?', a: '米利暗' },
+    { q: '在大馬色路上看見大光的掃羅後來叫?', a: '保羅(掃羅)' },
+    { q: '雅各最小的兒子(便雅憫的哥哥是約瑟),雅各共有幾個兒子?', a: '十二個' },
+    { q: '耶穌在哪個城出生?', a: '伯利恆' },
+  ] },
+  jonah: { name: '約拿書複習', items: [
+    { q: '神叫約拿去哪座大城呼喊?', a: '尼尼微' },
+    { q: '約拿卻坐船逃往哪裡?', a: '他施' },
+    { q: '海上起了什麼,船幾乎破壞?', a: '大風暴' },
+    { q: '水手把約拿怎麼樣,海就平靜了?', a: '拋進海裡' },
+    { q: '耶和華安排什麼吞了約拿?', a: '大魚' },
+    { q: '約拿在魚腹中幾日幾夜?', a: '三日三夜' },
+    { q: '約拿在魚腹中做什麼?', a: '禱告' },
+    { q: '尼尼微人聽了宣告就怎麼樣?', a: '悔改' },
+    { q: '神為約拿安排了什麼樹遮蔭?', a: '蓖麻' },
+    { q: '咬死蓖麻樹的是?', a: '一條蟲' },
+    { q: '約拿為蓖麻發怒,神說祂豈能不愛惜誰?', a: '尼尼微人' },
+    { q: '尼尼微城裡不能分辨左右手的有多少人?', a: '十二萬多' },
+  ] },
+  books: { name: '金句出處(哪卷書?)', items: [
+    { q: '「起初,神創造天地。」出自?', a: '創世記' },
+    { q: '「耶和華是我的牧者,我必不致缺乏。」出自?', a: '詩篇' },
+    { q: '「你的國就是我的國,你的神就是我的神。」出自?', a: '路得記' },
+    { q: '「請說,僕人敬聽!」出自?', a: '撒母耳記上' },
+    { q: '「神愛世人,甚至將他的獨生子賜給他們。」出自?', a: '約翰福音' },
+    { q: '「當信主耶穌,你和你一家都必得救。」出自?', a: '使徒行傳' },
+    { q: '「我靠著那加給我力量的,凡事都能做。」出自?', a: '腓立比書' },
+    { q: '「愛是恆久忍耐,又有恩慈。」出自?', a: '哥林多前書' },
+    { q: '「你們要靠主常常喜樂。」出自?', a: '腓立比書(4章)' },
+    { q: '「敬畏耶和華是智慧的開端。」出自?', a: '箴言' },
+    { q: '十誡記在出埃及記第幾章?', a: '二十章' },
+    { q: '「要收的莊稼多,做工的人少。」出自?', a: '馬太福音' },
+  ] },
+}
+
+const $ = (id) => document.getElementById(id)
+let printReady = false
+
+function currentPool () {
+  const key = $('preset').value
+  if (key !== 'paste') return PRESETS[key].items
+  const raw = $('pasteArea').value.trim()
+  if (!raw) throw new Error('請先貼上題庫 JSON')
+  let data = JSON.parse(raw)
+  if (data && data.stations) data = data.stations.flatMap((s) => s.quizzes || [])
+  if (!Array.isArray(data)) throw new Error('JSON 要是陣列(或含 stations 的 journey)')
+  return data.map((it) => {
+    if (it.q && it.a) return { q: String(it.q), a: String(it.a) }
+    if (it.question && Array.isArray(it.options)) {
+      const i = it.answerIndex
+      if (!(i >= 0 && i < it.options.length)) throw new Error('answerIndex 越界:' + it.question.slice(0, 12))
+      return { q: String(it.question), a: String(it.options[i]) }
+    }
+    throw new Error('看不懂的題目格式(要 q/a 或 question/options/answerIndex)')
+  })
+}
+
+$('preset').addEventListener('change', () => {
+  $('pasteBox').style.display = $('preset').value === 'paste' ? '' : 'none'
+  updateInfo()
+})
+$('pasteArea') && $('pasteArea').addEventListener('input', updateInfo)
+function updateInfo () {
+  try {
+    const pool = currentPool()
+    const dup = pool.length - new Set(pool.map((x) => x.a)).size
+    $('poolInfo').textContent = `題池共 ${pool.length} 題` + (dup ? `(⚠ 有 ${dup} 個重複答案,將自動去重)` : '') + '。5×5 需至少 24 題、3×3 需至少 8 題。'
+    $('errMsg').textContent = ''
+  } catch (e) { $('poolInfo').textContent = ''; if ($('preset').value === 'paste') $('errMsg').textContent = e.message }
+}
+updateInfo()
+
+$('genBtn').addEventListener('click', () => {
+  const out = $('out'); out.innerHTML = ''; $('errMsg').textContent = ''
+  let pool
+  try { pool = currentPool() } catch (e) { $('errMsg').textContent = e.message; return }
+  // 答案去重(同字格子沒意義)
+  const seen = new Set()
+  pool = pool.filter((x) => (seen.has(x.a) ? false : (seen.add(x.a), true)))
+  const size = +$('size').value
+  const need = size * size - 1 // 中央都是 FREE 格(5×5=24、3×3=8)
+  if (pool.length < need) { $('errMsg').textContent = `題池只有 ${pool.length} 題,${size}×${size} 至少要 ${need} 題`; return }
+  const n = Math.min(60, Math.max(1, +$('nCards').value || 1))
+  const baseSeed = fnv1a($('seedStr').value || 'HFPC')
+  const freeText = $('freeText').value || '❤'
+  const presetName = $('preset').value === 'paste' ? '自訂題庫' : PRESETS[$('preset').value].name
+  const cards = []
+  for (let c = 1; c <= n; c++) {
+    const rng = mulberry32(baseSeed ^ Math.imul(c, 0x9E3779B1))
+    const cells = seededShuffle(pool, rng).slice(0, need).map((x) => x.a)
+    cards.push({ no: c, cells })
+    out.insertAdjacentHTML('beforeend', renderCard(c, cells, size, freeText, presetName))
+  }
+  out.insertAdjacentHTML('beforeend', renderHost(pool, cards, size, baseSeed, presetName))
+  printReady = true; $('printBtn').disabled = false
+})
+$('printBtn').addEventListener('click', () => { if (printReady) window.print() })
+
+function esc (s) { return s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;') }
+function renderCard (no, cells, size, freeText, presetName) {
+  let i = 0
+  let rowsHtml = ''
+  for (let r = 0; r < size; r++) {
+    rowsHtml += '<tr>'
+    for (let col = 0; col < size; col++) {
+      const mid = (size - 1) / 2
+      const isFree = r === mid && col === mid
+      if (isFree) { rowsHtml += `<td class="free">FREE<br>${esc(freeText)}</td>`; continue }
+      const t = cells[i++]
+      rowsHtml += `<td${t.length > 6 ? ' class="small"' : ''}>${esc(t)}</td>`
+    }
+    rowsHtml += '</tr>'
+  }
+  return `<div class="card"><h3>🎯 聖經賓果</h3><div class="meta">${esc(presetName)} ・ 卡 #${no} ・ 連成一線喊「賓果!」</div><table class="grid">${rowsHtml}</table></div>`
+}
+function renderHost (pool, cards, size, baseSeed, presetName) {
+  const rng = mulberry32(baseSeed ^ 0x5EED)
+  const order = seededShuffle(pool, rng)
+  const usedAnswers = new Set(cards.flatMap((c) => c.cells))
+  let list = ''
+  let k = 0
+  for (const it of order) {
+    if (!usedAnswers.has(it.a)) continue // 沒被任何卡用到的題,唸了也沒人能蓋
+    list += `<li>☐ ${esc(it.q)} <span class="ans">→ ${esc(it.a)}</span></li>`
+    k++
+  }
+  let dist = '<table><tr><th>卡#</th><th>格子內容</th></tr>'
+  for (const c of cards) dist += `<tr><td>${c.no}</td><td>${esc(c.cells.join('、'))}</td></tr>`
+  dist += '</table>'
+  return `<div class="host"><h3>📢 老師主持稿(別發給孩子)</h3>
+    <p>題組:${esc(presetName)} ・ 場次:${esc($('seedStr').value)} ・ ${cards.length} 張 ${size}×${size} 卡 ・ 唸序共 ${k} 題(勾掉唸過的)</p>
+    <p class="hint">玩法:唸「提示」,孩子找格子蓋章;連成一線喊「賓果!」→ 上台唸中央金句才算贏。有人賓果時,用下表核對他卡上的字是否都唸過。</p>
+    <ol>${list}</ol>
+    <details><summary>各卡答案分佈(驗賓果用)</summary>${dist}</details></div>`
+}
+</script>
+</body>
+</html>

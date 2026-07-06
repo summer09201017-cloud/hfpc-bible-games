@@ -7,7 +7,12 @@ GitHub 帳號：summer09201017-cloud。GitHub 是唯一真相；桌面 zip 只�
 
 ★★★★★ 本輪(2026-07-06,HFP 機)★★★ 先讀這段(最新;下方 06-15~26 段已嚴重過時,僅供考古★★★
 ================================================================================
-現況:24 張首頁卡、7 合輯 37 關、sw v19。CLAUDE.md 與 data.js 為準。
+現況:28 張首頁卡、7 合輯 37 關、sw v23。CLAUDE.md 與 data.js 為準。
+ ◆ 🟢 補記(07-06 晚,agape250 機):🖍️ 聖經賓果(不插電)卡點亮——bible-bingo 產生器單檔
+   住本 repo public/bingo.html(review 分類,同源工具頁前例同金句複習;sw v23,28 卡;
+   npm test / test:offline 全綠)。內建題組頁內已標「請牧者過目」;老師自訂題庫先過 /cuv-check。
+ ◆ 🟢 補記(07-06 深夜,HFP 機):🎤 搶答 PK 秀卡點亮(牧者過審,sw v22,27 卡);
+   🌾 約瑟管糧倉卡(sw v21)、🧥 約瑟的彩衣卡+創50:20 金句(sw v20,verseData 21 句)。
  ◆ 07-06 新增:🕯️ 撒母耳聽呼喚卡(paul ?demo=samuel,牧者過審)+金句撒上3:10(verseData 20 句,sw v18)。
  ◆ 07-06 接匿名使用統計 beacon(play-stats-lite,g=lobby;只在正式站射、離線靜默跳過;sw v19)。
    儀表板:https://hfpc-play-stats.summer09201017.workers.dev/stats(零個資,只記遊戲×日期×次數)。

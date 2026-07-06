@@ -268,6 +268,18 @@ export const JOURNEYS = [
     emoji: '🎤',
     url: 'https://hfpc-quiz-show.netlify.app/',
   },
+  {
+    // 聖經賓果(同源工具頁):bible-bingo skill 的產生器單檔,住大廳 public/bingo.html。
+    // 全系列唯一「不插電」選項:產可列印 5×5/3×3 賓果卡+老師主持稿;零相依、可離線。
+    // ⚠ 內建題組文案 AI 草擬(產生器頁內已標「請牧者過目」);老師自訂題庫先過 /cuv-check。
+    id: 'bible-bingo',
+    name: '聖經賓果(不插電)',
+    subtitle: '列印賓果卡+老師主持稿・唸提示 ‧ 蓋章 ‧ 連線',
+    category: 'review',
+    color: '#3a7a4e',
+    emoji: '🖍️',
+    url: 'https://hfpc-bible-games.netlify.app/bingo.html',
+  },
   // —— 兩張「合輯卡片」:點了在大廳內就地展開,不離開頁面 ——
   {
     id: 'war',
