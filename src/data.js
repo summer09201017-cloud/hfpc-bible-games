@@ -298,6 +298,16 @@ export const JOURNEYS = [
     url: 'https://hfpc-paul-game.netlify.app/?demo=foxes',
   },
   {
+    // 摩西的籃子(直達卡):系列第一個「縱向捲軸漂流閃避」關(出 2;PR #72 牧者過審)。雷電反向化:只躲不打,嬰孩永遠平安。幼兒友善。
+    id: 'basket',
+    name: '摩西的籃子',
+    subtitle: '出 2・蒲草箱漂尼羅河,閃開障礙——神看顧著',
+    category: 'bible',
+    color: '#3a7a9a',
+    emoji: '🧺',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=basket',
+  },
+  {
     // 穿戴全副軍裝(直達卡):系列第一個「拖曳裝備/換裝」關(弗 6;PR #71 牧者過審)。青檔穿完加意義配對。
     id: 'armor',
     name: '穿戴全副軍裝',
