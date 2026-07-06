@@ -226,6 +226,17 @@ export const JOURNEYS = [
     // 撒母耳聽呼喚(直達卡):住保羅 repo src/minigames/samuel/,?demo=samuel(系列第一個「記憶序列 Simon 型」)。
     // ✅ 2026-07-06:牧者過審文案後點亮;引文 撒上3:4-5/3:9/3:10/3:19 cuv 逐字查驗;paul PR #64 A 站部署、線上已驗(mp3 f93b7f6c 200)。
     //   油燈依序亮、照順序點回(聽與順服);聽錯溫柔重聽、永不會輸;年齡三檔(幼3/童4/青5輪更快)。
+    // 約瑟的彩衣(直達卡):住保羅 repo src/minigames/joseph/,?demo=joseph(系列第一個「滑塊拼圖」)。
+    // ✅ 2026-07-06:牧者過審(paul PR #65 併,A 站已驗;mp3 596bac62 200);點空格旁碎塊拼回彩衣,永不會輸。
+    id: 'joseph',
+    name: '約瑟的彩衣',
+    subtitle: '創 37→50・拼回彩衣——神把破碎拼回',
+    category: 'bible',
+    color: '#b96a3a',
+    emoji: '🧥',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=joseph',
+  },
+  {
     id: 'samuel',
     name: '撒母耳聽呼喚',
     subtitle: '撒上 3・注意聽,照順序點燈——請說,僕人敬聽',

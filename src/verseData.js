@@ -115,6 +115,12 @@ export const VERSES = [
   },
 
   {
+    id: 'gen-50-20', book: '創世記', ref: '創世記 50:20', status: 'live',
+    theme: '人的惡意,神翻轉為保全性命的美意——神把破碎拼回。',
+    text: '從前你們的意思是要害我，但　神的意思原是好的，要保全許多人的性命，成就今日的光景。', cuv: 'verified',
+    game: '約瑟的彩衣', enter: 'https://hfpc-paul-game.netlify.app/?demo=joseph',
+  },
+  {
     id: '1sam-3-10', book: '撒母耳記上', ref: '撒母耳記上 3:10', status: 'live',
     theme: '聽神的話,不只是聽見——是記住、回應、照著行。',
     text: '耶和華又來站著，像前三次呼喚說：「撒母耳啊！撒母耳啊！」撒母耳回答說：「請說，僕人敬聽！」', cuv: 'verified',
