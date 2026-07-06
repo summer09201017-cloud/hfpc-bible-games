@@ -277,6 +277,36 @@ export const JOURNEYS = [
     emoji: '🕊️',
     url: 'https://hfpc-paul-game.netlify.app/?demo=ezra',
   },
+  {
+    // 護住好種子(直達卡):守護反應(打地鼠家族)第一式・驅趕型(PR #70 牧者過審)。幼兒友善。
+    id: 'sower',
+    name: '護住好種子',
+    subtitle: '太 13・點飛鳥拍手趕走,護種子長成小苗',
+    category: 'bible',
+    color: '#5a8a3e',
+    emoji: '🌱',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=sower',
+  },
+  {
+    // 擒拿小狐狸(直達卡):守護反應第二式・分辨型擒拿(歌 2:15 經文動詞「擒拿」;PR #70 牧者過審)。
+    id: 'foxes',
+    name: '擒拿小狐狸',
+    subtitle: '歌 2:15・網子擒住毀壞葡萄園的小狐狸——蝴蝶別抓錯',
+    category: 'bible',
+    color: '#b9743a',
+    emoji: '🦊',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=foxes',
+  },
+  {
+    // 撲滅小火苗(直達卡):守護反應第三式・蔓延型撲滅(雅 3:5;PR #70 牧者過審)。
+    id: 'sparks',
+    name: '撲滅小火苗',
+    subtitle: '雅 3:5・趁小撲滅,別讓最小的火點著最大的樹林',
+    category: 'bible',
+    color: '#3a6a9a',
+    emoji: '💧',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=sparks',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
