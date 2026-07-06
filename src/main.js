@@ -3,6 +3,7 @@
 import { CATEGORIES, JOURNEYS, COLLECTIONS, EGG } from './data.js'
 import { renderScoreboard } from './scoreboard.js'
 import { renderVerses, dailyStrip } from './verses.js'
+import { renderByType } from './bytype.js'
 
 const app = document.getElementById('app')
 
@@ -206,6 +207,7 @@ function route() {
   const key = m && m[1]
   if (key === 'scoreboard') renderScoreboard(app)
   else if (key === 'verses') renderVerses(app)
+  else if (key === 'bytype') renderByType(app)
   else if (key && COLLECTIONS[key]) renderCollection(COLLECTIONS[key])
   else renderHome()
   window.scrollTo(0, 0)

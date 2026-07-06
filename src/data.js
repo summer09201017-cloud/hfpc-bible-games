@@ -42,6 +42,17 @@ export const JOURNEYS = [
     emoji: '📖',
     route: 'verses', // → #/verses(src/verses.js);不是外部遊戲網址
   },
+  {
+    // 依玩法瀏覽(route 卡):#/bytype(src/bytype.js)——全系列關卡按 32 種玩法分組的索引內頁。
+    // 資料=各卡片/合輯 item 的 kind 欄位;新關上卡時順手標 kind 即入列。
+    id: 'by-type',
+    name: '依玩法瀏覽',
+    subtitle: '32 種玩法索引・跑酷/節奏/桌遊/解謎/課堂,想玩哪種挑哪種',
+    category: 'review',
+    color: '#4a6ab0',
+    emoji: '🎮',
+    route: 'bytype',
+  },
   // —— 靠神得勝・閃避(合輯卡片:點了就地展開掃羅+尼希米兩關) ——
   {
     id: 'dodge-heroes',
@@ -54,6 +65,7 @@ export const JOURNEYS = [
   },
   {
     id: 'jonah',
+    kind: 'parkour', // 玩法類型(#/bytype 依此分組)
     name: '約拿闖關(動作版)',
     subtitle: '約拿書・六關跑酷與默想',
     category: 'bible',
@@ -67,6 +79,7 @@ export const JOURNEYS = [
   // 注意:這張「約拿宣教之旅(桌遊版)」與上面獨立的「約拿闖關(動作版)」是兩種玩法,刻意並存。
   {
     id: 'jonah-board',
+    kind: 'rollmove', // 玩法類型(#/bytype 依此分組)
     name: '約拿宣教之旅(桌遊版)',
     subtitle: '約拿書 1–4 ・ 大富翁桌遊',
     category: 'bible',
@@ -76,6 +89,7 @@ export const JOURNEYS = [
   },
   {
     id: 'paul',
+    kind: 'rollmove', // 玩法類型(#/bytype 依此分組)
     name: '保羅大富翁',
     subtitle: '保羅宣教之旅・擲骰桌遊',
     category: 'bible',
@@ -85,6 +99,7 @@ export const JOURNEYS = [
   },
   {
     id: 'daniel',
+    kind: 'rollmove', // 玩法類型(#/bytype 依此分組)
     name: '但以理在巴比倫',
     subtitle: '但以理書 1–6、9 ・ 大富翁桌遊',
     category: 'bible',
@@ -94,6 +109,7 @@ export const JOURNEYS = [
   },
   {
     id: 'exodus',
+    kind: 'rollmove', // 玩法類型(#/bytype 依此分組)
     name: '出埃及記之旅',
     subtitle: '出埃及記 1–40 ・ 大富翁桌遊',
     category: 'bible',
@@ -105,6 +121,7 @@ export const JOURNEYS = [
     // 路得記·從空到滿:獨立 repo hfpc-ruth-game(可玩棋盤 + 拾麥穗收集闖關)。
     // ✅ 2026-06-19:已部署 hfpc-ruth-game.netlify.app(curl 驗證標題+資產+真內容),卡片正式亮。
     id: 'ruth',
+    kind: 'rollmove', // 玩法類型(#/bytype 依此分組)
     name: '路得記·從空到滿',
     subtitle: '得 1–4・大富翁桌遊:救贖與恩慈(hesed)',
     category: 'bible',
@@ -116,6 +133,7 @@ export const JOURNEYS = [
     // 彼得走海(節奏闖關):獨立 repo hfpc-peter-sea-game(vanilla Canvas + Web Audio PWA,FNF 風格節拍打擊)。
     // ✅ 2026-06-21:已部署 hfpc-peter-sea-game.netlify.app(curl 驗證標題 + 核心資產 200),卡片正式亮。
     id: 'peter-sea',
+    kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
     name: '彼得走海(節奏闖關)',
     subtitle: '太 14・定睛看耶穌,踩準節拍走過海面',
     category: 'bible',
@@ -128,6 +146,7 @@ export const JOURNEYS = [
     // 保羅西拉(節奏闖關):獨立 repo hfpc-paul-silas-game(vanilla Canvas + Web Audio PWA,FNF 風格)。
     // ✅ 2026-06-22:已部署 hfpc-paul-silas-game.netlify.app(curl 驗證標題 + 核心資產 200),卡片正式亮。
     id: 'paul-silas',
+    kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
     name: '保羅西拉(節奏闖關)',
     subtitle: '徒 16・半夜監牢唱詩讚美,神開監門',
     category: 'bible',
@@ -139,6 +158,7 @@ export const JOURNEYS = [
     // 詩篇150(節奏闖關):獨立 repo hfpc-psalm150-game(vanilla Canvas + Web Audio PWA,FNF 風格)。
     // ✅ 2026-06-22:已部署 hfpc-psalm150-game.netlify.app(curl 驗證標題 + 核心資產 200),卡片正式亮。
     id: 'psalm150',
+    kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
     name: '詩篇150(節奏闖關)',
     subtitle: '詩 150・各樣樂器齊鳴,凡有氣息都讚美',
     category: 'bible',
@@ -153,6 +173,7 @@ export const JOURNEYS = [
     // ✅ 2026-06-25:已部署 hfpc-daniel-game.netlify.app(curl 驗證標題 + 核心資產 200),卡片正式亮。
     //    內建「恐怖強度」旋鈕(💀滿／🕯️緩和／🧸兒童),切「兒童」即不嚇人、無血、較亮 → 主日學也能用。
     id: 'daniel-palace',
+    kind: 'stealth', // 玩法類型(#/bytype 依此分組)
     name: '王宮之夜(潛行闖關)',
     subtitle: '但 2・漆黑王宮避開獵手,趕在天亮前到王前求寬限',
     category: 'bible',
@@ -166,6 +187,7 @@ export const JOURNEYS = [
     // ✅ 2026-06-25:地圖「整頁變藍」已修(paul 494eb9d)、經文已上線;文案經牧者自審(免送審題包)→ 直接亮。
     //    另在「彼得的一生」合輯(series)也收一張(id:'board');這裡是首頁聖經旅程的直達卡。
     id: 'peter-board',
+    kind: 'rollmove', // 玩法類型(#/bytype 依此分組)
     name: '彼得大富翁',
     subtitle: '徒 1–12・20 站真實地理,擲骰走遍彼得腳蹤',
     category: 'bible',
@@ -179,6 +201,7 @@ export const JOURNEYS = [
     //    ⑥客西馬尼撐住不睡⑦各各他五幕終局)、題庫+卡片文案牧師已過審 → 點亮。
     //    玩家=無名門徒「你」,耶穌永不受操控;受難守定調(剪影不見血)。
     id: 'jesus-journey',
+    kind: 'rollmove', // 玩法類型(#/bytype 依此分組)
     name: '耶穌生平之旅',
     subtitle: '四福音・21 站聖地,跟隨主直到空墳墓',
     category: 'bible',
@@ -191,6 +214,7 @@ export const JOURNEYS = [
     // 已部署 hfpc-samson-game.netlify.app(2026-06-25 curl 驗證標題 + 200)。憫安製作,合輯(戰爭/憫安)也各收一張。
     // 主題正中合輯精神:聖經不說參孫多強壯,而說「耶和華的靈大大感動他」——力量出於神。
     id: 'samson',
+    kind: 'boss', // 玩法類型(#/bytype 依此分組)
     name: '參孫打獅子',
     subtitle: '士 14・耶和華的靈感動,徒手撕獅',
     category: 'bible',
@@ -203,6 +227,7 @@ export const JOURNEYS = [
     // 耶利哥城牆(直達卡):住保羅 repo src/minigames/jericho/,?demo=jericho(忿怒鳥式:蓄力吹角吶喊震塌城牆)。
     // ✅ 2026-06-27:經文 cuv 查驗(書6:2/6:16/6:20)、A 站自動部署。神學:城牆是「耶和華使它塌陷」(書6:20),不是靠人的武力。
     id: 'jericho',
+    kind: 'shout', // 玩法類型(#/bytype 依此分組)
     name: '耶利哥城牆',
     subtitle: '書 6・繞城吹角大聲呼喊,耶和華使城牆塌陷',
     category: 'bible',
@@ -215,6 +240,7 @@ export const JOURNEYS = [
     // ✅ 2026-07-05:牧者過審文案後點亮;引文 路15:4/5-6/7 cuv 逐字查驗;paul PR #63 A 站部署、線上已驗。
     //   年齡三檔(青=夜裡提燈尋羊);永不會輸——「直到找著呢?」牧人必找到底。
     id: 'shepherd',
+    kind: 'maze', // 玩法類型(#/bytype 依此分組)
     name: '好牧人尋羊',
     subtitle: '路 15・循「咩~」尋迷羊,扛在肩上帶回家',
     category: 'bible',
@@ -231,6 +257,7 @@ export const JOURNEYS = [
     // 約瑟管糧倉(直達卡):獨立 repo hfpc-joseph-granary(零建置手寫 PWA,系列第一個「經營管理」)。
     // ✅ 2026-07-06:牧者過審文案後點亮;七豐年收存/七荒年配糧,恩典卡永不會輸;線上全程 Playwright 驗畢(3星)。
     id: 'joseph-granary',
+    kind: 'management', // 玩法類型(#/bytype 依此分組)
     name: '約瑟管糧倉',
     subtitle: '創 41・七豐年七荒年——豐年不揮霍,荒年有預備',
     category: 'bible',
@@ -240,6 +267,7 @@ export const JOURNEYS = [
   },
   {
     id: 'joseph',
+    kind: 'sliding', // 玩法類型(#/bytype 依此分組)
     name: '約瑟的彩衣',
     subtitle: '創 37→50・拼回彩衣——神把破碎拼回',
     category: 'bible',
@@ -249,6 +277,7 @@ export const JOURNEYS = [
   },
   {
     id: 'samuel',
+    kind: 'memoryseq', // 玩法類型(#/bytype 依此分組)
     name: '撒母耳聽呼喚',
     subtitle: '撒上 3・注意聽,照順序點燈——請說,僕人敬聽',
     category: 'bible',
@@ -260,6 +289,7 @@ export const JOURNEYS = [
     // 尼希米守望(直達卡):住保羅 repo src/minigames/wallguard/(系列第一個「塔防・佈置守望」,PR #69 牧者過審)。
     // 與閃避合輯裡的「尼希米修牆」是 two-forms:同故事,靜的佈置版 vs 動的閃避版。
     id: 'wallguard',
+    kind: 'defense', // 玩法類型(#/bytype 依此分組)
     name: '尼希米守望',
     subtitle: '尼 3-6・佈崗吹角,仇敵退去——神必為我們爭戰',
     category: 'bible',
@@ -270,6 +300,7 @@ export const JOURNEYS = [
   {
     // 以斯拉護送(直達卡):住保羅 repo src/minigames/ezra/(系列第一個「護送」,PR #69 牧者過審)。
     id: 'ezra',
+    kind: 'escort', // 玩法類型(#/bytype 依此分組)
     name: '以斯拉護送',
     subtitle: '拉 8・沒有刀兵,只有禱告——護送全隊回耶路撒冷',
     category: 'bible',
@@ -280,6 +311,7 @@ export const JOURNEYS = [
   {
     // 護住好種子(直達卡):守護反應(打地鼠家族)第一式・驅趕型(PR #70 牧者過審)。幼兒友善。
     id: 'sower',
+    kind: 'guard', // 玩法類型(#/bytype 依此分組)
     name: '護住好種子',
     subtitle: '太 13・點飛鳥拍手趕走,護種子長成小苗',
     category: 'bible',
@@ -290,6 +322,7 @@ export const JOURNEYS = [
   {
     // 擒拿小狐狸(直達卡):守護反應第二式・分辨型擒拿(歌 2:15 經文動詞「擒拿」;PR #70 牧者過審)。
     id: 'foxes',
+    kind: 'guard', // 玩法類型(#/bytype 依此分組)
     name: '擒拿小狐狸',
     subtitle: '歌 2:15・網子擒住毀壞葡萄園的小狐狸——蝴蝶別抓錯',
     category: 'bible',
@@ -300,6 +333,7 @@ export const JOURNEYS = [
   {
     // 摩西的籃子(直達卡):系列第一個「縱向捲軸漂流閃避」關(出 2;PR #72 牧者過審)。雷電反向化:只躲不打,嬰孩永遠平安。幼兒友善。
     id: 'basket',
+    kind: 'drift', // 玩法類型(#/bytype 依此分組)
     name: '摩西的籃子',
     subtitle: '出 2・蒲草箱漂尼羅河,閃開障礙——神看顧著',
     category: 'bible',
@@ -310,6 +344,7 @@ export const JOURNEYS = [
   {
     // 穿戴全副軍裝(直達卡):系列第一個「拖曳裝備/換裝」關(弗 6;PR #71 牧者過審)。青檔穿完加意義配對。
     id: 'armor',
+    kind: 'dressup', // 玩法類型(#/bytype 依此分組)
     name: '穿戴全副軍裝',
     subtitle: '弗 6・六件軍裝拖到正確部位——站立得住',
     category: 'bible',
@@ -320,6 +355,7 @@ export const JOURNEYS = [
   {
     // 撲滅小火苗(直達卡):守護反應第三式・蔓延型撲滅(雅 3:5;PR #70 牧者過審)。
     id: 'sparks',
+    kind: 'guard', // 玩法類型(#/bytype 依此分組)
     name: '撲滅小火苗',
     subtitle: '雅 3:5・趁小撲滅,別讓最小的火點著最大的樹林',
     category: 'bible',
@@ -332,6 +368,7 @@ export const JOURNEYS = [
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
     // ✅ 2026-07-06:牧者過審內建題組後點亮;投影分組搶答(先按先得/roll-over/末題雙倍),老師判分。
     id: 'quiz-show',
+    kind: 'buzzer', // 玩法類型(#/bytype 依此分組)
     name: '聖經搶答 PK 秀',
     subtitle: '投影分組搶答・🦁A 🦅L 🐑Z 🐟M 先按先得',
     category: 'review',
@@ -344,6 +381,7 @@ export const JOURNEYS = [
     // 全系列唯一「不插電」選項:產可列印 5×5/3×3 賓果卡+老師主持稿;零相依、可離線。
     // ⚠ 內建題組文案 AI 草擬(產生器頁內已標「請牧者過目」);老師自訂題庫先過 /cuv-check。
     id: 'bible-bingo',
+    kind: 'bingo', // 玩法類型(#/bytype 依此分組)
     name: '聖經賓果(不插電)',
     subtitle: '列印賓果卡+老師主持稿・唸提示 ‧ 蓋章 ‧ 連線',
     category: 'review',
@@ -443,6 +481,7 @@ export const COLLECTIONS = {
     items: [
       {
         id: 'peter-sea',
+        kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
         name: '彼得走海(節拍)',
         subtitle: '太 14・定睛看耶穌,踩準節拍走過海面',
         color: '#1e4f8a',
@@ -452,6 +491,7 @@ export const COLLECTIONS = {
       },
       {
         id: 'paul-silas',
+        kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
         name: '保羅西拉獄中讚美(節拍)',
         subtitle: '徒 16・半夜監牢唱詩讚美,神開監門',
         color: '#3a2c52',
@@ -460,6 +500,7 @@ export const COLLECTIONS = {
       },
       {
         id: 'psalm150',
+        kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
         name: '詩篇150(節拍)',
         subtitle: '詩 150・各樣樂器齊鳴,凡有氣息都讚美',
         color: '#b5872e',
@@ -468,6 +509,7 @@ export const COLLECTIONS = {
       },
       {
         id: 'psalm100',
+        kind: 'rhythm-4k', // 玩法類型(#/bytype 依此分組)
         name: '讚美琴鍵(下落琴鍵)',
         subtitle: '詩 100・琴鍵落進聖殿的門,按對=稱謝進門',
         color: '#b8860b',
@@ -476,6 +518,7 @@ export const COLLECTIONS = {
       },
       {
         id: 'davidharp',
+        kind: 'rhythm-guitar', // 玩法類型(#/bytype 依此分組)
         name: '大衛彈琴(透視琴弦)',
         subtitle: '撒上 16・用手彈琴,掃羅便舒暢爽快,惡魔離了他',
         color: '#7a5a9c',
@@ -486,6 +529,7 @@ export const COLLECTIONS = {
         // two-forms 配對(2026-07-04):同故事的「自由演奏」幼稚園版——沒有音符、沒有錯的音,
         // 五聲音階怎麼亂彈都好聽;跟上面的節奏判定版並排,老師按年齡選。
         id: 'harptoy',
+        kind: 'freeplay', // 玩法類型(#/bytype 依此分組)
         name: '大衛彈琴(自由演奏・幼兒)',
         subtitle: '撒上 16・想彈哪根弦就彈,沒有錯的音!彈著彈著,王的愁煩就散開',
         color: '#9c7ab8',
@@ -494,6 +538,7 @@ export const COLLECTIONS = {
       },
       {
         id: 'miriam',
+        kind: 'rhythm-taiko', // 玩法類型(#/bytype 依此分組)
         name: '米利暗擊鼓(太鼓連打)',
         subtitle: '出 15・拿鼓跳舞!你們要歌頌耶和華,因他大大戰勝',
         color: '#d9483d',
@@ -513,6 +558,7 @@ export const COLLECTIONS = {
     items: [
       {
         id: 'saul-spear',
+        kind: 'dodge', // 玩法類型(#/bytype 依此分組)
         name: '掃羅擲槍·大衛閃避',
         subtitle: '撒上 18-19・大衛不伸手害受膏者,只躲、只信靠神',
         color: '#6b3fa0',
@@ -521,6 +567,7 @@ export const COLLECTIONS = {
       },
       {
         id: 'nehemiah-wall',
+        kind: 'dodge', // 玩法類型(#/bytype 依此分組)
         name: '尼希米修牆·躲攻擊',
         subtitle: '尼 4&6・邊閃避邊把城牆建起來,神為我們爭戰',
         color: '#7a4030',
@@ -540,6 +587,7 @@ export const COLLECTIONS = {
     items: [
       {
         id: 'peter-sea',
+        kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
         name: '彼得走海(節奏闖關)',
         subtitle: '太 14・定睛看耶穌,踩準節拍走過海面',
         color: '#1e4f8a',
@@ -549,6 +597,7 @@ export const COLLECTIONS = {
       },
       {
         id: 'samson',
+        kind: 'boss', // 玩法類型(#/bytype 依此分組)
         name: '參孫打獅子',
         subtitle: '士 14・耶和華的靈感動,徒手撕獅',
         color: '#9c5a2a',
@@ -558,6 +607,7 @@ export const COLLECTIONS = {
       },
       {
         id: 'daniel-palace',
+        kind: 'stealth', // 玩法類型(#/bytype 依此分組)
         name: '王宮之夜(潛行闖關)',
         subtitle: '但 2・漆黑王宮避開獵手,趕在天亮前到王前',
         color: '#3a2c52',
@@ -580,6 +630,7 @@ export const COLLECTIONS = {
         // ✅ 2026-07-05:搬進永久家保羅 repo(paul PR #62,自動部署)→ ?demo=moses-action;
         //   原 hfpc-war-games(手動 B 站)可退役。
         id: 'moses',
+        kind: 'endure', // 玩法類型(#/bytype 依此分組)
         name: '摩西舉手之戰',
         subtitle: '出 17・撐住舉手,亞倫戶珥扶手',
         color: '#c98a2b',
@@ -590,6 +641,7 @@ export const COLLECTIONS = {
         // 大衛甩石:住在「保羅大富翁」repo,src/minigames/sling/,?demo=sling 可單獨玩。
         // ✅ 2026-06-14:牧師實測 OK → feat/david-sling 已併 main 並部署,卡片正式亮。
         id: 'david',
+        kind: 'aim', // 玩法類型(#/bytype 依此分組)
         name: '大衛甩石',
         subtitle: '撒上 17・瞄準拋射,打倒歌利亞',
         color: '#3a8d6b',
@@ -602,6 +654,7 @@ export const COLLECTIONS = {
         // ✅ 2026-06-16:戰爭關搬進保羅 repo(永久家,消除跨 repo sync)→ paul ?demo=jehoshaphat-action
         //    (自動部署;敵人放大+表情等改動即可上線。原 war-games 為手動部署的原型站。)
         id: 'jehoshaphat',
+        kind: 'reliance', // 玩法類型(#/bytype 依此分組)
         name: '聖歌奇兵',
         subtitle: '代下 20・詩班讚美,神設伏兵得勝',
         color: '#9a4ca8',
@@ -612,6 +665,7 @@ export const COLLECTIONS = {
         // 反轉奇兵(巴蘭的驢 民22,約拿引擎 L10)。與「逆轉奇兵」合輯共用同一關(深連結,不複製)。
         // ✅ 2026-07-05:搬進永久家保羅 repo(paul PR #62,自動部署)→ ?demo=balaam-action。
         id: 'balaam',
+        kind: 'reliance', // 玩法類型(#/bytype 依此分組)
         name: '反轉奇兵',
         subtitle: '民 22・巴蘭的驢,神攔阻得勝',
         color: '#8a6d3b',
@@ -622,6 +676,7 @@ export const COLLECTIONS = {
         // ✅ 2026-06-15:紅海奔逃動作關復活——獨立入口 保羅 ?demo=redsea(出 14;不綁約拿站,點進去直接玩)。
         //   ⚠ 需先合併並部署 paul「feat/redsea-demo」才會生效。
         id: 'redsea',
+        kind: 'parkour', // 玩法類型(#/bytype 依此分組)
         name: '紅海奔逃',
         subtitle: '出 14・站住等候,神開海路',
         color: '#2b6fa8',
@@ -633,6 +688,7 @@ export const COLLECTIONS = {
         // 永久家=自己的 Netlify 站。✅ 2026-06-17:hfpc-samson-game.netlify.app 已部署上線,卡片正式亮。
         // 主題正中合輯精神:聖經不說參孫多強壯,而說「耶和華的靈大大感動他」——力量出於神。
         id: 'samson',
+        kind: 'boss', // 玩法類型(#/bytype 依此分組)
         name: '參孫打獅子',
         subtitle: '士 14・耶和華的靈感動,徒手撕獅',
         color: '#9c5a2a',
@@ -646,6 +702,7 @@ export const COLLECTIONS = {
         // ✅ 2026-06-25:經文 cuv 查驗、自動部署上線(paul A 站)。年齡旋鈕(幼/童/青)+ 會動的靶 + 語音玩法。
         // 主題正中合輯精神:得勝是「耶和華的得勝箭」,不是王的臂力;憑信多射幾次=得勝越完全(13:19)。
         id: 'joash',
+        kind: 'aim', // 玩法類型(#/bytype 依此分組)
         name: '約阿施射得勝箭',
         subtitle: '王下 13・憑信射到底,耶和華使你得勝',
         color: '#7a4fb0',
@@ -671,6 +728,7 @@ export const COLLECTIONS = {
       {
         // ✅ 2026-06-15:福音卡片關上線(?demo=cornelius,牧者已審)。
         id: 'cornelius-card',
+        kind: 'cards', // 玩法類型(#/bytype 依此分組)
         name: '福音奇兵·卡片版',
         subtitle: '徒 10・彼得向哥尼流傳福音',
         color: '#3a8d8d',
@@ -680,6 +738,7 @@ export const COLLECTIONS = {
       {
         // ⚠ 文案待牧者審(使用者指示先亮、之後自審);關卡已在保羅 main(?demo=elijah)。
         id: 'elijah-card',
+        kind: 'cards', // 玩法類型(#/bytype 依此分組)
         name: '盼望奇兵·卡片版',
         subtitle: '王上 19・以利亞灰心後重得力',
         color: '#c1772e',
@@ -689,6 +748,7 @@ export const COLLECTIONS = {
       {
         // ⚠ 文案待牧者審(使用者指示先亮、之後自審);關卡已在保羅 main(?demo=saul)。
         id: 'saul-card',
+        kind: 'cards', // 玩法類型(#/bytype 依此分組)
         name: '大光奇兵·卡片版',
         subtitle: '徒 9・掃羅遇大光信主',
         color: '#d9b310',
@@ -698,6 +758,7 @@ export const COLLECTIONS = {
       {
         // ✅ 2026-06-15 新做:聖歌卡片關(代下 20 約沙法唱詩得勝);需 paul 卡片關 PR 部署。文案待牧者審。
         id: 'jehoshaphat-card',
+        kind: 'cards', // 玩法類型(#/bytype 依此分組)
         name: '聖歌奇兵·卡片版',
         subtitle: '代下 20・約沙法唱詩歌得勝',
         color: '#9a4ca8',
@@ -707,6 +768,7 @@ export const COLLECTIONS = {
       {
         // ✅ 2026-06-15 新做:反轉卡片關(民 22 巴蘭的驢);需 paul 卡片關 PR 部署。文案待牧者審。
         id: 'balaam-card',
+        kind: 'cards', // 玩法類型(#/bytype 依此分組)
         name: '反轉奇兵·卡片版',
         subtitle: '民 22・巴蘭的驢開口',
         color: '#8a6d3b',
@@ -717,6 +779,7 @@ export const COLLECTIONS = {
       {
         // ✅ 2026-06-15:福音動作版上線(跑酷,約帕→該撒利亞,?demo=cornelius-action)。需 paul feat/cornelius-action 部署。
         id: 'cornelius-action',
+        kind: 'parkour', // 玩法類型(#/bytype 依此分組)
         name: '福音奇兵·動作版',
         subtitle: '徒 10・順服聖靈,出發傳福音',
         color: '#3a8d8d',
@@ -726,6 +789,7 @@ export const COLLECTIONS = {
       {
         // ✅ 2026-06-15:盼望動作版上線(以利亞曠野撿餅水恢復體力,?demo=elijah-action)。
         id: 'elijah-action',
+        kind: 'collect', // 玩法類型(#/bytype 依此分組)
         name: '盼望奇兵·動作版',
         subtitle: '王上 19・撿餅喝水重得力',
         color: '#c1772e',
@@ -735,6 +799,7 @@ export const COLLECTIONS = {
       {
         // ✅ 2026-06-15:大光動作版上線(曠野跑酷,大馬士革路→直街,?demo=saul-action)。需 paul feat/saul-action 部署。
         id: 'saul-action',
+        kind: 'parkour', // 玩法類型(#/bytype 依此分組)
         name: '大光奇兵·動作版',
         subtitle: '徒 9・大光仆倒,順服奔跑',
         color: '#d9b310',
@@ -744,6 +809,7 @@ export const COLLECTIONS = {
       {
         // ✅ 2026-06-16:聖歌動作版搬進保羅 repo(永久家)→ paul ?demo=jehoshaphat-action(自動部署);與戰爭合輯共用同一關。
         id: 'jehoshaphat-action',
+        kind: 'reliance', // 玩法類型(#/bytype 依此分組)
         name: '聖歌奇兵·動作版',
         subtitle: '代下 20・詩班讚美,神設伏兵',
         color: '#9a4ca8',
@@ -753,6 +819,7 @@ export const COLLECTIONS = {
       {
         // ✅ 2026-07-05:搬進保羅 repo(paul PR #62)→ ?demo=balaam-action;與戰爭合輯共用同一關。
         id: 'balaam-action',
+        kind: 'reliance', // 玩法類型(#/bytype 依此分組)
         name: '反轉奇兵·動作版',
         subtitle: '民 22・閃避攔路,神攔阻得勝',
         color: '#8a6d3b',
@@ -772,6 +839,7 @@ export const COLLECTIONS = {
       {
         // ✅ 2026-06-18:完整挪亞大富翁旅程(14 站手繪洪水板 + arkbuild/arkpairs 闖關站 + 彩虹之約終局卡片關)。住保羅 repo,?journey=noah。
         id: 'noah-journey',
+        kind: 'rollmove', // 玩法類型(#/bytype 依此分組)
         name: '挪亞方舟・完整旅程',
         subtitle: '創 6–9・擲骰大富翁:造舟→洪水→彩虹之約',
         color: '#3f7fbf',
@@ -781,6 +849,7 @@ export const COLLECTIONS = {
       {
         // 一公一母進方舟 + 安排房間解謎:住保羅 repo src/minigames/arkpairs/,?demo=arkpairs。
         id: 'arkpairs',
+        kind: 'pairs', // 玩法類型(#/bytype 依此分組)
         name: '一公一母進方舟',
         subtitle: '創 6–7・翻牌配對 + 安排房間(母的戴🎀)',
         color: '#3f7fd0',
@@ -790,6 +859,7 @@ export const COLLECTIONS = {
       {
         // 一步一步蓋方舟(操作挪亞鎚擊瞄準):住保羅 repo src/minigames/arkbuild/,?demo=arkbuild。
         id: 'arkbuild',
+        kind: 'buildtiming', // 玩法類型(#/bytype 依此分組)
         name: '一步一步蓋方舟',
         subtitle: '創 6:14-22・操作挪亞釘木板,旁人嘲笑',
         color: '#8a4b2f',
@@ -810,6 +880,7 @@ export const COLLECTIONS = {
         // 彼得大富翁(?journey=peter,已嵌 paul、A 站自動部署)。地圖「整頁變藍」2026-06-25 已修(commit 494eb9d,已 push 上線)。
         // ✅ 2026-06-25:經文已上線、文案經牧者自審(免送審題包)→ 直接亮(首頁聖經旅程另有直達卡 peter-board)。
         id: 'board',
+        kind: 'rollmove', // 玩法類型(#/bytype 依此分組)
         name: '彼得大富翁',
         subtitle: '徒 1–12・20 站真實地理,擲骰走遍彼得腳蹤',
         color: '#5a7d3a',
@@ -819,6 +890,7 @@ export const COLLECTIONS = {
       {
         // 彼得走海(節奏關,已部署上線;大廳首頁也有直達卡 peter-sea、憫安合輯也收一張)。
         id: 'sea',
+        kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
         name: '彼得走海',
         subtitle: '太 14・定睛看耶穌,在風浪中不下沉',
         color: '#2f6fb0',
@@ -829,6 +901,7 @@ export const COLLECTIONS = {
         // 彼得越獄(潛行關)。✅ 2026-06-25:經文 cuv 查驗 10/10、已部署 hfpc-peter-prison-game.netlify.app
         //   (curl 驗證標題 + 核心資產 200);牧者審題包依指示略過(牧者自審)→ 正式亮。
         id: 'prison',
+        kind: 'stealth', // 玩法類型(#/bytype 依此分組)
         name: '彼得越獄',
         subtitle: '徒 12・神開鐵門,人只管跟著走',
         color: '#5b6470',
@@ -839,6 +912,7 @@ export const COLLECTIONS = {
         // 下網得魚(收集類)。✅ 2026-06-27:住保羅 repo src/minigames/fishing/,?demo=fishing;經文 cuv 查驗(路5:4/5/6/10/11)、A 站自動部署。
         //   兩階段順服:整夜勞力→「依你的話」開到水深之處→網滿;神學「得人如得魚、撇下所有跟從」(路5:10-11)。
         id: 'catch',
+        kind: 'collect', // 玩法類型(#/bytype 依此分組)
         name: '下網得魚',
         subtitle: '路 5・聽主的話,空船變滿網',
         color: '#2e8b8b',
@@ -849,6 +923,7 @@ export const COLLECTIONS = {
         // 海邊的復興/三次託付。✅ 2026-06-28:住保羅 repo src/minigames/shore/,?demo=shore;經文 cuv 查驗(約21:15/16/17/19/9)、A 站自動部署。
         //   三次「你愛我嗎?」→ 餵養我的羊;炭火旁的接納(彼得曾三次不認主)、「你跟從我吧」(21:19)。⛔ 不渲染殉道。
         id: 'restore',
+        kind: 'storyanswer', // 玩法類型(#/bytype 依此分組)
         name: '海邊的復興',
         subtitle: '約 21・「你愛我嗎?」三次跌倒、三次託付',
         color: '#c0612a',
