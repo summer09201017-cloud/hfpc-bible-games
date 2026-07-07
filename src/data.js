@@ -375,6 +375,50 @@ export const JOURNEYS = [
     url: 'https://hfpc-paul-game.netlify.app/?demo=gideon',
   },
   {
+    // 好管家(直達卡):經營管理②(太 25 按才幹的比喻;PR #74 牧者過審)。星等按忠心不按金額,埋太多=溫柔教導。
+    id: 'steward',
+    kind: 'management', // 玩法類型(#/bytype 依此分組)
+    name: '好管家',
+    subtitle: '太 25・銀子交託給你——神看忠心,不看數額',
+    category: 'bible',
+    color: '#a07a30',
+    emoji: '💼',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=steward',
+  },
+  {
+    // 失錢找物(直達卡):系列第一個「找物/找碴」關(路 15:8-10;PR #74 牧者過審)。油燈照暗屋、直到找著,天父尋找人的心。
+    id: 'lostcoin',
+    kind: 'seek', // 玩法類型(#/bytype 依此分組)
+    name: '失錢找物',
+    subtitle: '路 15:8-10・點上燈細細地找——直到找著',
+    category: 'bible',
+    color: '#8a6a3a',
+    emoji: '🪙',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=lostcoin',
+  },
+  {
+    // 羅得紅綠燈(直達卡):系列第一個「忍住誘惑・向前跑」關(創 19;PR #74 牧者過審)。回頭鈕千萬別按;按了天使拉住不算輸。
+    id: 'lotrun',
+    kind: 'resist', // 玩法類型(#/bytype 依此分組)
+    name: '羅得紅綠燈',
+    subtitle: '創 19・逃命吧!不可回頭看——忍住那顆按鈕',
+    category: 'bible',
+    color: '#7a4055',
+    emoji: '🧂',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=lotrun',
+  },
+  {
+    // 各從其類・動物歸艙(直達卡):系列第一個「彈珠配對」關(創 7;PR #74 牧者過審)。配對=一起進方舟非爆破;耶和華關門。
+    id: 'arkmatch',
+    kind: 'match', // 玩法類型(#/bytype 依此分組)
+    name: '各從其類・動物歸艙',
+    subtitle: '創 7・同類聚一起,進方舟——耶和華關門',
+    category: 'bible',
+    color: '#4a7a58',
+    emoji: '🦁',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=arkmatch',
+  },
+  {
     // 撲滅小火苗(直達卡):守護反應第三式・蔓延型撲滅(雅 3:5;PR #70 牧者過審)。
     id: 'sparks',
     kind: 'guard', // 玩法類型(#/bytype 依此分組)
