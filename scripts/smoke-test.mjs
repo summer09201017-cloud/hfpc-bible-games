@@ -128,6 +128,24 @@ if (process.argv.includes('--offline')) {
   }
 }
 
+// —— kind 玩法欄位守門(2026-07-07 新規矩進 CI:可玩卡必標 kind,值必在 bytype.js 家族表) ——
+//    沒標=不會出現在 #/bytype 玩法索引(隱形關卡);打錯字=索引碎裂。以前只靠人記得,現在 push 必驗。
+const { GROUPS } = await import('../src/bytype.js').catch(() => ({ GROUPS: [] }))
+const validKinds = new Set((GROUPS || []).flatMap((g) => g.kinds.map(([k]) => k)))
+if (!validKinds.size) fail('bytype.js 的 GROUPS 載入失敗(kind 守門沒得驗)')
+const usedKinds = new Set()
+const checkKind = (item, where) => {
+  if (!item || !item.url || item.soon) return // route 卡/敬請期待不強制
+  if (!item.kind) return fail(`${where} 有 url 但沒標 kind(隱形關卡:不會出現在依玩法瀏覽)`)
+  if (!validKinds.has(item.kind)) return fail(`${where} 的 kind "${item.kind}" 不在 bytype.js 家族表(打錯字?或忘了補家族表)`)
+  usedKinds.add(item.kind)
+}
+JOURNEYS.forEach((j, i) => checkKind(j, `JOURNEYS[${i}](${(j && j.id) || '無 id'})`))
+for (const [key, c] of Object.entries(collections))
+  (c.items || []).forEach((it, i) => checkKind(it, `COLLECTIONS["${key}"].items[${i}](${(it && it.id) || (it && it.name) || '無 id'})`))
+const deadKinds = [...validKinds].filter((k) => !usedKinds.has(k) && !['versepuzzle', 'versequiz'].includes(k)) // 這兩個是 #/verses 內頁固定收錄
+if (deadKinds.length) console.log(`  (提醒:家族表有 ${deadKinds.length} 個沒卡片使用的 kind:${deadKinds.join('、')}——死分類或關卡還沒上)`)
+
 // —— 結果 ——
 if (errors.length) {
   console.error(`✗ 煙霧測試失敗(${errors.length}):`)

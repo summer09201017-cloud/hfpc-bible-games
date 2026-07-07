@@ -4,8 +4,8 @@
 // 大廳鐵則不變:只帶路、不放遊戲——每一條都是深連結。新關上卡時在 data.js 順手標 kind 即可入列。
 import { JOURNEYS, COLLECTIONS } from './data.js'
 
-// —— 32 種玩法:依家族分組(順序=展示順序) ——
-const GROUPS = [
+// —— 34 種玩法:依家族分組(順序=展示順序)。export 給 smoke-test 驗「kind 值必在此表」。 ——
+export const GROUPS = [
   {
     name: '🏃 動作與冒險',
     kinds: [
