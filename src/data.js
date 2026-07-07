@@ -353,6 +353,28 @@ export const JOURNEYS = [
     url: 'https://hfpc-paul-game.netlify.app/?demo=armor',
   },
   {
+    // 活石蓋聖殿(直達卡):系列第一個「落石砌合」關(王上 6:7+彼前 2:5;PR #73 牧者過審)。砌合發光非爆炸、堆頂歇口氣、全程無鎚斧聲。
+    id: 'temple',
+    kind: 'stack', // 玩法類型(#/bytype 依此分組)
+    name: '活石蓋聖殿',
+    subtitle: '王上 6:7・石頭鑿好才運來——安安靜靜砌成聖殿',
+    category: 'bible',
+    color: '#a08040',
+    emoji: '🧱',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=temple',
+  },
+  {
+    // 基甸拆祭壇(直達卡):系列第一個「打磚塊」關(士 6:25-27;PR #73 牧者過審)。奉命拆巴力壇、球掉出僕人撿回、拆完接「築真壇」一幕。
+    id: 'gideon',
+    kind: 'breakout', // 玩法類型(#/bytype 依此分組)
+    name: '基甸拆祭壇',
+    subtitle: '士 6:25-27・夜裡拆巴力壇——先拆假的,才立真的',
+    category: 'bible',
+    color: '#2c3658',
+    emoji: '⚒️',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=gideon',
+  },
+  {
     // 撲滅小火苗(直達卡):守護反應第三式・蔓延型撲滅(雅 3:5;PR #70 牧者過審)。
     id: 'sparks',
     kind: 'guard', // 玩法類型(#/bytype 依此分組)
