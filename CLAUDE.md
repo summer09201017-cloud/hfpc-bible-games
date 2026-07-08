@@ -3,8 +3,8 @@
 本 repo 是 **`hfpc-bible-games`(總入口大廳)**,也是整個「HFPC 聖經遊戲系列」的**生態系 hub**:一面卡片牆,帶路到各個獨立部署的遊戲。本檔給整個生態系的共用慣例與當前優先序;**各遊戲自己的開發細節在各自 repo 的 CLAUDE.md**。
 
 ## 🎯 當前任務(2026-07-08 晚對齊)
-- **現況:45 張首頁卡(含 2 route 卡)、3 分類、7 個合輯(37 關)、sw v31**(npm test 以此為準)。
-- 07-08 晚新增:🧺 **收拾零碎**(kind `match`)+🍇 **聖靈果子**(kind `match`)+💎 **胸牌寶石歸位**(新 kind `fit`)三卡——paul PR #75 牧者過審併入、**A 站驗過這三關已上線才點卡**(sw v31);bytype.js +1 kind `fit`。⚠ 同批的 🐑 趕羊入圈(PR #76)、⚽ 射門練習(PR #77,進憫安合輯)**已併 main 但 A 站尚未部署到(Netlify 落後,bundle 卡在只含 #75 的版本)——故這兩張卡先不點,待 A 站上到新版(或人工去 Netlify 觸發 redeploy)再補**。
+- **現況:46 張首頁卡(含 2 route 卡)、3 分類、7 個合輯(38 關)、sw v32**(npm test 以此為準)。
+- 07-08 晚新增:🧺 **收拾零碎**(kind `match`)+🍇 **聖靈果子**(kind `match`)+💎 **胸牌寶石歸位**(新 kind `fit`)三卡——paul PR #75 牧者過審併入、**A 站驗過這三關已上線才點卡**(sw v31);bytype.js +1 kind `fit`。✅ 同批 🐑 趕羊入圈(PR #76,kind `pool`,首頁卡)+⚽ 射門練習(PR #77,kind `sports`,進憫安合輯)已補點——A 站曾因遠端合併留下的 MiniGameModal 疊套 if(少 2 個 })建置失敗卡在舊版,修復(845193e)後 Netlify 重建成功、6 關全上線才點卡。
 - 07-08 新增:💼 **好管家**(kind `management`)+🪙 **失錢找物**(新 kind `seek`)+🧂 **羅得紅綠燈**(新 kind `resist`)+🦁 **各從其類・動物歸艙**(新 kind `match`)四卡——paul PR #74 牧者過審併入、A 站驗過新版才點卡(sw v30);bytype.js 家族表 +3 kind(系列玩法 → 37 種)。
 - 07-07 新增:🧱 **活石蓋聖殿**(paul `?demo=temple`,系列第一個落石砌合,kind `stack`)+ ⚒️ **基甸拆祭壇**(paul `?demo=gideon`,系列第一個打磚塊,kind `breakout`)兩卡——paul PR #73 牧者過審併入、A 站驗過新版才點卡(sw v29);bytype.js 家族表同步 +2 kind(系列玩法 → 34 種)。
 - 07-06 深夜④新增:🎮 **依玩法瀏覽 route 卡**(#/bytype,src/bytype.js)——全系列 55 個去重關卡按 **32 種玩法** 4 家族分組的索引內頁;資料=data.js 各卡/合輯 item 的 **kind 欄位**(64 筆已標);★新規矩:**新關上卡時順手標 kind**,不標就不會出現在玩法索引。

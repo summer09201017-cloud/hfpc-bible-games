@@ -452,6 +452,17 @@ export const JOURNEYS = [
     url: 'https://hfpc-paul-game.netlify.app/?demo=gems',
   },
   {
+    // 趕羊入圈(直達卡):系列第一個「撞球物理」關(約 10:16+詩 23;PR #76 牧者過審)。撞羊入圈=歸聚安歇,非落袋。
+    id: 'herd',
+    kind: 'pool', // 玩法類型(#/bytype 依此分組)
+    name: '趕羊入圈',
+    subtitle: '約 10・撞球式把走散的羊領回圈——合成一群',
+    category: 'bible',
+    color: '#5a8a4a',
+    emoji: '🐑',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=herd',
+  },
+  {
     // 撲滅小火苗(直達卡):守護反應第三式・蔓延型撲滅(雅 3:5;PR #70 牧者過審)。
     id: 'sparks',
     kind: 'guard', // 玩法類型(#/bytype 依此分組)
@@ -684,6 +695,16 @@ export const COLLECTIONS = {
     color: '#f0b840',
     emoji: '✨',
     items: [
+      {
+        // 射門練習:休閒關(無經文,運動練習型;非憫安手作故不掛製作徽章)。使用者拍板運動題材做練習不做對戰。
+        id: 'goalkick',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '射門練習(休閒)',
+        subtitle: '拖球射門・守門員撲救・踢 10 球看進幾球',
+        color: '#5a8a3a',
+        emoji: '⚽',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=goalkick',
+      },
       {
         id: 'peter-sea',
         kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
