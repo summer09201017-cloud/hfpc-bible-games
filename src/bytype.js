@@ -4,7 +4,7 @@
 // 大廳鐵則不變:只帶路、不放遊戲——每一條都是深連結。新關上卡時在 data.js 順手標 kind 即可入列。
 import { JOURNEYS, COLLECTIONS } from './data.js'
 
-// —— 34 種玩法:依家族分組(順序=展示順序)。export 給 smoke-test 驗「kind 值必在此表」。 ——
+// —— 41 種玩法:依家族分組(順序=展示順序)。export 給 smoke-test 驗「kind 值必在此表」。 ——
 export const GROUPS = [
   {
     name: '🏃 動作與冒險',
@@ -54,6 +54,7 @@ export const GROUPS = [
       ['stack', '落石砌合', '鑿好的石塊落下,湊滿一排砌進牆(非爆炸)'],
       ['seek', '找物尋寶', '提著燈細細地找,直到找著'],
       ['match', '彈珠配對', '同類聚在一起,一起進方舟(非爆破)'],
+      ['swap3', '交換配對', '點兩塊相鄰的交換,3 個同款=收進罐裡(非爆裂)'],
       ['fit', '歸位配對', '把每一塊放回它該在的位置(放錯溫柔搖頭)'],
     ],
   },
@@ -98,7 +99,7 @@ export function renderByType(app) {
     <a class="backlink" href="#/" aria-label="返回大廳">← 返回大廳</a>
     <div class="cat__head subhub__head">
       <h2 class="cat__name">🎮 依玩法瀏覽</h2>
-      <p class="cat__desc">全系列關卡按 32 種玩法分組——想玩哪一種,從這裡挑。(同一關若在多個合輯,只列一次)</p>
+      <p class="cat__desc">全系列關卡按 41 種玩法分組——想玩哪一種,從這裡挑。(同一關若在多個合輯,只列一次)</p>
     </div>`
   app.appendChild(section)
 

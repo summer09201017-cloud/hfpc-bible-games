@@ -463,6 +463,17 @@ export const JOURNEYS = [
     url: 'https://hfpc-paul-game.netlify.app/?demo=herd',
   },
   {
+    // 嗎哪收取(直達卡):系列第一個「交換配對(消消樂反向化)」關(出 16;PR #78 牧者過審)。3 連=收進俄梅珥罐非爆裂;補位=天降。
+    id: 'manna',
+    kind: 'swap3', // 玩法類型(#/bytype 依此分組)
+    name: '嗎哪收取',
+    subtitle: '出 16・收滿俄梅珥罐——多收的沒有餘,少收的沒有缺',
+    category: 'bible',
+    color: '#b0985a',
+    emoji: '🍞',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=manna',
+  },
+  {
     // 撲滅小火苗(直達卡):守護反應第三式・蔓延型撲滅(雅 3:5;PR #70 牧者過審)。
     id: 'sparks',
     kind: 'guard', // 玩法類型(#/bytype 依此分組)

@@ -2,8 +2,9 @@
 
 本 repo 是 **`hfpc-bible-games`(總入口大廳)**,也是整個「HFPC 聖經遊戲系列」的**生態系 hub**:一面卡片牆,帶路到各個獨立部署的遊戲。本檔給整個生態系的共用慣例與當前優先序;**各遊戲自己的開發細節在各自 repo 的 CLAUDE.md**。
 
-## 🎯 當前任務(2026-07-08 晚對齊)
-- **現況:46 張首頁卡(含 2 route 卡)、3 分類、7 個合輯(38 關)、sw v32**(npm test 以此為準)。
+## 🎯 當前任務(2026-07-09 對齊)
+- **現況:47 張首頁卡(含 2 route 卡)、3 分類、7 個合輯(38 關)、sw v33**(npm test 以此為準)。
+- 07-09 新增:🍞 **嗎哪收取**(paul `?demo=manna`,系列第一個交換配對/消消樂反向化,**新 kind `swap3`**——不與彈珠配對 `match` 混)一卡——paul PR #78 牧者過審併入、A 站驗過 bundle+mp3 才點卡(sw v33);bytype.js +1 kind(系列玩法 → 41 種,索引頁顯示字串同步對齊)。
 - 07-08 晚新增:🧺 **收拾零碎**(kind `match`)+🍇 **聖靈果子**(kind `match`)+💎 **胸牌寶石歸位**(新 kind `fit`)三卡——paul PR #75 牧者過審併入、**A 站驗過這三關已上線才點卡**(sw v31);bytype.js +1 kind `fit`。✅ 同批 🐑 趕羊入圈(PR #76,kind `pool`,首頁卡)+⚽ 射門練習(PR #77,kind `sports`,進憫安合輯)已補點——A 站曾因遠端合併留下的 MiniGameModal 疊套 if(少 2 個 })建置失敗卡在舊版,修復(845193e)後 Netlify 重建成功、6 關全上線才點卡。
 - 07-08 新增:💼 **好管家**(kind `management`)+🪙 **失錢找物**(新 kind `seek`)+🧂 **羅得紅綠燈**(新 kind `resist`)+🦁 **各從其類・動物歸艙**(新 kind `match`)四卡——paul PR #74 牧者過審併入、A 站驗過新版才點卡(sw v30);bytype.js 家族表 +3 kind(系列玩法 → 37 種)。
 - 07-07 新增:🧱 **活石蓋聖殿**(paul `?demo=temple`,系列第一個落石砌合,kind `stack`)+ ⚒️ **基甸拆祭壇**(paul `?demo=gideon`,系列第一個打磚塊,kind `breakout`)兩卡——paul PR #73 牧者過審併入、A 站驗過新版才點卡(sw v29);bytype.js 家族表同步 +2 kind(系列玩法 → 34 種)。
