@@ -419,6 +419,39 @@ export const JOURNEYS = [
     url: 'https://hfpc-paul-game.netlify.app/?demo=arkmatch',
   },
   {
+    // 收拾零碎(直達卡):彈珠配對⑭第二實作(約 6:11-13;PR #75 牧者過審)。配對=收進十二個籃子,免得有糟蹋的。
+    id: 'fragments',
+    kind: 'match', // 玩法類型(#/bytype 依此分組)
+    name: '五餅二魚・收拾零碎',
+    subtitle: '約 6・零碎收進十二個籃子——免得有糟蹋的',
+    category: 'bible',
+    color: '#b0904a',
+    emoji: '🧺',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=fragments',
+  },
+  {
+    // 聖靈果子(直達卡):彈珠配對⑭第三實作(加 5:22-23+約 15:5;PR #75 牧者過審)。配對=結到樹上;果子是聖靈結的。
+    id: 'fruits',
+    kind: 'match', // 玩法類型(#/bytype 依此分組)
+    name: '聖靈果子・結果子',
+    subtitle: '加 5・仁愛喜樂和平…結到樹上,常在主裡面',
+    category: 'bible',
+    color: '#7aa060',
+    emoji: '🍇',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=fruits',
+  },
+  {
+    // 大祭司胸牌・寶石歸位(直達卡):新類型⑮歸位配對(出 28:17-21,29;PR #75 牧者過審)。石名四行照和合本,名字帶在胸前。
+    id: 'gems',
+    kind: 'fit', // 玩法類型(#/bytype 依此分組)
+    name: '大祭司胸牌・寶石歸位',
+    subtitle: '出 28・十二寶石按支派歸位——名字帶在胸前',
+    category: 'bible',
+    color: '#7a5a9a',
+    emoji: '💎',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=gems',
+  },
+  {
     // 撲滅小火苗(直達卡):守護反應第三式・蔓延型撲滅(雅 3:5;PR #70 牧者過審)。
     id: 'sparks',
     kind: 'guard', // 玩法類型(#/bytype 依此分組)
