@@ -463,6 +463,28 @@ export const JOURNEYS = [
     url: 'https://hfpc-paul-game.netlify.app/?demo=herd',
   },
   {
+    // 拾穗的路得(直達卡):交換配對⑰第二實作+斜線實驗版(得 2;PR #79 牧者過審)。橫直斜都算一排=恩典故意多給;捆成一捆進伊法籃。
+    id: 'glean',
+    kind: 'swap3', // 玩法類型(#/bytype 依此分組)
+    name: '拾穗的路得',
+    subtitle: '得 2・橫直斜都算一排——恩典故意多給一點',
+    category: 'bible',
+    color: '#b0904a',
+    emoji: '🌾',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=glean',
+  },
+  {
+    // 雅各的斑點羊(直達卡):撞球⑯第二實作・雙欄分類(創 30-31;PR #80 牧者過審)。純白歸拉班欄、斑點歸雅各欄;走錯欄牧人帶回。
+    id: 'flock',
+    kind: 'pool', // 玩法類型(#/bytype 依此分組)
+    name: '雅各的斑點羊',
+    subtitle: '創 30・純白進左欄、斑點進右欄——證出我的公義來',
+    category: 'bible',
+    color: '#6a8a4a',
+    emoji: '🐏',
+    url: 'https://hfpc-paul-game.netlify.app/?demo=flock',
+  },
+  {
     // 嗎哪收取(直達卡):系列第一個「交換配對(消消樂反向化)」關(出 16;PR #78 牧者過審)。3 連=收進俄梅珥罐非爆裂;補位=天降。
     id: 'manna',
     kind: 'swap3', // 玩法類型(#/bytype 依此分組)
