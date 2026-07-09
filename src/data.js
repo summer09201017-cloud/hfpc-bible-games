@@ -130,59 +130,6 @@ export const JOURNEYS = [
     url: 'https://hfpc-ruth-game.netlify.app/',
   },
   {
-    // 彼得走海(節奏闖關):獨立 repo hfpc-peter-sea-game(vanilla Canvas + Web Audio PWA,FNF 風格節拍打擊)。
-    // ✅ 2026-06-21:已部署 hfpc-peter-sea-game.netlify.app(curl 驗證標題 + 核心資產 200),卡片正式亮。
-    id: 'peter-sea',
-    kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
-    name: '彼得走海(節奏闖關)',
-    subtitle: '太 14・定睛看耶穌,踩準節拍走過海面',
-    category: 'bible',
-    color: '#1e4f8a',
-    emoji: '🌊',
-    url: 'https://hfpc-peter-sea-game.netlify.app/',
-    credit: '製作:憫安',
-  },
-  {
-    // 保羅西拉(節奏闖關):獨立 repo hfpc-paul-silas-game(vanilla Canvas + Web Audio PWA,FNF 風格)。
-    // ✅ 2026-06-22:已部署 hfpc-paul-silas-game.netlify.app(curl 驗證標題 + 核心資產 200),卡片正式亮。
-    id: 'paul-silas',
-    kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
-    name: '保羅西拉(節奏闖關)',
-    subtitle: '徒 16・半夜監牢唱詩讚美,神開監門',
-    category: 'bible',
-    color: '#5a3a8a',
-    emoji: '🎶',
-    url: 'https://hfpc-paul-silas-game.netlify.app/',
-  },
-  {
-    // 詩篇150(節奏闖關):獨立 repo hfpc-psalm150-game(vanilla Canvas + Web Audio PWA,FNF 風格)。
-    // ✅ 2026-06-22:已部署 hfpc-psalm150-game.netlify.app(curl 驗證標題 + 核心資產 200),卡片正式亮。
-    id: 'psalm150',
-    kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
-    name: '詩篇150(節奏闖關)',
-    subtitle: '詩 150・各樣樂器齊鳴,凡有氣息都讚美',
-    category: 'bible',
-    color: '#b5872e',
-    emoji: '🎺',
-    url: 'https://hfpc-psalm150-game.netlify.app/',
-  },
-  // (psalm100 讚美琴鍵 / davidharp 大衛彈琴 / miriam 米利暗擊鼓 三張直達卡
-  //  2026-07-04 撤下首頁、收進「音樂闖關合輯」COLLECTIONS.music——網址不變,只是入口整併。)
-  {
-    // 王宮之夜(潛行恐怖 + 輕反向RPG):獨立 repo hfpc-daniel-game(vanilla Canvas PWA)。
-    // ✅ 2026-06-25:已部署 hfpc-daniel-game.netlify.app(curl 驗證標題 + 核心資產 200),卡片正式亮。
-    //    內建「恐怖強度」旋鈕(💀滿／🕯️緩和／🧸兒童),切「兒童」即不嚇人、無血、較亮 → 主日學也能用。
-    id: 'daniel-palace',
-    kind: 'stealth', // 玩法類型(#/bytype 依此分組)
-    name: '王宮之夜(潛行闖關)',
-    subtitle: '但 2・漆黑王宮避開獵手,趕在天亮前到王前求寬限',
-    category: 'bible',
-    color: '#3a2c52',
-    emoji: '🕯️',
-    url: 'https://hfpc-daniel-game.netlify.app/',
-    credit: '製作:憫安',
-  },
-  {
     // 彼得大富翁(直達卡):住保羅 repo,?journey=peter(20 站真實地理聖地棋盤)。
     // ✅ 2026-06-25:地圖「整頁變藍」已修(paul 494eb9d)、經文已上線;文案經牧者自審(免送審題包)→ 直接亮。
     //    另在「彼得的一生」合輯(series)也收一張(id:'board');這裡是首頁聖經旅程的直達卡。
@@ -208,303 +155,6 @@ export const JOURNEYS = [
     color: '#7a5ab0',
     emoji: '✝️',
     url: 'https://hfpc-paul-game.netlify.app/?journey=jesus',
-  },
-  {
-    // 參孫打獅子(直達卡):獨立 repo hfpc-samson-game(vanilla Canvas PWA),即時動作關。
-    // 已部署 hfpc-samson-game.netlify.app(2026-06-25 curl 驗證標題 + 200)。憫安製作,合輯(戰爭/憫安)也各收一張。
-    // 主題正中合輯精神:聖經不說參孫多強壯,而說「耶和華的靈大大感動他」——力量出於神。
-    id: 'samson',
-    kind: 'boss', // 玩法類型(#/bytype 依此分組)
-    name: '參孫打獅子',
-    subtitle: '士 14・耶和華的靈感動,徒手撕獅',
-    category: 'bible',
-    color: '#9c5a2a',
-    emoji: '🦁',
-    url: 'https://hfpc-samson-game.netlify.app/',
-    credit: '製作:憫安',
-  },
-  {
-    // 耶利哥城牆(直達卡):住保羅 repo src/minigames/jericho/,?demo=jericho(忿怒鳥式:蓄力吹角吶喊震塌城牆)。
-    // ✅ 2026-06-27:經文 cuv 查驗(書6:2/6:16/6:20)、A 站自動部署。神學:城牆是「耶和華使它塌陷」(書6:20),不是靠人的武力。
-    id: 'jericho',
-    kind: 'shout', // 玩法類型(#/bytype 依此分組)
-    name: '耶利哥城牆',
-    subtitle: '書 6・繞城吹角大聲呼喊,耶和華使城牆塌陷',
-    category: 'bible',
-    color: '#c98a2b',
-    emoji: '🎺',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=jericho',
-  },
-  {
-    // 好牧人尋羊(直達卡):住保羅 repo src/minigames/shepherd/,?demo=shepherd(系列第一個「迷宮尋路」)。
-    // ✅ 2026-07-05:牧者過審文案後點亮;引文 路15:4/5-6/7 cuv 逐字查驗;paul PR #63 A 站部署、線上已驗。
-    //   年齡三檔(青=夜裡提燈尋羊);永不會輸——「直到找著呢?」牧人必找到底。
-    id: 'shepherd',
-    kind: 'maze', // 玩法類型(#/bytype 依此分組)
-    name: '好牧人尋羊',
-    subtitle: '路 15・循「咩~」尋迷羊,扛在肩上帶回家',
-    category: 'bible',
-    color: '#5c8f49',
-    emoji: '🐑',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=shepherd',
-  },
-  {
-    // 撒母耳聽呼喚(直達卡):住保羅 repo src/minigames/samuel/,?demo=samuel(系列第一個「記憶序列 Simon 型」)。
-    // ✅ 2026-07-06:牧者過審文案後點亮;引文 撒上3:4-5/3:9/3:10/3:19 cuv 逐字查驗;paul PR #64 A 站部署、線上已驗(mp3 f93b7f6c 200)。
-    //   油燈依序亮、照順序點回(聽與順服);聽錯溫柔重聽、永不會輸;年齡三檔(幼3/童4/青5輪更快)。
-    // 約瑟的彩衣(直達卡):住保羅 repo src/minigames/joseph/,?demo=joseph(系列第一個「滑塊拼圖」)。
-    // ✅ 2026-07-06:牧者過審(paul PR #65 併,A 站已驗;mp3 596bac62 200);點空格旁碎塊拼回彩衣,永不會輸。
-    // 約瑟管糧倉(直達卡):獨立 repo hfpc-joseph-granary(零建置手寫 PWA,系列第一個「經營管理」)。
-    // ✅ 2026-07-06:牧者過審文案後點亮;七豐年收存/七荒年配糧,恩典卡永不會輸;線上全程 Playwright 驗畢(3星)。
-    id: 'joseph-granary',
-    kind: 'management', // 玩法類型(#/bytype 依此分組)
-    name: '約瑟管糧倉',
-    subtitle: '創 41・七豐年七荒年——豐年不揮霍,荒年有預備',
-    category: 'bible',
-    color: '#b8860b',
-    emoji: '🌾',
-    url: 'https://hfpc-joseph-granary.netlify.app/',
-  },
-  {
-    id: 'joseph',
-    kind: 'sliding', // 玩法類型(#/bytype 依此分組)
-    name: '約瑟的彩衣',
-    subtitle: '創 37→50・拼回彩衣——神把破碎拼回',
-    category: 'bible',
-    color: '#b96a3a',
-    emoji: '🧥',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=joseph',
-  },
-  {
-    id: 'samuel',
-    kind: 'memoryseq', // 玩法類型(#/bytype 依此分組)
-    name: '撒母耳聽呼喚',
-    subtitle: '撒上 3・注意聽,照順序點燈——請說,僕人敬聽',
-    category: 'bible',
-    color: '#7a5c9e',
-    emoji: '🕯️',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=samuel',
-  },
-  {
-    // 尼希米守望(直達卡):住保羅 repo src/minigames/wallguard/(系列第一個「塔防・佈置守望」,PR #69 牧者過審)。
-    // 與閃避合輯裡的「尼希米修牆」是 two-forms:同故事,靜的佈置版 vs 動的閃避版。
-    id: 'wallguard',
-    kind: 'defense', // 玩法類型(#/bytype 依此分組)
-    name: '尼希米守望',
-    subtitle: '尼 3-6・佈崗吹角,仇敵退去——神必為我們爭戰',
-    category: 'bible',
-    color: '#8a6a33',
-    emoji: '🛡️',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=wallguard',
-  },
-  {
-    // 以斯拉護送(直達卡):住保羅 repo src/minigames/ezra/(系列第一個「護送」,PR #69 牧者過審)。
-    id: 'ezra',
-    kind: 'escort', // 玩法類型(#/bytype 依此分組)
-    name: '以斯拉護送',
-    subtitle: '拉 8・沒有刀兵,只有禱告——護送全隊回耶路撒冷',
-    category: 'bible',
-    color: '#4a7a8a',
-    emoji: '🕊️',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=ezra',
-  },
-  {
-    // 護住好種子(直達卡):守護反應(打地鼠家族)第一式・驅趕型(PR #70 牧者過審)。幼兒友善。
-    id: 'sower',
-    kind: 'guard', // 玩法類型(#/bytype 依此分組)
-    name: '護住好種子',
-    subtitle: '太 13・點飛鳥拍手趕走,護種子長成小苗',
-    category: 'bible',
-    color: '#5a8a3e',
-    emoji: '🌱',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=sower',
-  },
-  {
-    // 擒拿小狐狸(直達卡):守護反應第二式・分辨型擒拿(歌 2:15 經文動詞「擒拿」;PR #70 牧者過審)。
-    id: 'foxes',
-    kind: 'guard', // 玩法類型(#/bytype 依此分組)
-    name: '擒拿小狐狸',
-    subtitle: '歌 2:15・網子擒住毀壞葡萄園的小狐狸——蝴蝶別抓錯',
-    category: 'bible',
-    color: '#b9743a',
-    emoji: '🦊',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=foxes',
-  },
-  {
-    // 摩西的籃子(直達卡):系列第一個「縱向捲軸漂流閃避」關(出 2;PR #72 牧者過審)。雷電反向化:只躲不打,嬰孩永遠平安。幼兒友善。
-    id: 'basket',
-    kind: 'drift', // 玩法類型(#/bytype 依此分組)
-    name: '摩西的籃子',
-    subtitle: '出 2・蒲草箱漂尼羅河,閃開障礙——神看顧著',
-    category: 'bible',
-    color: '#3a7a9a',
-    emoji: '🧺',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=basket',
-  },
-  {
-    // 穿戴全副軍裝(直達卡):系列第一個「拖曳裝備/換裝」關(弗 6;PR #71 牧者過審)。青檔穿完加意義配對。
-    id: 'armor',
-    kind: 'dressup', // 玩法類型(#/bytype 依此分組)
-    name: '穿戴全副軍裝',
-    subtitle: '弗 6・六件軍裝拖到正確部位——站立得住',
-    category: 'bible',
-    color: '#8a6a2e',
-    emoji: '⚔️',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=armor',
-  },
-  {
-    // 活石蓋聖殿(直達卡):系列第一個「落石砌合」關(王上 6:7+彼前 2:5;PR #73 牧者過審)。砌合發光非爆炸、堆頂歇口氣、全程無鎚斧聲。
-    id: 'temple',
-    kind: 'stack', // 玩法類型(#/bytype 依此分組)
-    name: '活石蓋聖殿',
-    subtitle: '王上 6:7・石頭鑿好才運來——安安靜靜砌成聖殿',
-    category: 'bible',
-    color: '#a08040',
-    emoji: '🧱',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=temple',
-  },
-  {
-    // 基甸拆祭壇(直達卡):系列第一個「打磚塊」關(士 6:25-27;PR #73 牧者過審)。奉命拆巴力壇、球掉出僕人撿回、拆完接「築真壇」一幕。
-    id: 'gideon',
-    kind: 'breakout', // 玩法類型(#/bytype 依此分組)
-    name: '基甸拆祭壇',
-    subtitle: '士 6:25-27・夜裡拆巴力壇——先拆假的,才立真的',
-    category: 'bible',
-    color: '#2c3658',
-    emoji: '⚒️',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=gideon',
-  },
-  {
-    // 好管家(直達卡):經營管理②(太 25 按才幹的比喻;PR #74 牧者過審)。星等按忠心不按金額,埋太多=溫柔教導。
-    id: 'steward',
-    kind: 'management', // 玩法類型(#/bytype 依此分組)
-    name: '好管家',
-    subtitle: '太 25・銀子交託給你——神看忠心,不看數額',
-    category: 'bible',
-    color: '#a07a30',
-    emoji: '💼',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=steward',
-  },
-  {
-    // 失錢找物(直達卡):系列第一個「找物/找碴」關(路 15:8-10;PR #74 牧者過審)。油燈照暗屋、直到找著,天父尋找人的心。
-    id: 'lostcoin',
-    kind: 'seek', // 玩法類型(#/bytype 依此分組)
-    name: '失錢找物',
-    subtitle: '路 15:8-10・點上燈細細地找——直到找著',
-    category: 'bible',
-    color: '#8a6a3a',
-    emoji: '🪙',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=lostcoin',
-  },
-  {
-    // 羅得紅綠燈(直達卡):系列第一個「忍住誘惑・向前跑」關(創 19;PR #74 牧者過審)。回頭鈕千萬別按;按了天使拉住不算輸。
-    id: 'lotrun',
-    kind: 'resist', // 玩法類型(#/bytype 依此分組)
-    name: '羅得紅綠燈',
-    subtitle: '創 19・逃命吧!不可回頭看——忍住那顆按鈕',
-    category: 'bible',
-    color: '#7a4055',
-    emoji: '🧂',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=lotrun',
-  },
-  {
-    // 各從其類・動物歸艙(直達卡):系列第一個「彈珠配對」關(創 7;PR #74 牧者過審)。配對=一起進方舟非爆破;耶和華關門。
-    id: 'arkmatch',
-    kind: 'match', // 玩法類型(#/bytype 依此分組)
-    name: '各從其類・動物歸艙',
-    subtitle: '創 7・同類聚一起,進方舟——耶和華關門',
-    category: 'bible',
-    color: '#4a7a58',
-    emoji: '🦁',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=arkmatch',
-  },
-  {
-    // 收拾零碎(直達卡):彈珠配對⑭第二實作(約 6:11-13;PR #75 牧者過審)。配對=收進十二個籃子,免得有糟蹋的。
-    id: 'fragments',
-    kind: 'match', // 玩法類型(#/bytype 依此分組)
-    name: '五餅二魚・收拾零碎',
-    subtitle: '約 6・零碎收進十二個籃子——免得有糟蹋的',
-    category: 'bible',
-    color: '#b0904a',
-    emoji: '🧺',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=fragments',
-  },
-  {
-    // 聖靈果子(直達卡):彈珠配對⑭第三實作(加 5:22-23+約 15:5;PR #75 牧者過審)。配對=結到樹上;果子是聖靈結的。
-    id: 'fruits',
-    kind: 'match', // 玩法類型(#/bytype 依此分組)
-    name: '聖靈果子・結果子',
-    subtitle: '加 5・仁愛喜樂和平…結到樹上,常在主裡面',
-    category: 'bible',
-    color: '#7aa060',
-    emoji: '🍇',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=fruits',
-  },
-  {
-    // 大祭司胸牌・寶石歸位(直達卡):新類型⑮歸位配對(出 28:17-21,29;PR #75 牧者過審)。石名四行照和合本,名字帶在胸前。
-    id: 'gems',
-    kind: 'fit', // 玩法類型(#/bytype 依此分組)
-    name: '大祭司胸牌・寶石歸位',
-    subtitle: '出 28・十二寶石按支派歸位——名字帶在胸前',
-    category: 'bible',
-    color: '#7a5a9a',
-    emoji: '💎',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=gems',
-  },
-  {
-    // 趕羊入圈(直達卡):系列第一個「撞球物理」關(約 10:16+詩 23;PR #76 牧者過審)。撞羊入圈=歸聚安歇,非落袋。
-    id: 'herd',
-    kind: 'pool', // 玩法類型(#/bytype 依此分組)
-    name: '趕羊入圈',
-    subtitle: '約 10・撞球式把走散的羊領回圈——合成一群',
-    category: 'bible',
-    color: '#5a8a4a',
-    emoji: '🐑',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=herd',
-  },
-  {
-    // 拾穗的路得(直達卡):交換配對⑰第二實作+斜線實驗版(得 2;PR #79 牧者過審)。橫直斜都算一排=恩典故意多給;捆成一捆進伊法籃。
-    id: 'glean',
-    kind: 'swap3', // 玩法類型(#/bytype 依此分組)
-    name: '拾穗的路得',
-    subtitle: '得 2・橫直斜都算一排——恩典故意多給一點',
-    category: 'bible',
-    color: '#b0904a',
-    emoji: '🌾',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=glean',
-  },
-  {
-    // 雅各的斑點羊(直達卡):撞球⑯第二實作・雙欄分類(創 30-31;PR #80 牧者過審)。純白歸拉班欄、斑點歸雅各欄;走錯欄牧人帶回。
-    id: 'flock',
-    kind: 'pool', // 玩法類型(#/bytype 依此分組)
-    name: '雅各的斑點羊',
-    subtitle: '創 30・純白進左欄、斑點進右欄——證出我的公義來',
-    category: 'bible',
-    color: '#6a8a4a',
-    emoji: '🐏',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=flock',
-  },
-  {
-    // 嗎哪收取(直達卡):系列第一個「交換配對(消消樂反向化)」關(出 16;PR #78 牧者過審)。3 連=收進俄梅珥罐非爆裂;補位=天降。
-    id: 'manna',
-    kind: 'swap3', // 玩法類型(#/bytype 依此分組)
-    name: '嗎哪收取',
-    subtitle: '出 16・收滿俄梅珥罐——多收的沒有餘,少收的沒有缺',
-    category: 'bible',
-    color: '#b0985a',
-    emoji: '🍞',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=manna',
-  },
-  {
-    // 撲滅小火苗(直達卡):守護反應第三式・蔓延型撲滅(雅 3:5;PR #70 牧者過審)。
-    id: 'sparks',
-    kind: 'guard', // 玩法類型(#/bytype 依此分組)
-    name: '撲滅小火苗',
-    subtitle: '雅 3:5・趁小撲滅,別讓最小的火點著最大的樹林',
-    category: 'bible',
-    color: '#3a6a9a',
-    emoji: '💧',
-    url: 'https://hfpc-paul-game.netlify.app/?demo=sparks',
   },
 
   {
@@ -552,17 +202,6 @@ export const JOURNEYS = [
     collection: 'reversal',
   },
   {
-    // 挪亞方舟:兩個方舟小遊戲(住保羅 repo src/minigames/arkpairs|arkbuild/)。
-    // ⚠ 連到保羅站 ?demo=,需先合併並部署 paul「feat/noah-minigames」(PR #15)才會生效;未部署前點了會 404。
-    id: 'noah',
-    name: '挪亞方舟',
-    subtitle: '創 6–7・兩個方舟小遊戲',
-    category: 'series',
-    color: '#3f7fbf',
-    emoji: '🛕',
-    collection: 'noah',
-  },
-  {
     // 憫安製作闖關合輯:作者「作品集 / 榮譽牆」——把憫安一手做的關集中展示。
     // 這些關各自在大廳別處也有卡(播放清單模式:同一關可在多個清單),這裡按「作者」聚成一面牆。
     id: 'minan',
@@ -594,6 +233,54 @@ export const JOURNEYS = [
     color: '#b8860b',
     emoji: '🎵',
     collection: 'music',
+  },
+  // —— 2026-07-09 首頁瘦身(使用者拍板):原本的單關直達卡按「書卷/故事主題」收進下面五個合輯,
+  //    首頁只留桌遊主線旗艦卡+合輯卡+工具卡(49 → 23 張)。網址全不變、只是入口整併;
+  //    「依玩法瀏覽」#/bytype 照樣收錄全部關卡(它讀 JOURNEYS+COLLECTIONS 全量,不受影響)。
+  {
+    id: 'genesis',
+    name: '創世記闖關合輯',
+    subtitle: '挪亞方舟・羅得・雅各・約瑟——審判中有恩典',
+    category: 'series',
+    color: '#3f7fbf',
+    emoji: '📜',
+    collection: 'genesis',
+  },
+  {
+    id: 'exodus-pack',
+    name: '出埃及闖關合輯',
+    subtitle: '籃子・紅海・嗎哪・胸牌——神領百姓出埃及',
+    category: 'series',
+    color: '#b5452f',
+    emoji: '🏜️',
+    collection: 'exodus-pack',
+  },
+  {
+    id: 'kings',
+    name: '士師與列王合輯',
+    subtitle: '耶利哥・基甸・參孫・大衛・聖殿・回歸重建',
+    category: 'series',
+    color: '#8a6a2e',
+    emoji: '⚔️',
+    collection: 'kings',
+  },
+  {
+    id: 'parables',
+    name: '比喻與教導合輯',
+    subtitle: '好牧人・失錢・好管家・五餅二魚・聖靈果子',
+    category: 'series',
+    color: '#5c8f49',
+    emoji: '💬',
+    collection: 'parables',
+  },
+  {
+    id: 'sports-fun',
+    name: '休閒運動合輯',
+    subtitle: '射門練習+世界盃兩種玩法——課間放鬆(無經文)',
+    category: 'series',
+    color: '#3f7a34',
+    emoji: '🎮',
+    collection: 'sports-fun',
   },
 ]
 
@@ -1002,16 +689,18 @@ export const COLLECTIONS = {
       },
     ],
   },
-  noah: {
-    title: '挪亞方舟',
+  // —— 2026-07-09 首頁瘦身新增的五個「書卷/故事主題」合輯(使用者拍板)——
+  //    播放清單模式:同一關可在多個清單(samson 同時在戰爭/憫安/士師列王),都是深連結、不複製關卡。
+  //    原「挪亞方舟」合輯(noah)整組併入創世記合輯,卡片與網址不變。
+  genesis: {
+    title: '創世記闖關合輯',
+    emoji: '📜',
     desc:
-      '創世記 6–9:挪亞因著信、頂著旁人譏笑造方舟;動物一對一對進來;審判中有恩典,彩虹為立約的記號。' +
-      '可玩「完整大富翁旅程」(14 站,把兩關當闖關站),也可單獨玩各關。',
+      '起初,神創造——從挪亞方舟到約瑟:審判中有恩典、破碎中有保守。' +
+      '可玩挪亞「完整大富翁旅程」,其餘每關都能單獨玩。(每張卡片直接連到那一關的所在地,不複製關卡。)',
     color: '#3f7fbf',
-    emoji: '🛕',
     items: [
       {
-        // ✅ 2026-06-18:完整挪亞大富翁旅程(14 站手繪洪水板 + arkbuild/arkpairs 闖關站 + 彩虹之約終局卡片關)。住保羅 repo,?journey=noah。
         id: 'noah-journey',
         kind: 'rollmove', // 玩法類型(#/bytype 依此分組)
         name: '挪亞方舟・完整旅程',
@@ -1021,7 +710,15 @@ export const COLLECTIONS = {
         url: 'https://hfpc-paul-game.netlify.app/?journey=noah',
       },
       {
-        // 一公一母進方舟 + 安排房間解謎:住保羅 repo src/minigames/arkpairs/,?demo=arkpairs。
+        id: 'arkbuild',
+        kind: 'buildtiming', // 玩法類型(#/bytype 依此分組)
+        name: '一步一步蓋方舟',
+        subtitle: '創 6:14-22・操作挪亞釘木板,旁人嘲笑',
+        color: '#8a4b2f',
+        emoji: '🔨',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=arkbuild',
+      },
+      {
         id: 'arkpairs',
         kind: 'pairs', // 玩法類型(#/bytype 依此分組)
         name: '一公一母進方舟',
@@ -1031,14 +728,360 @@ export const COLLECTIONS = {
         url: 'https://hfpc-paul-game.netlify.app/?demo=arkpairs',
       },
       {
-        // 一步一步蓋方舟(操作挪亞鎚擊瞄準):住保羅 repo src/minigames/arkbuild/,?demo=arkbuild。
-        id: 'arkbuild',
-        kind: 'buildtiming', // 玩法類型(#/bytype 依此分組)
-        name: '一步一步蓋方舟',
-        subtitle: '創 6:14-22・操作挪亞釘木板,旁人嘲笑',
-        color: '#8a4b2f',
-        emoji: '🔨',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=arkbuild',
+        id: 'arkmatch',
+        kind: 'match', // 玩法類型(#/bytype 依此分組)
+        name: '各從其類・動物歸艙',
+        subtitle: '創 7・同類聚一起,進方舟——耶和華關門',
+        color: '#4a7a58',
+        emoji: '🦁',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=arkmatch',
+      },
+      {
+        id: 'lotrun',
+        kind: 'resist', // 玩法類型(#/bytype 依此分組)
+        name: '羅得紅綠燈',
+        subtitle: '創 19・逃命吧!不可回頭看——忍住那顆按鈕',
+        color: '#7a4055',
+        emoji: '🧂',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=lotrun',
+      },
+      {
+        id: 'flock',
+        kind: 'pool', // 玩法類型(#/bytype 依此分組)
+        name: '雅各的斑點羊',
+        subtitle: '創 30・純白進左欄、斑點進右欄——證出我的公義來',
+        color: '#6a8a4a',
+        emoji: '🐏',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=flock',
+      },
+      {
+        id: 'joseph',
+        kind: 'sliding', // 玩法類型(#/bytype 依此分組)
+        name: '約瑟的彩衣',
+        subtitle: '創 37→50・拼回彩衣——神把破碎拼回',
+        color: '#b96a3a',
+        emoji: '🧥',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=joseph',
+      },
+      {
+        id: 'joseph-granary',
+        kind: 'management', // 玩法類型(#/bytype 依此分組)
+        name: '約瑟管糧倉',
+        subtitle: '創 41・七豐年七荒年——豐年不揮霍,荒年有預備',
+        color: '#b8860b',
+        emoji: '🌾',
+        url: 'https://hfpc-joseph-granary.netlify.app/',
+      },
+    ],
+  },
+  'exodus-pack': {
+    title: '出埃及闖關合輯',
+    emoji: '🏜️',
+    desc:
+      '神用大能的手領百姓出埃及——籃子裡的保守、海中開路、天降嗎哪、胸前帶著名字。' +
+      '想走完整故事,首頁另有「出埃及記之旅」大富翁。(紅海/舉手之戰/米利暗與戰爭・音樂合輯共用同一關。)',
+    color: '#b5452f',
+    items: [
+      {
+        id: 'basket',
+        kind: 'drift', // 玩法類型(#/bytype 依此分組)
+        name: '摩西的籃子',
+        subtitle: '出 2・蒲草箱漂尼羅河,閃開障礙——神看顧著',
+        color: '#3a7a9a',
+        emoji: '🧺',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=basket',
+      },
+      {
+        id: 'redsea',
+        kind: 'parkour', // 玩法類型(#/bytype 依此分組)
+        name: '紅海奔逃',
+        subtitle: '出 14・站住等候,神開海路',
+        color: '#2b6fa8',
+        emoji: '🌊',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=redsea',
+      },
+      {
+        id: 'miriam',
+        kind: 'rhythm-taiko', // 玩法類型(#/bytype 依此分組)
+        name: '米利暗擊鼓(太鼓連打)',
+        subtitle: '出 15・拿鼓跳舞!你們要歌頌耶和華,因他大大戰勝',
+        color: '#d9483d',
+        emoji: '🥁',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=miriam',
+      },
+      {
+        id: 'manna',
+        kind: 'swap3', // 玩法類型(#/bytype 依此分組)
+        name: '嗎哪收取',
+        subtitle: '出 16・收滿俄梅珥罐——多收的沒有餘,少收的沒有缺',
+        color: '#b0985a',
+        emoji: '🍞',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=manna',
+      },
+      {
+        id: 'moses',
+        kind: 'endure', // 玩法類型(#/bytype 依此分組)
+        name: '摩西舉手之戰',
+        subtitle: '出 17・撐住舉手,亞倫戶珥扶手',
+        color: '#c98a2b',
+        emoji: '🙌',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=moses-action',
+      },
+      {
+        id: 'gems',
+        kind: 'fit', // 玩法類型(#/bytype 依此分組)
+        name: '大祭司胸牌・寶石歸位',
+        subtitle: '出 28・十二寶石按支派歸位——名字帶在胸前',
+        color: '#7a5a9a',
+        emoji: '💎',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=gems',
+      },
+    ],
+  },
+  kings: {
+    title: '士師與列王合輯',
+    emoji: '⚔️',
+    desc:
+      '從耶利哥到回歸重建——約書亞、士師、君王與先知的時代:' +
+      '得勝從來不靠人的強壯,是耶和華的作為。(參孫/大衛/約阿施與戰爭合輯共用同一關。)',
+    color: '#8a6a2e',
+    items: [
+      {
+        id: 'jericho',
+        kind: 'shout', // 玩法類型(#/bytype 依此分組)
+        name: '耶利哥城牆',
+        subtitle: '書 6・繞城吹角大聲呼喊,耶和華使城牆塌陷',
+        color: '#c98a2b',
+        emoji: '🎺',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=jericho',
+      },
+      {
+        id: 'gideon',
+        kind: 'breakout', // 玩法類型(#/bytype 依此分組)
+        name: '基甸拆祭壇',
+        subtitle: '士 6:25-27・夜裡拆巴力壇——先拆假的,才立真的',
+        color: '#2c3658',
+        emoji: '⚒️',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=gideon',
+      },
+      {
+        id: 'samson',
+        kind: 'boss', // 玩法類型(#/bytype 依此分組)
+        name: '參孫打獅子',
+        subtitle: '士 14・耶和華的靈感動,徒手撕獅',
+        color: '#9c5a2a',
+        emoji: '🦁',
+        url: 'https://hfpc-samson-game.netlify.app/',
+        credit: '製作:憫安',
+      },
+      {
+        id: 'glean',
+        kind: 'swap3', // 玩法類型(#/bytype 依此分組)
+        name: '拾穗的路得',
+        subtitle: '得 2・橫直斜都算一排——恩典故意多給一點',
+        color: '#b0904a',
+        emoji: '🌾',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=glean',
+      },
+      {
+        id: 'samuel',
+        kind: 'memoryseq', // 玩法類型(#/bytype 依此分組)
+        name: '撒母耳聽呼喚',
+        subtitle: '撒上 3・注意聽,照順序點燈——請說,僕人敬聽',
+        color: '#7a5c9e',
+        emoji: '🕯️',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=samuel',
+      },
+      {
+        id: 'david',
+        kind: 'aim', // 玩法類型(#/bytype 依此分組)
+        name: '大衛甩石',
+        subtitle: '撒上 17・瞄準拋射,打倒歌利亞',
+        color: '#3a8d6b',
+        emoji: '🎯',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=sling',
+      },
+      {
+        id: 'temple',
+        kind: 'stack', // 玩法類型(#/bytype 依此分組)
+        name: '活石蓋聖殿',
+        subtitle: '王上 6:7・石頭鑿好才運來——安安靜靜砌成聖殿',
+        color: '#a08040',
+        emoji: '🧱',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=temple',
+      },
+      {
+        id: 'elijah-action',
+        kind: 'collect', // 玩法類型(#/bytype 依此分組)
+        name: '以利亞重得力',
+        subtitle: '王上 19・撿餅喝水重得力',
+        color: '#c1772e',
+        emoji: '🌅',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=elijah-action',
+      },
+      {
+        id: 'joash',
+        kind: 'aim', // 玩法類型(#/bytype 依此分組)
+        name: '約阿施射得勝箭',
+        subtitle: '王下 13・憑信射到底,耶和華使你得勝',
+        color: '#7a4fb0',
+        emoji: '🏹',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=joash',
+      },
+      {
+        id: 'ezra',
+        kind: 'escort', // 玩法類型(#/bytype 依此分組)
+        name: '以斯拉護送',
+        subtitle: '拉 8・沒有刀兵,只有禱告——護送全隊回耶路撒冷',
+        color: '#4a7a8a',
+        emoji: '🕊️',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=ezra',
+      },
+      {
+        id: 'wallguard',
+        kind: 'defense', // 玩法類型(#/bytype 依此分組)
+        name: '尼希米守望',
+        subtitle: '尼 3-6・佈崗吹角,仇敵退去——神必為我們爭戰',
+        color: '#8a6a33',
+        emoji: '🛡️',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=wallguard',
+      },
+    ],
+  },
+  parables: {
+    title: '比喻與教導合輯',
+    emoji: '💬',
+    desc:
+      '耶穌的比喻與聖經的教導——撒種、尋羊、找錢、管家、收零碎、結果子…' +
+      '小遊戲玩一遍,道理就記住了。每關都能單獨玩、都有年齡難度。',
+    color: '#5c8f49',
+    items: [
+      {
+        id: 'sower',
+        kind: 'guard', // 玩法類型(#/bytype 依此分組)
+        name: '護住好種子',
+        subtitle: '太 13・點飛鳥拍手趕走,護種子長成小苗',
+        color: '#5a8a3e',
+        emoji: '🌱',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=sower',
+      },
+      {
+        id: 'steward',
+        kind: 'management', // 玩法類型(#/bytype 依此分組)
+        name: '好管家',
+        subtitle: '太 25・銀子交託給你——神看忠心,不看數額',
+        color: '#a07a30',
+        emoji: '💼',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=steward',
+      },
+      {
+        id: 'shepherd',
+        kind: 'maze', // 玩法類型(#/bytype 依此分組)
+        name: '好牧人尋羊',
+        subtitle: '路 15・循「咩~」尋迷羊,扛在肩上帶回家',
+        color: '#5c8f49',
+        emoji: '🐑',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=shepherd',
+      },
+      {
+        id: 'lostcoin',
+        kind: 'seek', // 玩法類型(#/bytype 依此分組)
+        name: '失錢找物',
+        subtitle: '路 15:8-10・點上燈細細地找——直到找著',
+        color: '#8a6a3a',
+        emoji: '🪙',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=lostcoin',
+      },
+      {
+        id: 'fragments',
+        kind: 'match', // 玩法類型(#/bytype 依此分組)
+        name: '五餅二魚・收拾零碎',
+        subtitle: '約 6・零碎收進十二個籃子——免得有糟蹋的',
+        color: '#b0904a',
+        emoji: '🧺',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=fragments',
+      },
+      {
+        id: 'herd',
+        kind: 'pool', // 玩法類型(#/bytype 依此分組)
+        name: '趕羊入圈',
+        subtitle: '約 10・撞球式把走散的羊領回圈——合成一群',
+        color: '#5a8a4a',
+        emoji: '🐑',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=herd',
+      },
+      {
+        id: 'fruits',
+        kind: 'match', // 玩法類型(#/bytype 依此分組)
+        name: '聖靈果子・結果子',
+        subtitle: '加 5・仁愛喜樂和平…結到樹上,常在主裡面',
+        color: '#7aa060',
+        emoji: '🍇',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=fruits',
+      },
+      {
+        id: 'armor',
+        kind: 'dressup', // 玩法類型(#/bytype 依此分組)
+        name: '穿戴全副軍裝',
+        subtitle: '弗 6・六件軍裝拖到正確部位——站立得住',
+        color: '#8a6a2e',
+        emoji: '⚔️',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=armor',
+      },
+      {
+        id: 'foxes',
+        kind: 'guard', // 玩法類型(#/bytype 依此分組)
+        name: '擒拿小狐狸',
+        subtitle: '歌 2:15・網子擒住毀壞葡萄園的小狐狸——蝴蝶別抓錯',
+        color: '#b9743a',
+        emoji: '🦊',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=foxes',
+      },
+      {
+        id: 'sparks',
+        kind: 'guard', // 玩法類型(#/bytype 依此分組)
+        name: '撲滅小火苗',
+        subtitle: '雅 3:5・趁小撲滅,別讓最小的火點著最大的樹林',
+        color: '#3a6a9a',
+        emoji: '💧',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=sparks',
+      },
+    ],
+  },
+  'sports-fun': {
+    title: '休閒運動合輯',
+    emoji: '🎮',
+    desc:
+      '無經文的課間放鬆小遊戲——運動題材,輸了也開心,再來一場就是了。' +
+      '(與「憫安製作闖關合輯」共用同幾關;這裡按「休閒」聚一份,課間快速找。)',
+    color: '#3f7a34',
+    items: [
+      {
+        id: 'goalkick',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '射門練習(休閒)',
+        subtitle: '拖球射門・守門員撲救・踢 10 球看進幾球',
+        color: '#5a8a3a',
+        emoji: '⚽',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=goalkick',
+      },
+      {
+        id: 'soccer',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '世界盃足球賽(休閒)',
+        subtitle: '回合彈射全場・🤖 鬥阿福教練或 👥 雙人同機 PK',
+        color: '#3f7a34',
+        emoji: '🏆',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=soccer',
+      },
+      {
+        id: 'football',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '世界盃足球賽・實況版(休閒)',
+        subtitle: '即時運球+蓄力踢球・🤖 對戰 AI 或 👥 雙人同機',
+        color: '#3f7a34',
+        emoji: '🥅',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=football',
       },
     ],
   },
