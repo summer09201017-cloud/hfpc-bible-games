@@ -1083,6 +1083,36 @@ export const COLLECTIONS = {
         emoji: '🥅',
         url: 'https://hfpc-paul-game.netlify.app/?demo=football',
       },
+      {
+        // 投籃大賽:休閒關第四彈(無經文,側視蓄力投籃;paul PR #84 併入、A 站驗過 bundle 才點)。
+        id: 'hoopshot',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '投籃大賽(休閒)',
+        subtitle: '蓄力抓綠色甜蜜區・越投越遠・三分線外算 3 分',
+        color: '#a05a28',
+        emoji: '🏀',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=hoopshot',
+      },
+      {
+        // 世界盃籃球賽:休閒關第五彈(無經文,football 姊妹作即時運球+投籃;paul PR #84 併入)。
+        id: 'basketball',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '世界盃籃球賽(休閒)',
+        subtitle: '即時運球+蓄力投籃・搶籃板・🤖 對戰 AI 或 👥 雙人同機',
+        color: '#8a4a20',
+        emoji: '⛹️',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=basketball',
+      },
+      {
+        // 棒球打擊王:休閒關第六彈(無經文,主審視角時機揮棒;paul PR #85 併入,#86 主審視角大改審中)。
+        id: 'baseball',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '棒球打擊王(休閒)',
+        subtitle: '看清好壞球再揮棒・全壘打!・🤖 打擊練習或 👥 投打對決',
+        color: '#4a6a9a',
+        emoji: '⚾',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=baseball',
+      },
     ],
   },
   peterLife: {
