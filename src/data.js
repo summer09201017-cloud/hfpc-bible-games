@@ -749,6 +749,17 @@ export const COLLECTIONS = {
         url: 'https://hfpc-paul-game.netlify.app/?demo=soccer',
       },
       {
+        // 世界盃足球賽・實況版:休閒關第三彈(無經文,即時運球+蓄力踢球;paul PR #83)。
+        // 牧者點名「真的運球與踢球,不要撞球方式」——與回合彈射版(soccer)同題材兩玩法並列。
+        id: 'football',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '世界盃足球賽・實況版(休閒)',
+        subtitle: '即時運球+蓄力踢球・🤖 對戰 AI 或 👥 雙人同機',
+        color: '#3f7a34',
+        emoji: '🥅',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=football',
+      },
+      {
         id: 'peter-sea',
         kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
         name: '彼得走海(節奏闖關)',
