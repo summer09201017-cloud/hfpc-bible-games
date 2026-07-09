@@ -59,9 +59,13 @@ function makeCard(j) {
   card.style.setProperty('--accent', j.color || '#3b6ea5')
 
   let cta = '敬請期待'
+  // 合輯卡片標題自動帶關數「(有N關)」——從 COLLECTIONS items 動態算,加關卡不必手改數字。
+  let nameSuffix = ''
   if (isCollection) {
     card.href = `#/${j.collection}`
-    card.setAttribute('aria-label', `展開 ${j.name}`)
+    const n = (COLLECTIONS[j.collection]?.items || []).length
+    if (n > 0) nameSuffix = `<span class="card__count">(有${n}關)</span>`
+    card.setAttribute('aria-label', `展開 ${j.name}(有 ${(COLLECTIONS[j.collection]?.items || []).length} 關)`)
     cta = '展開 →'
   } else if (isRoute) {
     card.href = `#/${j.route}`
@@ -77,7 +81,7 @@ function makeCard(j) {
   card.innerHTML = `
     <div class="card__emoji" aria-hidden="true">${j.emoji || '✦'}</div>
     <div class="card__text">
-      <div class="card__name">${j.name}</div>
+      <div class="card__name">${j.name}${nameSuffix}</div>
       <div class="card__sub">${j.subtitle || ''}</div>
       ${j.credit ? `<div class="card__credit">${j.credit}</div>` : ''}
     </div>
