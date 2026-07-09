@@ -739,6 +739,16 @@ export const COLLECTIONS = {
         url: 'https://hfpc-paul-game.netlify.app/?demo=goalkick',
       },
       {
+        // 世界盃足球賽:休閒關第二彈(無經文,回合彈射全場;paul PR #81)。AI 阿福教練/雙人同機 PK。
+        id: 'soccer',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '世界盃足球賽(休閒)',
+        subtitle: '回合彈射全場・🤖 鬥阿福教練或 👥 雙人同機 PK',
+        color: '#3f7a34',
+        emoji: '🏆',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=soccer',
+      },
+      {
         id: 'peter-sea',
         kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
         name: '彼得走海(節奏闖關)',
