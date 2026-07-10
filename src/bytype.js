@@ -4,7 +4,7 @@
 // 大廳鐵則不變:只帶路、不放遊戲——每一條都是深連結。新關上卡時在 data.js 順手標 kind 即可入列。
 import { JOURNEYS, COLLECTIONS } from './data.js'
 
-// —— 41 種玩法:依家族分組(順序=展示順序)。export 給 smoke-test 驗「kind 值必在此表」。 ——
+// —— 42 種玩法:依家族分組(順序=展示順序)。export 給 smoke-test 驗「kind 值必在此表」。 ——
 export const GROUPS = [
   {
     name: '🏃 動作與冒險',
@@ -27,6 +27,7 @@ export const GROUPS = [
       ['resist', '忍住誘惑', '往前跑,那顆「回頭」的按鈕千萬別按'],
       ['pool', '撞球物理', '像撞球一樣瞄準發射,把散開的領回一處'],
       ['sports', '運動練習', '瞄準射門・抓時機・玩得開心(休閒)'],
+      ['shmup', '飛行射擊', '駕機升空、擊落敵機(無經文休閒・大孩子向)'],
     ],
   },
   {
