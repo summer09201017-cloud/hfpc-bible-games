@@ -1124,6 +1124,16 @@ export const COLLECTIONS = {
         emoji: '⚾',
         url: 'https://hfpc-paul-game.netlify.app/?demo=baseball',
       },
+      {
+        // 花式撞球:休閒關第七彈(無經文,真物理入袋;paul PR #89 併入、A 站驗過 bundle 才點)。
+        id: 'billiards',
+        kind: 'pool', // 玩法類型(#/bytype 依此分組)
+        name: '花式撞球(休閒)',
+        subtitle: '真物理入袋・拉桿瞄準清光自己的球・🤖 鬥阿福或 👥 雙人',
+        color: '#2e7d4f',
+        emoji: '🎱',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=billiards',
+      },
     ],
   },
   // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——
