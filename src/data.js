@@ -282,6 +282,17 @@ export const JOURNEYS = [
     emoji: '🎮',
     collection: 'sports-fun',
   },
+  {
+    // 經典街機合輯(2026-07-10 使用者拍板):直連「爸爸作品集」裡已完成部署的經典遊戲,
+    // 大廳只帶路不複製;雷電含射擊(打敵機)——卡片副標寫明「大孩子向」讓老師自行斟酌。
+    id: 'arcade-classics',
+    name: '經典街機合輯',
+    subtitle: '打磚塊・俄羅斯方塊・雷電・九局熱戰——經典懷舊(無經文)',
+    category: 'series',
+    color: '#2c3e6b',
+    emoji: '🕹️',
+    collection: 'arcade-classics',
+  },
 ]
 
 // ★ 隱藏彩蛋卡片(2026-07-03 牧師決定):連點大廳大標題 7 下才會出現、之後 localStorage 記住。
@@ -1112,6 +1123,54 @@ export const COLLECTIONS = {
         color: '#4a6a9a',
         emoji: '⚾',
         url: 'https://hfpc-paul-game.netlify.app/?demo=baseball',
+      },
+    ],
+  },
+  // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——
+  // 大廳鐵則「只帶路、不放遊戲、不複製」的活範例;原專案改版,這裡自動享受新版。
+  'arcade-classics': {
+    title: '經典街機合輯',
+    emoji: '🕹️',
+    desc:
+      '經典懷舊小遊戲——打磚塊、俄羅斯方塊、雷電、棒球對戰,都是完整成品(無經文)。' +
+      '課間放鬆、大孩子挑戰高分;雷電是飛行射擊(擊落敵機),老師可自行斟酌年齡。',
+    color: '#2c3e6b',
+    items: [
+      {
+        id: 'bricksbreaking',
+        kind: 'breakout', // 玩法類型(#/bytype 依此分組)
+        name: '打磚塊',
+        subtitle: '經典彈板敲磚・寶物雷射分裂球・每日挑戰與成就',
+        color: '#c8901e',
+        emoji: '🧱',
+        url: 'https://bricksbreaking.netlify.app/',
+      },
+      {
+        id: 'dragtetris',
+        kind: 'stack', // 玩法類型(#/bytype 依此分組)
+        name: '俄羅斯方塊',
+        subtitle: '經典 Tetris・HOLD+五顆預覽・滑鼠拖曳模式',
+        color: '#2c5ac8',
+        emoji: '🟦',
+        url: 'https://dragtetris.netlify.app/',
+      },
+      {
+        id: 'flyshoot',
+        kind: 'shmup', // 玩法類型(#/bytype 依此分組;新 kind:飛行射擊)
+        name: '雷電・蒼穹突擊',
+        subtitle: '擊落敵機・大孩子向——Boss/僚機/商店/雙人協力',
+        color: '#1e3a5c',
+        emoji: '✈️',
+        url: 'https://flyshoot.netlify.app/',
+      },
+      {
+        id: 'deyi-baseball',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '九局熱戰(棒球進階版)',
+        subtitle: '完整九局棒球對戰——與棒球打擊王並列,進階版',
+        color: '#7a3a2c',
+        emoji: '⚾',
+        url: 'https://deyi-baseball.netlify.app/',
       },
     ],
   },
