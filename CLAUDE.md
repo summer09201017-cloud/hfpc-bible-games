@@ -3,7 +3,8 @@
 本 repo 是 **`hfpc-bible-games`(總入口大廳)**,也是整個「HFPC 聖經遊戲系列」的**生態系 hub**:一面卡片牆,帶路到各個獨立部署的遊戲。本檔給整個生態系的共用慣例與當前優先序;**各遊戲自己的開發細節在各自 repo 的 CLAUDE.md**。
 
 ## 🎯 當前任務(2026-07-09 對齊)
-- **現況:24 張首頁卡(含 2 route 卡)、3 分類、12 個合輯(83 關)、sw v41**(npm test 以此為準)。
+- **現況:24 張首頁卡(含 2 route 卡)、3 分類、12 個合輯(84 關)、sw v42**(npm test 以此為準)。
+- 07-10(HFP 機):🏟️ **3D 棒球**進休閒運動合輯(kind sports,**獨立站 hfpc-baseball3d.netlify.app**——系列第一個 Three.js 3D 關,主審視角/九宮格五球種/盜壘跑壘/9 局計分板/人聲播報;repo `baseball3d`,Netlify CLI 建站部署(改版後 `netlify deploy --prod --dir dist` 重推),線上冒煙驗過才點卡)+sw v42。
 - 07-10(HFP 機):🎱 **花式撞球**進休閒運動合輯(kind pool,paul `?demo=billiards` 真物理入袋,PR #89 無經文免送審併入、A 站驗過 bundle 才點卡)+sw v41。
 - 07-10(HFP 機):🕹️ **經典街機合輯**上線(使用者拍板)——四張**直達卡連「爸爸作品集」已部署成品**(打磚塊 bricksbreaking/俄羅斯方塊 dragtetris/雷電 flyshoot/九局熱戰 deyi-baseball),大廳鐵則「只帶路不複製」的活範例、零維護分叉;雷電副標寫明「擊落敵機・大孩子向」(使用者拍板放行)、九局熱戰標「棒球進階版」與棒球打擊王並列;bytype +1 新 kind `shmup`(系列玩法 → 42 種)+sw v40。
 - 07-09 晚(HFP 機):🏀 **投籃大賽**+⛹️ **世界盃籃球賽**+⚾ **棒球打擊王**三卡進休閒運動合輯(kind sports,合輯卡關數自動 3→6;paul PR #84/#85 無經文免送審併入、A 站驗過 bundle 三關都在才點卡)+sw v39。棒球「主審視角大改」在 paul PR #86 審中,併後既有卡直接生效。

@@ -1134,6 +1134,17 @@ export const COLLECTIONS = {
         emoji: '🎱',
         url: 'https://hfpc-paul-game.netlify.app/?demo=billiards',
       },
+      {
+        // 3D 棒球:休閒關第八彈(無經文,獨立站 baseball3d;大廳只帶路——Three.js 主審視角,
+        // 07-10 一天建成:九宮格五球種/盜壘跑壘/9 局計分板/人聲播報;Netlify CLI 部署驗過 bundle 才點卡)。
+        id: 'baseball3d',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '3D 棒球(休閒)',
+        subtitle: '主審視角 3D 球場・九宮格五球種・盜壘跑壘・🤖 打擊/投球/對戰/雙人',
+        color: '#35558a',
+        emoji: '🏟️',
+        url: 'https://hfpc-baseball3d.netlify.app/',
+      },
     ],
   },
   // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——
