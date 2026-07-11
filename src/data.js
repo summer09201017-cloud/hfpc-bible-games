@@ -1235,6 +1235,16 @@ export const COLLECTIONS = {
         emoji: '🏮',
         url: 'https://hfpc-kungfutrain3d.netlify.app/',
       },
+      {
+        // 3D 桌球:休閒關第十八彈(racket3d 第三運動,?mode=pingpong 深連結)。
+        id: 'pingpong3d',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '3D 桌球(休閒)',
+        subtitle: '球桌快節奏・彈跳快殺球更快・搶 11 分自訂・🤖/👥',
+        color: '#2456a8',
+        emoji: '🏓',
+        url: 'https://hfpc-racket3d.netlify.app/?mode=pingpong',
+      },
     ],
   },
   // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——
