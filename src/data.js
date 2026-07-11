@@ -1185,6 +1185,16 @@ export const COLLECTIONS = {
         emoji: '🏸',
         url: 'https://hfpc-racket3d.netlify.app/?mode=badminton',
       },
+      {
+        // 3D 西洋劍:休閒關第十三彈(奧運觸劍計分,點到為止無血條;07-11 使用者拍板做競技版)。
+        id: 'fencing3d',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '3D 西洋劍(休閒)',
+        subtitle: '奧運觸劍計分・看紅色預告格擋再反擊・搶 N 分自訂・🤖/👥',
+        color: '#5a6482',
+        emoji: '🤺',
+        url: 'https://hfpc-fencing3d.netlify.app/',
+      },
     ],
   },
   // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——
