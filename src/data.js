@@ -1215,6 +1215,16 @@ export const COLLECTIONS = {
         emoji: '⛳',
         url: 'https://hfpc-minigolf3d.netlify.app/',
       },
+      {
+        // 3D 躲避球:休閒關第十六彈(台灣小學經典;接殺機制+溫柔出局=板凳加油)。
+        id: 'dodgeball3d',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '3D 躲避球(休閒)',
+        subtitle: '小學經典・蓄力投球+K 接殺逆轉・出局到板凳加油・🤖/👥',
+        color: '#a3552e',
+        emoji: '🤾',
+        url: 'https://hfpc-dodgeball3d.netlify.app/',
+      },
     ],
   },
   // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——
