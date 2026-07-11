@@ -1145,6 +1145,26 @@ export const COLLECTIONS = {
         emoji: '🏟️',
         url: 'https://hfpc-baseball3d.netlify.app/',
       },
+      {
+        // 3D 撞球:休閒關第九彈(無經文,獨立站;07-11 子代理照 3d-game-kit 建成,51 項物理/規則自測)。
+        id: 'billiards3d',
+        kind: 'pool', // 玩法類型(#/bytype 依此分組)
+        name: '3D 撞球(休閒)',
+        subtitle: '3D 球桌雙色對決・蓄力擊球清台打黑8・🤖 鬥阿福或 👥 雙人',
+        color: '#1f6b45',
+        emoji: '🎱',
+        url: 'https://hfpc-billiards3d.netlify.app/',
+      },
+      {
+        // 3D 足球:休閒關第十彈(無經文,獨立站;07-11 建成——即時控人+守門員撲救+先進N球)。
+        id: 'soccer3d',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '3D 足球(休閒)',
+        subtitle: '3D 綠茵夜賽・帶球傳射+守門員撲救・先進 N 球獲勝・🤖/👥',
+        color: '#2c7a3f',
+        emoji: '⚽',
+        url: 'https://hfpc-soccer3d.netlify.app/',
+      },
     ],
   },
   // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——
