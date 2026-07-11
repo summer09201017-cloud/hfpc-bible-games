@@ -1205,6 +1205,16 @@ export const COLLECTIONS = {
         emoji: '🎳',
         url: 'https://hfpc-bowling3d.netlify.app/',
       },
+      {
+        // 3D 迷你高爾夫:休閒關第十五彈(滾球物理+九洞關卡;溫柔 8 桿上限)。
+        id: 'minigolf3d',
+        kind: 'pool', // 玩法類型(#/bytype 依此分組:滾球瞄準家族)
+        name: '3D 迷你高爾夫(休閒)',
+        subtitle: '九洞牆壁迷宮・瞄角度拿捏力道・桿數比標準桿・單人/🤖/👥',
+        color: '#2e7a44',
+        emoji: '⛳',
+        url: 'https://hfpc-minigolf3d.netlify.app/',
+      },
     ],
   },
   // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——
