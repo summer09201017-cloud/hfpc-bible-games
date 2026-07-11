@@ -1165,6 +1165,26 @@ export const COLLECTIONS = {
         emoji: '⚽',
         url: 'https://hfpc-soccer3d.netlify.app/',
       },
+      {
+        // 3D 網球:休閒關第十一彈(racket3d 一站雙玩法,?mode 深連結;07-11 隔網引擎)。
+        id: 'tennis3d',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '3D 網球(休閒)',
+        subtitle: '隔網對打・時機揮拍蓄力抽擊・搶 N 分自訂・🤖 五檔/👥 雙人',
+        color: '#2f6e8f',
+        emoji: '🎾',
+        url: 'https://hfpc-racket3d.netlify.app/?mode=tennis',
+      },
+      {
+        // 3D 羽毛球:休閒關第十二彈(同站 racket3d,羽毛球物理:不落地/殺球快陡)。
+        id: 'badminton3d',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '3D 羽毛球(休閒)',
+        subtitle: '不落地的攻防・長按殺球又快又陡・搶 N 分自訂・🤖/👥',
+        color: '#3f7a4a',
+        emoji: '🏸',
+        url: 'https://hfpc-racket3d.netlify.app/?mode=badminton',
+      },
     ],
   },
   // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——

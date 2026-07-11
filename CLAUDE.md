@@ -3,7 +3,10 @@
 本 repo 是 **`hfpc-bible-games`(總入口大廳)**,也是整個「HFPC 聖經遊戲系列」的**生態系 hub**:一面卡片牆,帶路到各個獨立部署的遊戲。本檔給整個生態系的共用慣例與當前優先序;**各遊戲自己的開發細節在各自 repo 的 CLAUDE.md**。
 
 ## 🎯 當前任務(2026-07-09 對齊)
-- **現況:24 張首頁卡(含 2 route 卡)、3 分類、12 個合輯(86 關)、sw v43**(npm test 以此為準)。
+- **現況:24 張首頁卡(含 2 route 卡)、3 分類、12 個合輯(88 關)、sw v44**(npm test 以此為準)。
+- 07-11(HFP 機):🎾 **3D 網球**+🏸 **3D 羽毛球**進休閒運動合輯(第十一/十二彈——**一站雙卡**:
+  repo racket3d(私有)/hfpc-racket3d.netlify.app,`?mode=tennis|badminton` 深連結;隔網對打引擎共用,
+  時機窗揮拍+先擲命運,14 句雲哲人聲;Netlify 手動站 `--no-build` 重推)+sw v44。
 - 07-11(HFP 機):🎱 **3D 撞球**+⚽ **3D 足球**進休閒運動合輯(第九/十彈,獨立站
   hfpc-billiards3d / hfpc-soccer3d .netlify.app,Netlify CLI 手動部署站——改版要 `--no-build` 重推;
   repo billiards3d/soccer3d(私有);照 skill 3d-game-kit 建成,撞球=雙色清台+黑8、足球=即時控人+撲救+先進N球)+sw v43。
