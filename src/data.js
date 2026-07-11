@@ -1195,6 +1195,16 @@ export const COLLECTIONS = {
         emoji: '🤺',
         url: 'https://hfpc-fencing3d.netlify.app/',
       },
+      {
+        // 3D 保齡球:休閒關第十四彈(滾球物理+正規計分學算數;回合制輪流=課間分組)。
+        id: 'bowling3d',
+        kind: 'pool', // 玩法類型(#/bytype 依此分組:滾球瞄準家族)
+        name: '3D 保齡球(休閒)',
+        subtitle: '瞄口袋蓄力出手・全倒補中正規計分學算數・單人/🤖/👥 輪流',
+        color: '#8a5a28',
+        emoji: '🎳',
+        url: 'https://hfpc-bowling3d.netlify.app/',
+      },
     ],
   },
   // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——
