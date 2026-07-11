@@ -1225,6 +1225,16 @@ export const COLLECTIONS = {
         emoji: '🤾',
         url: 'https://hfpc-dodgeball3d.netlify.app/',
       },
+      {
+        // 3D 功夫修行:休閒關第十七彈(打木人樁節奏模仿,非互毆;評級全鼓勵語)。
+        id: 'kungfutrain3d',
+        kind: 'rhythm', // 玩法類型(#/bytype 依此分組:節奏家族)
+        name: '3D 功夫修行(休閒)',
+        subtitle: '跟節奏打木人樁・拳掌踢擋四鍵・連擊評級到宗師・非對打',
+        color: '#7a3c2e',
+        emoji: '🏮',
+        url: 'https://hfpc-kungfutrain3d.netlify.app/',
+      },
     ],
   },
   // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——
