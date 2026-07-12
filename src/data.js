@@ -867,6 +867,17 @@ export const COLLECTIONS = {
         url: 'https://hfpc-paul-game.netlify.app/?demo=jericho',
       },
       {
+        // 約拿單的暗號:第一個「3D 引擎聖經皮」關(archery3d fork,07-12 建成;
+        // 撒上20:20-22/42+18:1 和合本 cuv MCP 逐句查驗;獨立站,大廳只帶路)。
+        id: 'jonathan-arrows',
+        kind: 'aim', // 玩法類型(#/bytype 依此分組)
+        name: '約拿單的暗號(3D)',
+        subtitle: '撒上 20・射三箭如射靶,第四箭飛過童子——「箭在前頭」救大衛!',
+        color: '#8a6a28',
+        emoji: '🏹',
+        url: 'https://hfpc-jonathan-arrows.netlify.app/',
+      },
+      {
         id: 'gideon',
         kind: 'breakout', // 玩法類型(#/bytype 依此分組)
         name: '基甸拆祭壇',
