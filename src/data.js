@@ -1245,6 +1245,18 @@ export const COLLECTIONS = {
         emoji: '🏓',
         url: 'https://hfpc-racket3d.netlify.app/?mode=pingpong',
       },
+      {
+        // 3D 射箭:休閒關第十九彈(無經文,獨立站 archery3d;「蓄力+拋物線」家族地基,
+        // 07-12 建成:拉弓蓄力+屏息準星晃動+順逆風補償+十環靶,雲哲人聲播報+觀眾聲,
+        // 五難度自我對戰校正;線上 bundle 驗過新版才點卡)。
+        id: 'archery3d',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '3D 射箭(休閒)',
+        subtitle: '拉弓蓄力屏息瞄準・抓風向反向補償・十環靶計分・五難度三模式',
+        color: '#8a6a28',
+        emoji: '🏹',
+        url: 'https://hfpc-archery3d.netlify.app/',
+      },
     ],
   },
   // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——
