@@ -1257,6 +1257,37 @@ export const COLLECTIONS = {
         emoji: '🏹',
         url: 'https://hfpc-archery3d.netlify.app/',
       },
+      {
+        // 3D 鉛球:休閒關第二十彈(athletics3d 一站三項,?mode 深連結——racket3d 範式;
+        // archery3d fork「蓄力+拋物線」家族,07-12 建成:蓄力+出手角度+順逆風+6投取最佳+個人紀錄)。
+        id: 'shotput3d',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '3D 鉛球(休閒)',
+        subtitle: '蓄力推球 41° 最遠・順逆風補償・6 投取最佳・個人紀錄金弧',
+        color: '#4a4e57',
+        emoji: '🥎',
+        url: 'https://hfpc-athletics3d.netlify.app/?mode=shotput',
+      },
+      {
+        // 3D 鐵餅:同站 athletics3d 第二項目。
+        id: 'discus3d',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '3D 鐵餅(休閒)',
+        subtitle: '甩餅乘風滑翔 38° 最遠・角度手抖拿捏・6 投取最佳・個人紀錄',
+        color: '#8a6a28',
+        emoji: '🥏',
+        url: 'https://hfpc-athletics3d.netlify.app/?mode=discus',
+      },
+      {
+        // 3D 標槍:同站 athletics3d 第三項目。
+        id: 'javelin3d',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '3D 標槍(休閒)',
+        subtitle: '全力一擲插進草地 36° 最遠・貼近真實紀錄尺度・6 投取最佳',
+        color: '#5a6482',
+        emoji: '🎯',
+        url: 'https://hfpc-athletics3d.netlify.app/?mode=javelin',
+      },
     ],
   },
   // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——
