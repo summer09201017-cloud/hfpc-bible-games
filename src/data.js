@@ -343,7 +343,17 @@ export const COLLECTIONS = {
         emoji: '🌊',
         url: 'https://hfpc-peter-sea-game.netlify.app/',
         credit: '製作:憫安',
+      },      {
+        // 彼得走海(3D):peter-sea3d(07-13 佇列#15;kungfutrain 節奏底座聖經皮;2D 原版保留並列=keep-2d-add-3d 鐵則)。
+        id: 'peter-sea3d',
+        kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
+        name: '彼得走海(3D)',
+        subtitle: '夜海 3D 踏浪!左右腳跟拍走向耶穌・風浪下沉喊「主啊救我」・經文朗讀',
+        color: '#1d4265',
+        emoji: '🌊',
+        url: 'https://hfpc-peter-sea3d.netlify.app/',
       },
+
       {
         id: 'paul-silas',
         kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
@@ -480,7 +490,17 @@ export const COLLECTIONS = {
         emoji: '🌊',
         url: 'https://hfpc-peter-sea-game.netlify.app/',
         credit: '製作:憫安',
+      },      {
+        // 彼得走海(3D):peter-sea3d(07-13 佇列#15;kungfutrain 節奏底座聖經皮;2D 原版保留並列=keep-2d-add-3d 鐵則)。
+        id: 'peter-sea3d',
+        kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
+        name: '彼得走海(3D)',
+        subtitle: '夜海 3D 踏浪!左右腳跟拍走向耶穌・風浪下沉喊「主啊救我」・經文朗讀',
+        color: '#1d4265',
+        emoji: '🌊',
+        url: 'https://hfpc-peter-sea3d.netlify.app/',
       },
+
       {
         id: 'samson',
         kind: 'boss', // 玩法類型(#/bytype 依此分組)
@@ -1435,7 +1455,17 @@ export const COLLECTIONS = {
         color: '#2f6fb0',
         emoji: '🌊',
         url: 'https://hfpc-peter-sea-game.netlify.app/',
+      },      {
+        // 彼得走海(3D):peter-sea3d(07-13 佇列#15;kungfutrain 節奏底座聖經皮;2D 原版保留並列=keep-2d-add-3d 鐵則)。
+        id: 'peter-sea3d',
+        kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
+        name: '彼得走海(3D)',
+        subtitle: '夜海 3D 踏浪!左右腳跟拍走向耶穌・風浪下沉喊「主啊救我」・經文朗讀',
+        color: '#1d4265',
+        emoji: '🌊',
+        url: 'https://hfpc-peter-sea3d.netlify.app/',
       },
+
       {
         // 彼得越獄(潛行關)。✅ 2026-06-25:經文 cuv 查驗 10/10、已部署 hfpc-peter-prison-game.netlify.app
         //   (curl 驗證標題 + 核心資產 200);牧者審題包依指示略過(牧者自審)→ 正式亮。
