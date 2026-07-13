@@ -1333,6 +1333,16 @@ export const COLLECTIONS = {
         emoji: '🏃',
         url: 'https://hfpc-athletics3d.netlify.app/?mode=sprint',
       },
+      {
+        // 3D 冰壺:bowling3d fork(07-13 佇列⑧;擲壺+掃冰+House 計分,冰上西洋棋)。
+        id: 'curling3d',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '3D 冰壺(休閒)',
+        subtitle: '擲壺蓄力+按住空白鍵掃冰更滑・House 圓心計分・4v4 壺鬥智',
+        color: '#2f6fd6',
+        emoji: '🥌',
+        url: 'https://hfpc-curling3d.netlify.app/',
+      },
     ],
   },
   // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——
