@@ -512,6 +512,16 @@ export const COLLECTIONS = {
         credit: '製作:憫安',
       },
       {
+        // 參孫打獅子(3D):samson-lion3d(judo引擎聖經皮;keep-2d-add-3d 並列)。
+        id: 'samson-lion3d',
+        kind: 'fight-gentle', // 玩法類型(#/bytype 依此分組)
+        name: '參孫打獅子(3D)',
+        subtitle: '士 14・葡萄園徒手鬥獅!聖靈大招制伏(不流血)・經文朗讀',
+        color: '#9aa14f',
+        emoji: '🦁',
+        url: 'https://hfpc-samson-lion3d.netlify.app/',
+      },
+      {
         id: 'daniel-palace',
         kind: 'stealth', // 玩法類型(#/bytype 依此分組)
         name: '王宮之夜(潛行闖關)',
@@ -614,6 +624,16 @@ export const COLLECTIONS = {
         url: 'https://hfpc-samson-game.netlify.app/',
         // 小作者署名:任何卡片加 credit 欄就會顯示一枚「製作」徽章(見 main.js makeCard / styles.css .card__credit)。
         credit: '製作:憫安',
+      },
+      {
+        // 參孫打獅子(3D):samson-lion3d(judo引擎聖經皮;keep-2d-add-3d 並列)。
+        id: 'samson-lion3d',
+        kind: 'fight-gentle', // 玩法類型(#/bytype 依此分組)
+        name: '參孫打獅子(3D)',
+        subtitle: '士 14・葡萄園徒手鬥獅!聖靈大招制伏(不流血)・經文朗讀',
+        color: '#9aa14f',
+        emoji: '🦁',
+        url: 'https://hfpc-samson-lion3d.netlify.app/',
       },
       {
         // 約阿施射得勝箭(王下 13):住保羅 repo src/minigames/joash/,?demo=joash(拋射動作關,複製甩石引擎換皮)。
@@ -941,6 +961,16 @@ export const COLLECTIONS = {
         emoji: '🦁',
         url: 'https://hfpc-samson-game.netlify.app/',
         credit: '製作:憫安',
+      },
+      {
+        // 參孫打獅子(3D):samson-lion3d(judo引擎聖經皮;keep-2d-add-3d 並列)。
+        id: 'samson-lion3d',
+        kind: 'fight-gentle', // 玩法類型(#/bytype 依此分組)
+        name: '參孫打獅子(3D)',
+        subtitle: '士 14・葡萄園徒手鬥獅!聖靈大招制伏(不流血)・經文朗讀',
+        color: '#9aa14f',
+        emoji: '🦁',
+        url: 'https://hfpc-samson-lion3d.netlify.app/',
       },
       {
         id: 'glean',
