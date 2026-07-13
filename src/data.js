@@ -1323,6 +1323,16 @@ export const COLLECTIONS = {
         emoji: '🎯',
         url: 'https://hfpc-athletics3d.netlify.app/?mode=javelin',
       },
+      {
+        // 3D 100公尺:athletics3d 第四項目(07-13 佇列⑤田徑跑步;連點節奏衝刺+計時+PB)。
+        id: 'sprint3d',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '3D 100公尺(休閒)',
+        subtitle: '連點衝刺節奏越穩越快・亂按會腳步打結・計時+個人紀錄',
+        color: '#b3542e',
+        emoji: '🏃',
+        url: 'https://hfpc-athletics3d.netlify.app/?mode=sprint',
+      },
     ],
   },
   // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——
