@@ -300,7 +300,7 @@ export const JOURNEYS = [
     id: 'hfpc-olympics',
     kind: 'sports', // 玩法類型(#/bytype 依此分組)
     name: 'HFPC 奧運會',
-    subtitle: '16+ 3D 運動項目・賽程表・隊伍計分板——分組對抗運動會主控台',
+    subtitle: '25 個運動關卡(主賽18+示範賽7)・賽程表・隊伍計分板——分組對抗運動會主控台',
     category: 'series',
     color: '#b8860b',
     emoji: '🏅',
