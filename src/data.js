@@ -293,6 +293,20 @@ export const JOURNEYS = [
     emoji: '🕹️',
     collection: 'arcade-classics',
   },
+  {
+    // HFPC 奧運會入口(07-13 使用者拍板放進大廳):16+ 3D 運動項目卡+可編輯賽程表+
+    // 隊伍計分板=教會分組對抗運動會主控台。portal=入口頁不是關卡,頁尾關卡數不計入;
+    // 對打類(deyi 武鬥館系列)按家規仍獨立在大廳之外,由奧運會頁「示範賽」區帶路。
+    id: 'hfpc-olympics',
+    kind: 'sports', // 玩法類型(#/bytype 依此分組)
+    name: 'HFPC 奧運會',
+    subtitle: '16+ 3D 運動項目・賽程表・隊伍計分板——分組對抗運動會主控台',
+    category: 'series',
+    color: '#b8860b',
+    emoji: '🏅',
+    portal: true,
+    url: 'https://hfpc-olympics.netlify.app/',
+  },
 ]
 
 // ★ 隱藏彩蛋卡片(2026-07-03 牧師決定):連點大廳大標題 7 下才會出現、之後 localStorage 記住。

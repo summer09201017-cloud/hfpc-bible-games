@@ -316,7 +316,7 @@ try {
   for (const col of Object.values(COLLECTIONS)) for (const it of (col.items || [])) ids.add(it.id)
   let extra = 0
   for (const j of JOURNEYS) {
-    if (!j.collection && !(j.url || '').startsWith('#/') && !ids.has(j.id)) extra += 1
+    if (!j.collection && !j.portal && !(j.url || '').startsWith('#/') && !ids.has(j.id)) extra += 1
   }
   const totalLevels = ids.size + extra
   const foot = document.getElementById('footCount')
