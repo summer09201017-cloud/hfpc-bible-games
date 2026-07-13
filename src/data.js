@@ -1377,6 +1377,16 @@ export const COLLECTIONS = {
         emoji: '🥌',
         url: 'https://hfpc-curling3d.netlify.app/',
       },
+      {
+        // 3D 冰球:curling3d fork(07-13 佇列⑨最終項;射門+撲救輪流對決)。
+        id: 'hockey3d',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '3D 冰球(休閒)',
+        subtitle: '射門瞄死角+換邊控守門員撲救・側板反彈折射球・進球多者勝',
+        color: '#3a5f8a',
+        emoji: '🏒',
+        url: 'https://hfpc-hockey3d.netlify.app/',
+      },
     ],
   },
   // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——
