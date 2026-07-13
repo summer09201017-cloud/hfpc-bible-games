@@ -1387,6 +1387,16 @@ export const COLLECTIONS = {
         emoji: '🏒',
         url: 'https://hfpc-hockey3d.netlify.app/',
       },
+      {
+        // 3D 12碼PK:hockey3d 骨架足球版(07-14 使用者拍板)。
+        id: 'penalty3d',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '3D 12碼 PK 大戰(休閒)',
+        subtitle: '主罰⇄飛撲輪流攻防・大力=高球較難撲・賭方向的心理戰',
+        color: '#2e7d32',
+        emoji: '⚽',
+        url: 'https://hfpc-penalty3d.netlify.app/',
+      },
     ],
   },
   // 經典街機合輯(2026-07-10 使用者拍板):四張直達卡連到「爸爸作品集」已部署的完整成品——
