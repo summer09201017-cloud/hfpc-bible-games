@@ -308,3 +308,10 @@ if ('serviceWorker' in navigator) {
     })
   }
 }
+
+// 全站關卡數(07-13 使用者點名要顯示):同 smoke-test 口徑=各合輯 items 加總,動態算加關自動更新
+try {
+  const totalLevels = Object.values(COLLECTIONS).reduce((n, c) => n + ((c && c.items && c.items.length) || 0), 0)
+  const foot = document.getElementById('footCount')
+  if (foot) foot.textContent = `HFPC 聖經遊戲 ・ 全站共 ${totalLevels} 關 ・ 點任一張卡片進入該旅程`
+} catch { /* 靜默 */ }
