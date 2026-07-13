@@ -521,6 +521,18 @@ export const COLLECTIONS = {
         url: 'https://hfpc-paul-game.netlify.app/?demo=sling',
       },
       {
+        // 大衛甩石(3D):athletics3d 引擎聖經皮,獨立站——與 2D 版並列(keep-2d-add-3d 鐵則,
+        // 07-13 建成:蓄力+雙軸瞄準+風;17:49 仆倒面伏於地照經文;便雅憫毫髮不差挑戰;
+        // 終幕經文朗讀曉臻;經文 cuv 逐句查驗)。
+        id: 'david-sling3d',
+        kind: 'aim', // 玩法類型(#/bytype 依此分組)
+        name: '大衛甩石(3D)',
+        subtitle: '撒上 17・3D 甩石索瞄巨人額頭+便雅憫毫髮不差挑戰(士20:16)',
+        color: '#2e7d4f',
+        emoji: '🪨',
+        url: 'https://hfpc-david-sling3d.netlify.app/',
+      },
+      {
         // 聖歌奇兵(約沙法)動作關:代下 20——詩班走在軍隊前面讚美,神設伏兵,猶大不戰而勝
         // (最典型「不靠刀槍、靠倚靠神」)。與「逆轉奇兵」合輯共用同一關(深連結,不複製)。
         // ✅ 2026-06-16:戰爭關搬進保羅 repo(永久家,消除跨 repo sync)→ paul ?demo=jehoshaphat-action
@@ -922,6 +934,18 @@ export const COLLECTIONS = {
         color: '#3a8d6b',
         emoji: '🎯',
         url: 'https://hfpc-paul-game.netlify.app/?demo=sling',
+      },
+      {
+        // 大衛甩石(3D):athletics3d 引擎聖經皮,獨立站——與 2D 版並列(keep-2d-add-3d 鐵則,
+        // 07-13 建成:蓄力+雙軸瞄準+風;17:49 仆倒面伏於地照經文;便雅憫毫髮不差挑戰;
+        // 終幕經文朗讀曉臻;經文 cuv 逐句查驗)。
+        id: 'david-sling3d',
+        kind: 'aim', // 玩法類型(#/bytype 依此分組)
+        name: '大衛甩石(3D)',
+        subtitle: '撒上 17・3D 甩石索瞄巨人額頭+便雅憫毫髮不差挑戰(士20:16)',
+        color: '#2e7d4f',
+        emoji: '🪨',
+        url: 'https://hfpc-david-sling3d.netlify.app/',
       },
       {
         id: 'temple',
