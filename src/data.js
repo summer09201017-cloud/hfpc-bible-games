@@ -514,7 +514,7 @@ export const COLLECTIONS = {
       {
         // 參孫打獅子(3D):samson-lion3d(judo引擎聖經皮;keep-2d-add-3d 並列)。
         id: 'samson-lion3d',
-        kind: 'fight-gentle', // 玩法類型(#/bytype 依此分組)
+        kind: 'boss', // 玩法類型(#/bytype 依此分組)
         name: '參孫打獅子(3D)',
         subtitle: '士 14・葡萄園徒手鬥獅!聖靈大招制伏(不流血)・經文朗讀',
         color: '#9aa14f',
@@ -628,7 +628,7 @@ export const COLLECTIONS = {
       {
         // 參孫打獅子(3D):samson-lion3d(judo引擎聖經皮;keep-2d-add-3d 並列)。
         id: 'samson-lion3d',
-        kind: 'fight-gentle', // 玩法類型(#/bytype 依此分組)
+        kind: 'boss', // 玩法類型(#/bytype 依此分組)
         name: '參孫打獅子(3D)',
         subtitle: '士 14・葡萄園徒手鬥獅!聖靈大招制伏(不流血)・經文朗讀',
         color: '#9aa14f',
@@ -965,7 +965,7 @@ export const COLLECTIONS = {
       {
         // 參孫打獅子(3D):samson-lion3d(judo引擎聖經皮;keep-2d-add-3d 並列)。
         id: 'samson-lion3d',
-        kind: 'fight-gentle', // 玩法類型(#/bytype 依此分組)
+        kind: 'boss', // 玩法類型(#/bytype 依此分組)
         name: '參孫打獅子(3D)',
         subtitle: '士 14・葡萄園徒手鬥獅!聖靈大招制伏(不流血)・經文朗讀',
         color: '#9aa14f',
