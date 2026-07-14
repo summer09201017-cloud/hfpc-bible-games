@@ -14,6 +14,8 @@ const THEMES = [
   { id: 'mint', name: '淺薄荷綠', sw: 'linear-gradient(135deg,#f1f8f2,#e0f0e6)' },
   { id: 'apricot', name: '暖杏橘', sw: 'linear-gradient(135deg,#fdf3ea,#fbe6d2)' },
   { id: 'night', name: '深藍夜間', sw: 'linear-gradient(135deg,#1d4a73,#0a1b2e)' },
+  { id: 'purple', name: '深紫夜', sw: 'linear-gradient(135deg,#4a1a2a,#140d1c)' },
+  { id: 'deepgreen', name: '墨綠夜', sw: 'linear-gradient(135deg,#0e3b2e,#07211a)' },
 ]
 const THEME_KEY = 'hub-theme'
 function applyTheme(id) {
@@ -42,7 +44,7 @@ function renderThemePick() {
   }
 }
 const savedTheme =
-  (() => { try { return localStorage.getItem(THEME_KEY) } catch { return null } })() || 'sky'
+  (() => { try { return localStorage.getItem(THEME_KEY) } catch { return null } })() || 'deepgreen'
 renderThemePick()
 applyTheme(savedTheme)
 

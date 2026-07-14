@@ -52,6 +52,22 @@
   --overlay: rgba(255, 255, 255, 0.07); --overlay-hover: rgba(255, 255, 255, 0.13);
 }
 
+[data-theme="purple"] {
+  --bg-glow: #4a1a2a; --bg-top: #2a1533; --bg-bot: #140d1c;
+  --ink: #f4f0fa; --ink-dim: #c0aed0; --card-bg: #2a1a3a;
+  --gold: #ffd479; --title-from: #ffffff; --title-to: #ffd479;
+  --line: rgba(255, 255, 255, 0.12); --line-strong: rgba(255, 255, 255, 0.25);
+  --overlay: rgba(255, 255, 255, 0.07); --overlay-hover: rgba(255, 255, 255, 0.13);
+}
+
+[data-theme="deepgreen"] {
+  --bg-glow: #0e3b2e; --bg-top: #0b2b21; --bg-bot: #07211a;
+  --ink: #eaf8f1; --ink-dim: #9fcfba; --card-bg: #12352a;
+  --gold: #ffd479; --title-from: #ffffff; --title-to: #ffd479;
+  --line: rgba(255, 255, 255, 0.12); --line-strong: rgba(255, 255, 255, 0.25);
+  --overlay: rgba(255, 255, 255, 0.07); --overlay-hover: rgba(255, 255, 255, 0.13);
+}
+
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
