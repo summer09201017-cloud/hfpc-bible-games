@@ -57,7 +57,7 @@ export const JOURNEYS = [
   {
     id: 'dodge-heroes',
     name: '靠神得勝・閃避',
-    subtitle: '掃羅擲槍 / 尼希米修牆 — 只管躲、不還手,神保守',
+    subtitle: '掃羅擲槍 / 尼希米修牆 / 大衛躲槍(3D) — 只管躲、不還手,神保守',
     category: 'series',
     color: '#7a4030',
     emoji: '🛡️',
@@ -429,6 +429,15 @@ export const COLLECTIONS = {
         color: '#6b3fa0',
         emoji: '🗡️',
         url: 'https://hfpc-paul-game.netlify.app/?demo=saul-spear',
+      },
+      {
+        id: 'david-spear3d',
+        kind: 'dodge', // 玩法類型(#/bytype 依此分組)
+        name: '大衛躲槍(3D)',
+        subtitle: '撒上 18・掃羅掄槍,大衛照常彈琴——3D 王宮夜、槍釘牆',
+        color: '#6b3fa0',
+        emoji: '🎵',
+        url: 'https://hfpc-david-spear3d.netlify.app/',
       },
       {
         id: 'nehemiah-wall',
