@@ -531,6 +531,15 @@ export const COLLECTIONS = {
         url: 'https://hfpc-samson-lion3d.netlify.app/',
       },
       {
+        id: 'jacob-wrestle3d',
+        kind: 'boss', // 玩法類型(#/bytype 依此分組)
+        name: '雅各摔跤(3D)',
+        subtitle: '創 32・毘努伊勒摔到黎明!得勝改名以色列・瘸腿蒙福・經文朗讀',
+        color: '#3a5a8a',
+        emoji: '🌙',
+        url: 'https://hfpc-jacob-wrestle3d.netlify.app/',
+      },
+      {
         id: 'daniel-palace',
         kind: 'stealth', // 玩法類型(#/bytype 依此分組)
         name: '王宮之夜(潛行闖關)',
