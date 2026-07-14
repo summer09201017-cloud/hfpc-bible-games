@@ -16,6 +16,7 @@ const THEMES = [
   { id: 'night', name: '深藍夜間', sw: 'linear-gradient(135deg,#1d4a73,#0a1b2e)' },
   { id: 'purple', name: '深紫夜', sw: 'linear-gradient(135deg,#4a1a2a,#140d1c)' },
   { id: 'deepgreen', name: '墨綠夜', sw: 'linear-gradient(135deg,#0e3b2e,#07211a)' },
+  { id: 'navy', name: '奧運深藍', sw: 'linear-gradient(135deg,#15426b,#09131d)' },
 ]
 const THEME_KEY = 'hub-theme'
 function applyTheme(id) {

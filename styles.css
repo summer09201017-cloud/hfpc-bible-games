@@ -68,6 +68,14 @@
   --overlay: rgba(255, 255, 255, 0.07); --overlay-hover: rgba(255, 255, 255, 0.13);
 }
 
+[data-theme="navy"] {
+  --bg-glow: #15426b; --bg-top: #0e2e4c; --bg-bot: #09131d;
+  --ink: #f4f8fc; --ink-dim: #9fb6cf; --card-bg: #122b45;
+  --gold: #f6d743; --title-from: #ffffff; --title-to: #f6d743;
+  --line: rgba(255, 255, 255, 0.12); --line-strong: rgba(255, 255, 255, 0.25);
+  --overlay: rgba(255, 255, 255, 0.07); --overlay-hover: rgba(255, 255, 255, 0.13);
+}
+
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
