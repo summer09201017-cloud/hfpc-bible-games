@@ -540,6 +540,15 @@ export const COLLECTIONS = {
         url: 'https://hfpc-jacob-wrestle3d.netlify.app/',
       },
       {
+        id: 'gideon300-3d',
+        kind: 'stealth', // 玩法類型(#/bytype 依此分組)
+        name: '基甸三百勇士(3D)',
+        subtitle: '士 7・夜襲潛行避火把+吹角破瓶舉火把三信號——耶和華和基甸的刀!',
+        color: '#8a5a20',
+        emoji: '🎺',
+        url: 'https://hfpc-gideon300-3d.netlify.app/',
+      },
+      {
         id: 'daniel-palace',
         kind: 'stealth', // 玩法類型(#/bytype 依此分組)
         name: '王宮之夜(潛行闖關)',
