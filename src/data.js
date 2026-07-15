@@ -156,6 +156,19 @@ export const JOURNEYS = [
     emoji: '✝️',
     url: 'https://hfpc-paul-game.netlify.app/?journey=jesus',
   },
+  {
+    // 騎驢進耶路撒冷(3D)(直達卡):獨立 repo donkey-jerusalem3d(equestrian3d 騎乘引擎聖經皮)。
+    // ✅ 2026-07-16:玩家=小驢駒馱主進城(耶穌永不受操控);人群站綠區「穩步」,擦標=受驚+4 罰分,
+    //    永不會輸;亞9:9/太21:9 已 cuv 查驗,曉臻朗讀;獨立站,大廳只帶路。
+    id: 'donkey-jerusalem3d',
+    kind: 'ride', // 玩法類型(#/bytype 依此分組)
+    name: '騎驢進耶路撒冷(3D)',
+    subtitle: '太 21・你是小驢駒,馱著溫柔的王穩穩進城',
+    category: 'bible',
+    color: '#8a6a3f',
+    emoji: '🫏',
+    url: 'https://hfpc-donkey-jerusalem3d.netlify.app/',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
@@ -343,7 +356,8 @@ export const COLLECTIONS = {
         emoji: '🌊',
         url: 'https://hfpc-peter-sea-game.netlify.app/',
         credit: '製作:憫安',
-      },      {
+      },
+      {
         // 彼得走海(3D):peter-sea3d(07-13 佇列#15;kungfutrain 節奏底座聖經皮;2D 原版保留並列=keep-2d-add-3d 鐵則)。
         id: 'peter-sea3d',
         kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
@@ -499,7 +513,8 @@ export const COLLECTIONS = {
         emoji: '🌊',
         url: 'https://hfpc-peter-sea-game.netlify.app/',
         credit: '製作:憫安',
-      },      {
+      },
+      {
         // 彼得走海(3D):peter-sea3d(07-13 佇列#15;kungfutrain 節奏底座聖經皮;2D 原版保留並列=keep-2d-add-3d 鐵則)。
         id: 'peter-sea3d',
         kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
@@ -1554,7 +1569,8 @@ export const COLLECTIONS = {
         color: '#2f6fb0',
         emoji: '🌊',
         url: 'https://hfpc-peter-sea-game.netlify.app/',
-      },      {
+      },
+      {
         // 彼得走海(3D):peter-sea3d(07-13 佇列#15;kungfutrain 節奏底座聖經皮;2D 原版保留並列=keep-2d-add-3d 鐵則)。
         id: 'peter-sea3d',
         kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
