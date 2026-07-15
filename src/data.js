@@ -674,6 +674,17 @@ export const COLLECTIONS = {
         emoji: '🏹',
         url: 'https://hfpc-paul-game.netlify.app/?demo=joash',
       },
+      {
+        // 約阿施的得勝箭(3D):joash-arrows(archery3d 引擎聖經皮;keep-2d-add-3d 並列)。
+        // 2026-07-15:病房朝東窗射軍旗靶+拿箭打地(不揭示次數,≥5=完全得勝);王下13:14-19 cuv 查驗;獨立站,大廳只帶路。
+        id: 'joash-arrows3d',
+        kind: 'aim', // 玩法類型(#/bytype 依此分組)
+        name: '約阿施的得勝箭(3D)',
+        subtitle: '王下 13・開朝東的窗射得勝箭+拿箭打地——打幾次,你決定!',
+        color: '#6d3fb0',
+        emoji: '🏹',
+        url: 'https://hfpc-joash-arrows.netlify.app/',
+      },
     ],
   },
   reversal: {
@@ -1064,6 +1075,17 @@ export const COLLECTIONS = {
         color: '#7a4fb0',
         emoji: '🏹',
         url: 'https://hfpc-paul-game.netlify.app/?demo=joash',
+      },
+      {
+        // 約阿施的得勝箭(3D):joash-arrows(archery3d 引擎聖經皮;keep-2d-add-3d 並列)。
+        // 2026-07-15:病房朝東窗射軍旗靶+拿箭打地(不揭示次數,≥5=完全得勝);王下13:14-19 cuv 查驗;獨立站,大廳只帶路。
+        id: 'joash-arrows3d',
+        kind: 'aim', // 玩法類型(#/bytype 依此分組)
+        name: '約阿施的得勝箭(3D)',
+        subtitle: '王下 13・開朝東的窗射得勝箭+拿箭打地——打幾次,你決定!',
+        color: '#6d3fb0',
+        emoji: '🏹',
+        url: 'https://hfpc-joash-arrows.netlify.app/',
       },
       {
         id: 'ezra',
