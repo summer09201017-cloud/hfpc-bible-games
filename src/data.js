@@ -183,6 +183,19 @@ export const JOURNEYS = [
     emoji: '⚔️',
     url: 'https://hfpc-david-warriors3d.netlify.app/',
   },
+  {
+    // 巴蘭騎驢(3D)(直達卡):獨立 repo balaam-donkey3d(驢駒引擎再 fork,民22:21-33)。
+    // ✅ 2026-07-16:玩家=驢,全場唯一看得見持刀天使的;三幕避讓(田間/葡萄園/山道)、
+    //    挨打溫柔演出、終局天使現形+巴蘭俯伏;民22:28/31/33 已 cuv 查驗,曉臻朗讀;防穿模雙保險。
+    id: 'balaam-donkey3d',
+    kind: 'ride', // 玩法類型(#/bytype 依此分組)
+    name: '巴蘭騎驢(3D)',
+    subtitle: '民 22・你是那頭驢——唯一看得見天使的',
+    category: 'bible',
+    color: '#5a6b8f',
+    emoji: '🫏',
+    url: 'https://hfpc-balaam-donkey3d.netlify.app/',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
