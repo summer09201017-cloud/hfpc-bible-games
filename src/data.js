@@ -169,6 +169,20 @@ export const JOURNEYS = [
     emoji: '🫏',
     url: 'https://hfpc-donkey-jerusalem3d.netlify.app/',
   },
+  {
+    // 大衛的勇士們(3D)(直達卡):獨立 repo david-warriors3d(arena-duel-kit 首個聖經皮,
+    // fork warrior3d 競技場對決引擎)。✅ 2026-07-16:四勇士可選(以利亞撒劍/沙瑪大刀/
+    // 比拿雅長槍/亞比篩長矛)vs 非利士勇士;場景=沙瑪死守的紅豆田(撒下23:11-12);
+    // 八般武器+蓄力大招+格擋盾反;撒下23:10 已 cuv 查驗、曉臻誦讀;溫柔 KO 無流血。
+    id: 'david-warriors3d',
+    kind: 'boss', // 玩法類型(#/bytype 依此分組)
+    name: '大衛的勇士們(3D)',
+    subtitle: '撒下 23・在紅豆田迎戰非利士勇士,得勝歸耶和華',
+    category: 'bible',
+    color: '#8f6a2e',
+    emoji: '⚔️',
+    url: 'https://hfpc-david-warriors3d.netlify.app/',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
