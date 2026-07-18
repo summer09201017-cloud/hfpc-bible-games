@@ -347,7 +347,7 @@ function annotatePlayRank() {
     const b = document.createElement('em')
     b.className = 'playrank'
     b.style.cssText = 'display:block;margin-top:6px;font-size:12px;opacity:.85;font-style:normal'
-    b.textContent = (i < 3 ? medals[i] + ' ' : (i < 10 ? 'No.' + (i + 1) + '・' : '')) + '▶ 被開啟 ' + r.n + ' 次'
+    b.textContent = (i < 3 ? medals[i] + ' ' : '') + 'No.' + (i + 1) + '・▶ 被開啟 ' + r.n + ' 次'
     r.c.appendChild(b)
   })
   for (const g of document.querySelectorAll('.grid')) {
