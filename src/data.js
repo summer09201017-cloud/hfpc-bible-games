@@ -614,6 +614,36 @@ export const COLLECTIONS = {
     emoji: '⚔️',
     items: [
       {
+        // 基甸三百(3D):07-19 自憫安合輯移居此地(該合輯改為純憫安作品牆)。
+        id: 'gideon300-3d',
+        kind: 'stealth', // 玩法類型(#/bytype 依此分組)
+        name: '基甸三百勇士(3D)',
+        subtitle: '士 7・夜襲潛行避火把+吹角破瓶舉火把三信號——耶和華和基甸的刀!',
+        color: '#8a5a20',
+        emoji: '🎺',
+        url: 'https://hfpc-gideon300-3d.netlify.app/',
+      },
+      {
+        // 王宮之夜(3D):daniel-palace3d(07-19 上架;gideon300-3d 潛行底座換皮;2D 版在憫安合輯=keep-2d-add-3d)。
+        id: 'daniel-palace3d',
+        kind: 'stealth', // 玩法類型(#/bytype 依此分組)
+        name: '王宮之夜(3D)',
+        subtitle: '但 2・殺令之夜!柱影潛行避獵手火把,與三同伴同心禱告——奧祕在夜間異象中顯明',
+        color: '#3a2c52',
+        emoji: '🕯️',
+        url: 'https://hfpc-daniel-palace3d.netlify.app/',
+      },
+      {
+        // 雅各摔跤(3D):07-19 自憫安合輯移居此地(創32:28 與神與人較力都得了勝)。
+        id: 'jacob-wrestle3d',
+        kind: 'boss', // 玩法類型(#/bytype 依此分組)
+        name: '雅各摔跤(3D)',
+        subtitle: '創 32・毘努伊勒摔到黎明!得勝改名以色列・瘸腿蒙福・經文朗讀',
+        color: '#3a5a8a',
+        emoji: '🌙',
+        url: 'https://hfpc-jacob-wrestle3d.netlify.app/',
+      },
+      {
         // 摩西舉手之戰(約拿引擎 L7)。
         // ✅ 2026-07-05:搬進永久家保羅 repo(paul PR #62,自動部署)→ ?demo=moses-action;
         //   原 hfpc-war-games(手動 B 站)可退役。
