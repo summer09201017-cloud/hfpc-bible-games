@@ -196,6 +196,19 @@ export const JOURNEYS = [
     emoji: '🫏',
     url: 'https://hfpc-balaam-donkey3d.netlify.app/',
   },
+  {
+    // 約拿落海(3D)(直達卡):獨立 repo jonah-water3d(water-kit 首個聖經皮,拿1)。
+    // ✅ 2026-07-18:風暴撐船(舀水+穩舵耐力)→掣籤→認罪→拋下海→海立平靜(拿1:15 神蹟固定觸發)
+    //    →大魚吞(拿1:17);拿1:3/4/7/12/15/17 已 cuv 查驗,曉臻唸經+雲哲旁白;永不會輸。
+    id: 'jonah-water3d',
+    kind: 'endure', // 玩法類型(#/bytype 依此分組):撐住型——撐過風暴,體會拿1
+    name: '約拿落海(3D)',
+    subtitle: '拿 1・撐過風暴——海的狂浪就平息了',
+    category: 'bible',
+    color: '#1f5e96',
+    emoji: '🐳',
+    url: 'https://hfpc-jonah-water3d.netlify.app/',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
