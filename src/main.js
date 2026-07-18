@@ -328,33 +328,38 @@ try {
 } catch { /* 靜默 */ }
 
 
-// ── 🔥 play-stats 排行(2026-07-18):卡片加「▶ 被開啟 N 次」+前三 🥇🥈🥉,grid 依累計動態排序 ──
-// 離線/失敗=靜默照舊(大廳是離線 PWA);無數據卡保持原相對順序墊後;lobby 本體不參加排行。
+// ── 🔥 play-stats 排行 v2(每個分區 grid 自己的完整排行,區內 No.1..n 不跳號;
+//    v1 全頁排序會因分區而看似缺名次——奧運頁「沒有第2名」實戰)——規格=skill lobby-play-rank。
+//    每卡標 No.x+▶次數(前三 🥇🥈🥉);no-store 每次開頁必拉最新(無上限累加);離線靜默照舊。
 let __playCounts = null
 function annotatePlayRank() {
   if (!__playCounts) return
   const cards = Array.from(document.querySelectorAll('.card[data-gid]'))
-  const ranked = []
+  const groups = new Map()
   for (const c of cards) {
     c.querySelector('.playrank')?.remove()
     const n = __playCounts[c.dataset.gid]
-    if (typeof n === 'number' && n > 0) { ranked.push({ c, n }); c.__plays = n } else c.__plays = -1
+    if (typeof n === 'number' && n > 0) {
+      c.__plays = n
+      const p = c.parentElement
+      if (!groups.has(p)) groups.set(p, [])
+      groups.get(p).push({ c, n })
+    } else c.__plays = -1
   }
-  if (!ranked.length) return
-  ranked.sort((a, b) => b.n - a.n)
   const medals = ['🥇', '🥈', '🥉']
-  ranked.forEach((r, i) => {
-    const b = document.createElement('em')
-    b.className = 'playrank'
-    b.style.cssText = 'display:block;margin-top:6px;font-size:12px;opacity:.85;font-style:normal'
-    b.textContent = (i < 3 ? medals[i] + ' ' : '') + 'No.' + (i + 1) + '・▶ 被開啟 ' + r.n + ' 次'
-    r.c.appendChild(b)
-  })
-  for (const g of document.querySelectorAll('.grid')) {
-    Array.from(g.children)
+  for (const [p, list] of groups) {
+    list.sort((a, b) => b.n - a.n)
+    list.forEach((r, i) => {
+      const b = document.createElement('em')
+      b.className = 'playrank'
+      b.style.cssText = 'display:block;margin-top:6px;font-size:12px;opacity:.85;font-style:normal'
+      b.textContent = (i < 3 ? medals[i] + ' ' : '') + 'No.' + (i + 1) + '・▶ 被開啟 ' + r.n + ' 次'
+      r.c.appendChild(b)
+    })
+    Array.from(p.children)
       .map((el, i) => ({ el, i, n: el.__plays ?? -1 }))
       .sort((a, b) => (b.n - a.n) || (a.i - b.i))
-      .forEach((o) => g.appendChild(o.el))
+      .forEach((o) => p.appendChild(o.el))
   }
 }
 fetch('https://hfpc-play-stats.summer09201017.workers.dev/stats?bust=' + Date.now(), { cache: 'no-store' })
@@ -366,7 +371,7 @@ fetch('https://hfpc-play-stats.summer09201017.workers.dev/stats?bust=' + Date.no
       const td = tr.querySelectorAll('td')
       if (td.length >= 4) map[td[0].textContent.trim()] = parseInt(td[3].textContent, 10) || 0
     }
-    delete map.lobby // 母體不參加排行
+    delete map.lobby
     __playCounts = map
     annotatePlayRank()
   })
