@@ -357,7 +357,7 @@ function annotatePlayRank() {
       .forEach((o) => g.appendChild(o.el))
   }
 }
-fetch('https://hfpc-play-stats.summer09201017.workers.dev/stats')
+fetch('https://hfpc-play-stats.summer09201017.workers.dev/stats?bust=' + Date.now(), { cache: 'no-store' })
   .then((r) => r.text())
   .then((html) => {
     const doc = new DOMParser().parseFromString(html, 'text/html')
