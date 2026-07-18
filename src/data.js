@@ -738,6 +738,16 @@ export const COLLECTIONS = {
         url: 'https://hfpc-samson-lion3d.netlify.app/',
       },
       {
+        // 參孫打獅子(真3D):samson3d(07-19 上架;warrior3d 自由走位底座;beast-boss-kit 首發活範例)。
+        id: 'samson3d',
+        kind: 'boss', // 玩法類型(#/bytype 依此分組)
+        name: '參孫打獅子(真3D)',
+        subtitle: '士 14・真3D 自由走位鬥獅!輕拳重拳+聖靈金光・撲咬預告紅圈・蜂蜜補血',
+        color: '#8a6a2e',
+        emoji: '🦁',
+        url: 'https://hfpc-samson3d.netlify.app/',
+      },
+      {
         // 約阿施射得勝箭(王下 13):住保羅 repo src/minigames/joash/,?demo=joash(拋射動作關,複製甩石引擎換皮)。
         // ✅ 2026-06-25:經文 cuv 查驗、自動部署上線(paul A 站)。年齡旋鈕(幼/童/青)+ 會動的靶 + 語音玩法。
         // 主題正中合輯精神:得勝是「耶和華的得勝箭」,不是王的臂力;憑信多射幾次=得勝越完全(13:19)。
