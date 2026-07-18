@@ -534,42 +534,11 @@ export const COLLECTIONS = {
   minan: {
     title: '憫安製作闖關合輯',
     desc:
-      '這些關卡都是憫安一手打造的——節奏、動作、潛行各一款,每關都能單獨玩。' +
+      '這些關卡都是憫安一手打造的——每關都能單獨玩。' +
       '(同一關在大廳別處也找得到;這裡按「作者」聚成一面作品牆,給憫安記上一筆。)',
     color: '#f0b840',
     emoji: '✨',
     items: [
-      {
-        // 射門練習:休閒關(無經文,運動練習型;非憫安手作故不掛製作徽章)。使用者拍板運動題材做練習不做對戰。
-        id: 'goalkick',
-        kind: 'sports', // 玩法類型(#/bytype 依此分組)
-        name: '射門練習(休閒)',
-        subtitle: '拖球射門・守門員撲救・踢 10 球看進幾球',
-        color: '#5a8a3a',
-        emoji: '⚽',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=goalkick',
-      },
-      {
-        // 世界盃足球賽:休閒關第二彈(無經文,回合彈射全場;paul PR #81)。AI 阿福教練/雙人同機 PK。
-        id: 'soccer',
-        kind: 'sports', // 玩法類型(#/bytype 依此分組)
-        name: '世界盃足球賽(休閒)',
-        subtitle: '回合彈射全場・🤖 鬥阿福教練或 👥 雙人同機 PK',
-        color: '#3f7a34',
-        emoji: '🏆',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=soccer',
-      },
-      {
-        // 世界盃足球賽・實況版:休閒關第三彈(無經文,即時運球+蓄力踢球;paul PR #83)。
-        // 牧者點名「真的運球與踢球,不要撞球方式」——與回合彈射版(soccer)同題材兩玩法並列。
-        id: 'football',
-        kind: 'sports', // 玩法類型(#/bytype 依此分組)
-        name: '世界盃足球賽・實況版(休閒)',
-        subtitle: '即時運球+蓄力踢球・🤖 對戰 AI 或 👥 雙人同機',
-        color: '#3f7a34',
-        emoji: '🥅',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=football',
-      },
       {
         id: 'peter-sea',
         kind: 'rhythm-fnf', // 玩法類型(#/bytype 依此分組)
@@ -589,6 +558,7 @@ export const COLLECTIONS = {
         color: '#1d4265',
         emoji: '🌊',
         url: 'https://hfpc-peter-sea3d.netlify.app/',
+        credit: '製作:憫安',
       },
 
       {
@@ -610,24 +580,18 @@ export const COLLECTIONS = {
         color: '#9aa14f',
         emoji: '🦁',
         url: 'https://hfpc-samson-lion3d.netlify.app/',
+        credit: '製作:憫安',
       },
       {
-        id: 'jacob-wrestle3d',
-        kind: 'boss', // 玩法類型(#/bytype 依此分組)
-        name: '雅各摔跤(3D)',
-        subtitle: '創 32・毘努伊勒摔到黎明!得勝改名以色列・瘸腿蒙福・經文朗讀',
-        color: '#3a5a8a',
-        emoji: '🌙',
-        url: 'https://hfpc-jacob-wrestle3d.netlify.app/',
-      },
-      {
-        id: 'gideon300-3d',
-        kind: 'stealth', // 玩法類型(#/bytype 依此分組)
-        name: '基甸三百勇士(3D)',
-        subtitle: '士 7・夜襲潛行避火把+吹角破瓶舉火把三信號——耶和華和基甸的刀!',
-        color: '#8a5a20',
-        emoji: '🎺',
-        url: 'https://hfpc-gideon300-3d.netlify.app/',
+        // 3D 馬術障礙賽(07-19 使用者點名加入憫安合輯):equestrian3d,騎馬跨欄競速。
+        id: 'equestrian3d',
+        kind: 'sports', // 玩法類型(#/bytype 依此分組)
+        name: '3D 馬術障礙賽',
+        subtitle: '騎馬跨欄!控速節奏抓綠區起跳・多視角・競速對手',
+        color: '#7a5a2e',
+        emoji: '🏇',
+        url: 'https://hfpc-equestrian3d.netlify.app/',
+        credit: '製作:憫安',
       },
       {
         id: 'daniel-palace',
