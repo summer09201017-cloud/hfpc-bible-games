@@ -60,6 +60,7 @@ function makeCard(j) {
   const card = clickable ? document.createElement('a') : document.createElement('div')
   card.className = 'card' + (j.soon ? ' card--soon' : '')
   card.style.setProperty('--accent', j.color || '#3b6ea5')
+  if (j.id) card.dataset.gid = j.id // play-rank 對照 beacon g=
 
   let cta = '敬請期待'
   // 合輯卡片標題自動帶關數「(有N關)」——從 COLLECTIONS items 動態算,加關卡不必手改數字。
@@ -325,3 +326,49 @@ try {
   const foot = document.getElementById('footCount')
   if (foot) foot.textContent = `HFPC 聖經遊戲 ・ 全站共 ${totalLevels} 個不重複關卡 ・ 點任一張卡片進入該旅程`
 } catch { /* 靜默 */ }
+
+
+// ── 🔥 play-stats 排行(2026-07-18):卡片加「▶ 被開啟 N 次」+前三 🥇🥈🥉,grid 依累計動態排序 ──
+// 離線/失敗=靜默照舊(大廳是離線 PWA);無數據卡保持原相對順序墊後;lobby 本體不參加排行。
+let __playCounts = null
+function annotatePlayRank() {
+  if (!__playCounts) return
+  const cards = Array.from(document.querySelectorAll('.card[data-gid]'))
+  const ranked = []
+  for (const c of cards) {
+    c.querySelector('.playrank')?.remove()
+    const n = __playCounts[c.dataset.gid]
+    if (typeof n === 'number' && n > 0) { ranked.push({ c, n }); c.__plays = n } else c.__plays = -1
+  }
+  if (!ranked.length) return
+  ranked.sort((a, b) => b.n - a.n)
+  const medals = ['🥇', '🥈', '🥉']
+  ranked.forEach((r, i) => {
+    const b = document.createElement('em')
+    b.className = 'playrank'
+    b.style.cssText = 'display:block;margin-top:6px;font-size:12px;opacity:.85;font-style:normal'
+    b.textContent = (i < 3 ? medals[i] + ' ' : (i < 10 ? 'No.' + (i + 1) + '・' : '')) + '▶ 被開啟 ' + r.n + ' 次'
+    r.c.appendChild(b)
+  })
+  for (const g of document.querySelectorAll('.grid')) {
+    Array.from(g.children)
+      .map((el, i) => ({ el, i, n: el.__plays ?? -1 }))
+      .sort((a, b) => (b.n - a.n) || (a.i - b.i))
+      .forEach((o) => g.appendChild(o.el))
+  }
+}
+fetch('https://hfpc-play-stats.summer09201017.workers.dev/stats')
+  .then((r) => r.text())
+  .then((html) => {
+    const doc = new DOMParser().parseFromString(html, 'text/html')
+    const map = {}
+    for (const tr of doc.querySelectorAll('table tr')) {
+      const td = tr.querySelectorAll('td')
+      if (td.length >= 4) map[td[0].textContent.trim()] = parseInt(td[3].textContent, 10) || 0
+    }
+    delete map.lobby // 母體不參加排行
+    __playCounts = map
+    annotatePlayRank()
+  })
+  .catch(() => {})
+window.addEventListener('hashchange', () => setTimeout(annotatePlayRank, 0))
