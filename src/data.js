@@ -209,6 +209,32 @@ export const JOURNEYS = [
     emoji: '🐳',
     url: 'https://hfpc-jonah-water3d.netlify.app/',
   },
+  {
+    // 紅海過乾地(3D)(直達卡):獨立 repo redsea3d(C1 formation-kit 首跑,出14)。
+    // ✅ 2026-07-18:摩西舉杖(敘事鈕)→活水牆分開→帶百姓走乾地(A/D 導引+礁石;
+    //    落後者自動歸隊=一個也不失落)→全隊過完水牆才合攏;出14:21/22/31 已 cuv 驗,曉臻朗讀。
+    id: 'redsea3d',
+    kind: 'reliance', // 玩法類型:靠神得勝——海是耶和華分開的,你的工作是牧養帶隊
+    name: '紅海過乾地(3D)',
+    subtitle: '出 14・帶百姓走乾地——一個也不失落',
+    category: 'bible',
+    color: '#2a4a68',
+    emoji: '🌊',
+    url: 'https://hfpc-redsea3d.netlify.app/',
+  },
+  {
+    // 挪亞方舟建造(3D)(直達卡):獨立 repo noahark3d(C2 construction-snap-kit 首跑,創6-7)。
+    // ✅ 2026-07-18:格線照圖蓋舟(綠框=神的吩咐)→動物成對進舟→耶和華關門(創7:16 固定觸發)
+    //    →洪水漲方舟浮起(water-kit);創6:14/6:22/7:16 已 cuv 驗;放錯溫柔退回永不會輸。
+    id: 'noahark3d',
+    kind: 'stack', // 玩法類型:砌合建造
+    name: '挪亞方舟建造(3D)',
+    subtitle: '創 6-7・照神所吩咐的蓋——門是神關的',
+    category: 'bible',
+    color: '#5a86ac',
+    emoji: '🛶',
+    url: 'https://hfpc-noahark3d.netlify.app/',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
