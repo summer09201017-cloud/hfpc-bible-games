@@ -572,10 +572,10 @@ export const COLLECTIONS = {
         credit: '製作:憫安',
       },
       {
-        // 參孫打獅子(3D):samson-lion3d(judo引擎聖經皮;keep-2d-add-3d 並列)。
+        // 參孫打獅子(2.5D):samson-lion3d(judo引擎聖經皮=側視 1D 家族;07-19 正名 2.5D;真3D=samson3d 另 repo)。
         id: 'samson-lion3d',
         kind: 'boss', // 玩法類型(#/bytype 依此分組)
-        name: '參孫打獅子(3D)',
+        name: '參孫打獅子(2.5D)',
         subtitle: '士 14・葡萄園徒手鬥獅!聖靈大招制伏(不流血)・經文朗讀',
         color: '#9aa14f',
         emoji: '🦁',
@@ -728,10 +728,10 @@ export const COLLECTIONS = {
         credit: '製作:憫安',
       },
       {
-        // 參孫打獅子(3D):samson-lion3d(judo引擎聖經皮;keep-2d-add-3d 並列)。
+        // 參孫打獅子(2.5D):samson-lion3d(judo引擎聖經皮=側視 1D 家族;07-19 正名 2.5D;真3D=samson3d 另 repo)。
         id: 'samson-lion3d',
         kind: 'boss', // 玩法類型(#/bytype 依此分組)
-        name: '參孫打獅子(3D)',
+        name: '參孫打獅子(2.5D)',
         subtitle: '士 14・葡萄園徒手鬥獅!聖靈大招制伏(不流血)・經文朗讀',
         color: '#9aa14f',
         emoji: '🦁',
@@ -1076,10 +1076,10 @@ export const COLLECTIONS = {
         credit: '製作:憫安',
       },
       {
-        // 參孫打獅子(3D):samson-lion3d(judo引擎聖經皮;keep-2d-add-3d 並列)。
+        // 參孫打獅子(2.5D):samson-lion3d(judo引擎聖經皮=側視 1D 家族;07-19 正名 2.5D;真3D=samson3d 另 repo)。
         id: 'samson-lion3d',
         kind: 'boss', // 玩法類型(#/bytype 依此分組)
-        name: '參孫打獅子(3D)',
+        name: '參孫打獅子(2.5D)',
         subtitle: '士 14・葡萄園徒手鬥獅!聖靈大招制伏(不流血)・經文朗讀',
         color: '#9aa14f',
         emoji: '🦁',
