@@ -1456,7 +1456,7 @@ export const COLLECTIONS = {
         subtitle: '九洞牆壁迷宮・瞄角度拿捏力道・桿數比標準桿・單人/🤖/👥',
         color: '#2e7a44',
         emoji: '⛳',
-        url: 'https://hfpc-minigolf3d.netlify.app/',
+        url: 'https://hfpc-minigolf3d.pages.dev/',
       },
       {
         // 3D 躲避球:休閒關第十六彈(台灣小學經典;接殺機制+溫柔出局=板凳加油)。
