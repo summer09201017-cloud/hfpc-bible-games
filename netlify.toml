@@ -1,8 +1,16 @@
 # Netlify 部署設定(與約拿同套)
 # build 只是把靜態檔複製到 site/(不打包),publish 指向 site/。
+#
+# ⚠️ 2026-07-19 止血:本站已「斷開 Netlify 雲端 auto-build」——git push 不再觸發雲端 build
+#   (Netlify 新制每次雲端 build 都燒點數,大廳每天推好幾次=最大出血點)。
+#   ①站台層:build_settings.stop_builds=true(netlify api,不在此檔)②在檔層雙保險=下面 ignore=exit 0。
+#   ★部署一律走「本機 build + direct upload」:npm run build && netlify deploy --prod --dir site --site <id>
+#   (direct upload 不算 build 分鐘;此站 id=7999a5c1-a861-4f61-aa40-e1831e7dda6d)。
 [build]
   command = "npm run build"
   publish = "site"
+  # exit 0 = 取消這次 Git 觸發的 build(Netlify 語意:ignore 回 0 就跳過 build);手動 direct upload 不受此影響。
+  ignore = "exit 0"
 
 # .webmanifest 要用正確 MIME,PWA 安裝才穩(Netlify 預設會給 octet-stream)
 [[headers]]
