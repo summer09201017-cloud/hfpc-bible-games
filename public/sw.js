@@ -4,7 +4,7 @@
 //
 // ⚠ 注意:卡片連到的「各遊戲」是別的網域(跨來源),SW 不會、也不該幫它們快取。
 //    本大廳離線時只保證「選單畫面」打得開;各遊戲要離線,需各自安裝/快取它自己。
-const CACHE = 'hfpc-hub-v85'
+const CACHE = 'hfpc-hub-v86'
 const CORE = [
   '/',
   '/index.html',
