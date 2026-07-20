@@ -634,6 +634,16 @@ export const COLLECTIONS = {
         url: 'https://hfpc-daniel-palace3d.netlify.app/',
       },
       {
+        // 俄巴底藏先知(3D 潛行×護送):obadiah3d(07-20 上架;daniel-palace3d fork+formation-kit 護送小隊)。CF Pages。
+        id: 'obadiah3d',
+        kind: 'stealth', // 玩法類型(#/bytype 依此分組)
+        name: '俄巴底藏先知',
+        subtitle: '王上 18・帶先知小隊避開耶洗別的兵、分批藏進山洞,供養餅和水——神藉俄巴底保存一百先知',
+        color: '#2e3d2a',
+        emoji: '🕊️',
+        url: 'https://hfpc-obadiah3d.pages.dev/',
+      },
+      {
         // 雅各摔跤(3D):07-19 自憫安合輯移居此地(創32:28 與神與人較力都得了勝)。
         id: 'jacob-wrestle3d',
         kind: 'boss', // 玩法類型(#/bytype 依此分組)
@@ -756,6 +766,26 @@ export const COLLECTIONS = {
         color: '#7a5230',
         emoji: '🐻',
         url: 'https://hfpc-davidbeasts3d.pages.dev/',
+      },
+      {
+        // 大衛打獅與熊(2D):davidbeasts2d(07-20 上架;hfpc-samson-game 2D fork,獅波→救羊羔→熊波)。CF Pages。
+        id: 'davidbeasts2d',
+        kind: 'boss',
+        name: '大衛打獅與熊(2D)',
+        subtitle: '撒上 17・牧羊少年徒手擊退獅與熊兩波・得勝歸耶和華(17:37)',
+        color: '#7a5230',
+        emoji: '🦁',
+        url: 'https://hfpc-davidbeasts2d.pages.dev/',
+      },
+      {
+        // 大衛打獅與熊(2.5D):davidbeasts2p5d(07-20 上架;samson-lion3d 側視 fork,連戰獅→救羊羔→熊)。CF Pages。
+        id: 'davidbeasts2p5d',
+        kind: 'boss',
+        name: '大衛打獅與熊(2.5D)',
+        subtitle: '撒上 17・側視摔技對獅與熊・聖靈大招・得勝歸神',
+        color: '#7a5230',
+        emoji: '🐻',
+        url: 'https://hfpc-davidbeasts2p5d.pages.dev/',
       },
       {
         // 約阿施射得勝箭(王下 13):住保羅 repo src/minigames/joash/,?demo=joash(拋射動作關,複製甩石引擎換皮)。
