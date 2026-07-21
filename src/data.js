@@ -167,7 +167,7 @@ export const JOURNEYS = [
     category: 'bible',
     color: '#8a6a3f',
     emoji: '🫏',
-    url: 'https://hfpc-donkey-jerusalem3d.netlify.app/',
+    url: 'https://hfpc-donkey-jerusalem3d.summer09201017.workers.dev/',
   },
   {
     // 大衛的勇士們(3D)(直達卡):獨立 repo david-warriors3d(arena-duel-kit 首個聖經皮,
@@ -181,7 +181,7 @@ export const JOURNEYS = [
     category: 'bible',
     color: '#8f6a2e',
     emoji: '⚔️',
-    url: 'https://hfpc-david-warriors3d.netlify.app/',
+    url: 'https://hfpc-david-warriors3d.summer09201017.workers.dev/',
   },
   {
     // 巴蘭騎驢(3D)(直達卡):獨立 repo balaam-donkey3d(驢駒引擎再 fork,民22:21-33)。
@@ -194,7 +194,7 @@ export const JOURNEYS = [
     category: 'bible',
     color: '#5a6b8f',
     emoji: '🫏',
-    url: 'https://hfpc-balaam-donkey3d.netlify.app/',
+    url: 'https://hfpc-balaam-donkey3d.summer09201017.workers.dev/',
   },
   {
     // 約拿落海(3D)(直達卡):獨立 repo jonah-water3d(water-kit 首個聖經皮,拿1)。
@@ -207,7 +207,7 @@ export const JOURNEYS = [
     category: 'bible',
     color: '#1f5e96',
     emoji: '🐳',
-    url: 'https://hfpc-jonah-water3d.netlify.app/',
+    url: 'https://hfpc-jonah-water3d.summer09201017.workers.dev/',
   },
   {
     // 紅海過乾地(3D)(直達卡):獨立 repo redsea3d(C1 formation-kit 首跑,出14)。
@@ -220,7 +220,7 @@ export const JOURNEYS = [
     category: 'bible',
     color: '#2a4a68',
     emoji: '🌊',
-    url: 'https://hfpc-redsea3d.netlify.app/',
+    url: 'https://hfpc-redsea3d.summer09201017.workers.dev/',
   },
   {
     // 挪亞方舟建造(3D)(直達卡):獨立 repo noahark3d(C2 construction-snap-kit 首跑,創6-7)。
@@ -233,7 +233,7 @@ export const JOURNEYS = [
     category: 'bible',
     color: '#5a86ac',
     emoji: '🛶',
-    url: 'https://hfpc-noahark3d.netlify.app/',
+    url: 'https://hfpc-noahark3d.summer09201017.workers.dev/',
   },
 
   {
@@ -431,7 +431,7 @@ export const COLLECTIONS = {
         subtitle: '夜海 3D 踏浪!左右腳跟拍走向耶穌・風浪下沉喊「主啊救我」・經文朗讀',
         color: '#1d4265',
         emoji: '🌊',
-        url: 'https://hfpc-peter-sea3d.netlify.app/',
+        url: 'https://hfpc-peter-sea3d.summer09201017.workers.dev/',
       },
 
       {
@@ -517,7 +517,7 @@ export const COLLECTIONS = {
         subtitle: '撒上 18・掃羅掄槍,大衛照常彈琴——3D 王宮夜、槍釘牆',
         color: '#6b3fa0',
         emoji: '🎵',
-        url: 'https://hfpc-david-spear3d.netlify.app/',
+        url: 'https://hfpc-david-spear3d.summer09201017.workers.dev/',
       },
       {
         id: 'nehemiah-wall',
@@ -557,7 +557,7 @@ export const COLLECTIONS = {
         subtitle: '夜海 3D 踏浪!左右腳跟拍走向耶穌・風浪下沉喊「主啊救我」・經文朗讀',
         color: '#1d4265',
         emoji: '🌊',
-        url: 'https://hfpc-peter-sea3d.netlify.app/',
+        url: 'https://hfpc-peter-sea3d.summer09201017.workers.dev/',
         credit: '製作:憫安',
       },
 
@@ -579,7 +579,7 @@ export const COLLECTIONS = {
         subtitle: '士 14・葡萄園徒手鬥獅!聖靈大招制伏(不流血)・經文朗讀',
         color: '#9aa14f',
         emoji: '🦁',
-        url: 'https://hfpc-samson-lion3d.netlify.app/',
+        url: 'https://hfpc-samson-lion3d.summer09201017.workers.dev/',
         credit: '製作:憫安',
       },
       {
@@ -590,7 +590,7 @@ export const COLLECTIONS = {
         subtitle: '騎馬跨欄!控速節奏抓綠區起跳・多視角・競速對手',
         color: '#7a5a2e',
         emoji: '🏇',
-        url: 'https://hfpc-equestrian3d.netlify.app/',
+        url: 'https://hfpc-equestrian3d.summer09201017.workers.dev/',
         credit: '製作:憫安',
       },
       {
@@ -621,7 +621,7 @@ export const COLLECTIONS = {
         subtitle: '士 7・夜襲潛行避火把+吹角破瓶舉火把三信號——耶和華和基甸的刀!',
         color: '#8a5a20',
         emoji: '🎺',
-        url: 'https://hfpc-gideon300-3d.netlify.app/',
+        url: 'https://hfpc-gideon300-3d.summer09201017.workers.dev/',
       },
       {
         // 王宮之夜(3D):daniel-palace3d(07-19 上架;gideon300-3d 潛行底座換皮;2D 版在憫安合輯=keep-2d-add-3d)。
@@ -631,7 +631,7 @@ export const COLLECTIONS = {
         subtitle: '但 2・殺令之夜!柱影潛行避獵手火把,與三同伴同心禱告——奧祕在夜間異象中顯明',
         color: '#3a2c52',
         emoji: '🕯️',
-        url: 'https://hfpc-daniel-palace3d.netlify.app/',
+        url: 'https://hfpc-daniel-palace3d.summer09201017.workers.dev/',
       },
       {
         // 俄巴底藏先知(3D 潛行×護送):obadiah3d(07-20 上架;daniel-palace3d fork+formation-kit 護送小隊)。CF Pages。
@@ -651,7 +651,7 @@ export const COLLECTIONS = {
         subtitle: '創 32・毘努伊勒摔到黎明!得勝改名以色列・瘸腿蒙福・經文朗讀',
         color: '#3a5a8a',
         emoji: '🌙',
-        url: 'https://hfpc-jacob-wrestle3d.netlify.app/',
+        url: 'https://hfpc-jacob-wrestle3d.summer09201017.workers.dev/',
       },
       {
         // 摩西舉手之戰(約拿引擎 L7)。
@@ -686,7 +686,7 @@ export const COLLECTIONS = {
         subtitle: '撒上 17・3D 甩石索瞄巨人額頭+便雅憫毫髮不差挑戰(士20:16)',
         color: '#2e7d4f',
         emoji: '🪨',
-        url: 'https://hfpc-david-sling3d.netlify.app/',
+        url: 'https://hfpc-david-sling3d.pages.dev/',
       },
       {
         // 聖歌奇兵(約沙法)動作關:代下 20——詩班走在軍隊前面讚美,神設伏兵,猶大不戰而勝
@@ -745,7 +745,7 @@ export const COLLECTIONS = {
         subtitle: '士 14・葡萄園徒手鬥獅!聖靈大招制伏(不流血)・經文朗讀',
         color: '#9aa14f',
         emoji: '🦁',
-        url: 'https://hfpc-samson-lion3d.netlify.app/',
+        url: 'https://hfpc-samson-lion3d.summer09201017.workers.dev/',
       },
       {
         // 參孫打獅子(真3D):samson3d(07-19 上架;warrior3d 自由走位底座;beast-boss-kit 首發活範例)。
@@ -755,7 +755,7 @@ export const COLLECTIONS = {
         subtitle: '士 14・真3D 自由走位鬥獅!輕拳重拳+聖靈金光・撲咬預告紅圈・蜂蜜補血',
         color: '#8a6a2e',
         emoji: '🦁',
-        url: 'https://hfpc-samson3d.netlify.app/',
+        url: 'https://hfpc-samson3d.summer09201017.workers.dev/',
       },
       {
         // 大衛打獅熊(真3D):davidbeasts3d(07-19 上架;samson3d fork 多獸引擎 foes[];Cloudflare Pages 首發試點站)。
@@ -808,7 +808,7 @@ export const COLLECTIONS = {
         subtitle: '王下 13・開朝東的窗射得勝箭+拿箭打地——打幾次,你決定!',
         color: '#6d3fb0',
         emoji: '🏹',
-        url: 'https://hfpc-joash-arrows.netlify.app/',
+        url: 'https://hfpc-joash-arrows.summer09201017.workers.dev/',
       },
     ],
   },
@@ -1104,7 +1104,7 @@ export const COLLECTIONS = {
         subtitle: '撒上 20・射三箭如射靶,第四箭飛過童子——「箭在前頭」救大衛!',
         color: '#8a6a28',
         emoji: '🏹',
-        url: 'https://hfpc-jonathan-arrows.netlify.app/',
+        url: 'https://hfpc-jonathan-arrows.pages.dev/',
       },
       {
         id: 'gideon',
@@ -1133,7 +1133,7 @@ export const COLLECTIONS = {
         subtitle: '士 14・葡萄園徒手鬥獅!聖靈大招制伏(不流血)・經文朗讀',
         color: '#9aa14f',
         emoji: '🦁',
-        url: 'https://hfpc-samson-lion3d.netlify.app/',
+        url: 'https://hfpc-samson-lion3d.summer09201017.workers.dev/',
       },
       {
         id: 'glean',
@@ -1172,7 +1172,7 @@ export const COLLECTIONS = {
         subtitle: '撒上 17・3D 甩石索瞄巨人額頭+便雅憫毫髮不差挑戰(士20:16)',
         color: '#2e7d4f',
         emoji: '🪨',
-        url: 'https://hfpc-david-sling3d.netlify.app/',
+        url: 'https://hfpc-david-sling3d.pages.dev/',
       },
       {
         id: 'temple',
@@ -1210,7 +1210,7 @@ export const COLLECTIONS = {
         subtitle: '王下 13・開朝東的窗射得勝箭+拿箭打地——打幾次,你決定!',
         color: '#6d3fb0',
         emoji: '🏹',
-        url: 'https://hfpc-joash-arrows.netlify.app/',
+        url: 'https://hfpc-joash-arrows.summer09201017.workers.dev/',
       },
       {
         id: 'ezra',
@@ -1416,7 +1416,7 @@ export const COLLECTIONS = {
         subtitle: '主審視角 3D 球場・九宮格五球種・盜壘跑壘・🤖 打擊/投球/對戰/雙人',
         color: '#35558a',
         emoji: '🏟️',
-        url: 'https://hfpc-baseball3d.netlify.app/',
+        url: 'https://hfpc-baseball3d.summer09201017.workers.dev/',
       },
       {
         // 3D 撞球:休閒關第九彈(無經文,獨立站;07-11 子代理照 3d-game-kit 建成,51 項物理/規則自測)。
@@ -1426,7 +1426,7 @@ export const COLLECTIONS = {
         subtitle: '3D 球桌雙色對決・蓄力擊球清台打黑8・🤖 鬥阿福或 👥 雙人',
         color: '#1f6b45',
         emoji: '🎱',
-        url: 'https://hfpc-billiards3d.netlify.app/',
+        url: 'https://hfpc-billiards3d.summer09201017.workers.dev/',
       },
       {
         // 3D 足球:休閒關第十彈(無經文,獨立站;07-11 建成——即時控人+守門員撲救+先進N球)。
@@ -1436,7 +1436,7 @@ export const COLLECTIONS = {
         subtitle: '3D 綠茵夜賽・帶球傳射+守門員撲救・先進 N 球獲勝・🤖/👥',
         color: '#2c7a3f',
         emoji: '⚽',
-        url: 'https://hfpc-soccer3d.netlify.app/',
+        url: 'https://hfpc-soccer3d.summer09201017.workers.dev/',
       },
       {
         // 3D 網球:休閒關第十一彈(racket3d 一站雙玩法,?mode 深連結;07-11 隔網引擎)。
@@ -1446,7 +1446,7 @@ export const COLLECTIONS = {
         subtitle: '隔網對打・時機揮拍蓄力抽擊・搶 N 分自訂・🤖 五檔/👥 雙人',
         color: '#2f6e8f',
         emoji: '🎾',
-        url: 'https://hfpc-racket3d.netlify.app/?mode=tennis',
+        url: 'https://hfpc-racket3d.summer09201017.workers.dev/?mode=tennis',
       },
       {
         // 3D 羽毛球:休閒關第十二彈(同站 racket3d,羽毛球物理:不落地/殺球快陡)。
@@ -1456,7 +1456,7 @@ export const COLLECTIONS = {
         subtitle: '不落地的攻防・長按殺球又快又陡・搶 N 分自訂・🤖/👥',
         color: '#3f7a4a',
         emoji: '🏸',
-        url: 'https://hfpc-racket3d.netlify.app/?mode=badminton',
+        url: 'https://hfpc-racket3d.summer09201017.workers.dev/?mode=badminton',
       },
       {
         // 3D 西洋劍:休閒關第十三彈(奧運觸劍計分,點到為止無血條;07-11 使用者拍板做競技版)。
@@ -1506,7 +1506,7 @@ export const COLLECTIONS = {
         subtitle: '跟節奏打木人樁・拳掌踢擋四鍵・連擊評級到宗師・非對打',
         color: '#7a3c2e',
         emoji: '🏮',
-        url: 'https://hfpc-kungfutrain3d.netlify.app/',
+        url: 'https://hfpc-kungfutrain3d.summer09201017.workers.dev/',
       },
       {
         // 3D 桌球:休閒關第十八彈(racket3d 第三運動,?mode=pingpong 深連結)。
@@ -1516,7 +1516,7 @@ export const COLLECTIONS = {
         subtitle: '球桌快節奏・彈跳快殺球更快・搶 11 分自訂・🤖/👥',
         color: '#2456a8',
         emoji: '🏓',
-        url: 'https://hfpc-racket3d.netlify.app/?mode=pingpong',
+        url: 'https://hfpc-racket3d.summer09201017.workers.dev/?mode=pingpong',
       },
       {
         // 3D 射箭:休閒關第十九彈(無經文,獨立站 archery3d;「蓄力+拋物線」家族地基,
@@ -1528,7 +1528,7 @@ export const COLLECTIONS = {
         subtitle: '拉弓蓄力屏息瞄準・抓風向反向補償・十環靶計分・五難度三模式',
         color: '#8a6a28',
         emoji: '🏹',
-        url: 'https://hfpc-archery3d.netlify.app/',
+        url: 'https://hfpc-archery3d.summer09201017.workers.dev/',
       },
       {
         // 3D 鉛球:休閒關第二十彈(athletics3d 一站三項,?mode 深連結——racket3d 範式;
@@ -1539,7 +1539,7 @@ export const COLLECTIONS = {
         subtitle: '蓄力推球 41° 最遠・順逆風補償・6 投取最佳・個人紀錄金弧',
         color: '#4a4e57',
         emoji: '🥎',
-        url: 'https://hfpc-athletics3d.netlify.app/?mode=shotput',
+        url: 'https://hfpc-athletics3d.summer09201017.workers.dev/?mode=shotput',
       },
       {
         // 3D 鐵餅:同站 athletics3d 第二項目。
@@ -1549,7 +1549,7 @@ export const COLLECTIONS = {
         subtitle: '甩餅乘風滑翔 38° 最遠・角度手抖拿捏・6 投取最佳・個人紀錄',
         color: '#8a6a28',
         emoji: '🥏',
-        url: 'https://hfpc-athletics3d.netlify.app/?mode=discus',
+        url: 'https://hfpc-athletics3d.summer09201017.workers.dev/?mode=discus',
       },
       {
         // 3D 標槍:同站 athletics3d 第三項目。
@@ -1559,7 +1559,7 @@ export const COLLECTIONS = {
         subtitle: '全力一擲插進草地 36° 最遠・貼近真實紀錄尺度・6 投取最佳',
         color: '#5a6482',
         emoji: '🎯',
-        url: 'https://hfpc-athletics3d.netlify.app/?mode=javelin',
+        url: 'https://hfpc-athletics3d.summer09201017.workers.dev/?mode=javelin',
       },
       {
         // 3D 100公尺:athletics3d 第四項目(07-13 佇列⑤田徑跑步;連點節奏衝刺+計時+PB)。
@@ -1569,7 +1569,7 @@ export const COLLECTIONS = {
         subtitle: '連點衝刺節奏越穩越快・亂按會腳步打結・計時+個人紀錄',
         color: '#b3542e',
         emoji: '🏃',
-        url: 'https://hfpc-athletics3d.netlify.app/?mode=sprint',
+        url: 'https://hfpc-athletics3d.summer09201017.workers.dev/?mode=sprint',
       },
       {
         // 3D 冰壺:bowling3d fork(07-13 佇列⑧;擲壺+掃冰+House 計分,冰上西洋棋)。
@@ -1688,7 +1688,7 @@ export const COLLECTIONS = {
         subtitle: '夜海 3D 踏浪!左右腳跟拍走向耶穌・風浪下沉喊「主啊救我」・經文朗讀',
         color: '#1d4265',
         emoji: '🌊',
-        url: 'https://hfpc-peter-sea3d.netlify.app/',
+        url: 'https://hfpc-peter-sea3d.summer09201017.workers.dev/',
       },
 
       {
