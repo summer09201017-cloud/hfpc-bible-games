@@ -248,6 +248,42 @@ export const JOURNEYS = [
     emoji: '🍞',
     url: 'https://hfpc-fiveloaves-tsum.summer09201017.workers.dev/',
   },
+  {
+    // 嗎哪收集(直達卡):獨立 repo hfpc-manna-tsum(tsum 連鏈,CF workers.dev)。
+    // ✅ 2026-07-21:牧者過審點亮;連線=收進罐,buff=第六天收雙倍;出16:4/16:18/16:31 已 cuv 驗;曉臻三句。
+    id: 'manna-tsum',
+    kind: 'tsum', // 玩法類型:連鏈分享
+    name: '嗎哪收集・天天夠用',
+    subtitle: '出 16・每天收每天的分,天父天天供應',
+    category: 'bible',
+    color: '#b8863c',
+    emoji: '🍯',
+    url: 'https://hfpc-manna-tsum.summer09201017.workers.dev/',
+  },
+  {
+    // 一網滿滿的魚(直達卡):獨立 repo hfpc-fishnet-tsum(tsum 連鏈,CF workers.dev)。
+    // ✅ 2026-07-21:牧者過審點亮;金色大魚=百搭算 3 條;青少年檔目標 153 條=約21:11;約21:6/21:11 已 cuv 驗。
+    id: 'fishnet-tsum',
+    kind: 'tsum', // 玩法類型:連鏈分享
+    name: '一網滿滿的魚',
+    subtitle: '約 21・撒在船的右邊,網滿了卻沒有破',
+    category: 'bible',
+    color: '#2a6a9c',
+    emoji: '🎣',
+    url: 'https://hfpc-fishnet-tsum.summer09201017.workers.dev/',
+  },
+  {
+    // 羊群歸圈(直達卡):獨立 repo hfpc-sheepfold-tsum(tsum 連鏈,CF workers.dev;全系列最萌、幼幼友善)。
+    // ✅ 2026-07-21:牧者過審點亮;連線=聽牧人聲歸圈;約10:3-4/10:14/10:27-28 已 cuv 驗;曉臻三句。
+    id: 'sheepfold-tsum',
+    kind: 'tsum', // 玩法類型:連鏈分享
+    name: '羊群歸圈',
+    subtitle: '約 10・聽牧人的聲音,一隻也不失落',
+    category: 'bible',
+    color: '#3f7a34',
+    emoji: '🐑',
+    url: 'https://hfpc-sheepfold-tsum.summer09201017.workers.dev/',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
