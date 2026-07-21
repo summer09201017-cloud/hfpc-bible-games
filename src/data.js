@@ -235,6 +235,19 @@ export const JOURNEYS = [
     emoji: '🛶',
     url: 'https://hfpc-noahark3d.summer09201017.workers.dev/',
   },
+  {
+    // 五餅二魚・越分越多(直達卡):獨立 repo hfpc-fiveloaves-tsum(tsum-chain 首發,CF workers.dev)。
+    // ✅ 2026-07-21:牧者過審文案後點亮;Verlet 圓堆疊+劃線連同款分給眾人,清 n 掉 n+1(越分越多);
+    //    太14:19-21/約6:9 已 cuv 驗;曉臻 intro/bless/win 三句已烤;年齡三檔(幼連2/童3/青3)。
+    id: 'fiveloaves-tsum',
+    kind: 'tsum', // 玩法類型:連鏈分享(#/bytype 依此分組)
+    name: '五餅二魚・越分越多',
+    subtitle: '太 14・劃線連同款,分給眾人越分越多',
+    category: 'bible',
+    color: '#c98a2d',
+    emoji: '🍞',
+    url: 'https://hfpc-fiveloaves-tsum.summer09201017.workers.dev/',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
