@@ -284,6 +284,18 @@ export const JOURNEYS = [
     emoji: '🐑',
     url: 'https://hfpc-sheepfold-tsum.summer09201017.workers.dev/',
   },
+  {
+    // 聖靈九果・結果子分出去(直達卡):獨立 repo hfpc-fruit9-tsum(tsum 連鏈,CF workers.dev)。
+    // ✅ 2026-07-22:九果圖鑑=加5:22-23(cuv 驗);果身標德目;關卡制;曉臻三句。
+    id: 'fruit9-tsum',
+    kind: 'tsum',
+    name: '聖靈九果・結果子分出去',
+    subtitle: '加 5:22-23・九種果子,結出來分給鄰舍',
+    category: 'bible',
+    color: '#7a4a9c',
+    emoji: '🍇',
+    url: 'https://hfpc-fruit9-tsum.summer09201017.workers.dev/',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
