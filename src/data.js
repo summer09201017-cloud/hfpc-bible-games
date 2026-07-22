@@ -296,6 +296,30 @@ export const JOURNEYS = [
     emoji: '🍇',
     url: 'https://hfpc-fruit9-tsum.summer09201017.workers.dev/',
   },
+  {
+    // 撒該請客・還他四倍(直達卡):獨立 repo hfpc-zacchaeus-tsum(tsum 連鏈,CF workers.dev)。
+    // ✅ 2026-07-23:牧者過審點亮;連線=分給窮人/奉還;💰訛詐錢袋=還四倍(路19:8);路19:5/8/9-10 已 cuv 驗;曉臻三句。
+    id: 'zacchaeus-tsum',
+    kind: 'tsum', // 玩法類型:連鏈分享
+    name: '撒該請客・還他四倍',
+    subtitle: '路 19・遇見耶穌生命翻轉,訛詐的還他四倍',
+    category: 'bible',
+    color: '#6b4a23',
+    emoji: '💰',
+    url: 'https://hfpc-zacchaeus-tsum.summer09201017.workers.dev/',
+  },
+  {
+    // 麻風十人・回來感謝(直達卡):獨立 repo hfpc-tenlepers-tsum(tsum 連鏈,CF workers.dev)。
+    // ✅ 2026-07-23:牧者過審點亮;連線=結伴回來感謝;金色=撒馬利亞人×2;路17:14/15-16/19 已 cuv 驗;曉臻三句。
+    id: 'tenlepers-tsum',
+    kind: 'tsum', // 玩法類型:連鏈分享
+    name: '麻風十人・回來感謝',
+    subtitle: '路 17・十個得潔淨,願我們作回來的那一個',
+    category: 'bible',
+    color: '#2e6b52',
+    emoji: '🙌',
+    url: 'https://hfpc-tenlepers-tsum.summer09201017.workers.dev/',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
