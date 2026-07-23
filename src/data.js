@@ -320,6 +320,18 @@ export const JOURNEYS = [
     emoji: '🙌',
     url: 'https://hfpc-tenlepers-tsum.summer09201017.workers.dev/',
   },
+  {
+    // 葡萄園的工人・恩典一樣(直達卡):獨立 repo hfpc-vineyard-tsum(tsum 連鏈,CF workers.dev)。
+    // ✅ 2026-07-23:牧者過審點亮;連線=召工人進葡萄園;金色=後來的也得一樣;勝利=十枚一樣的一錢銀子;太20:1/4/8-16 已 cuv 驗;曉臻三句。
+    id: 'vineyard-tsum',
+    kind: 'tsum', // 玩法類型:連鏈分享
+    name: '葡萄園的工人・恩典一樣',
+    subtitle: '太 20・黃昏發工錢,後來的也得一樣',
+    category: 'bible',
+    color: '#5a3d78',
+    emoji: '👨‍🌾',
+    url: 'https://hfpc-vineyard-tsum.summer09201017.workers.dev/',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
