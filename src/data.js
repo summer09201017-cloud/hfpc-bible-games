@@ -383,10 +383,11 @@ export const JOURNEYS = [
   {
     // 雅各的斑點羊(直達卡):獨立 repo hfpc-jacobsheep-match3(swap 三消+tsum 皮,forge noahark)。
     // ✅ 2026-07-23:牧者過審點亮;三連=同紋歸圈(六款羊)、剝皮的枝子=特殊塊(創30:37)、蝴蝶搗蛋;創30:32/43+31:9 已 cuv 驗;曉臻三句;信息=神使人昌盛非把戲。
+    // ✅ 2026-07-24:斜線變體第二款(有點有斑都算工價→斜的一排也算)+關卡制/地圖/衝刺+難度調升+tsum立體化。
     id: 'jacobsheep-match3',
-    kind: 'swap3', // 玩法類型(#/bytype 依此分組)
+    kind: 'swap3', // 玩法類型(#/bytype 依此分組;斜線變體)
     name: '雅各的斑點羊',
-    subtitle: '創 30・三連同紋歸圈——神使人昌盛',
+    subtitle: '創 30・斜線款——同紋歸圈,斜的一排也算',
     category: 'bible',
     color: '#689838',
     emoji: '🐑',
@@ -398,7 +399,7 @@ export const JOURNEYS = [
     id: 'samaritan-match3',
     kind: 'swap3', // 玩法類型(#/bytype 依此分組;斜線變體)
     name: '好撒瑪利亞人・備品',
-    subtitle: '路 10・斜的一排也算——憐憫多算一步',
+    subtitle: '路 10・斜線款——憐憫多算一步,斜的一排也算',
     category: 'bible',
     color: '#b07828',
     emoji: '🍶',
