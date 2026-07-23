@@ -332,6 +332,54 @@ export const JOURNEYS = [
     emoji: '👨‍🌾',
     url: 'https://hfpc-vineyard-tsum.summer09201017.workers.dev/',
   },
+  {
+    // 挪亞方舟・動物上船(直達卡):獨立 repo hfpc-noahark-match3(swap 三消+tsum 皮首發,CF workers.dev)。
+    // ✅ 2026-07-23:牧者過審點亮;三連=一起上船(艙窗亮)、彩虹方塊=整排整列、烏鴉搗蛋鬼(創8:7);創6:19-20/7:9/7:16/8:7/9:13 已 cuv 驗;曉臻三句;v2=難度調升+再玩一次。
+    id: 'noahark-match3',
+    kind: 'swap3', // 玩法類型(#/bytype 依此分組)
+    name: '挪亞方舟・動物上船',
+    subtitle: '創 7・排成一排就上船——一對一對,神關門',
+    category: 'bible',
+    color: '#4a6a9c',
+    emoji: '🚢',
+    url: 'https://hfpc-noahark-match3.summer09201017.workers.dev/',
+  },
+  {
+    // 約瑟七豐年存糧(直達卡):獨立 repo hfpc-josephgrain-match3(swap 三消+tsum 皮,fork noahark)。
+    // ✅ 2026-07-23:牧者過審點亮;三連=收進糧倉、豐收捆、瘦穗子搗蛋鬼(創41:23);創41:29/48/49+50:20 已 cuv 驗;曉臻三句;與 joseph 糧倉關區隔=神預先看顧。
+    id: 'josephgrain-match3',
+    kind: 'swap3', // 玩法類型(#/bytype 依此分組)
+    name: '約瑟七豐年存糧',
+    subtitle: '創 41・三連入倉——神預先看顧,荒年有糧',
+    category: 'bible',
+    color: '#a07828',
+    emoji: '🌾',
+    url: 'https://hfpc-josephgrain-match3.summer09201017.workers.dev/',
+  },
+  {
+    // 十童女・預備油(直達卡):獨立 repo hfpc-oillamps-match3(swap 三消+tsum 皮,fork noahark;3 滴油一盞燈)。
+    // ✅ 2026-07-23:牧者過審點亮(核可條件=只做預備油正面面,不做關門戲);夜空月亮、瞌睡雲(太25:5)、火光方塊;太25:4/7/13 已 cuv 驗;曉臻三句。
+    id: 'oillamps-match3',
+    kind: 'swap3', // 玩法類型(#/bytype 依此分組)
+    name: '十童女・預備油',
+    subtitle: '太 25・三連倒油入燈——歡喜儆醒等新郎',
+    category: 'bible',
+    color: '#3a4a7c',
+    emoji: '🪔',
+    url: 'https://hfpc-oillamps-match3.summer09201017.workers.dev/',
+  },
+  {
+    // 網滿大魚・一五三(直達卡):獨立 repo hfpc-fish153-bubble(彈珠配對+tsum 皮首發,arkmatch 引擎移植)。
+    // ✅ 2026-07-23:牧者過審點亮;同類 3 條=游進網(歸聚)、離群主也數算、結尾炭火早飯;約21:6/11/12 已 cuv 驗;曉臻三句;與 fishnet-tsum 一題兩型。
+    id: 'fish153-bubble',
+    kind: 'match', // 玩法類型:彈珠配對(同 arkmatch)
+    name: '網滿大魚・一五三',
+    subtitle: '約 21・同類聚一起進網——網卻沒有破',
+    category: 'bible',
+    color: '#2c6a8c',
+    emoji: '🐟',
+    url: 'https://hfpc-fish153-bubble.summer09201017.workers.dev/',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
