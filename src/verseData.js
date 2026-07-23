@@ -21,7 +21,7 @@ export const VERSES = [
     id: 'jonah-2-9', book: '約拿書', ref: '約拿書 2:9', status: 'live',
     theme: '救恩不是出於人的逃避或努力,是出於神。',
     text: '救恩出於耶和華。', cuv: 'verified',
-    game: '約拿闖關', enter: 'https://hfpc-jonah-game.netlify.app/',
+    game: '約拿闖關', enter: 'https://hfpc-jonah-game.summer09201017.workers.dev/',
   },
   {
     id: 'acts-16-26', book: '使徒行傳', ref: '使徒行傳 16:26', status: 'live',

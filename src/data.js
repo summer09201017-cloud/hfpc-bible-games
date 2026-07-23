@@ -71,7 +71,7 @@ export const JOURNEYS = [
     category: 'bible',
     color: '#2b7fa8',
     emoji: '🐳',
-    url: 'https://hfpc-jonah-game.netlify.app/',
+    url: 'https://hfpc-jonah-game.summer09201017.workers.dev/',
   },
   // —— 以下四個都住在「保羅大富翁」這個 app(hfpc-paul-game),用 ?journey= 直接跳到那條旅程 ——
   //    deep-link 由保羅的 SetupScreen 讀 ?journey= 預選旅程(已加,需重新部署保羅才會生效;
@@ -1647,7 +1647,7 @@ export const COLLECTIONS = {
         subtitle: '奧運觸劍計分・看紅色預告格擋再反擊・搶 N 分自訂・🤖/👥',
         color: '#5a6482',
         emoji: '🤺',
-        url: 'https://hfpc-fencing3d.netlify.app/',
+        url: 'https://hfpc-fencing3d.pages.dev/',
       },
       {
         // 3D 保齡球:休閒關第十四彈(滾球物理+正規計分學算數;回合制輪流=課間分組)。
@@ -1657,7 +1657,7 @@ export const COLLECTIONS = {
         subtitle: '瞄口袋蓄力出手・全倒補中正規計分學算數・單人/🤖/👥 輪流',
         color: '#8a5a28',
         emoji: '🎳',
-        url: 'https://hfpc-bowling3d.netlify.app/',
+        url: 'https://hfpc-bowling3d.pages.dev/',
       },
       {
         // 3D 迷你高爾夫:休閒關第十五彈(滾球物理+九洞關卡;溫柔 8 桿上限)。
@@ -1677,7 +1677,7 @@ export const COLLECTIONS = {
         subtitle: '小學經典・蓄力投球+K 接殺逆轉・出局到板凳加油・🤖/👥',
         color: '#a3552e',
         emoji: '🤾',
-        url: 'https://hfpc-dodgeball3d.netlify.app/',
+        url: 'https://hfpc-dodgeball3d.pages.dev/',
       },
       {
         // 3D 功夫修行:休閒關第十七彈(打木人樁節奏模仿,非互毆;評級全鼓勵語)。
@@ -1760,7 +1760,7 @@ export const COLLECTIONS = {
         subtitle: '擲壺蓄力+按住空白鍵掃冰更滑・House 圓心計分・4v4 壺鬥智',
         color: '#2f6fd6',
         emoji: '🥌',
-        url: 'https://hfpc-curling3d.netlify.app/',
+        url: 'https://hfpc-curling3d.pages.dev/',
       },
       {
         // 3D 冰球:curling3d fork(07-13 佇列⑨最終項;射門+撲救輪流對決)。
@@ -1770,7 +1770,7 @@ export const COLLECTIONS = {
         subtitle: '射門瞄死角+換邊控守門員撲救・側板反彈折射球・進球多者勝',
         color: '#3a5f8a',
         emoji: '🏒',
-        url: 'https://hfpc-hockey3d.netlify.app/',
+        url: 'https://hfpc-hockey3d.pages.dev/',
       },
       {
         // 3D 12碼PK:hockey3d 骨架足球版(07-14 使用者拍板)。
@@ -1780,7 +1780,7 @@ export const COLLECTIONS = {
         subtitle: '主罰⇄飛撲輪流攻防・大力=高球較難撲・賭方向的心理戰',
         color: '#2e7d32',
         emoji: '⚽',
-        url: 'https://hfpc-penalty3d.netlify.app/',
+        url: 'https://hfpc-penalty3d.pages.dev/',
       },
     ],
   },
