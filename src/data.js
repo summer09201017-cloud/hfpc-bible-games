@@ -380,6 +380,42 @@ export const JOURNEYS = [
     emoji: '🐟',
     url: 'https://hfpc-fish153-bubble.summer09201017.workers.dev/',
   },
+  {
+    // 雅各的斑點羊(直達卡):獨立 repo hfpc-jacobsheep-match3(swap 三消+tsum 皮,forge noahark)。
+    // ✅ 2026-07-23:牧者過審點亮;三連=同紋歸圈(六款羊)、剝皮的枝子=特殊塊(創30:37)、蝴蝶搗蛋;創30:32/43+31:9 已 cuv 驗;曉臻三句;信息=神使人昌盛非把戲。
+    id: 'jacobsheep-match3',
+    kind: 'swap3', // 玩法類型(#/bytype 依此分組)
+    name: '雅各的斑點羊',
+    subtitle: '創 30・三連同紋歸圈——神使人昌盛',
+    category: 'bible',
+    color: '#689838',
+    emoji: '🐑',
+    url: 'https://hfpc-jacobsheep-match3.summer09201017.workers.dev/',
+  },
+  {
+    // 好撒瑪利亞人・備品(直達卡):獨立 repo hfpc-samaritan-match3(🌾 拾穗類斜線變體首個獨立站)。
+    // ✅ 2026-07-23:牧者過審點亮;橫直斜四方向都算一排(路10:35 憐憫多算一步)+金繩捆帶+兩拍慢節奏+補位軟迴避;慈心方塊;路10:33-35/37 已 cuv 驗;曉臻三句。
+    id: 'samaritan-match3',
+    kind: 'swap3', // 玩法類型(#/bytype 依此分組;斜線變體)
+    name: '好撒瑪利亞人・備品',
+    subtitle: '路 10・斜的一排也算——憐憫多算一步',
+    category: 'bible',
+    color: '#b07828',
+    emoji: '🍶',
+    url: 'https://hfpc-samaritan-match3.summer09201017.workers.dev/',
+  },
+  {
+    // 會幕・甘心奉獻(直達卡):獨立 repo hfpc-tabernacle-bubble(彈珠配對+tsum 皮,forge fish153)。
+    // ✅ 2026-07-23:牧者過審點亮;同類 3 件=歸進會幕庫房(金環/三色線團/皂莢木擬人臉)、三色門幔;出35:5/21+36:7 已 cuv 驗;曉臻三句;信息=甘心樂意+夠用有餘。
+    id: 'tabernacle-bubble',
+    kind: 'match', // 玩法類型:彈珠配對(同 arkmatch)
+    name: '會幕・甘心奉獻',
+    subtitle: '出 35・同類聚一起歸庫房——夠用而且有餘',
+    category: 'bible',
+    color: '#9a7444',
+    emoji: '⛺',
+    url: 'https://hfpc-tabernacle-bubble.summer09201017.workers.dev/',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
