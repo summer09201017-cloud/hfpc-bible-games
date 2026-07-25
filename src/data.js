@@ -417,6 +417,21 @@ export const JOURNEYS = [
     emoji: '⛺',
     url: 'https://hfpc-tabernacle-bubble.summer09201017.workers.dev/',
   },
+  {
+    // 會幕拆卸(直達卡):獨立 repo hfpc-tabernacle-screw(純邏輯解謎新地基,不是換皮;CF Pages)。
+    // 2026-07-25 上架:民 1:51 / 4:5-6,15,25-26,31-32 + 出 26:1 / 25:13 全部 cuv 逐節查證。
+    // 機制即經文:螺絲=橛子、上層壓著才拆不動=民 4 的拆卸次序、三個擔子=哥轄/革順/米拉利三族。
+    // 出廠檢驗:6 關經 solver 判定保證可解 + 兩隻 bot 量難度(躺平會卡、想一下就過);Playwright 線上實測全破。
+    // ⏳ 文案與神學語氣「尚未」經牧者過審(別的卡片開頭的 ✅ 是審過的);正式推給老師前請先審。
+    id: 'tabernacle-screw',
+    kind: 'puzzle', // 玩法類型:純邏輯解謎(本系列第一款,#/bytype 依此分組)
+    name: '會幕拆卸',
+    subtitle: '民 4・帳幕往前行的時候,利未人要拆卸——橛子按名分進三族的擔子',
+    category: 'bible',
+    color: '#8d6e42',
+    emoji: '🪛',
+    url: 'https://hfpc-tabernacle-screw.pages.dev/',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
