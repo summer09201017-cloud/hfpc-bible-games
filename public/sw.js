@@ -4,7 +4,12 @@
 //
 // ⚠ 注意:卡片連到的「各遊戲」是別的網域(跨來源),SW 不會、也不該幫它們快取。
 //    本大廳離線時只保證「選單畫面」打得開;各遊戲要離線,需各自安裝/快取它自己。
-const CACHE = 'hfpc-hub-v102'
+// v103(2026-07-26):強制所有裝置換快取——我在部署時誤把根目錄的 .assetsignore 複製進 site/,
+// 那份清單排除 `src`,結果 /src/main.js 變 404、卡片整片消失(已修回並重佈)。
+// SW 本身是網路優先且只快取 200,不會存到那個 404;bump 版本是為了讓已開著的裝置一定拿到新版。
+// ★ 教訓:site/ 是**產物**,裡面只有出貨檔,不需要也不可以放根目錄那份 .assetsignore
+//   (那份是給 `--assets .` 用的)。部署大廳只要 npm run build → wrangler deploy --assets site。
+const CACHE = 'hfpc-hub-v103'
 const CORE = [
   '/',
   '/index.html',
