@@ -437,6 +437,22 @@ export const JOURNEYS = [
     emoji: '🪛',
     url: 'https://hfpc-tabernacle-screw.pages.dev/',
   },
+  {
+    // 以斯拉點交聖殿器皿(直達卡):獨立 repo hfpc-ezra-screw(fork 會幕拆卸換皮,screw-pile-puzzle-kit 第二款)。
+    // 2026-07-26 上架:拉 1:7 / 1:9 / 1:10 / 8:25 / 8:28 / 8:29 / 8:34 + 1:11 共八節 cuv 逐節查證。
+    // 機制即經文:器皿=螺絲、照清單分箱=「都點了數目,按著分量寫在冊上」(拉 8:34)、警醒看守=看準了才拿。
+    // 比會幕多兩個新機制(使用者拍板):祭司的托盤(放不進先擱著,幼3/童2/青1)+拒絕制(點到放不進的=溫柔擋下不判輸)。
+    // 07-26 晚:集滿三件同類=祭司抬走動畫;難度帶重校(拒絕制語意重量測,青少年真卡死 31~46%)。
+    // ✅ 2026-07-27:牧者過審後點亮。
+    id: 'ezra-screw',
+    kind: 'puzzle', // 與會幕拆卸同型:純邏輯解謎(#/bytype 依此分組)
+    name: '以斯拉點交器皿',
+    subtitle: '拉 8・你們歸耶和華為聖,器皿也為聖——照清單點交,一件不可少',
+    category: 'bible',
+    color: '#b08a3e',
+    emoji: '🏺',
+    url: 'https://hfpc-ezra-screw.pages.dev/',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
