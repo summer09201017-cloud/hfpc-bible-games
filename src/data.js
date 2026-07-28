@@ -453,6 +453,23 @@ export const JOURNEYS = [
     emoji: '🏺',
     url: 'https://hfpc-ezra-screw.pages.dev/',
   },
+  {
+    // 尋羊記(直達卡):獨立 repo sheepquest(全系列第一款「走出門玩」的定位收集,geo-hunt-kit 首例;CF Workers)。
+    // 2026-07-29 上架:路 15:4-7 走失的羊(一百隻裡的那一隻)+ 15:6 找著了就歡歡喜喜。
+    // 機制即經文:牧人親自去找=腳真的要走到(GPS 25m 內才收得到)、99+1=收集冊滿 100 觸發歡喜彩帶、
+    // 溫柔規則=套失手小羊只是跳開,永不失去(路 15 的重點是「必尋回」不是「抓得準」)。
+    // 零後端全家同見:羊由「地圖格子×4 小時時段」種子算出,同時同地每支手機看到同一群(位置絕不上傳)。
+    // 🙋 開場強制勾「牧人守則」(抬頭看路/安全地點/孩童需大人陪同)才能開始;🧪 客廳測試模式可不出門玩。
+    // ✅ 2026-07-29:牧者過審後點亮。
+    id: 'sheepquest',
+    kind: 'geohunt', // 玩法類型:走出門的定位收集(本系列第一款,#/bytype 依此分組)
+    name: '尋羊記',
+    subtitle: '路 15・失去一隻,你不去找著牠嗎?——走到牠身邊,溫柔帶回羊圈',
+    category: 'bible',
+    color: '#2e7d4f',
+    emoji: '🐑',
+    url: 'https://hfpc-sheepquest.summer09201017.workers.dev/',
+  },
 
   {
     // 聖經搶答 PK 秀(直達卡):獨立 repo hfpc-quiz-show(零建置手寫 PWA,class-game-show 活實作)。
