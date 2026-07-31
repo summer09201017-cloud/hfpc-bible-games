@@ -1,12 +1,25 @@
 .git
+.git/**
 .assetsignore
+# 🔒 0731 補:wrangler --assets 掃的是「磁碟」不是 git,.gitignore 擋不住它。
+#   每一項都要寫「名稱」+「名稱/**」兩行,只寫名稱擋不住目錄裡的檔案。
+.wrangler
+.wrangler/**
 .netlify
+.netlify/**
 netlify.toml
 netlify-301
+netlify-301/**
 node_modules
+node_modules/**
 src
+src/**
 public
+public/**
 scripts
+scripts/**
+tests
+tests/**
 package.json
 package-lock.json
 .gitignore
@@ -14,5 +27,4 @@ package-lock.json
 README.md
 CLAUDE.md
 roadmap.md
-tests
 *.md
