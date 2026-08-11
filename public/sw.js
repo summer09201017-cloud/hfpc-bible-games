@@ -13,7 +13,7 @@
 // SW 本身是網路優先且只快取 200,不會存到那個 404;bump 版本是為了讓已開著的裝置一定拿到新版。
 // ★ 教訓:site/ 是**產物**,裡面只有出貨檔,不需要也不可以放根目錄那份 .assetsignore
 //   (那份是給 `--assets .` 用的)。部署大廳只要 npm run build → wrangler deploy --assets site。
-const CACHE = 'hfpc-hub-v106'
+const CACHE = 'hfpc-hub-v107'
 const CORE = [
   '/',
   '/index.html',

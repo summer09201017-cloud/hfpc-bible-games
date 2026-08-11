@@ -993,6 +993,16 @@ export const COLLECTIONS = {
         url: 'https://hfpc-samson3d.summer09201017.workers.dev/',
       },
       {
+        // 牧羊人與羊群(3D尋羊):sheepflock3d(0811 上架;davidbeasts3d fork+羊群系統 flock.js;TSUM 造型;羊圈圖鑑跨站格式 hfpc-sheepdex-v1)。CF Pages。
+        id: 'sheepflock3d',
+        kind: 'collect', // 蒐集型玩法
+        name: '牧羊人與羊群(3D尋羊)',
+        subtitle: '路15×約10・尋回迷羊取名蒐集,羊群跟著你走;野獸來了帶羊出戰(鈴鐺/絨毛/快腿/詩歌)',
+        color: '#5a7a3a',
+        emoji: '🐑',
+        url: 'https://hfpc-sheepflock3d.pages.dev/',
+      },
+      {
         // 大衛打獅熊(真3D):davidbeasts3d(07-19 上架;samson3d fork 多獸引擎 foes[];Cloudflare Pages 首發試點站)。
         id: 'davidbeasts3d',
         kind: 'boss', // 玩法類型(#/bytype 依此分組)
