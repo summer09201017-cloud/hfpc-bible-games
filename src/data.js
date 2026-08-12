@@ -494,7 +494,10 @@ export const JOURNEYS = [
     category: 'review',
     color: '#3a7a4e',
     emoji: '🖍️',
-    url: 'https://hfpc-bible-games.netlify.app/bingo.html',
+    // ⚠ 0812 修:本站 07-22 已遷 CF Workers,這裡卻還指著**舊 netlify 網址**(大廳自己指自己的舊家)。
+    //   舊網址那時還活著、而且供的是舊版大廳 ⇒ 使用者從那邊進來永遠看不到新卡片(0812 使用者實際踩到)。
+    //   同批已把舊 netlify 站改成 301 殼;這裡也一併改指正版,少一次轉址、不依賴舊平台。
+    url: 'https://hfpc-bible-games.summer09201017.workers.dev/bingo.html',
   },
   // —— 「合輯卡片」:點了在大廳內就地展開,不離開頁面 ——
   {
