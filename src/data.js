@@ -496,7 +496,18 @@ export const JOURNEYS = [
     emoji: '🖍️',
     url: 'https://hfpc-bible-games.netlify.app/bingo.html',
   },
-  // —— 兩張「合輯卡片」:點了在大廳內就地展開,不離開頁面 ——
+  // —— 「合輯卡片」:點了在大廳內就地展開,不離開頁面 ——
+  {
+    // 🐑 好牧人・尋羊(2026-08-12 使用者拍板立):路 15 + 約 10 的五款收在一起。
+    // 收的標準是**經文主題**不是名字——「雅各的斑點羊」(創 30)刻意不收,見 collections.goodshepherd。
+    id: 'goodshepherd',
+    name: '好牧人・尋羊',
+    subtitle: '路 15 × 約 10・同一位牧人,五種玩法(出門找/3D牧場/聽聲尋/趕羊/歸圈)',
+    category: 'series',
+    color: '#3f8a5c',
+    emoji: '🐑',
+    collection: 'goodshepherd',
+  },
   {
     id: 'war',
     name: '戰爭闖關合輯',
@@ -837,6 +848,75 @@ export const COLLECTIONS = {
         emoji: '🕯️',
         url: 'https://hfpc-daniel-game.netlify.app/',
         credit: '製作:憫安',
+      },
+    ],
+  },
+  // 🐑 好牧人・尋羊合輯(2026-08-12 使用者拍板立):把散在四個地方、講**同一組經文**的羊全收在一起。
+  // ⚠ 收的標準是**經文主題**不是名字:路 15(失羊的比喻)+ 約 10(好牧人)才收;
+  //   「雅各的斑點羊」雖然名字有羊,但那是創 30(神使雅各羊群增多、證出他的公義),
+  //   主題完全不同 ⇒ **刻意不收**,留在創世記闖關合輯。
+  // ⚠ 深連結不複製:每張卡直接連到那一關的所在地;sheepflock3d 在戰爭合輯的卡**保留不動**
+  //   (它確實有帶羊出戰打野獸的部分;大廳本來就允許一款進多個合輯,如參孫同時在三個)。
+  goodshepherd: {
+    title: '好牧人・尋羊',
+    desc:
+      '路加十五章「失羊的比喻」與約翰十章「好牧人」——同一位牧人,五種玩法:' +
+      '走出門去找、在 3D 牧場養、聽聲音尋、撞球式趕羊、連鏈歸圈。' +
+      '重點不是「我抓得準」,是「牧人必尋回」。' +
+      '★ 尋羊記和牧羊人與羊群的**羊圈是互通的**——在外面用手機抓到的羊,可以帶進 3D 牧場出戰。' +
+      '(每張卡片直接連到那一關的所在地,不複製關卡。)',
+    color: '#3f8a5c',
+    emoji: '🐑',
+    items: [
+      {
+        // 尋羊記:走出門的 GPS 定位收集(全系列唯一「必須出門」的一款)。深連結,正本在頂層卡。
+        id: 'sheepquest',
+        kind: 'geohunt',
+        name: '尋羊記',
+        subtitle: '路 15・失去一隻,你不去找著牠嗎?——走到牠身邊,溫柔帶回羊圈',
+        color: '#2e7d4f',
+        emoji: '🐑',
+        url: 'https://hfpc-sheepquest.summer09201017.workers.dev/',
+      },
+      {
+        // 牧羊人與羊群(3D):蒐集養成+帶羊出戰;與尋羊記共用羊圈格式 hfpc-sheepdex-v1。
+        id: 'sheepflock3d',
+        kind: 'collect',
+        name: '牧羊人與羊群(3D尋羊)',
+        subtitle: '路15×約10・尋回迷羊取名蒐集,羊群跟著你走;野獸來了帶羊出戰(鈴鐺/絨毛/快腿/詩歌)',
+        color: '#5a7a3a',
+        emoji: '🐑',
+        url: 'https://hfpc-sheepflock3d.pages.dev/',
+      },
+      {
+        // 好牧人尋羊:保羅大富翁的迷宮小關(深連結 ?demo=shepherd,不複製關卡)。
+        id: 'shepherd',
+        kind: 'maze',
+        name: '好牧人尋羊',
+        subtitle: '路 15・循「咩~」尋迷羊,扛在肩上帶回家',
+        color: '#5c8f49',
+        emoji: '🐑',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=shepherd',
+      },
+      {
+        // 趕羊入圈:保羅大富翁的撞球式小關(深連結 ?demo=herd)。
+        id: 'herd',
+        kind: 'pool',
+        name: '趕羊入圈',
+        subtitle: '約 10・撞球式把走散的羊領回圈——合成一群',
+        color: '#5a8a4a',
+        emoji: '🐑',
+        url: 'https://hfpc-paul-game.netlify.app/?demo=herd',
+      },
+      {
+        // 羊群歸圈:tsum 連鏈,全系列最萌、幼幼友善(低年級首選)。深連結,正本在頂層卡。
+        id: 'sheepfold-tsum',
+        kind: 'tsum',
+        name: '羊群歸圈',
+        subtitle: '約 10・聽牧人的聲音,一隻也不失落',
+        color: '#3f7a34',
+        emoji: '🐑',
+        url: 'https://hfpc-sheepfold-tsum.summer09201017.workers.dev/',
       },
     ],
   },
