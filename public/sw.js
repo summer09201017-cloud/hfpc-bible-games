@@ -4,6 +4,8 @@
 //
 // ⚠ 注意:卡片連到的「各遊戲」是別的網域(跨來源),SW 不會、也不該幫它們快取。
 //    本大廳離線時只保證「選單畫面」打得開;各遊戲要離線,需各自安裝/快取它自己。
+// v110(2026-08-15):📊 頁尾加「使用統計(同工用)」連結 → /stats(HFP 機 07-25 的 commit 卡在本機沒推,
+//   本輪 rebase 上 145 個新 commit 才上線;衝突處=遠端給那段 <p> 加了 id="footCount",兩邊都保留)。
 // v109(2026-08-13):📺 修「兩支 90 秒影片線上 404」——★ 根因不是上傳工具擋大檔,是**檔案放錯資料夾**:
 //   `scripts/bundle-static.mjs` 產出 site/ 時只複製四樣(index.html / styles.css / src/ / public/),
 //   而兩支 mp4 從 0804 加進 index.html 那天起就躺在**repo 根目錄** ⇒ 永遠進不了 site/ ⇒ 線上 404 九天。
@@ -26,7 +28,7 @@
 // SW 本身是網路優先且只快取 200,不會存到那個 404;bump 版本是為了讓已開著的裝置一定拿到新版。
 // ★ 教訓:site/ 是**產物**,裡面只有出貨檔,不需要也不可以放根目錄那份 .assetsignore
 //   (那份是給 `--assets .` 用的)。部署大廳只要 npm run build → wrangler deploy --assets site。
-const CACHE = 'hfpc-hub-v109'
+const CACHE = 'hfpc-hub-v110'
 const CORE = [
   '/',
   '/index.html',
