@@ -85,7 +85,7 @@ export const JOURNEYS = [
     category: 'bible',
     color: '#2aa198',
     emoji: '🗺️',
-    url: 'https://hfpc-paul-game.netlify.app/?journey=jonah',
+    url: 'https://hfpc-paul-game.pages.dev/?journey=jonah',
   },
   {
     id: 'paul',
@@ -95,7 +95,7 @@ export const JOURNEYS = [
     category: 'bible',
     color: '#c1772e',
     emoji: '⛵',
-    url: 'https://hfpc-paul-game.netlify.app/?journey=paul',
+    url: 'https://hfpc-paul-game.pages.dev/?journey=paul',
   },
   {
     id: 'daniel',
@@ -105,7 +105,7 @@ export const JOURNEYS = [
     category: 'bible',
     color: '#6a4c93',
     emoji: '🦁',
-    url: 'https://hfpc-paul-game.netlify.app/?journey=daniel',
+    url: 'https://hfpc-paul-game.pages.dev/?journey=daniel',
   },
   {
     id: 'exodus',
@@ -115,11 +115,11 @@ export const JOURNEYS = [
     category: 'bible',
     color: '#b5452f',
     emoji: '🔥',
-    url: 'https://hfpc-paul-game.netlify.app/?journey=exodus',
+    url: 'https://hfpc-paul-game.pages.dev/?journey=exodus',
   },
   {
     // 路得記·從空到滿:獨立 repo hfpc-ruth-game(可玩棋盤 + 拾麥穗收集闖關)。
-    // ✅ 2026-06-19:已部署 hfpc-ruth-game.netlify.app(curl 驗證標題+資產+真內容),卡片正式亮。
+    // ✅ 2026-06-19:已部署 hfpc-ruth-game.pages.dev(curl 驗證標題+資產+真內容),卡片正式亮。
     id: 'ruth',
     kind: 'rollmove', // 玩法類型(#/bytype 依此分組)
     name: '路得記·從空到滿',
@@ -127,7 +127,7 @@ export const JOURNEYS = [
     category: 'bible',
     color: '#caa54a',
     emoji: '🌾',
-    url: 'https://hfpc-ruth-game.netlify.app/',
+    url: 'https://hfpc-ruth-game.pages.dev/',
   },
   {
     // 彼得大富翁(直達卡):住保羅 repo,?journey=peter(20 站真實地理聖地棋盤)。
@@ -140,7 +140,7 @@ export const JOURNEYS = [
     category: 'bible',
     color: '#5a7d3a',
     emoji: '🎲',
-    url: 'https://hfpc-paul-game.netlify.app/?journey=peter',
+    url: 'https://hfpc-paul-game.pages.dev/?journey=peter',
   },
   {
     // 耶穌生平之旅(直達卡):住保羅 repo,?journey=jesus(21 站聖地棋盤,伯利恆→加利利→耶路撒冷)。
@@ -154,7 +154,7 @@ export const JOURNEYS = [
     category: 'bible',
     color: '#7a5ab0',
     emoji: '✝️',
-    url: 'https://hfpc-paul-game.netlify.app/?journey=jesus',
+    url: 'https://hfpc-paul-game.pages.dev/?journey=jesus',
   },
   {
     // 騎驢進耶路撒冷(3D)(直達卡):獨立 repo donkey-jerusalem3d(equestrian3d 騎乘引擎聖經皮)。
@@ -481,7 +481,7 @@ export const JOURNEYS = [
     category: 'review',
     color: '#8a5cc4',
     emoji: '🎤',
-    url: 'https://hfpc-quiz-show.netlify.app/',
+    url: 'https://hfpc-quiz-show.pages.dev/',
   },
   {
     // 聖經賓果(同源工具頁):bible-bingo skill 的產生器單檔,住大廳 public/bingo.html。
@@ -669,7 +669,7 @@ export const COLLECTIONS = {
         subtitle: '太 14・定睛看耶穌,踩準節拍走過海面',
         color: '#1e4f8a',
         emoji: '🌊',
-        url: 'https://hfpc-peter-sea-game.netlify.app/',
+        url: 'https://hfpc-peter-sea-game.pages.dev/',
         credit: '製作:憫安',
       },
       {
@@ -690,7 +690,7 @@ export const COLLECTIONS = {
         subtitle: '徒 16・半夜監牢唱詩讚美,神開監門',
         color: '#3a2c52',
         emoji: '⛓️',
-        url: 'https://hfpc-paul-silas-game.netlify.app/',
+        url: 'https://hfpc-paul-silas-game.pages.dev/',
       },
       {
         id: 'psalm150',
@@ -699,7 +699,7 @@ export const COLLECTIONS = {
         subtitle: '詩 150・各樣樂器齊鳴,凡有氣息都讚美',
         color: '#b5872e',
         emoji: '🎺',
-        url: 'https://hfpc-psalm150-game.netlify.app/',
+        url: 'https://hfpc-psalm150-game.pages.dev/',
       },
       {
         id: 'psalm100',
@@ -708,7 +708,7 @@ export const COLLECTIONS = {
         subtitle: '詩 100・琴鍵落進聖殿的門,按對=稱謝進門',
         color: '#b8860b',
         emoji: '🎹',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=psalm100',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=psalm100',
       },
       {
         id: 'davidharp',
@@ -717,7 +717,7 @@ export const COLLECTIONS = {
         subtitle: '撒上 16・用手彈琴,掃羅便舒暢爽快,惡魔離了他',
         color: '#7a5a9c',
         emoji: '🎻',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=davidharp',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=davidharp',
       },
       {
         // two-forms 配對(2026-07-04):同故事的「自由演奏」幼稚園版——沒有音符、沒有錯的音,
@@ -728,7 +728,7 @@ export const COLLECTIONS = {
         subtitle: '撒上 16・想彈哪根弦就彈,沒有錯的音!彈著彈著,王的愁煩就散開',
         color: '#9c7ab8',
         emoji: '🪕',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=harptoy',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=harptoy',
       },
       {
         id: 'miriam',
@@ -737,7 +737,7 @@ export const COLLECTIONS = {
         subtitle: '出 15・拿鼓跳舞!你們要歌頌耶和華,因他大大戰勝',
         color: '#d9483d',
         emoji: '🥁',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=miriam',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=miriam',
       },
     ],
   },
@@ -757,7 +757,7 @@ export const COLLECTIONS = {
         subtitle: '撒上 18-19・大衛不伸手害受膏者,只躲、只信靠神',
         color: '#6b3fa0',
         emoji: '🗡️',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=saul-spear',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=saul-spear',
       },
       {
         id: 'david-spear3d',
@@ -775,7 +775,7 @@ export const COLLECTIONS = {
         subtitle: '尼 4&6・邊閃避邊把城牆建起來,神為我們爭戰',
         color: '#7a4030',
         emoji: '🧱',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=nehemiah',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=nehemiah',
       },
     ],
   },
@@ -795,7 +795,7 @@ export const COLLECTIONS = {
         subtitle: '太 14・定睛看耶穌,踩準節拍走過海面',
         color: '#1e4f8a',
         emoji: '🌊',
-        url: 'https://hfpc-peter-sea-game.netlify.app/',
+        url: 'https://hfpc-peter-sea-game.pages.dev/',
         credit: '製作:憫安',
       },
       {
@@ -817,7 +817,7 @@ export const COLLECTIONS = {
         subtitle: '士 14・耶和華的靈感動,徒手撕獅',
         color: '#9c5a2a',
         emoji: '🦁',
-        url: 'https://hfpc-samson-game.netlify.app/',
+        url: 'https://hfpc-samson-game.pages.dev/',
         credit: '製作:憫安',
       },
       {
@@ -902,7 +902,7 @@ export const COLLECTIONS = {
         subtitle: '路 15・循「咩~」尋迷羊,扛在肩上帶回家',
         color: '#5c8f49',
         emoji: '🐑',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=shepherd',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=shepherd',
       },
       {
         // 趕羊入圈:保羅大富翁的撞球式小關(深連結 ?demo=herd)。
@@ -912,7 +912,7 @@ export const COLLECTIONS = {
         subtitle: '約 10・撞球式把走散的羊領回圈——合成一群',
         color: '#5a8a4a',
         emoji: '🐑',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=herd',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=herd',
       },
       {
         // 羊群歸圈:tsum 連鏈,全系列最萌、幼幼友善(低年級首選)。深連結,正本在頂層卡。
@@ -984,7 +984,7 @@ export const COLLECTIONS = {
         subtitle: '出 17・撐住舉手,亞倫戶珥扶手',
         color: '#c98a2b',
         emoji: '🙌',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=moses-action',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=moses-action',
       },
       {
         // 大衛甩石:住在「保羅大富翁」repo,src/minigames/sling/,?demo=sling 可單獨玩。
@@ -995,7 +995,7 @@ export const COLLECTIONS = {
         subtitle: '撒上 17・瞄準拋射,打倒歌利亞',
         color: '#3a8d6b',
         emoji: '🎯',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=sling',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=sling',
       },
       {
         // 大衛甩石(3D):athletics3d 引擎聖經皮,獨立站——與 2D 版並列(keep-2d-add-3d 鐵則,
@@ -1020,7 +1020,7 @@ export const COLLECTIONS = {
         subtitle: '代下 20・詩班讚美,神設伏兵得勝',
         color: '#9a4ca8',
         emoji: '🎵',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=jehoshaphat-action',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=jehoshaphat-action',
       },
       {
         // 反轉奇兵(巴蘭的驢 民22,約拿引擎 L10)。與「逆轉奇兵」合輯共用同一關(深連結,不複製)。
@@ -1031,7 +1031,7 @@ export const COLLECTIONS = {
         subtitle: '民 22・巴蘭的驢,神攔阻得勝',
         color: '#8a6d3b',
         emoji: '🫏',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=balaam-action',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=balaam-action',
       },
       {
         // ✅ 2026-06-15:紅海奔逃動作關復活——獨立入口 保羅 ?demo=redsea(出 14;不綁約拿站,點進去直接玩)。
@@ -1042,11 +1042,11 @@ export const COLLECTIONS = {
         subtitle: '出 14・站住等候,神開海路',
         color: '#2b6fa8',
         emoji: '🌊',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=redsea',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=redsea',
       },
       {
         // 參孫打獅子:住在獨立 repo「孫孫打獅子」(vanilla JS + Canvas,可獨立 build 的 PWA)。
-        // 永久家=自己的 Netlify 站。✅ 2026-06-17:hfpc-samson-game.netlify.app 已部署上線,卡片正式亮。
+        // 永久家=自己的 Netlify 站。✅ 2026-06-17:hfpc-samson-game.pages.dev 已部署上線,卡片正式亮。
         // 主題正中合輯精神:聖經不說參孫多強壯,而說「耶和華的靈大大感動他」——力量出於神。
         id: 'samson',
         kind: 'boss', // 玩法類型(#/bytype 依此分組)
@@ -1054,7 +1054,7 @@ export const COLLECTIONS = {
         subtitle: '士 14・耶和華的靈感動,徒手撕獅',
         color: '#9c5a2a',
         emoji: '🦁',
-        url: 'https://hfpc-samson-game.netlify.app/',
+        url: 'https://hfpc-samson-game.pages.dev/',
         // 小作者署名:任何卡片加 credit 欄就會顯示一枚「製作」徽章(見 main.js makeCard / styles.css .card__credit)。
         credit: '製作:憫安',
       },
@@ -1128,7 +1128,7 @@ export const COLLECTIONS = {
         subtitle: '王下 13・憑信射到底,耶和華使你得勝',
         color: '#7a4fb0',
         emoji: '🏹',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=joash',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=joash',
       },
       {
         // 約阿施的得勝箭(3D):joash-arrows(archery3d 引擎聖經皮;keep-2d-add-3d 並列)。
@@ -1165,7 +1165,7 @@ export const COLLECTIONS = {
         subtitle: '徒 10・彼得向哥尼流傳福音',
         color: '#3a8d8d',
         emoji: '🕊️',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=cornelius',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=cornelius',
       },
       {
         // ⚠ 文案待牧者審(使用者指示先亮、之後自審);關卡已在保羅 main(?demo=elijah)。
@@ -1175,7 +1175,7 @@ export const COLLECTIONS = {
         subtitle: '王上 19・以利亞灰心後重得力',
         color: '#c1772e',
         emoji: '🌅',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=elijah',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=elijah',
       },
       {
         // ⚠ 文案待牧者審(使用者指示先亮、之後自審);關卡已在保羅 main(?demo=saul)。
@@ -1185,7 +1185,7 @@ export const COLLECTIONS = {
         subtitle: '徒 9・掃羅遇大光信主',
         color: '#d9b310',
         emoji: '💡',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=saul',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=saul',
       },
       {
         // ✅ 2026-06-15 新做:聖歌卡片關(代下 20 約沙法唱詩得勝);需 paul 卡片關 PR 部署。文案待牧者審。
@@ -1195,7 +1195,7 @@ export const COLLECTIONS = {
         subtitle: '代下 20・約沙法唱詩歌得勝',
         color: '#9a4ca8',
         emoji: '🎵',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=jehoshaphat',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=jehoshaphat',
       },
       {
         // ✅ 2026-06-15 新做:反轉卡片關(民 22 巴蘭的驢);需 paul 卡片關 PR 部署。文案待牧者審。
@@ -1205,7 +1205,7 @@ export const COLLECTIONS = {
         subtitle: '民 22・巴蘭的驢開口',
         color: '#8a6d3b',
         emoji: '🫏',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=balaam',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=balaam',
       },
       // ───────────── 動作版(5):即時 Canvas 闖關 ─────────────
       {
@@ -1216,7 +1216,7 @@ export const COLLECTIONS = {
         subtitle: '徒 10・順服聖靈,出發傳福音',
         color: '#3a8d8d',
         emoji: '🕊️',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=cornelius-action',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=cornelius-action',
       },
       {
         // ✅ 2026-06-15:盼望動作版上線(以利亞曠野撿餅水恢復體力,?demo=elijah-action)。
@@ -1226,7 +1226,7 @@ export const COLLECTIONS = {
         subtitle: '王上 19・撿餅喝水重得力',
         color: '#c1772e',
         emoji: '🌅',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=elijah-action',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=elijah-action',
       },
       {
         // ✅ 2026-06-15:大光動作版上線(曠野跑酷,大馬士革路→直街,?demo=saul-action)。需 paul feat/saul-action 部署。
@@ -1236,7 +1236,7 @@ export const COLLECTIONS = {
         subtitle: '徒 9・大光仆倒,順服奔跑',
         color: '#d9b310',
         emoji: '💡',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=saul-action',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=saul-action',
       },
       {
         // ✅ 2026-06-16:聖歌動作版搬進保羅 repo(永久家)→ paul ?demo=jehoshaphat-action(自動部署);與戰爭合輯共用同一關。
@@ -1246,7 +1246,7 @@ export const COLLECTIONS = {
         subtitle: '代下 20・詩班讚美,神設伏兵',
         color: '#9a4ca8',
         emoji: '🎵',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=jehoshaphat-action',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=jehoshaphat-action',
       },
       {
         // ✅ 2026-07-05:搬進保羅 repo(paul PR #62)→ ?demo=balaam-action;與戰爭合輯共用同一關。
@@ -1256,7 +1256,7 @@ export const COLLECTIONS = {
         subtitle: '民 22・閃避攔路,神攔阻得勝',
         color: '#8a6d3b',
         emoji: '🫏',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=balaam-action',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=balaam-action',
       },
     ],
   },
@@ -1278,7 +1278,7 @@ export const COLLECTIONS = {
         subtitle: '創 6–9・擲骰大富翁:造舟→洪水→彩虹之約',
         color: '#3f7fbf',
         emoji: '🌈',
-        url: 'https://hfpc-paul-game.netlify.app/?journey=noah',
+        url: 'https://hfpc-paul-game.pages.dev/?journey=noah',
       },
       {
         id: 'arkbuild',
@@ -1287,7 +1287,7 @@ export const COLLECTIONS = {
         subtitle: '創 6:14-22・操作挪亞釘木板,旁人嘲笑',
         color: '#8a4b2f',
         emoji: '🔨',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=arkbuild',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=arkbuild',
       },
       {
         id: 'arkpairs',
@@ -1296,7 +1296,7 @@ export const COLLECTIONS = {
         subtitle: '創 6–7・翻牌配對 + 安排房間(母的戴🎀)',
         color: '#3f7fd0',
         emoji: '🐘',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=arkpairs',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=arkpairs',
       },
       {
         id: 'arkmatch',
@@ -1305,7 +1305,7 @@ export const COLLECTIONS = {
         subtitle: '創 7・同類聚一起,進方舟——耶和華關門',
         color: '#4a7a58',
         emoji: '🦁',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=arkmatch',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=arkmatch',
       },
       {
         id: 'lotrun',
@@ -1314,7 +1314,7 @@ export const COLLECTIONS = {
         subtitle: '創 19・逃命吧!不可回頭看——忍住那顆按鈕',
         color: '#7a4055',
         emoji: '🧂',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=lotrun',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=lotrun',
       },
       {
         id: 'flock',
@@ -1323,7 +1323,7 @@ export const COLLECTIONS = {
         subtitle: '創 30・純白進左欄、斑點進右欄——證出我的公義來',
         color: '#6a8a4a',
         emoji: '🐏',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=flock',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=flock',
       },
       {
         id: 'joseph',
@@ -1332,7 +1332,7 @@ export const COLLECTIONS = {
         subtitle: '創 37→50・拼回彩衣——神把破碎拼回',
         color: '#b96a3a',
         emoji: '🧥',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=joseph',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=joseph',
       },
       {
         id: 'joseph-granary',
@@ -1341,7 +1341,7 @@ export const COLLECTIONS = {
         subtitle: '創 41・七豐年七荒年——豐年不揮霍,荒年有預備',
         color: '#b8860b',
         emoji: '🌾',
-        url: 'https://hfpc-joseph-granary.netlify.app/',
+        url: 'https://hfpc-joseph-granary.pages.dev/',
       },
     ],
   },
@@ -1360,7 +1360,7 @@ export const COLLECTIONS = {
         subtitle: '出 2・蒲草箱漂尼羅河,閃開障礙——神看顧著',
         color: '#3a7a9a',
         emoji: '🧺',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=basket',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=basket',
       },
       {
         id: 'redsea',
@@ -1369,7 +1369,7 @@ export const COLLECTIONS = {
         subtitle: '出 14・站住等候,神開海路',
         color: '#2b6fa8',
         emoji: '🌊',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=redsea',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=redsea',
       },
       {
         id: 'miriam',
@@ -1378,7 +1378,7 @@ export const COLLECTIONS = {
         subtitle: '出 15・拿鼓跳舞!你們要歌頌耶和華,因他大大戰勝',
         color: '#d9483d',
         emoji: '🥁',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=miriam',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=miriam',
       },
       {
         id: 'manna',
@@ -1387,7 +1387,7 @@ export const COLLECTIONS = {
         subtitle: '出 16・收滿俄梅珥罐——多收的沒有餘,少收的沒有缺',
         color: '#b0985a',
         emoji: '🍞',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=manna',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=manna',
       },
       {
         id: 'moses',
@@ -1396,7 +1396,7 @@ export const COLLECTIONS = {
         subtitle: '出 17・撐住舉手,亞倫戶珥扶手',
         color: '#c98a2b',
         emoji: '🙌',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=moses-action',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=moses-action',
       },
       {
         id: 'gems',
@@ -1405,7 +1405,7 @@ export const COLLECTIONS = {
         subtitle: '出 28・十二寶石按支派歸位——名字帶在胸前',
         color: '#7a5a9a',
         emoji: '💎',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=gems',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=gems',
       },
     ],
   },
@@ -1424,7 +1424,7 @@ export const COLLECTIONS = {
         subtitle: '書 6・繞城吹角大聲呼喊,耶和華使城牆塌陷',
         color: '#c98a2b',
         emoji: '🎺',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=jericho',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=jericho',
       },
       {
         // 約拿單的暗號:第一個「3D 引擎聖經皮」關(archery3d fork,07-12 建成;
@@ -1444,7 +1444,7 @@ export const COLLECTIONS = {
         subtitle: '士 6:25-27・夜裡拆巴力壇——先拆假的,才立真的',
         color: '#2c3658',
         emoji: '⚒️',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=gideon',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=gideon',
       },
       {
         id: 'samson',
@@ -1453,7 +1453,7 @@ export const COLLECTIONS = {
         subtitle: '士 14・耶和華的靈感動,徒手撕獅',
         color: '#9c5a2a',
         emoji: '🦁',
-        url: 'https://hfpc-samson-game.netlify.app/',
+        url: 'https://hfpc-samson-game.pages.dev/',
         credit: '製作:憫安',
       },
       {
@@ -1473,7 +1473,7 @@ export const COLLECTIONS = {
         subtitle: '得 2・橫直斜都算一排——恩典故意多給一點',
         color: '#b0904a',
         emoji: '🌾',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=glean',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=glean',
       },
       {
         id: 'samuel',
@@ -1482,7 +1482,7 @@ export const COLLECTIONS = {
         subtitle: '撒上 3・注意聽,照順序點燈——請說,僕人敬聽',
         color: '#7a5c9e',
         emoji: '🕯️',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=samuel',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=samuel',
       },
       {
         id: 'david',
@@ -1491,7 +1491,7 @@ export const COLLECTIONS = {
         subtitle: '撒上 17・瞄準拋射,打倒歌利亞',
         color: '#3a8d6b',
         emoji: '🎯',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=sling',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=sling',
       },
       {
         // 大衛甩石(3D):athletics3d 引擎聖經皮,獨立站——與 2D 版並列(keep-2d-add-3d 鐵則,
@@ -1512,7 +1512,7 @@ export const COLLECTIONS = {
         subtitle: '王上 6:7・石頭鑿好才運來——安安靜靜砌成聖殿',
         color: '#a08040',
         emoji: '🧱',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=temple',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=temple',
       },
       {
         id: 'elijah-action',
@@ -1521,7 +1521,7 @@ export const COLLECTIONS = {
         subtitle: '王上 19・撿餅喝水重得力',
         color: '#c1772e',
         emoji: '🌅',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=elijah-action',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=elijah-action',
       },
       {
         id: 'joash',
@@ -1530,7 +1530,7 @@ export const COLLECTIONS = {
         subtitle: '王下 13・憑信射到底,耶和華使你得勝',
         color: '#7a4fb0',
         emoji: '🏹',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=joash',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=joash',
       },
       {
         // 約阿施的得勝箭(3D):joash-arrows(archery3d 引擎聖經皮;keep-2d-add-3d 並列)。
@@ -1550,7 +1550,7 @@ export const COLLECTIONS = {
         subtitle: '拉 8・沒有刀兵,只有禱告——護送全隊回耶路撒冷',
         color: '#4a7a8a',
         emoji: '🕊️',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=ezra',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=ezra',
       },
       {
         id: 'wallguard',
@@ -1559,7 +1559,7 @@ export const COLLECTIONS = {
         subtitle: '尼 3-6・佈崗吹角,仇敵退去——神必為我們爭戰',
         color: '#8a6a33',
         emoji: '🛡️',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=wallguard',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=wallguard',
       },
     ],
   },
@@ -1578,7 +1578,7 @@ export const COLLECTIONS = {
         subtitle: '太 13・點飛鳥拍手趕走,護種子長成小苗',
         color: '#5a8a3e',
         emoji: '🌱',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=sower',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=sower',
       },
       {
         id: 'steward',
@@ -1587,7 +1587,7 @@ export const COLLECTIONS = {
         subtitle: '太 25・銀子交託給你——神看忠心,不看數額',
         color: '#a07a30',
         emoji: '💼',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=steward',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=steward',
       },
       {
         id: 'shepherd',
@@ -1596,7 +1596,7 @@ export const COLLECTIONS = {
         subtitle: '路 15・循「咩~」尋迷羊,扛在肩上帶回家',
         color: '#5c8f49',
         emoji: '🐑',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=shepherd',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=shepherd',
       },
       {
         id: 'lostcoin',
@@ -1605,7 +1605,7 @@ export const COLLECTIONS = {
         subtitle: '路 15:8-10・點上燈細細地找——直到找著',
         color: '#8a6a3a',
         emoji: '🪙',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=lostcoin',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=lostcoin',
       },
       {
         id: 'fragments',
@@ -1614,7 +1614,7 @@ export const COLLECTIONS = {
         subtitle: '約 6・零碎收進十二個籃子——免得有糟蹋的',
         color: '#b0904a',
         emoji: '🧺',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=fragments',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=fragments',
       },
       {
         id: 'herd',
@@ -1623,7 +1623,7 @@ export const COLLECTIONS = {
         subtitle: '約 10・撞球式把走散的羊領回圈——合成一群',
         color: '#5a8a4a',
         emoji: '🐑',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=herd',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=herd',
       },
       {
         id: 'fruits',
@@ -1632,7 +1632,7 @@ export const COLLECTIONS = {
         subtitle: '加 5・仁愛喜樂和平…結到樹上,常在主裡面',
         color: '#7aa060',
         emoji: '🍇',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=fruits',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=fruits',
       },
       {
         id: 'armor',
@@ -1641,7 +1641,7 @@ export const COLLECTIONS = {
         subtitle: '弗 6・六件軍裝拖到正確部位——站立得住',
         color: '#8a6a2e',
         emoji: '⚔️',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=armor',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=armor',
       },
       {
         id: 'foxes',
@@ -1650,7 +1650,7 @@ export const COLLECTIONS = {
         subtitle: '歌 2:15・網子擒住毀壞葡萄園的小狐狸——蝴蝶別抓錯',
         color: '#b9743a',
         emoji: '🦊',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=foxes',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=foxes',
       },
       {
         id: 'sparks',
@@ -1659,7 +1659,7 @@ export const COLLECTIONS = {
         subtitle: '雅 3:5・趁小撲滅,別讓最小的火點著最大的樹林',
         color: '#3a6a9a',
         emoji: '💧',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=sparks',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=sparks',
       },
     ],
   },
@@ -1678,7 +1678,7 @@ export const COLLECTIONS = {
         subtitle: '拖球射門・守門員撲救・踢 10 球看進幾球',
         color: '#5a8a3a',
         emoji: '⚽',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=goalkick',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=goalkick',
       },
       {
         id: 'soccer',
@@ -1687,7 +1687,7 @@ export const COLLECTIONS = {
         subtitle: '回合彈射全場・🤖 鬥阿福教練或 👥 雙人同機 PK',
         color: '#3f7a34',
         emoji: '🏆',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=soccer',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=soccer',
       },
       {
         id: 'football',
@@ -1696,7 +1696,7 @@ export const COLLECTIONS = {
         subtitle: '即時運球+蓄力踢球・🤖 對戰 AI 或 👥 雙人同機',
         color: '#3f7a34',
         emoji: '🥅',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=football',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=football',
       },
       {
         // 投籃大賽:休閒關第四彈(無經文,側視蓄力投籃;paul PR #84 併入、A 站驗過 bundle 才點)。
@@ -1706,7 +1706,7 @@ export const COLLECTIONS = {
         subtitle: '蓄力抓綠色甜蜜區・越投越遠・三分線外算 3 分',
         color: '#a05a28',
         emoji: '🏀',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=hoopshot',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=hoopshot',
       },
       {
         // 世界盃籃球賽:休閒關第五彈(無經文,football 姊妹作即時運球+投籃;paul PR #84 併入)。
@@ -1716,7 +1716,7 @@ export const COLLECTIONS = {
         subtitle: '即時運球+蓄力投籃・搶籃板・🤖 對戰 AI 或 👥 雙人同機',
         color: '#8a4a20',
         emoji: '⛹️',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=basketball',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=basketball',
       },
       {
         // 棒球打擊王:休閒關第六彈(無經文,主審視角時機揮棒;paul PR #85 併入,#86 主審視角大改審中)。
@@ -1726,7 +1726,7 @@ export const COLLECTIONS = {
         subtitle: '看清好壞球再揮棒・全壘打!・🤖 打擊練習或 👥 投打對決',
         color: '#4a6a9a',
         emoji: '⚾',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=baseball',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=baseball',
       },
       {
         // 花式撞球:休閒關第七彈(無經文,真物理入袋;paul PR #89 併入、A 站驗過 bundle 才點)。
@@ -1736,7 +1736,7 @@ export const COLLECTIONS = {
         subtitle: '真物理入袋・拉桿瞄準清光自己的球・🤖 鬥阿福或 👥 雙人',
         color: '#2e7d4f',
         emoji: '🎱',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=billiards',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=billiards',
       },
       {
         // 3D 棒球:休閒關第八彈(無經文,獨立站 baseball3d;大廳只帶路——Three.js 主審視角,
@@ -1999,7 +1999,7 @@ export const COLLECTIONS = {
         subtitle: '徒 1–12・20 站真實地理,擲骰走遍彼得腳蹤',
         color: '#5a7d3a',
         emoji: '🎲',
-        url: 'https://hfpc-paul-game.netlify.app/?journey=peter',
+        url: 'https://hfpc-paul-game.pages.dev/?journey=peter',
       },
       {
         // 彼得走海(節奏關,已部署上線;大廳首頁也有直達卡 peter-sea、憫安合輯也收一張)。
@@ -2009,7 +2009,7 @@ export const COLLECTIONS = {
         subtitle: '太 14・定睛看耶穌,在風浪中不下沉',
         color: '#2f6fb0',
         emoji: '🌊',
-        url: 'https://hfpc-peter-sea-game.netlify.app/',
+        url: 'https://hfpc-peter-sea-game.pages.dev/',
       },
       {
         // 彼得走海(3D):peter-sea3d(07-13 佇列#15;kungfutrain 節奏底座聖經皮;2D 原版保留並列=keep-2d-add-3d 鐵則)。
@@ -2023,7 +2023,7 @@ export const COLLECTIONS = {
       },
 
       {
-        // 彼得越獄(潛行關)。✅ 2026-06-25:經文 cuv 查驗 10/10、已部署 hfpc-peter-prison-game.netlify.app
+        // 彼得越獄(潛行關)。✅ 2026-06-25:經文 cuv 查驗 10/10、已部署 hfpc-peter-prison-game.pages.dev
         //   (curl 驗證標題 + 核心資產 200);牧者審題包依指示略過(牧者自審)→ 正式亮。
         id: 'prison',
         kind: 'stealth', // 玩法類型(#/bytype 依此分組)
@@ -2031,7 +2031,7 @@ export const COLLECTIONS = {
         subtitle: '徒 12・神開鐵門,人只管跟著走',
         color: '#5b6470',
         emoji: '🕯️',
-        url: 'https://hfpc-peter-prison-game.netlify.app/',
+        url: 'https://hfpc-peter-prison-game.pages.dev/',
       },
       {
         // 下網得魚(收集類)。✅ 2026-06-27:住保羅 repo src/minigames/fishing/,?demo=fishing;經文 cuv 查驗(路5:4/5/6/10/11)、A 站自動部署。
@@ -2042,7 +2042,7 @@ export const COLLECTIONS = {
         subtitle: '路 5・聽主的話,空船變滿網',
         color: '#2e8b8b',
         emoji: '🎣',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=fishing',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=fishing',
       },
       {
         // 海邊的復興/三次託付。✅ 2026-06-28:住保羅 repo src/minigames/shore/,?demo=shore;經文 cuv 查驗(約21:15/16/17/19/9)、A 站自動部署。
@@ -2053,7 +2053,7 @@ export const COLLECTIONS = {
         subtitle: '約 21・「你愛我嗎?」三次跌倒、三次託付',
         color: '#c0612a',
         emoji: '🔥',
-        url: 'https://hfpc-paul-game.netlify.app/?demo=shore',
+        url: 'https://hfpc-paul-game.pages.dev/?demo=shore',
       },
     ],
   },
