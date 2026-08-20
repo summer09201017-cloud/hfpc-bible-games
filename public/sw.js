@@ -28,7 +28,7 @@
 // SW 本身是網路優先且只快取 200,不會存到那個 404;bump 版本是為了讓已開著的裝置一定拿到新版。
 // ★ 教訓:site/ 是**產物**,裡面只有出貨檔,不需要也不可以放根目錄那份 .assetsignore
 //   (那份是給 `--assets .` 用的)。部署大廳只要 npm run build → wrangler deploy --assets site。
-const CACHE = 'hfpc-hub-v112'
+const CACHE = 'hfpc-hub-v113'
 const CORE = [
   '/',
   '/index.html',
@@ -100,3 +100,8 @@ self.addEventListener('fetch', (event) => {
       .catch(() => caches.match(req))
   )
 })
+
+// 🏷️ 版號回報(0820 全艦隊批次):頁尾徽章問「實際執行中的版本」,答案=本 SW 的快取名。
+self.addEventListener('message', function (e) {
+  if (e && e.data === 'GET_VERSION' && e.source) e.source.postMessage({ type: 'SW_VERSION', v: CACHE });
+});
