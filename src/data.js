@@ -615,7 +615,7 @@ export const JOURNEYS = [
     // 大廳只帶路不複製;雷電含射擊(打敵機)——卡片副標寫明「大孩子向」讓老師自行斟酌。
     id: 'arcade-classics',
     name: '經典街機合輯',
-    subtitle: '打磚塊・俄羅斯方塊・雷電・九局熱戰——經典懷舊(無經文)',
+    subtitle: '打磚塊・俄羅斯方塊・雷電・九局熱戰・毛毛大亂鬥——經典懷舊(無經文)',
     category: 'series',
     color: '#2c3e6b',
     emoji: '🕹️',
@@ -1940,8 +1940,9 @@ export const COLLECTIONS = {
     title: '經典街機合輯',
     emoji: '🕹️',
     desc:
-      '經典懷舊小遊戲——打磚塊、俄羅斯方塊、雷電、棒球對戰,都是完整成品(無經文)。' +
-      '課間放鬆、大孩子挑戰高分;雷電是飛行射擊(擊落敵機),老師可自行斟酌年齡。',
+      '經典懷舊小遊戲——打磚塊、俄羅斯方塊、雷電、棒球對戰、毛毛大亂鬥,都是完整成品(無經文)。' +
+      '課間放鬆、大孩子挑戰高分;雷電是飛行射擊(擊落敵機),老師可自行斟酌年齡。' +
+      '毛毛大亂鬥是同機兩人搶一個鍵盤的互推遊戲,手機/平板請橫向玩。',
     color: '#2c3e6b',
     items: [
       {
@@ -1979,6 +1980,18 @@ export const COLLECTIONS = {
         color: '#7a3a2c',
         emoji: '⚾',
         url: 'https://deyi-baseball.netlify.app/',
+      },
+      {
+        // 毛毛大亂鬥(hfpc-git/animalbrawl3d,CF Pages;2026-09-01 上線)——
+        // 艦隊第一個用真物理引擎(Rapier)的專案。純娛樂、不接經文(使用者 0828 拍板)。
+        // 同機兩人搶一個鍵盤最好玩;手機/平板要橫向(站內有轉橫提示)。
+        id: 'animalbrawl3d',
+        kind: 'brawl', // 玩法類型(#/bytype 依此分組;新 kind:互推大亂鬥)
+        name: '毛毛大亂鬥',
+        subtitle: '物理布娃娃互推・把對手推下浮空台——四種動物,同機兩人或對電腦',
+        color: '#4a8c3f',
+        emoji: '🐾',
+        url: 'https://hfpc-animalbrawl3d.pages.dev/',
       },
     ],
   },
