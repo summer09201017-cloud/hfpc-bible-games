@@ -852,6 +852,18 @@ export const COLLECTIONS = {
         url: 'https://hfpc-daniel-game.netlify.app/',
         credit: '製作:憫安',
       },
+      {
+        // 毛毛大亂鬥(hfpc-git/animalbrawl3d,CF Pages;09-01 進街機合輯、09-02 使用者拍板「是憫安的作品」再收進本合輯)。
+        // 純娛樂、不接經文;同機兩人搶一個鍵盤最好玩,手機/平板要橫向。播放清單模式:同一關兩處都有,都深連結不複製。
+        id: 'animalbrawl3d-minan',
+        kind: 'brawl', // 玩法類型(#/bytype 依此分組)
+        name: '毛毛大亂鬥',
+        subtitle: '物理布娃娃互推・把對手推下浮空台——四種動物,同機兩人或對電腦',
+        color: '#4a8c3f',
+        emoji: '🐾',
+        url: 'https://hfpc-animalbrawl3d.pages.dev/',
+        credit: '製作:憫安',
+      },
     ],
   },
   // 🐑 好牧人・尋羊合輯(2026-08-12 使用者拍板立):把散在四個地方、講**同一組經文**的羊全收在一起。
@@ -1992,6 +2004,7 @@ export const COLLECTIONS = {
         color: '#4a8c3f',
         emoji: '🐾',
         url: 'https://hfpc-animalbrawl3d.pages.dev/',
+        credit: '製作:憫安',
       },
     ],
   },
