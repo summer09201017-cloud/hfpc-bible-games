@@ -5,6 +5,17 @@ GitHub 帳號：summer09201017-cloud。GitHub 是唯一真相；桌面 zip 只�
 本檔已同步 commit 到 paul / bible-games / jonah 三個 repo 的 main。
 ============================================================
 
+★★★★★ 2026-09-02 晚(HFP 機・Fable 5.1)✨ 毛毛大亂鬥進「憫安製作闖關合輯」+ sw v115 ★★★ 先讀這段(最新)★★★
+================================================================================
+現況:50 張首頁卡、3 分類、13 合輯 128 關、sw v115(npm test 印的數字為準;CLAUDE.md 現況行已對齊)。
+【本輪一改,已 build+wrangler deploy+線上驗】
+  · 使用者拍板「毛毛大亂鬥是憫安的作品」⇒ COLLECTIONS.minan.items 加一張(id animalbrawl3d-minan,kind brawl,credit 製作:憫安),
+    經典街機合輯原本那張也掛 credit 徽章;同一關兩處都有=播放清單模式,都深連結不複製。
+  · 同步:德義作品集(hfpc-portfolio)撤掉毛毛大亂鬥那張卡(憫安作品不進德義作品集),作品集對賬腳本 IGNORE 記原因。
+  · 部署:npm run build → npx wrangler deploy --name hfpc-bible-games --compatibility-date 2026-07-01 --assets site;
+    驗:線上 sw.js=hfpc-hub-v115、線上 /src/data.js grep animalbrawl3d-minan=1。commit dd80bcd 已 push(未推 0)。
+  · ⚠ 這輪學到:src/data.js 是 CRLF,用 node 腳本插卡要先正規化換行再比對錨點(直接比 LF 字串會「anchor not found」)。
+【下一步】無新待辦;下次加卡照 /add-lobby-card(data.js→sw bump→build→wrangler→線上驗→commit)。
 ★★★★★ 本輪(2026-07-09 晚,agape250 機)★★★ 先讀這段(最新)★★★
 ================================================================================
 現況:**23 張首頁卡(含 2 route 卡)、3 分類、11 合輯 75 關、sw v38**。CLAUDE.md 與 data.js 為準。
