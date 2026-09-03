@@ -5,7 +5,23 @@ GitHub 帳號：summer09201017-cloud。GitHub 是唯一真相；桌面 zip 只�
 本檔已同步 commit 到 paul / bible-games / jonah 三個 repo 的 main。
 ============================================================
 
-★★★★★ 2026-09-02 晚(HFP 機・Fable 5.1)✨ 毛毛大亂鬥進「憫安製作闖關合輯」+ sw v115 ★★★ 先讀這段(最新)★★★
+★★★★★ 2026-09-03(agape250 機・Opus 5)✨ 大廳動態(同信友火花那套)+ sw v116 ★★★ 先讀這段(最新)★★★
+================================================================================
+現況:50 張首頁卡、3 分類、13 合輯 128 關、sw v116(npm test 印的數字為準;CLAUDE.md 現況行已對齊)。
+【本輪:使用者 0902 點名「入口站都做成信友火花那樣有動態」,大廳是其一(另一個是作品集)】
+  · 新檔 src/motion.js(進 SW CORE,排在 main.js 之後):標題逐字進場約 2 秒 / 金色餘火 / 副標 6 句輪播+螢光綠進度線(數字自 data.js 算)/
+    卡片捲動浮現 / 分類標題螢光線 / 表情微浮 / 外連卡先亮再整頁拉幕同分頁跳轉。styles.css 尾段 +~90 行;index.html head 加 1 行總開關 + 1 個 module tag。
+  · ★ 卡片是 route() 每次整個重畫 ⇒ 用 MutationObserver 接 #app,新長出的卡片自動接上,main.js 一行沒動。
+  · ★ 退路:html.js-motion 沒掛(減少動態 / 沒 IntersectionObserver)⇒ 所有 opacity:0 起始都不套,內容全可見;真瀏覽器驗過。
+  · ★ IntersectionObserver rootMargin 上緣 100000px:一口氣捲到底、回上一頁還原捲動,捲過頭的區塊也算看過(信友火花 0902 實測抓到的坑)。
+  · 驗:npm test / npm test -- --offline 全綠(site/src 含 motion.js);真瀏覽器 21 項全綠(含合輯內頁 #/xxx 重畫全亮、拉幕與返回、減少動態)。
+  · 部署:npm run build → npx wrangler versions upload --name hfpc-bible-games --compatibility-date 2026-07-01 --assets site(預覽網址給使用者看)
+    → 拍板後 npx wrangler versions deploy <版本id>@100% -y(把看過的那一版原樣上線)。驗:線上 sw.js=hfpc-hub-v116、/src/motion.js 200。
+  · ⚠ Cloudflare 帳號 0903 起 ToS 審查中(鄰場提醒):小改可部署,不可建新 Pages/Worker、不可跑批次 —— 所以預覽用 versions upload 不建 -preview Worker。
+  · 同一套核心邏輯三站各一份(sparks-hub app.js 第 6 段 / 本 repo src/motion.js / portfolio motion.js),改一處要三處同步。
+【下一步】無新待辦;下次加卡照 /add-lobby-card。動態規矩若要調(秒數、顏色 #1FE88F、句子)都在 motion.js 頂端 CFG/LINES 與 styles.css 尾段。
+
+★★★★★ 2026-09-02 晚(HFP 機・Fable 5.1)✨ 毛毛大亂鬥進「憫安製作闖關合輯」+ sw v115 ★★★(上一輪)★★★
 ================================================================================
 現況:50 張首頁卡、3 分類、13 合輯 128 關、sw v115(npm test 印的數字為準;CLAUDE.md 現況行已對齊)。
 【本輪一改,已 build+wrangler deploy+線上驗】

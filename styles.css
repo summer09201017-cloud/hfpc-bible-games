@@ -855,3 +855,78 @@ body {
 .vd__chip--no { background: #fde3e3; border-color: #e88; animation: vdshake 0.4s; }
 .vd__chip--hint { background: #fff3c4; border-color: #e2b93b; box-shadow: 0 0 0 3px rgba(243, 217, 122, 0.4); }
 @keyframes vdshake { 25% { transform: translateX(-4px); } 75% { transform: translateX(4px); } }
+
+/* ── 動態（0903，同信友火花 0902 那套）—— 有節制的活 ────────────────────────
+   規矩：只動 transform / opacity；每一條「起始看不見」都掛在 html.js-motion 底下
+   （index.html head 那一行加的：沒有 IntersectionObserver、或使用者選了「減少動態」就不加）
+   ⇒ 沒 JS、舊瀏覽器、減少動態：內容從頭到尾都看得見，不會卡在 opacity:0。
+   @keyframes 只寫 from：終點就是元素自己的樣子（hover 位移、半透明卡都不會被蓋掉）。
+   DOM（.sparks / .tagbar / .split）由 motion.js 生；這裡只管長相。 */
+:root{--glow:#1FE88F}
+@keyframes rise{from{opacity:0;transform:translateY(12px)}}
+@keyframes draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes tagfill{to{transform:scaleX(1)}}
+@keyframes floaty{to{transform:translateY(-3px)}}
+@keyframes wiggle{0%{transform:none}30%{transform:rotate(-10deg) scale(1.12)}60%{transform:rotate(7deg)}100%{transform:none}}
+@keyframes sendoff{30%{transform:scale(1.025)}}
+@keyframes ember{0%{transform:translate3d(0,0,0) scale(.5);opacity:0}8%{opacity:.9}55%{opacity:.55}100%{transform:translate3d(var(--dx,0),-480px,0) scale(1.1);opacity:0}}
+
+/* 進場：hero 裡每一段照 --e 錯開（1.05s 起、每段 +0.2s）；標題另有逐字（--k，0.35s 起每字 +0.09s） */
+.hero{position:relative}
+.hero > :not(.sparks){position:relative;z-index:1}
+.js-motion .hero > :not(.sparks){animation:rise .9s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(1.05s + var(--e,0)*.2s)}
+.js-motion .hero > .hero__title{animation-delay:.35s}          /* JS 還沒拆字時的退路：整個標題一起浮 */
+.js-motion .hero__title.split{animation:none}
+.js-motion .hero__title.split > span{display:inline-block;animation:rise .9s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(.35s + var(--k,0)*.09s)}
+/* 標題底下的螢光線（減少動態＝一開始就畫好） */
+.hero__title::after{content:"";display:block;width:min(10rem,40%);height:3px;margin:.5rem auto 0;border-radius:2px;background:var(--glow);box-shadow:0 0 8px var(--glow)}
+.js-motion .hero__title::after{animation:draw .8s cubic-bezier(.2,.7,.2,1) 1.1s both}
+
+/* 捲動浮現（motion.js 標 .rv、進視窗加 .in；--i 是同一格內的順序） */
+.js-motion .rv:not(.in){opacity:0}
+.js-motion .rv.in{animation:rise .55s cubic-bezier(.2,.7,.2,1) backwards;animation-delay:calc(var(--i,0)*.06s)}
+
+/* 一句話輪播 + 螢光綠進度線 */
+.tagbar{display:none;gap:6px;width:min(16rem,60%);margin:.55rem auto 0}
+.js-motion .tagbar{display:flex}
+.tagbar i{flex:1;height:3px;border-radius:2px;background:rgba(128,128,128,.35);overflow:hidden;position:relative}
+.tagbar i::after{content:"";position:absolute;inset:0;border-radius:2px;background:var(--glow);box-shadow:0 0 6px var(--glow);transform:scaleX(0);transform-origin:left}
+.tagbar i.done::after{transform:scaleX(1)}
+.tagbar i.on::after{animation:tagfill var(--dur,6s) linear forwards}
+.rot{transition:opacity .32s ease,transform .32s ease}
+.rot.swap{opacity:0;transform:translateY(5px)}
+
+/* 餘火：hero 底部飄升，10 顆各自的位置/大小/速度（motion.js 給 --x/--s/--t/--d/--dx） */
+.sparks{display:none;position:absolute;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.js-motion .sparks{display:block}
+.sparks i{position:absolute;bottom:-10px;left:var(--x,50%);width:var(--s,6px);height:var(--s,6px);border-radius:50%;
+  background:radial-gradient(circle,#FFF1C4 0,var(--ember,#e0a040) 40%,transparent 72%);
+  opacity:0;animation:ember var(--t,9s) linear infinite;animation-delay:var(--d,0s);will-change:transform,opacity}
+
+/* 送出：卡片亮一下 + 整頁拉幕；站內換頁走原生跨頁轉場 */
+.js-motion .go{animation:sendoff .45s ease-out}
+@view-transition{navigation:auto}
+body.leaving{opacity:0;transform:scale(.985);transition:opacity .28s ease,transform .28s ease}
+
+/* 頁面切到背景：全部暫停（省電；回來再接） */
+html.paused *,html.paused *::before,html.paused *::after{animation-play-state:paused!important}
+
+@media (prefers-reduced-motion:reduce){
+  ::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}
+}
+
+/* ── 大廳自己的 ── */
+.sparks{--ember:var(--gold)}                          /* 金色餘火，八種皮都對得上 --gold */
+.hero__subtitle.rot{min-height:1.6em}                  /* 換句時版面不跳 */
+/* 標題是漸層字：拆字後漸層搬到每個字上（h1 本身不再 clip），看起來與原本一樣 */
+.js-motion .hero__title.split{background:none;color:var(--ink)}
+.js-motion .hero__title.split > span{background:linear-gradient(180deg,var(--title-from) 0%,var(--title-to) 130%);-webkit-background-clip:text;background-clip:text;color:transparent}
+/* 每個分類標題底下的螢光線：捲到才「畫」出來（減少動態＝一開始就畫好） */
+.cat__name{position:relative;padding-bottom:.35rem}
+.cat__name::after{content:"";position:absolute;left:0;bottom:0;height:3px;width:min(9rem,60%);border-radius:2px;background:var(--glow);box-shadow:0 0 6px var(--glow);transform-origin:left}
+.js-motion .rv:not(.in) .cat__name::after{transform:scaleX(0)}
+.js-motion .rv.in .cat__name::after{animation:draw .7s cubic-bezier(.2,.7,.2,1) .25s both}
+/* 卡片的表情圖示：常態很慢的上下微浮（各自錯開）、捲到時先晃一下、滑過去時抬起 */
+.js-motion .card__emoji{animation:floaty 2.8s ease-in-out infinite alternate;animation-delay:calc(var(--i,0)*-.7s)}
+.js-motion .rv.in .card__emoji{animation:wiggle .7s cubic-bezier(.2,.7,.2,1) calc(.4s + var(--i,0)*.06s) 1,floaty 2.8s ease-in-out calc(1.2s + var(--i,0)*-.7s) infinite alternate}
+.js-motion .card:hover .card__emoji{animation:none;transform:translateY(-4px) scale(1.08);transition:transform .25s cubic-bezier(.2,.7,.2,1)}

@@ -16,6 +16,9 @@
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/icon.svg" />
     <link rel="stylesheet" href="/styles.css" />
+    <!-- 動態總開關（0903）：沒有 IntersectionObserver、或使用者選了「減少動態」，就不加這個 class；
+         styles.css 裡所有 opacity:0 的起始狀態都掛在它底下 ⇒ 沒加就是「全部直接看得見」。 -->
+    <script>try{if(window.IntersectionObserver&&!(window.matchMedia&&matchMedia('(prefers-reduced-motion:reduce)').matches))document.documentElement.classList.add('js-motion')}catch(e){}</script>
   </head>
   <body>
     <header class="hero">
@@ -39,6 +42,8 @@
     </footer>
 
     <script type="module" src="/src/main.js"></script>
+    <!-- 動態（進場/餘火/輪播/捲動浮現/拉幕）：一定排在 main.js 之後——它要等 route() 把卡片畫好 -->
+    <script type="module" src="/src/motion.js"></script>
     <script>
       // play-stats 三層匿名計數(lobby-play-rank §3/§4):開啟 10 分去重;-start/-done 不去重;-done 帶 t=秒。零個資。
       window.psPing = function (key, t) {

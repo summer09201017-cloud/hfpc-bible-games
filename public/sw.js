@@ -1,6 +1,7 @@
 // 聖經遊戲總入口 — 手寫 Service Worker(可安裝 + 大廳本身可離線)。
 // 策略與約拿一致:核心檔安裝時預快取;所有同源 GET「網路優先」,離線才退回快取。
 // 改版時把 CACHE 版本號 +1,舊快取會在啟用時自動清除。
+// v116(2026-09-03):✨ 大廳動態(同信友火花那套):標題逐字進場/餘火/一句話輪播/卡片捲動浮現/外連拉幕;新檔 src/motion.js 進 CORE。
 //
 // ⚠ 注意:卡片連到的「各遊戲」是別的網域(跨來源),SW 不會、也不該幫它們快取。
 //    本大廳離線時只保證「選單畫面」打得開;各遊戲要離線,需各自安裝/快取它自己。
@@ -28,13 +29,14 @@
 // SW 本身是網路優先且只快取 200,不會存到那個 404;bump 版本是為了讓已開著的裝置一定拿到新版。
 // ★ 教訓:site/ 是**產物**,裡面只有出貨檔,不需要也不可以放根目錄那份 .assetsignore
 //   (那份是給 `--assets .` 用的)。部署大廳只要 npm run build → wrangler deploy --assets site。
-const CACHE = 'hfpc-hub-v115'
+const CACHE = 'hfpc-hub-v116'
 const CORE = [
   '/',
   '/index.html',
   '/bingo.html',
   '/styles.css',
   '/src/main.js',
+  '/src/motion.js',
   '/src/data.js',
   '/src/scoreboard.js',
   '/src/verses.js',
