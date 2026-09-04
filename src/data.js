@@ -1991,7 +1991,12 @@ export const COLLECTIONS = {
         subtitle: '完整九局棒球對戰——與棒球打擊王並列,進階版',
         color: '#7a3a2c',
         emoji: '⚾',
-        url: 'https://deyi-baseball.summer09201017.workers.dev/',
+        // ⚠⚠ 這一款的 CF 專案名叫 `3d-5chess`,**跟棋類無關**(5chess repo 的 CF 專案,內容是棒球)。
+        //    看起來像填錯,但這是對的 —— 判準是 <title>:這個網址回「九局熱戰 Baseball Duel」,與這張卡的名字相符。
+        //    **不要「順手改成 deyi-baseball.workers.dev」** —— 那個網址是**另一款遊戲**(3D 棒球對決),
+        //    0904 真的踩過一次、還上線了二十幾分鐘才被另一場抓到。
+        //    ★ 通則:CF 上有同名專案 ≠ 那是同一個東西。改卡片網址一律用 <title> 驗,不能看網址像不像。
+        url: 'https://3d-5chess.pages.dev/',
       },
       {
         // 毛毛大亂鬥(hfpc-git/animalbrawl3d,CF Pages;2026-09-01 上線)——
