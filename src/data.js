@@ -633,7 +633,7 @@ export const JOURNEYS = [
     color: '#b8860b',
     emoji: '🏅',
     portal: true,
-    url: 'https://hfpc-olympics.netlify.app/',
+    url: 'https://hfpc-olympics.summer09201017.workers.dev/',
   },
 ]
 
@@ -645,7 +645,7 @@ export const EGG = {
   emoji: '🎁',
   subtitle: '爸爸做的 51 個網站・聖經遊戲只是其中一部分',
   credit: '被你發現了!🎉',
-  url: 'https://hfpc-portfolio.netlify.app',
+  url: 'https://hfpc-portfolio.summer09201017.workers.dev',
   color: '#b8860b',
 }
 
@@ -849,7 +849,7 @@ export const COLLECTIONS = {
         subtitle: '但 2・漆黑王宮避開獵手,趕在天亮前到王前',
         color: '#3a2c52',
         emoji: '🕯️',
-        url: 'https://hfpc-daniel-game.netlify.app/',
+        url: 'https://hfpc-daniel-game.summer09201017.workers.dev/',
         credit: '製作:憫安',
       },
       {
@@ -1991,7 +1991,7 @@ export const COLLECTIONS = {
         subtitle: '完整九局棒球對戰——與棒球打擊王並列,進階版',
         color: '#7a3a2c',
         emoji: '⚾',
-        url: 'https://deyi-baseball.netlify.app/',
+        url: 'https://deyi-baseball.summer09201017.workers.dev/',
       },
       {
         // 毛毛大亂鬥(hfpc-git/animalbrawl3d,CF Pages;2026-09-01 上線)——
