@@ -1964,7 +1964,13 @@ export const COLLECTIONS = {
         subtitle: '經典彈板敲磚・寶物雷射分裂球・每日挑戰與成就',
         color: '#c8901e',
         emoji: '🧱',
-        url: 'https://bricksbreaking.netlify.app/',
+      // 🔗 0904:三款小遊戲從 *.netlify.app 改指 CF —— 9/17 要刪 Netlify 舊站的止血。
+      //    ★ 改之前先把「Netlify 上的現行建置」重佈到**既有**的 CF Pages 專案 ——
+      //      原本 CF 那三份是 8 月中的舊版(沒吃到 0831 版號徽章批次),
+      //      直接改指過去會**供更舊的版本**,而卡片照樣能開、零紅燈。
+      //    ★ 判準:兩平台 <title> + 每個資產的 byte 數逐一比對
+      //      (文字檔的差異已確認只是 CRLF,二進位檔完全相同)。
+        url: 'https://bricksbreaking.pages.dev/',
       },
       {
         id: 'dragtetris',
@@ -1973,7 +1979,7 @@ export const COLLECTIONS = {
         subtitle: '經典 Tetris・HOLD+五顆預覽・滑鼠拖曳模式',
         color: '#2c5ac8',
         emoji: '🟦',
-        url: 'https://dragtetris.netlify.app/',
+        url: 'https://dragtetris.pages.dev/',
       },
       {
         id: 'flyshoot',
@@ -1982,7 +1988,7 @@ export const COLLECTIONS = {
         subtitle: '擊落敵機・大孩子向——Boss/僚機/商店/雙人協力',
         color: '#1e3a5c',
         emoji: '✈️',
-        url: 'https://flyshoot.netlify.app/',
+        url: 'https://flyshoot.pages.dev/',
       },
       {
         id: 'deyi-baseball',
