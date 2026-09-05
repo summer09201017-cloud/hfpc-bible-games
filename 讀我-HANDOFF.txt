@@ -1,11 +1,23 @@
 ============================================================
 讀我 — HANDOFF（給 HFPC 那台 PC 的 AI / 開發者）
-更新：2026-06-15（晚）。接手請先讀這份整段，再進各 repo 讀 CLAUDE.md / README.md。
+更新：2026-09-05（HFP 機・Fable 5.1・0904-fb）⛺ 約書亞卡 sw v120 + 📖 經文牆四處校正 sw v121 —— 先讀最上面那個 ★ 段。（原 2026-06-15 晚的總說明仍在下面）
 GitHub 帳號：summer09201017-cloud。GitHub 是唯一真相；桌面 zip 只是備援快照。
 本檔已同步 commit 到 paul / bible-games / jonah 三個 repo 的 main。
 ============================================================
 
-★★★★★ 2026-09-03(agape250 機・Opus 5)✨ 大廳動態(同信友火花那套)+ sw v116 ★★★ 先讀這段(最新)★★★
+★★★★★ 2026-09-05(HFP 機・Fable 5.1・0904-fb)⛺ 約書亞卡點亮 sw v120 + 📖 經文牆四處校正 sw v121 ★★★ 先讀這段(最新)★★★
+  【⚠ 這台機有**兩份 clone**(Desktop/hfpc-bible-games 與 Downloads/hfpc-git/hfpc-bible-games),0905 兩份都在 b14934f。在一份改、從另一份部署=部上舊版而且零紅燈。】
+  ① v120(f9104da)⛺ **約書亞・得地為業**直達卡:JOURNEYS 聖經旅程區、紅海過乾地之前;subtitle 書 1:9;url https://hfpc-joshua-land.pages.dev/。
+     bytype.js 家族「🃏 卡片・桌遊・解謎」新增 kind `board`=棋類對弈(**新 kind 不補家族表 smoke-test 會擋**)。使用者實玩後拍板點亮(照 golf3d 慣例)。
+     作品集與 play-stats NAMES 早已收錄 joshua-land,本次只點大廳一處。CLAUDE.md 現況行對齊 51 卡(原本停在 sw v116)。
+  ② v121(b14934f)📖 經文牆 src/verseData.js 四處(課前總體檢 lobby-health 抓到、牧者一句話定案):
+     賽 40:31「從新得力」→「**重新得力**」(1919 舊版作從新、新標點和合本 unv.json 作重新;照 0706 路得記「以電子版為準」裁定與 0904 兩機統一新標點本);
+     民 22:28 / 太 14:31 / 徒 12:7 補和合本原文本有的「」引號(repo 漏抄,純格式)。四條逐字對 unv.json ✓。CLAUDE.md 生態系地圖那行 netlify.app → 實際的 workers.dev。
+  部署:npm run build → `npx wrangler deploy --name hfpc-bible-games --compatibility-date 2026-07-01 --assets site`(既有 Worker,凍結允許);線上 sw v121、verseData 四處新字串在、舊字 0、.git/HEAD 404。
+  ⚠ Worker 資產部署後邊緣要 20~60 秒才換新,剛部署完 curl 到舊版不是失敗,等一下再驗(0905 兩次都這樣)。
+  驗法:npm test(51 卡・3 分類・13 合輯 128 關)全綠;/class-ready(lobby-health)0905 上午跑過:138 網址全 200、19 條經文 15 符 4 修(就是上面那四條)。
+
+★★★★★ 2026-09-03(agape250 機・Opus 5)✨ 大廳動態(同信友火花那套)+ sw v116 ★★★
 ================================================================================
 現況:50 張首頁卡、3 分類、13 合輯 128 關、sw v116(npm test 印的數字為準;CLAUDE.md 現況行已對齊)。
 【本輪:使用者 0902 點名「入口站都做成信友火花那樣有動態」,大廳是其一(另一個是作品集)】
