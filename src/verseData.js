@@ -44,7 +44,7 @@ export const VERSES = [
   {
     id: 'isa-40-31', book: '以賽亞書', ref: '以賽亞書 40:31', status: 'live',
     theme: '等候耶和華的必重新得力;灰心時神先扶持你。',
-    text: '但那等候耶和華的必從新得力。他們必如鷹展翅上騰；他們奔跑卻不困倦，行走卻不疲乏。', cuv: 'verified',
+    text: '但那等候耶和華的必重新得力。他們必如鷹展翅上騰；他們奔跑卻不困倦，行走卻不疲乏。', cuv: 'verified',   // 0905 牧者定案「重新」(新標點和合本 unv.json;1919 舊版作「從新」)
     game: '以利亞・盼望', enter: 'https://hfpc-paul-game.pages.dev/?demo=elijah-action',
   },
   {
@@ -68,7 +68,7 @@ export const VERSES = [
   {
     id: 'num-22-balaam', book: '民數記', ref: '民數記 22:28', status: 'live',
     theme: '神能藉一頭驢說話,攔阻先知的悖逆;沒有神攔不住的路。',
-    text: '耶和華叫驢開口，對巴蘭說：我向你行了甚麼，你竟打我這三次呢？', cuv: 'verified',
+    text: '耶和華叫驢開口，對巴蘭說：「我向你行了甚麼，你竟打我這三次呢？」', cuv: 'verified',
     game: '巴蘭的驢', enter: 'https://hfpc-paul-game.pages.dev/?demo=balaam',
   },
   {
@@ -92,13 +92,13 @@ export const VERSES = [
   {
     id: 'mat-14-31', book: '馬太福音', ref: '馬太福音 14:31', status: 'live',
     theme: '定睛看耶穌;疑惑下沉時,主的手仍拉住你。',
-    text: '耶穌趕緊伸手拉住他，說：你這小信的人哪，為甚麼疑惑呢？', cuv: 'verified',
+    text: '耶穌趕緊伸手拉住他，說：「你這小信的人哪，為甚麼疑惑呢？」', cuv: 'verified',
     game: '彼得走海', enter: 'https://hfpc-peter-sea-game.pages.dev/',
   },
   {
     id: 'acts-12-peter', book: '使徒行傳', ref: '使徒行傳 12:7', status: 'live',
     theme: '教會同心禱告,神差天使開了監門救彼得。',
-    text: '忽然，有主的一個使者站在旁邊，屋裡有光照耀，天使拍彼得的肋旁，拍醒了他，說：快快起來！那鐵鍊就從他手上脫落下來。', cuv: 'verified',
+    text: '忽然，有主的一個使者站在旁邊，屋裡有光照耀，天使拍彼得的肋旁，拍醒了他，說：「快快起來！」那鐵鍊就從他手上脫落下來。', cuv: 'verified',
     game: '彼得越獄', enter: 'https://hfpc-peter-prison-game.pages.dev/',
   },
   {

@@ -3,7 +3,7 @@
 本 repo 是 **`hfpc-bible-games`(總入口大廳)**,也是整個「HFPC 聖經遊戲系列」的**生態系 hub**:一面卡片牆,帶路到各個獨立部署的遊戲。本檔給整個生態系的共用慣例與當前優先序;**各遊戲自己的開發細節在各自 repo 的 CLAUDE.md**。
 
 ## 🎯 當前任務(2026-09-03 對齊)
-- **現況:51 張首頁卡、3 分類、13 個合輯(128 關)、sw v120**(0905 HFP 機:+約書亞・得地為業直達卡,新 kind `board` 棋類對弈;v117~v119 是 0904 的三款小遊戲卡改指 CF)(`npm test` 印的數字以此為準;0903 對齊)。
+- **現況:51 張首頁卡、3 分類、13 個合輯(128 關)、sw v121**(0905 HFP 機:+約書亞・得地為業直達卡,新 kind `board` 棋類對弈;v117~v119 是 0904 的三款小遊戲卡改指 CF)(`npm test` 印的數字以此為準;0903 對齊)。
   ⚠ 0901 修正:這一行原本停在 07-09 的「24 卡 / 12 合輯 / 94 關 / sw v51」——
   和 `npm test` 差了 26 張卡、33 關、63 個 sw 版號。改動大廳資料時請順手更新這一行。
 - 09-03(agape250 機・Opus 5):✨ **大廳動態**(sw v115→v116;同信友火花 0902 那套「有節制的活」,使用者點名套到大廳):
@@ -63,7 +63,7 @@
 ## 🗺️ 生態系地圖(哪個遊戲住哪)
 | Repo | 是什麼 | 線上 |
 | --- | --- | --- |
-| **hfpc-bible-games**(本 repo) | 總入口大廳,只帶路、不放遊戲 | hfpc-bible-games.netlify.app |
+| **hfpc-bible-games**(本 repo) | 總入口大廳,只帶路、不放遊戲 | hfpc-bible-games.summer09201017.workers.dev(CF Worker,0905 對齊;netlify.app 舊址已停) |
 | **hfpc-paul-game**(`paul-journey-game`) | 保羅大富翁 + **多數動作/卡片關**住這(`?journey=`、`?demo=`);React+Vite | hfpc-paul-game.netlify.app |
 | **hfpc-jonah-game**(`jonah-game`) | 約拿闖關;**vanilla 引擎範本** | hfpc-jonah-game.netlify.app |
 | **hfpc-samson-game** | 參孫打獅子(獨立 vanilla 動作關,戰爭合輯第 6 關) | hfpc-samson-game.netlify.app |
