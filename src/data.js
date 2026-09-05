@@ -210,6 +210,19 @@ export const JOURNEYS = [
     url: 'https://hfpc-jonah-water3d.summer09201017.workers.dev/',
   },
   {
+    // 約書亞・得地為業(直達卡):獨立 repo hfpc-joshua-land(圍棋入門・吃子棋;大表 C14,v0.3.0 0901 上線)。
+    // ✅ 2026-09-05 使用者實玩後拍板點亮(照 golf3d 慣例:等實玩再上卡)。書 1:9 / 書 21:45 已 cuv 驗、mp3 已烤。
+    //    v2 完整圍棋(數地/全同型禁着/13 路/讓子/棋譜)仍待做,見該 repo README。統計 id=joshua-land(NAMES 已有)。
+    id: 'joshua-land',
+    kind: 'board', // 玩法類型(#/bytype 依此分組):棋類對弈——圍住對方的「氣」,把地奪為己業
+    name: '約書亞・得地為業',
+    subtitle: '書 1:9・圍棋入門——圍住對方的氣,把地奪為己業',
+    category: 'bible',
+    color: '#5b4a2f',
+    emoji: '⛺',
+    url: 'https://hfpc-joshua-land.pages.dev/',
+  },
+  {
     // 紅海過乾地(3D)(直達卡):獨立 repo redsea3d(C1 formation-kit 首跑,出14)。
     // ✅ 2026-07-18:摩西舉杖(敘事鈕)→活水牆分開→帶百姓走乾地(A/D 導引+礁石;
     //    落後者自動歸隊=一個也不失落)→全隊過完水牆才合攏;出14:21/22/31 已 cuv 驗,曉臻朗讀。
