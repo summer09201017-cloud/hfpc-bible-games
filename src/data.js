@@ -797,7 +797,8 @@ export const COLLECTIONS = {
     title: '憫安製作闖關合輯',
     desc:
       '這些關卡都是憫安一手打造的——每關都能單獨玩。' +
-      '(同一關在大廳別處也找得到;這裡按「作者」聚成一面作品牆,給憫安記上一筆。)',
+      '(同一關在大廳別處也找得到;這裡按「作者」聚成一面作品牆,給憫安記上一筆。)' +
+      ' <a href="https://minan-portfolio.pages.dev/" target="_blank" rel="noopener">✨ 憫安作品集完整版(含成長時間線)→</a>',
     color: '#f0b840',
     emoji: '✨',
     items: [
