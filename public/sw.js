@@ -42,11 +42,14 @@
 // SW 本身是網路優先且只快取 200,不會存到那個 404;bump 版本是為了讓已開著的裝置一定拿到新版。
 // ★ 教訓:site/ 是**產物**,裡面只有出貨檔,不需要也不可以放根目錄那份 .assetsignore
 //   (那份是給 `--assets .` 用的)。部署大廳只要 npm run build → wrangler deploy --assets site。
-const CACHE = 'hfpc-hub-v124'
+// v125(2026-09-14):🩹 全艦隊修「裝成 App 打開就 ERR_FAILED」(3D-Chess 幻影版實錘):Workers 靜態資產把 /index.html、/bingo.html
+//   307 轉到 / 與 /bingo;CORE 名單裡有 .html 項目 ⇒ install 存進去的是 redirected:true 的回應 ⇒ 導覽拿到它就被瀏覽器拒絕。
+//   改:CORE 拔 /index.html、/bingo.html→/bingo;導覽回應只在 ok 且 !redirected 時以 '/' 為鍵存;退路 caches.match('/');
+//   addAll 全有全無 → 逐一 add+catch(一個抖掉不整批沒快取)。補丁:skills repo static-pwa-ship/patches/patch-sw-index.mjs --cf。
+const CACHE = 'hfpc-hub-v125'
 const CORE = [
   '/',
-  '/index.html',
-  '/bingo.html',
+  '/bingo',
   '/styles.css',
   '/src/main.js',
   '/src/motion.js',
@@ -66,7 +69,7 @@ const CORE = [
 self.addEventListener('install', (event) => {
   self.skipWaiting()
   event.waitUntil(
-    caches.open(CACHE).then((c) => c.addAll(CORE).catch(() => {}))
+    caches.open(CACHE).then((c) => Promise.all(CORE.map((u) => c.add(u).catch(() => null))).catch(() => {}))
   )
 })
 
@@ -92,13 +95,14 @@ self.addEventListener('fetch', (event) => {
     event.respondWith(
       fetch(req)
         .then((res) => {
-          const copy = res.clone()
-          caches.open(CACHE).then((c) => c.put('/index.html', copy))
+          // 只存 200 且沒被轉址的殼層(/index.html → / 是 307/308,redirected:true 的回應進快取=裝成 App 打開 ERR_FAILED)
+          if (res && res.ok && !res.redirected) {
+            const copy = res.clone()
+            caches.open(CACHE).then((c) => c.put('/', copy))
+          }
           return res
         })
-        .catch(() =>
-          caches.match('/index.html').then((r) => r || caches.match('/'))
-        )
+        .catch(() => caches.match('/'))
     )
     return
   }

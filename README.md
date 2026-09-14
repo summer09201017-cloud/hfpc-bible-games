@@ -76,6 +76,8 @@ npm run test:offline   # 再加:build → site/ app shell 齊備(可離線)
 2. **`.bat` 一律純英文 + CRLF**(`.gitattributes` 已鎖 `*.bat eol=crlf`)。
 3. **Service Worker 在 localhost 會自動解除**(見 `src/main.js`),改了碼馬上看得到;改 `public/sw.js` 後把 `CACHE` 版本號 +1。
 4. **離線範圍**:大廳的 SW 只快取「選單畫面」(同網域)。各遊戲是別的網域,要離線需各自安裝。
+5. **SW 名單不可以放 `.html` 項目**(0914,sw v125):Workers/Pages 靜態資產把 `/index.html` 307 到 `/`,快取存到 redirected 回應 ⇒ 裝成 App 打開就 ERR_FAILED。
+   名單只放 `/`、`/bingo` 這種無副檔名路徑;導覽回應只在 ok 且 !redirected 時存。補丁:skills repo `static-pwa-ship/patches/patch-sw-index.mjs --cf`。
 
 ## 檔案結構
 

@@ -3,9 +3,14 @@
 本 repo 是 **`hfpc-bible-games`(總入口大廳)**,也是整個「HFPC 聖經遊戲系列」的**生態系 hub**:一面卡片牆,帶路到各個獨立部署的遊戲。本檔給整個生態系的共用慣例與當前優先序;**各遊戲自己的開發細節在各自 repo 的 CLAUDE.md**。
 
 ## 🎯 當前任務(2026-09-03 對齊)
-- **現況:51 張首頁卡、3 分類、13 個合輯(128 關)、sw v121**(0905 HFP 機:+約書亞・得地為業直達卡,新 kind `board` 棋類對弈;v117~v119 是 0904 的三款小遊戲卡改指 CF)(`npm test` 印的數字以此為準;0903 對齊)。
+- **現況:51 張首頁卡、3 分類、13 個合輯(128 關)、sw v125**(0914 拔 SW 名單裡的 index.html;0905 HFP 機:+約書亞・得地為業直達卡,新 kind `board` 棋類對弈;v117~v119 是 0904 的三款小遊戲卡改指 CF)(`npm test` 印的數字以此為準;0903 對齊)。
   ⚠ 0901 修正:這一行原本停在 07-09 的「24 卡 / 12 合輯 / 94 關 / sw v51」——
   和 `npm test` 差了 26 張卡、33 關、63 個 sw 版號。改動大廳資料時請順手更新這一行。
+- 09-14(HFP 機・Fable 5.1):🩹 **全艦隊修「裝成 App 打開就 ERR_FAILED」**(sw v124→v125):Workers 靜態資產把 `/index.html`、`/bingo.html` 307 轉到 `/`、`/bingo`,
+  SW CORE 名單裡有 .html 項目 ⇒ install 存的是 redirected:true 的回應 ⇒ 導覽拿到它就被瀏覽器拒絕(3D-Chess 幻影版實錘;每次 bump SW 重踩)。
+  改:CORE 拔 `/index.html`、`/bingo.html`→`/bingo`;導覽回應只在 ok 且 !redirected 時以 `/` 為鍵存、退路 `caches.match('/')`;addAll→逐一 add+catch;
+  main.js localhost 分支不再 `caches.keys→delete`(舊快取清理是 SW activate 的事);smoke-test 必備項 `/index.html`→`/`;賓果卡 url 改 `/bingo`。
+  補丁來源:skills repo `static-pwa-ship/patches/patch-sw-index.mjs --cf`(⚠ 它會把 `c.put('/index.html', copy)` 削成 `c.put(copy)`,要人工補);線上重演 `scripts/check-sw-nav-fleet.mjs`。
 - 09-03(agape250 機・Opus 5):✨ **大廳動態**(sw v115→v116;同信友火花 0902 那套「有節制的活」,使用者點名套到大廳):
   標題「聖經闖關大富翁遊戲」逐字進場約 2 秒 / 金色餘火 10 顆 / 副標 6 句輪播+螢光綠進度線(數字從 data.js、bytype.js 算:50 張卡・13 合輯・128 關・42 種玩法)/
   卡片捲動浮現(**MutationObserver 接住 route() 每次重畫,main.js 零改動**)/ 分類標題螢光線畫出 / 卡片表情微浮・捲到晃一下 / 外連卡先亮再整頁拉幕同分頁跳轉。
