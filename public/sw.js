@@ -42,11 +42,14 @@
 // SW 本身是網路優先且只快取 200,不會存到那個 404;bump 版本是為了讓已開著的裝置一定拿到新版。
 // ★ 教訓:site/ 是**產物**,裡面只有出貨檔,不需要也不可以放根目錄那份 .assetsignore
 //   (那份是給 `--assets .` 用的)。部署大廳只要 npm run build → wrangler deploy --assets site。
+// v126(2026-09-15):🟦 俄羅斯方塊 dragtetris 卡片副標更新 —— 該站 v3 上線(三種拖曳規則
+//   gravity/support/creative、托盤拖曳可轉向、?daily 每日挑戰與 ?seed= 題號、個人紀錄),
+//   舊副標「經典 Tetris・HOLD+五顆預覽・滑鼠拖曳模式」已經描述不到現在的樣子。
 // v125(2026-09-14):🩹 全艦隊修「裝成 App 打開就 ERR_FAILED」(3D-Chess 幻影版實錘):Workers 靜態資產把 /index.html、/bingo.html
 //   307 轉到 / 與 /bingo;CORE 名單裡有 .html 項目 ⇒ install 存進去的是 redirected:true 的回應 ⇒ 導覽拿到它就被瀏覽器拒絕。
 //   改:CORE 拔 /index.html、/bingo.html→/bingo;導覽回應只在 ok 且 !redirected 時以 '/' 為鍵存;退路 caches.match('/');
 //   addAll 全有全無 → 逐一 add+catch(一個抖掉不整批沒快取)。補丁:skills repo static-pwa-ship/patches/patch-sw-index.mjs --cf。
-const CACHE = 'hfpc-hub-v125'
+const CACHE = 'hfpc-hub-v126'
 const CORE = [
   '/',
   '/bingo',

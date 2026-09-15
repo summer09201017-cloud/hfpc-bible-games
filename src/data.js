@@ -1990,7 +1990,7 @@ export const COLLECTIONS = {
         id: 'dragtetris',
         kind: 'stack', // 玩法類型(#/bytype 依此分組)
         name: '俄羅斯方塊',
-        subtitle: '經典 Tetris・HOLD+五顆預覽・滑鼠拖曳模式',
+        subtitle: '三種拖曳規則・每日挑戰・個人紀錄',
         color: '#2c5ac8',
         emoji: '🟦',
         url: 'https://dragtetris.pages.dev/',
