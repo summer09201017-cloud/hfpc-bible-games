@@ -42,6 +42,11 @@
 // SW 本身是網路優先且只快取 200,不會存到那個 404;bump 版本是為了讓已開著的裝置一定拿到新版。
 // ★ 教訓:site/ 是**產物**,裡面只有出貨檔,不需要也不可以放根目錄那份 .assetsignore
 //   (那份是給 `--assets .` 用的)。部署大廳只要 npm run build → wrangler deploy --assets site。
+// v128(2026-09-16):🟦 俄羅斯方塊 dragtetris 卡片副標再更新 —— 該站 v4 上線
+//   (🧩 每日殘局:每天三題、出題時就用遊戲本身的規則證明過解得開;↩ 悔一步:一局 3 次,
+//   用過的那局不進紀錄;🎨 聖經主題皮膚:石頭與泥磚 + 和合本經文,經文全部用 cuv 查過)。
+//   ⚠ 副標只有一行、放得下三件事 ⇒ 挑「這一版新增、而且別的站沒有」的三件講;
+//     上一版的「三種拖曳規則・每日挑戰・個人紀錄」不是不重要,是已經不是新聞了。
 // v127(2026-09-16):💣 踩地雷 minesweeper 新卡片進「經典街機合輯」(WinXP 原味復刻 +
 //   無猜盤面生成器;bytype 新 kind `deduce` 看數字推理)。
 // v126(2026-09-15):🟦 俄羅斯方塊 dragtetris 卡片副標更新 —— 該站 v3 上線(三種拖曳規則
@@ -51,7 +56,7 @@
 //   307 轉到 / 與 /bingo;CORE 名單裡有 .html 項目 ⇒ install 存進去的是 redirected:true 的回應 ⇒ 導覽拿到它就被瀏覽器拒絕。
 //   改:CORE 拔 /index.html、/bingo.html→/bingo;導覽回應只在 ok 且 !redirected 時以 '/' 為鍵存;退路 caches.match('/');
 //   addAll 全有全無 → 逐一 add+catch(一個抖掉不整批沒快取)。補丁:skills repo static-pwa-ship/patches/patch-sw-index.mjs --cf。
-const CACHE = 'hfpc-hub-v127'
+const CACHE = 'hfpc-hub-v128'
 const CORE = [
   '/',
   '/bingo',
