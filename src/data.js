@@ -1996,6 +1996,15 @@ export const COLLECTIONS = {
         url: 'https://dragtetris.pages.dev/',
       },
       {
+        id: 'minesweeper',
+        kind: 'deduce', // 玩法類型(#/bytype 依此分組;新 kind:看數字推理)
+        name: '踩地雷',
+        subtitle: 'WinXP 原味・和弦展開・可開「無猜盤面」保證不用賭運氣',
+        color: '#4a8ad4',
+        emoji: '💣',
+        url: 'https://hfpc-minesweeper.summer09201017.workers.dev/',
+      },
+      {
         id: 'flyshoot',
         kind: 'shmup', // 玩法類型(#/bytype 依此分組;新 kind:飛行射擊)
         name: '雷電・蒼穹突擊',
