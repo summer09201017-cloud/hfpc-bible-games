@@ -1,9 +1,40 @@
 ============================================================
 讀我 — HANDOFF（給 HFPC 那台 PC 的 AI / 開發者）
-更新：2026-09-05（HFP 機・Fable 5.1・0904-fb）⛺ 約書亞卡 sw v120 + 📖 經文牆四處校正 sw v121 —— 先讀最上面那個 ★ 段。（原 2026-06-15 晚的總說明仍在下面）
+更新：2026-09-16（agape250 機）🟦 俄羅斯方塊卡片副標更新 sw v128（同日 v127 踩地雷新卡由 0916-minesweeper 場加）—— 先讀最上面那個 ★ 段。（原 2026-06-15 晚的總說明仍在下面）
 GitHub 帳號：summer09201017-cloud。GitHub 是唯一真相；桌面 zip 只是備援快照。
 本檔已同步 commit 到 paul / bible-games / jonah 三個 repo 的 main。
 ============================================================
+
+★★★★★ 2026-09-16(agape250 機)🟦 俄羅斯方塊卡片副標更新 sw v128 ★★★ 先讀這段(最新)★★★
+  【⚠ 這台機有**兩份 clone**(Desktop/hfpc-bible-games 與 Downloads/hfpc-git/hfpc-bible-games)。
+    0916 收工時兩份都在 5a5cbc7。在一份改、從另一份部署 = 部上舊版而且零紅燈。】
+
+  ① v128(5a5cbc7・0916-打磚與俄羅斯 場)🟦 **dragtetris 卡片副標**
+     「三種拖曳規則・每日挑戰・個人紀錄」→「**每日殘局・悔一步・聖經皮膚**」。
+     該站當天 v4 上線(🧩 每日殘局:每天三題,出題時就用遊戲本身的 reduce 實跑證明解得開;
+     ↩ 悔一步:一局 3 次,用過的那局不進紀錄;🎨 聖經主題皮膚:石頭泥磚 + 和合本經文,
+     八句全部用 cuv MCP 逐句查過)。
+     ⚠ 副標只有一行、放得下三件事 ⇒ 挑「這一版新增、而且別的站沒有」的三件講;
+       舊的那三件不是不重要,是已經不是新聞了。
+     大廳鐵則不變:**只帶路、不複製關卡** —— 卡片仍然深連結到 dragtetris.pages.dev。
+
+  ② v127(75a2451・0916-minesweeper 場)💣 **踩地雷 minesweeper** 新卡片進「經典街機合輯」,
+     bytype 新 kind `deduce`(看數字推理)。詳情看 skills repo 讀我-HANDOFF.txt 的
+     0916-minesweeper ★段(該場自己寫的),這裡只記大廳這一側。
+
+  ③ v126(3e342ce・0915)🟦 dragtetris 卡片副標第一次更新(該站 v3 上線)。
+
+  部署(不變):npm run build →
+    `npx wrangler deploy --name hfpc-bible-games --compatibility-date 2026-07-01 --assets <site 的絕對路徑>`
+  ⚠ 0916 新踩到:部署前的 zero-pii-guard 會擋「目錄用 shell 變數傳」——
+    `--assets $dist` 會被拒絕(守門讀的是原始指令字串,shell 還沒展開),要寫**展開後的絕對路徑**。
+  ⚠ Worker 資產部署後邊緣要 20~60 秒才換新,剛部署完 curl 到舊版不是失敗,等一下再驗。
+    0916 是用 `until curl … | grep -q hfpc-hub-v128; do sleep 5; done` 等到才驗,不靠猜。
+
+  驗(0916 實跑):npm test **51 張首頁卡 / 3 分類 / 13 合輯(129 關)** 全綠;
+    線上 sw.js = `hfpc-hub-v128`、/src/data.js 新副標在、**舊副標殘留 0**。
+    兩份 clone 都 pull 到 5a5cbc7,零未推送。
+
 
 ★★★★★ 2026-09-05(HFP 機・Fable 5.1・0904-fb)⛺ 約書亞卡點亮 sw v120 + 📖 經文牆四處校正 sw v121 ★★★ 先讀這段(最新)★★★
   【⚠ 這台機有**兩份 clone**(Desktop/hfpc-bible-games 與 Downloads/hfpc-git/hfpc-bible-games),0905 兩份都在 b14934f。在一份改、從另一份部署=部上舊版而且零紅燈。】
