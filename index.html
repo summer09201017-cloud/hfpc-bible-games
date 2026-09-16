@@ -36,7 +36,10 @@
 
     <main id="app" class="app"><!-- 卡片由 src/main.js 依 data.js 產生 --></main>
 
-    <footer class="foot">
+    <p class="ver-note-row" style="margin:.7rem 0 0;text-align:center">
+            <button type="button" id="appVerOpen" style="font:inherit;font-size:.82rem;line-height:1.2;padding:.5rem 1rem;min-height:40px;color:inherit;background:transparent;border:1px solid currentColor;border-radius:999px;opacity:.65;cursor:pointer">🏷️ 改版簡歷・看看前幾版做了什麼</button>
+          </p>
+          <footer class="foot">
       <p id="footCount">HFPC 聖經遊戲 ・ 點任一張卡片進入該旅程</p>
       <p><a href="https://hfpc-play-stats.summer09201017.workers.dev/stats" target="_blank" style="color:inherit;text-decoration:underline">📊 使用統計(同工用)</a></p>
     </footer>
@@ -99,6 +102,102 @@
   </div>
 </section>
 <div id="appVerBadge" style="position:fixed;right:6px;bottom:4px;font-size:11px;line-height:1;opacity:.55;z-index:2147483000;pointer-events:none;color:#fff;text-shadow:0 1px 3px rgba(0,0,0,.9);font-family:system-ui,sans-serif"></div>
+<!-- 🏷 改版簡歷(VT2 2026-09-16 補齊 game-must-haves ⑦ 的下半件)。
+     徽章只回答「我開到哪一版」,這一份回答「每一版做了什麼」——寫給家長與老師看。
+     ★ 徽章維持 pointer-events:none(標籤不是按鈕);簡歷從選單那顆鈕開。
+     ★ 改版時在 APP_VERSIONS 最前面插一筆就好。 -->
+<style>#appVerSheet[hidden]{display:none!important}</style>
+<div id="appVerSheet" hidden style="position:fixed;inset:0;z-index:2147483001;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;padding:16px;font-family:system-ui,'Noto Sans TC',sans-serif">
+  <div style="max-width:460px;width:100%;max-height:72vh;overflow-y:auto;background:#101a33;border:1px solid #33407a;border-radius:12px;padding:16px 18px;color:#e8ecff;box-shadow:0 18px 50px rgba(0,0,0,.45)">
+    <h3 style="margin:0 0 4px;font-size:16px">🏷️ 改版簡歷</h3>
+    <p style="margin:0 0 10px;font-size:12px;line-height:1.6;color:#a9b4e0">每一版新增了什麼,白話寫給家長與老師看。前幾版都列在下面,最新的在最上面。</p>
+    <ol id="appVerList" style="margin:0;padding-left:18px;font-size:13px;line-height:1.85"></ol>
+    <button type="button" id="appVerClose" style="margin-top:14px;width:100%;min-height:44px;font:inherit;color:#e8ecff;background:#2a356b;border:1px solid #3a4a8b;border-radius:8px;cursor:pointer">關閉</button>
+  </div>
+</div>
+<script>
+(function () {
+  // 最新的放最前面。改版只要在這裡插一筆。
+  var APP_VERSIONS = [
+    {
+      "v": "v130",
+      "d": "2026-09-16",
+      "t": "頁尾多一顆「🏷️ 改版簡歷」鈕,點開就看得到大廳每一版做了什麼。以前右下角只看得到版本號,卻看不到那一版新增了哪些關。"
+    },
+    {
+      "v": "v126 到 v129",
+      "d": "2026-09-16",
+      "t": "「踩地雷」收進經典街機合輯,俄羅斯方塊與踩地雷兩張卡的副標也跟著更新成最新的玩法說明。"
+    },
+    {
+      "v": "v125",
+      "d": "2026-09-14",
+      "t": "修好一個「把大廳裝成 App 之後打開是錯誤畫面」的毛病(離線快取名單裡不該放首頁檔名)。"
+    },
+    {
+      "v": "v120 到 v124",
+      "d": "2026-09-05",
+      "t": "新增「約書亞・得地為業(圍棋入門)」直達卡;經文牆四處照牧者定案校正(賽 40:31 的「從新」改「重新」,以及民 22:28、太 14:31、徒 12:7 三處)。"
+    },
+    {
+      "v": "v117 到 v119",
+      "d": "2026-09-04",
+      "t": "七張卡片從舊網址改成正式網址(舊站 9 月 17 日要關掉,先改指新家免得孩子點到空頁);順手修好其中一張被指錯遊戲的卡。"
+    },
+    {
+      "v": "v116",
+      "d": "2026-09-03",
+      "t": "大廳首頁動起來了:標題一個字一個字進場、金色餘火粒子、副標六句輪播,跟信友火花同一套。"
+    },
+    {
+      "v": "v114 到 v115",
+      "d": "2026-09-01",
+      "t": "街機合輯新增「毛毛大亂鬥」(物理布娃娃互推);後來依使用者拍板,把它歸進「憫安製作闖關合輯」——那是孩子自己做的作品。"
+    },
+    {
+      "v": "v113",
+      "d": "2026-08-20",
+      "t": "畫面右下角開始顯示版本號,而且十秒後會自動淡掉,不擋卡片。"
+    },
+    {
+      "v": "v107 到 v112",
+      "d": "2026-08-17",
+      "t": "新增「好牧人・尋羊」合輯(收五款,點過去不複製關卡)與「牧羊人與羊群(3D 尋羊)」;九個遊戲站搬新家,大廳的卡片網址一起更新。另外修好統計打點從 7 月 22 日搬家起就悄悄斷流的問題——看起來正常,數字卻永遠是零。"
+    },
+    {
+      "v": "v101 到 v106",
+      "d": "2026-07-29",
+      "t": "一個月內點亮一批新關:會幕拆卸(民數記 4 章的螺絲解謎)、以斯拉點交聖殿器皿、尋羊記(全系列第一款戶外定位收集)、挪亞方舟三消、約瑟存糧、十童女預備油、網滿大魚 153、雅各斑點羊、好撒瑪利亞人備品、會幕甘心奉獻。每一關都是牧者審過文案與神學語氣才點亮的。"
+    }
+  ];
+  var sheet = document.getElementById('appVerSheet');
+  var list = document.getElementById('appVerList');
+  var closeBtn = document.getElementById('appVerClose');
+  if (!sheet || !list || !closeBtn) return;
+  var esc = function (x) {
+    return String(x).replace(/[&<>]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;' }[c]; });
+  };
+  list.innerHTML = APP_VERSIONS.map(function (r) {
+    return '<li style="margin-bottom:.5em"><b>' + esc(r.v) + '</b>(' + esc(r.d) + '):' + esc(r.t) + '</li>';
+  }).join('');
+  function openSheet() { sheet.hidden = false; }
+  function shutSheet() { sheet.hidden = true; }
+  window.__openVersionSheet = openSheet;
+  window.__appVersion = APP_VERSIONS[0].v + '(' + APP_VERSIONS[0].d + ')';
+  // ★ 開簡歷那顆鈕**不一定在本段程式之前**就被解析完(--trigger=fixed 的 anchor 常在徽章後面)。
+  //   直接 getElementById 會拿到 null,鈕就變成按了沒反應——而且靜態檢查全綠、截圖也看不出來。
+  //   ⇒ 還在解析中就等 DOMContentLoaded 再綁。
+  function bindOpener() {
+    var b = document.getElementById('appVerOpen');
+    if (b) b.addEventListener('click', openSheet);
+  }
+  if (document.readyState === 'loading') addEventListener('DOMContentLoaded', bindOpener);
+  else bindOpener();
+  closeBtn.addEventListener('click', shutSheet);
+  sheet.addEventListener('click', function (e) { if (e.target === sheet) shutSheet(); });
+  addEventListener('keydown', function (e) { if (e.key === 'Escape' && !sheet.hidden) shutSheet(); });
+})();
+</script>
     <script>
       /* 🏷️ appVerBadgeFade（0828）：版號徽章是 position:fixed 在右下角，實測會蓋住大廳卡片、
          遊戲的「難度 / 開始比賽」按鈕——pointer-events:none 只讓「點擊」穿過去，字還是被蓋著。

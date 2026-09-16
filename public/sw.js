@@ -42,6 +42,8 @@
 // SW 本身是網路優先且只快取 200,不會存到那個 404;bump 版本是為了讓已開著的裝置一定拿到新版。
 // ★ 教訓:site/ 是**產物**,裡面只有出貨檔,不需要也不可以放根目錄那份 .assetsignore
 //   (那份是給 `--assets .` 用的)。部署大廳只要 npm run build → wrangler deploy --assets site。
+// v130(2026-09-16):🏷 頁尾加「改版簡歷」鈕(VT2 補齊 game-must-haves ⑦ 的下半件)——
+//   徽章只回答「我開到哪一版」,簡歷回答「每一版做了什麼」,寫給家長與老師看。
 // v129(2026-09-16):💣 踩地雷卡片副標更新 —— 該站 v2 上線(換皮 7 種 + 換背景 7 種
 //   + 三首原創零音檔背景音樂;含「高對比(投影用)」主題給教室投影)。
 // v128(2026-09-16):🟦 俄羅斯方塊 dragtetris 卡片副標再更新 —— 該站 v4 上線
@@ -58,7 +60,7 @@
 //   307 轉到 / 與 /bingo;CORE 名單裡有 .html 項目 ⇒ install 存進去的是 redirected:true 的回應 ⇒ 導覽拿到它就被瀏覽器拒絕。
 //   改:CORE 拔 /index.html、/bingo.html→/bingo;導覽回應只在 ok 且 !redirected 時以 '/' 為鍵存;退路 caches.match('/');
 //   addAll 全有全無 → 逐一 add+catch(一個抖掉不整批沒快取)。補丁:skills repo static-pwa-ship/patches/patch-sw-index.mjs --cf。
-const CACHE = 'hfpc-hub-v129'
+const CACHE = 'hfpc-hub-v130'
 const CORE = [
   '/',
   '/bingo',
