@@ -28,6 +28,11 @@
         <a class="topbtn" href="#/verses">📖 金句複習・朗讀</a>
         <a class="topbtn" href="#/scoreboard">🏆 分組計分板</a>
       </nav>
+      <!-- 🏷 改版簡歷入口(0916 二修):原本放在卡片牆最底下,實測手機要往下捲一萬多像素才看得到
+           ⇒ 等於沒有。搬進 header,一進站就在。徽章仍維持 pointer-events:none,不拿它當按鈕。 -->
+      <p class="ver-note-row" style="margin:.5rem 0 0;text-align:center">
+        <button type="button" id="appVerOpen" style="font:inherit;font-size:.75rem;line-height:1.2;padding:.35rem .8rem;min-height:36px;color:inherit;background:transparent;border:1px solid currentColor;border-radius:999px;opacity:.55;cursor:pointer">🏷️ 改版簡歷</button>
+      </p>
       <!-- 安裝按鈕由 src/main.js 視平台動態塞入(不能裝就不顯示) -->
       <div id="install-slot" class="install-slot"></div>
       <!-- 換色外皮:色點由 src/main.js 注入(localStorage 記住選擇) -->
@@ -36,9 +41,7 @@
 
     <main id="app" class="app"><!-- 卡片由 src/main.js 依 data.js 產生 --></main>
 
-    <p class="ver-note-row" style="margin:.7rem 0 0;text-align:center">
-            <button type="button" id="appVerOpen" style="font:inherit;font-size:.82rem;line-height:1.2;padding:.5rem 1rem;min-height:40px;color:inherit;background:transparent;border:1px solid currentColor;border-radius:999px;opacity:.65;cursor:pointer">🏷️ 改版簡歷・看看前幾版做了什麼</button>
-          </p>
+    
           <footer class="foot">
       <p id="footCount">HFPC 聖經遊戲 ・ 點任一張卡片進入該旅程</p>
       <p><a href="https://hfpc-play-stats.summer09201017.workers.dev/stats" target="_blank" style="color:inherit;text-decoration:underline">📊 使用統計(同工用)</a></p>
@@ -119,6 +122,11 @@
 (function () {
   // 最新的放最前面。改版只要在這裡插一筆。
   var APP_VERSIONS = [
+    {
+      "v": "v131",
+      "d": "2026-09-16",
+      "t": "「🏷️ 改版簡歷」鈕從頁尾搬到最上面的標題區。原本它排在所有卡片的後面,手機上要往下捲約 5,800 像素才看得到——等於沒有。"
+    },
     {
       "v": "v130",
       "d": "2026-09-16",
