@@ -60,7 +60,7 @@
 //   307 轉到 / 與 /bingo;CORE 名單裡有 .html 項目 ⇒ install 存進去的是 redirected:true 的回應 ⇒ 導覽拿到它就被瀏覽器拒絕。
 //   改:CORE 拔 /index.html、/bingo.html→/bingo;導覽回應只在 ok 且 !redirected 時以 '/' 為鍵存;退路 caches.match('/');
 //   addAll 全有全無 → 逐一 add+catch(一個抖掉不整批沒快取)。補丁:skills repo static-pwa-ship/patches/patch-sw-index.mjs --cf。
-const CACHE = 'hfpc-hub-v131'
+const CACHE = 'hfpc-hub-v132'
 const CORE = [
   '/',
   '/bingo',

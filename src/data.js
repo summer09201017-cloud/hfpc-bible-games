@@ -223,6 +223,21 @@ export const JOURNEYS = [
     url: 'https://hfpc-joshua-land.pages.dev/',
   },
   {
+    // 約書亞・得地為業 3D(直達卡):獨立 repo hfpc-joshua-go3d(2026-09-17 上線)。
+    //    2D 那張(joshua-land)留著不動——同一套規則的兩種呈現,孩子各挑各的。
+    //    規則引擎是從 2D 版**逐字複製**的(engine-sync 逐檔比雜湊,漂移就紅)⇒ 兩邊規則永遠一樣。
+    //    3D 多的是:立體盤、會落下的棋子、分地為業算完地「圍到的地會一塊塊升起來發光」。
+    //    統計 id=joshua-go3d(NAMES 已加)。
+    id: 'joshua-go3d',
+    kind: 'board', // 玩法類型:棋類對弈
+    name: '約書亞・得地為業 3D',
+    subtitle: '書 1:3・立體圍棋——圍住對方的氣,得地為業',
+    category: 'bible',
+    color: '#3b5f8a',
+    emoji: '⛺',
+    url: 'https://hfpc-joshua-go3d.summer09201017.workers.dev/',
+  },
+  {
     // 紅海過乾地(3D)(直達卡):獨立 repo redsea3d(C1 formation-kit 首跑,出14)。
     // ✅ 2026-07-18:摩西舉杖(敘事鈕)→活水牆分開→帶百姓走乾地(A/D 導引+礁石;
     //    落後者自動歸隊=一個也不失落)→全隊過完水牆才合攏;出14:21/22/31 已 cuv 驗,曉臻朗讀。
