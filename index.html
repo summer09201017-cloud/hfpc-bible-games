@@ -11,10 +11,14 @@
       name="description"
       content="HFPC 聖經遊戲總入口 — 選一段旅程開始(約拿、保羅…)"
     />
-    <meta name="theme-color" content="#f4ead6" />
+    <meta name="theme-color" content="#f6efe1" />
     <link rel="manifest" href="/manifest.webmanifest" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/icon.svg" />
+    <!-- 視覺語言 A(1007,同德義作品集 v8):標題明體、內文黑體;連不上 Google Fonts 時退回系統字,版面不壞 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@700;900&family=Noto+Sans+TC:wght@400;700&display=swap" />
     <link rel="stylesheet" href="/styles.css" />
     <!-- 動態總開關（0903）：沒有 IntersectionObserver、或使用者選了「減少動態」，就不加這個 class；
          styles.css 裡所有 opacity:0 的起始狀態都掛在它底下 ⇒ 沒加就是「全部直接看得見」。 -->
@@ -22,6 +26,39 @@
   </head>
   <body>
     <header class="hero">
+      <p class="hero__band">HFPC ・ 德義事工 ・ 聖經遊戲</p>
+      <!-- 徽章(視覺語言 A):十字架・開卷聖經・鴿子・羊。純裝飾,螢幕閱讀器略過 -->
+      <div class="hero__emblem"><svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 160">
+  <!-- 金環 + 米色臉 -->
+  <circle cx="80" cy="80" r="76" fill="#d4af37"/>
+  <circle cx="80" cy="80" r="68" fill="#fdf8ec" stroke="#d4af37" stroke-opacity=".4" stroke-width="1"/>
+  <!-- 十字架 -->
+  <rect x="76" y="26" width="8" height="62" rx="1.5" fill="#3a2f1c"/>
+  <rect x="52" y="42" width="56" height="8" rx="1.5" fill="#3a2f1c"/>
+  <!-- 開卷聖經 -->
+  <path d="M80,100 L42,90 L46,98 L80,108 Z" fill="#3a2f1c"/>
+  <path d="M80,100 L118,90 L114,98 L80,108 Z" fill="#3a2f1c"/>
+  <line x1="80" y1="98" x2="80" y2="110" stroke="#fdf8ec" stroke-width="1.4"/>
+  <!-- 鴿子 -->
+  <g transform="rotate(-16 111 36)">
+    <path d="M92,38 C98,30 105,30 111,37 C117,30 124,30 130,38 C123,35 116,35 112,40 C106,35 99,35 92,38 Z" fill="#3a2f1c"/>
+  </g>
+  <!-- 羊 -->
+  <ellipse cx="46" cy="125" rx="14" ry="9" fill="#3a2f1c"/>
+  <circle cx="35" cy="120" r="5" fill="#3a2f1c"/>
+  <circle cx="43" cy="116" r="5.5" fill="#3a2f1c"/>
+  <circle cx="51" cy="116" r="5" fill="#3a2f1c"/>
+  <circle cx="58" cy="120" r="4.5" fill="#3a2f1c"/>
+  <path d="M58,115 L54,107 L62,111 Z" fill="#3a2f1c"/>
+  <path d="M66,114 L70,106 L64,110 Z" fill="#3a2f1c"/>
+  <circle cx="62" cy="122" r="6.5" fill="#3a2f1c"/>
+  <circle cx="65" cy="120" r="1.1" fill="#fdf8ec"/>
+  <path d="M33,124 L26,121 L29,129 Z" fill="#3a2f1c"/>
+  <line x1="38" y1="134" x2="37" y2="140" stroke="#3a2f1c" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="44" y1="135" x2="44" y2="141" stroke="#3a2f1c" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="50" y1="135" x2="51" y2="141" stroke="#3a2f1c" stroke-width="1.8" stroke-linecap="round"/>
+  <line x1="56" y1="134" x2="57" y2="140" stroke="#3a2f1c" stroke-width="1.8" stroke-linecap="round"/>
+</svg></div>
       <h1 class="hero__title">聖經闖關大富翁遊戲</h1>
       <p class="hero__subtitle">選一段旅程開始 ✦ 主日學・全家適用</p>
       <nav class="hero__nav">
@@ -31,7 +68,7 @@
       <!-- 🏷 改版簡歷入口(0916 二修):原本放在卡片牆最底下,實測手機要往下捲一萬多像素才看得到
            ⇒ 等於沒有。搬進 header,一進站就在。徽章仍維持 pointer-events:none,不拿它當按鈕。 -->
       <p class="ver-note-row" style="margin:.5rem 0 0;text-align:center">
-        <button type="button" id="appVerOpen" style="font:inherit;font-size:.75rem;line-height:1.2;padding:.35rem .8rem;min-height:36px;color:inherit;background:transparent;border:1px solid currentColor;border-radius:999px;opacity:.55;cursor:pointer">🏷️ 改版簡歷</button>
+        <button type="button" id="appVerOpen" class="vernote-btn">🏷️ 改版簡歷</button>
       </p>
       <!-- 安裝按鈕由 src/main.js 視平台動態塞入(不能裝就不顯示) -->
       <div id="install-slot" class="install-slot"></div>
@@ -111,17 +148,22 @@
      ★ 改版時在 APP_VERSIONS 最前面插一筆就好。 -->
 <style>#appVerSheet[hidden]{display:none!important}</style>
 <div id="appVerSheet" hidden style="position:fixed;inset:0;z-index:2147483001;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;padding:16px;font-family:system-ui,'Noto Sans TC',sans-serif">
-  <div style="max-width:460px;width:100%;max-height:72vh;overflow-y:auto;background:#101a33;border:1px solid #33407a;border-radius:12px;padding:16px 18px;color:#e8ecff;box-shadow:0 18px 50px rgba(0,0,0,.45)">
-    <h3 style="margin:0 0 4px;font-size:16px">🏷️ 改版簡歷</h3>
-    <p style="margin:0 0 10px;font-size:12px;line-height:1.6;color:#a9b4e0">每一版新增了什麼,白話寫給家長與老師看。前幾版都列在下面,最新的在最上面。</p>
+  <div style="max-width:460px;width:100%;max-height:72vh;overflow-y:auto;background:#fffcf5;border:2px solid #d4af37;border-radius:12px;padding:16px 18px;color:#332818;box-shadow:0 18px 50px rgba(0,0,0,.45)">
+    <h3 style="margin:0 0 4px;font-size:17px;font-family:'Noto Serif TC','PMingLiU',serif;color:#332818">🏷️ 改版簡歷</h3>
+    <p style="margin:0 0 10px;font-size:12px;line-height:1.6;color:#6b5a3f">每一版新增了什麼,白話寫給家長與老師看。前幾版都列在下面,最新的在最上面。</p>
     <ol id="appVerList" style="margin:0;padding-left:18px;font-size:13px;line-height:1.85"></ol>
-    <button type="button" id="appVerClose" style="margin-top:14px;width:100%;min-height:44px;font:inherit;color:#e8ecff;background:#2a356b;border:1px solid #3a4a8b;border-radius:8px;cursor:pointer">關閉</button>
+    <button type="button" id="appVerClose" style="margin-top:14px;width:100%;min-height:44px;font:inherit;color:#fdf3df;background:#5c4416;border:1px solid #5c4416;border-radius:8px;cursor:pointer">關閉</button>
   </div>
 </div>
 <script>
 (function () {
   // 最新的放最前面。改版只要在這裡插一筆。
   var APP_VERSIONS = [
+    {
+      "v": "v133",
+      "d": "2026-10-07",
+      "t": "大廳換上「羊皮紙精緻版」新樣貌(和德義作品集同一套):最上面多了金色標籤與教會徽章,標題改成明體;卡片一律米色卡面、上面多一行小字說明是哪一種玩法。八種背景顏色都還在,深色背景時卡片仍是米色、字看得清楚。"
+    },
     {
       "v": "v131",
       "d": "2026-09-16",

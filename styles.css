@@ -930,3 +930,158 @@ html.paused *,html.paused *::before,html.paused *::after{animation-play-state:pa
 .js-motion .card__emoji{animation:floaty 2.8s ease-in-out infinite alternate;animation-delay:calc(var(--i,0)*-.7s)}
 .js-motion .rv.in .card__emoji{animation:wiggle .7s cubic-bezier(.2,.7,.2,1) calc(.4s + var(--i,0)*.06s) 1,floaty 2.8s ease-in-out calc(1.2s + var(--i,0)*-.7s) infinite alternate}
 .js-motion .card:hover .card__emoji{animation:none;transform:translateY(-4px) scale(1.08);transition:transform .25s cubic-bezier(.2,.7,.2,1)}
+
+/* ═══════════════════════════════════════════════════════════════════════════
+   視覺語言 A「羊皮紙精緻版」(2026-10-07;同德義作品集 v8,正本 = skill entry-site-visual-kit)
+   ★ 疊在大廳原本的樣式「之後」,只換長相,不動 THEMES 換膚機制:
+     - 頁層(背景、標題、分類名、頁尾)跟著皮走:淺色四皮(暖米白/淺天藍/淺薄荷綠/暖杏橘)深棕字,
+       深色四皮(深藍夜間/深紫夜/墨綠夜/奧運深藍)字整組翻亮、強調色改柔金。
+     - 卡層(卡片、今日金句)在任何皮都是米色卡面 + 深棕字(--c-*,不翻)。
+   ★ 金色(--vl-gold)只做線條、徽章底、金帶,永遠不當文字(金字在紙上只有 1.8:1)。
+     大廳原本的 --gold 仍是計分板分數/餘火的顏色,這裡不碰它。
+   ★ CJK 不用 italic;裝飾只留兩層(金帶+徽章、hero 細框+四角小十字)。
+   ═══════════════════════════════════════════════════════════════════════════ */
+/* 暖米白(沒選皮 = 沒有 data-theme)換成羊皮紙底。★ 一定要掛 :not([data-theme]):
+   這段排在換膚規則後面,寫成 :root 會把深色四皮的 --ink 也蓋成深棕 ⇒ 深底深字(1007 實測抓到)。 */
+html:not([data-theme]) {
+  --bg-glow: #fdf8ec; --bg-top: #f6efe1; --bg-bot: #eee2c4;
+  --ink: #332818; --ink-dim: #6b5a3f;
+}
+:root {
+  /* 頁層強調字 / 填底鈕(淺色皮) */
+  --deep: #5c4416; --fill: #5c4416; --fill-ink: #fdf3df;
+  --vl-gold: #d4af37; --vl-gold-soft: #d8c79e;
+  /* 卡層:任何皮都不翻 */
+  --card: #fffcf5; --card-edge: #e6d9bb;
+  --c-ink: #332818; --c-deep: #5c4416; --c-soft: #6b5a3f;
+  --font-display: 'Noto Serif TC', 'Songti TC', 'PMingLiU', 'Noto Serif CJK TC', serif;
+  --font-body: 'Noto Sans TC', 'Microsoft JhengHei', 'PingFang TC', system-ui, sans-serif;
+}
+[data-theme="night"], [data-theme="purple"], [data-theme="deepgreen"], [data-theme="navy"] {
+  --deep: #e8c98a; --fill: #e8c98a; --fill-ink: #241d10;
+  --vl-gold: #d4af66; --vl-gold-soft: rgba(212, 175, 102, .45);
+}
+body { font-family: var(--font-body); }
+
+/* ── Hero:金帶 + 徽章 + 明體大標 + 一圈細框與四角小十字 ── */
+.hero { padding-bottom: 24px; border-bottom: 2px solid var(--vl-gold-soft); }
+.hero::before, .hero::after { content: ""; position: absolute; pointer-events: none; z-index: 1; }
+.hero::before { inset: 10px; border: 1px solid currentColor; border-radius: 10px; opacity: .22; }
+.hero::after {
+  inset: 0; opacity: .5;
+  background:
+    linear-gradient(currentColor, currentColor) left 18px top 12px / 2px 14px no-repeat,
+    linear-gradient(currentColor, currentColor) left 12px top 18px / 14px 2px no-repeat,
+    linear-gradient(currentColor, currentColor) right 18px top 12px / 2px 14px no-repeat,
+    linear-gradient(currentColor, currentColor) right 12px top 18px / 14px 2px no-repeat,
+    linear-gradient(currentColor, currentColor) left 18px bottom 12px / 2px 14px no-repeat,
+    linear-gradient(currentColor, currentColor) left 12px bottom 18px / 14px 2px no-repeat,
+    linear-gradient(currentColor, currentColor) right 18px bottom 12px / 2px 14px no-repeat,
+    linear-gradient(currentColor, currentColor) right 12px bottom 18px / 14px 2px no-repeat;
+}
+.hero__band {
+  display: inline-block; overflow: hidden; max-width: calc(100% - 40px);
+  margin: 6px auto .9rem; padding: .42rem 1rem .42rem 1.35rem;
+  background: var(--vl-gold); color: #332818;
+  font-size: .68rem; letter-spacing: .35em; font-weight: 700; border-radius: 6px;
+}
+.hero__emblem { display: block; margin: 0 auto .5rem; line-height: 0; }
+.hero__emblem svg { width: clamp(80px, 13vw, 120px); height: auto; filter: drop-shadow(0 2px 4px rgba(58, 47, 34, .18)); }
+.hero__title,
+.js-motion .hero__title.split > span {
+  font-family: var(--font-display); font-weight: 900;
+  background: none; -webkit-background-clip: border-box; background-clip: border-box;
+  color: var(--ink); letter-spacing: .06em;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, .55);
+}
+[data-theme="night"] .hero__title, [data-theme="purple"] .hero__title,
+[data-theme="deepgreen"] .hero__title, [data-theme="navy"] .hero__title,
+[data-theme="night"] .hero__title span, [data-theme="purple"] .hero__title span,
+[data-theme="deepgreen"] .hero__title span, [data-theme="navy"] .hero__title span { text-shadow: none; }
+.hero__subtitle { color: var(--ink-dim); }
+
+/* 標題列按鈕(金句/計分板/安裝):填底鈕 = 淺色皮深棕底米字、深色皮柔金底深字 */
+.topbtn, .install-btn, .install-ios__ok {
+  color: var(--fill-ink); background: var(--fill);
+  min-height: 44px; box-shadow: 0 4px 12px rgba(58, 47, 34, .22);
+}
+/* 改版簡歷鈕:藥丸外框,跟頁籤同款 */
+.vernote-btn {
+  font: inherit; font-size: .8rem; line-height: 1.2; cursor: pointer;
+  padding: .35rem .95rem; min-height: 36px; border-radius: 999px;
+  color: var(--c-deep); background: var(--card); border: 1px solid var(--card-edge);
+}
+.vernote-btn:hover { border-color: var(--vl-gold); }
+@media (pointer: coarse) { .vernote-btn { min-height: 44px; } }
+.vernote-btn:focus-visible, .topbtn:focus-visible, .backlink:focus-visible, .card:focus-visible {
+  outline: 2px solid var(--vl-gold); outline-offset: 3px;
+}
+
+/* ── 分類標題:明體 + 金色細線 ── */
+.cat__head { border-bottom-color: var(--vl-gold-soft); }
+.cat__name, .subhub__head .cat__name { font-family: var(--font-display); color: var(--ink); }
+.cat__desc { color: var(--ink-dim); }
+/* 返回大廳:藥丸、米色底深棕字(金不當字) */
+.backlink { color: var(--c-deep); background: var(--card); border-color: var(--card-edge); min-height: 44px; }
+.backlink:hover { background: var(--card); border-color: var(--vl-gold); }
+
+/* ── 卡片:米色卡面 + 卡邊 + 四角 L 形細角;角標(金條+小標)→ 明體標題 → 副標 ── */
+.card {
+  position: relative;
+  color: var(--c-ink);
+  background: var(--card);
+  border: 1px solid var(--card-edge);
+  border-radius: 10px;
+  box-shadow: 0 3px 14px rgba(58, 47, 34, .10), inset 0 0 0 1px rgba(255, 255, 255, .5);
+}
+.card::before, .card::after {
+  content: ""; position: absolute; width: 12px; height: 12px;
+  border: 0 solid rgba(92, 68, 22, .38); pointer-events: none;
+}
+.card::before { top: 6px; left: 6px; border-top-width: 1.5px; border-left-width: 1.5px; }
+.card::after { bottom: 6px; right: 6px; border-bottom-width: 1.5px; border-right-width: 1.5px; }
+.card:hover, .card:focus-visible {
+  border-color: var(--vl-gold);
+  box-shadow: 0 8px 20px rgba(58, 47, 34, .16);
+}
+.card__eyebrow {
+  display: flex; align-items: center; gap: 6px;
+  font-size: .72rem; letter-spacing: .14em; font-weight: 700; color: var(--c-deep);
+  margin-bottom: .25rem;
+}
+.card__eyebrow::before { content: ""; width: 3px; height: 12px; border-radius: 2px; background: var(--vl-gold); flex: none; }
+.card__name { font-family: var(--font-display); color: var(--c-ink); line-height: 1.4; }
+.card__count { color: var(--c-soft); font-family: var(--font-body); }
+.card__sub { color: var(--c-soft); line-height: 1.55; }
+.card__cta { color: var(--c-deep); }
+.card .playrank { color: var(--c-deep); border-top: 1px solid var(--card-edge); padding-top: 6px; }
+/* 旗子形徽章(data.js 選填 badge)與旗艦卡(data.js 選填 flag:true) */
+.card__badge {
+  position: absolute; top: -9px; right: 16px; z-index: 2; padding: 5px 12px 5px 14px;
+  background: var(--c-deep); color: #fdf3df;
+  font-size: .7rem; font-weight: 700; letter-spacing: .05em;
+  clip-path: polygon(9px 0, 100% 0, 100% 100%, 9px 100%, 0 50%);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, .18);
+}
+.card--flag { border: 2px solid var(--vl-gold); background: linear-gradient(135deg, #fffcf5, #fdf3df); box-shadow: 0 4px 18px rgba(58, 47, 34, .16); }
+@media (min-width: 600px) { .grid:not(.grid--paired) > .card--flag { grid-column: span 2; } }
+.card--soon .card__cta { color: var(--c-soft); }
+.card--egg { border: 4px double var(--vl-gold); }
+
+/* ── 今日金句:卡層(米色)── */
+.daily { background: var(--card); border: 1px solid var(--card-edge); border-left: 4px solid var(--vl-gold); box-shadow: 0 3px 14px rgba(58, 47, 34, .10); }
+.daily__tag { color: var(--c-deep); }
+.daily__ref { color: var(--c-soft); }
+.daily__text { color: var(--c-ink); font-family: var(--font-display); }
+.daily__btn { background: #5c4416; color: #fdf3df; min-height: 44px; }
+.daily__btn--ghost { background: transparent; color: #5c4416; border-color: #b9a77e; }
+
+/* ── 影片區標題、頁尾 ── */
+body > section h2 { font-family: var(--font-display); color: var(--deep); }
+.foot { color: var(--ink-dim); border-top: 1px solid var(--vl-gold-soft); padding: 1.4rem 1rem 1.6rem; }
+.foot p:first-child { font-family: var(--font-display); }
+.foot p:first-child::before {
+  content: ""; display: block; width: 12px; height: 12px; margin: 0 auto .5rem; opacity: .5;
+  background: linear-gradient(currentColor, currentColor) center / 2px 100% no-repeat,
+              linear-gradient(currentColor, currentColor) center / 100% 2px no-repeat;
+}

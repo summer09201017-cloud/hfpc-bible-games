@@ -3,7 +3,10 @@
 import { CATEGORIES, JOURNEYS, COLLECTIONS, EGG } from './data.js'
 import { renderScoreboard } from './scoreboard.js'
 import { renderVerses, dailyStrip } from './verses.js'
-import { renderByType } from './bytype.js'
+import { renderByType, GROUPS } from './bytype.js'
+
+// 視覺語言 A(1007):卡片角標(.card__eyebrow)顯示玩法名稱——從 bytype 家族表查 kind,不另寫一份。
+const KIND_NAME = Object.fromEntries(GROUPS.flatMap((g) => g.kinds.map(([id, name]) => [id, name])))
 
 const app = document.getElementById('app')
 
@@ -58,7 +61,7 @@ function makeCard(j) {
   const isRoute = !!j.route // 大廳內頁(hash 路由,如金句複習 #/verses);不是外部遊戲網址
   const clickable = isCollection || isRoute || (!j.soon && j.url)
   const card = clickable ? document.createElement('a') : document.createElement('div')
-  card.className = 'card' + (j.soon ? ' card--soon' : '')
+  card.className = 'card' + (j.soon ? ' card--soon' : '') + (j.flag ? ' card--flag' : '')
   card.style.setProperty('--accent', j.color || '#3b6ea5')
   if (j.id) card.dataset.gid = j.id // play-rank 對照 beacon g=
 
@@ -82,9 +85,13 @@ function makeCard(j) {
     cta = '進入 →'
   }
 
+  // 角標:合輯/大廳工具/玩法名(data.js 的 kind);都沒有就不印。旗艦卡(flag)與旗子徽章(badge)由 data.js 選填
+  const eyebrow = isCollection ? '闖關合輯' : isRoute ? '大廳工具' : KIND_NAME[j.kind] || ''
   card.innerHTML = `
+    ${j.badge ? `<span class="card__badge">${j.badge}</span>` : ''}
     <div class="card__emoji" aria-hidden="true">${j.emoji || '✦'}</div>
     <div class="card__text">
+      ${eyebrow ? `<div class="card__eyebrow">${eyebrow}</div>` : ''}
       <div class="card__name">${j.name}${nameSuffix}</div>
       <div class="card__sub">${j.subtitle || ''}</div>
       ${j.credit ? `<div class="card__credit">${j.credit}</div>` : ''}
@@ -349,9 +356,9 @@ function annotatePlayRank() {
     list.forEach((r, i) => {
       const b = document.createElement('em')
       b.className = 'playrank'
-      b.style.cssText = 'display:block;margin-top:6px;font-size:12px;opacity:.85;font-style:normal'
+      b.style.cssText = 'display:block;margin-top:6px;font-size:12px;font-style:normal'
       b.textContent = (i < 3 ? medals[i] + ' ' : '') + 'No.' + (i + 1) + '・▶ 被開啟 ' + r.n + ' 次'
-      r.c.appendChild(b)
+      ;(r.c.querySelector('.card__text') || r.c).appendChild(b)
     })
     Array.from(p.children)
       .map((el, i) => ({ el, i, n: el.__plays ?? -1 }))
